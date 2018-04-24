@@ -18,7 +18,7 @@ We've been making an effort to take our reusable cups, bottles and stainless ste
 
 ## Refillable Splosh cleaning 
 
-Splosh is the great new way to buy essentials like washing up liquid, laundry detergent and surface cleaners. It’s great value, more convenient than the supermarkets and miles better for the environment.You can read all about it here: www.splosh.com.If you use this special code 151F69 when you buy from Splosh you’ll get money off your first order.
+Splosh is the great new way to buy essentials like washing up liquid, laundry detergent and surface cleaners. It’s great value, more convenient than the supermarkets and miles better for the environment.You can read all about it [on their website](http://www.splosh.com). If you use this special code 151F69 when you buy from Splosh you’ll get money off your first order.
 
 
 ## Milk bottles
