@@ -52,3 +52,7 @@ disqusShortname = "" # delete this to disable disqus comments
     name = "linkedin"
     weight = 4
 
+[[menu.icon]]
+    url = "https://www.instagram.com/rickymoorhouse/"
+    name = "instagram"
+    weight = 3
