@@ -1,0 +1,96 @@
+{{ partial "header" . }}
+<!--<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+-->
+  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+ 
+  <style>
+        #map {
+        height: 100%;
+        margin-top: -20px;
+        }
+        div.page-content {
+        position:fixed;
+        bottom: 100px;
+        margin-top: 1em;
+        right: 1em;
+        z-index: 999;
+        background: white;
+        width: 20em;
+        padding: 0.5em;
+        box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
+        }
+        footer { display: none;}
+  </style>
+    <div class="site">
+.
+
+      <div class="site-content" id="map">
+        <span class="mapbox-maplogo"></span>
+      </div>
+      <!-- site-content -->
+        <div class="page-content">
+        {{ .Content }}
+        </div>
+<script>
+
+document.getElementById('map').style.height=(window.innerHeight-110) + "px";
+L.mapbox.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
+var map = L.mapbox.map('map', 'mapbox.streets', {
+    attributionControl: {position: 'topright'}
+    }).setView([20, -20], 3);
+
+// As with any other AJAX request, this technique is subject to the Same Origin Policy:
+// http://en.wikipedia.org/wiki/Same_origin_policy
+// So the CSV file must be on the same domain as the Javascript, or the server
+// delivering it should support CORS.
+var featureLayer = L.mapbox.featureLayer()
+    .loadURL('map.geojson') //'/travel/map.geojson')
+    .addTo(map);
+
+featureLayer.on('layeradd', function(e) {
+    var marker = e.layer,
+    feature = marker.feature;
+    var content = '<a href="'+feature.properties.url+'">' + feature.properties.title + "</a>";
+    marker.bindPopup(content);
+});
+
+(function () {
+    'use strict';
+
+    // Your additional js should go there
+
+}());
+
+function insertMap(geojson_url) {
+  var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/mapbox/light-v9', //'mapbox://styles/rickymoorhouse/cih6ouins00f3bnm500a1d3dl',
+      center: [-53, 20], // starting position
+      zoom: 1.5 // starting zoom
+  });
+  map.on('load', function() {
+    map.addSource("visited", {
+      type: 'geojson',
+      data: geojson_url
+    });
+    map.addLayer({
+       "id": "points",
+       "type": "symbol",
+       "source": "visited",
+       "layout": {
+           "icon-image": "star-11",
+           //"text-field": "{name}",
+           "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+           "text-offset": [0, 0.6],
+           "text-anchor": "top"
+       }
+     });
+  });
+}
+
+</script>
+    </div>
+  </body>
+</html>

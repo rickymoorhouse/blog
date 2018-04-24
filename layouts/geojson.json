@@ -1,0 +1,10 @@
+[
+{{ range .Pages }}
+{ 
+    "lat":{{ .Params.lat }},
+    "lng":{{ .Params.lng }},
+
+    "name":"{{ .Title }}"
+},
+{{ end }}
+]
