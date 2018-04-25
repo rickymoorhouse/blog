@@ -13,8 +13,7 @@ disqusShortname = "" # delete this to disable disqus comments
 #    font = "Alegreya" # should match the name on Google Fonts!
     copyright = "&copy; Ricky Moorhouse"
     highlight = true
-    highlightStyle = "solarized-dark"
-    highlightLanguages = ["python", "swift"]
+    highlightLanguages = ["python", "swift", "YAML"]
 
 #  js = ["https://api.mapbox.com/mapbox.js/v0.44.2/mapbox.js"]
 #  css = ["https://api.mapbox.com/mapbox.js/v0.44.2/mapbox.css"]
