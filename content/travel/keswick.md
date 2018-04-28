@@ -1,0 +1,9 @@
+---
+title: "Keswick"
+datePosted: 2004-07-28
+layout: travel
+lat: 54.583574 
+lng: -3.144271
+---
+# Keswick
+
