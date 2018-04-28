@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-02-22T11:07:01Z"
-link: http://blog.rickymoorhouse.co.uk/2004/02/22/bread-rolls/
+link: https://rickymoorhouse.uk/2004/02/22/bread-rolls/
 slug: bread-rolls
 title: Bread rolls
 wordpress_id: 1648

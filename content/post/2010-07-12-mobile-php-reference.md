@@ -4,7 +4,7 @@ categories:
 - PHP
 comments: true
 date: "2010-07-12T20:58:38Z"
-link: http://blog.rickymoorhouse.co.uk/2010/07/12/mobile-php-reference/
+link: https://rickymoorhouse.uk/2010/07/12/mobile-php-reference/
 slug: mobile-php-reference
 tags:
 - iphone

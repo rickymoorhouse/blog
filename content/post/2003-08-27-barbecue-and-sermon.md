@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-08-27T17:58:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/08/27/barbecue-and-sermon/
+link: https://rickymoorhouse.uk/2003/08/27/barbecue-and-sermon/
 slug: barbecue-and-sermon
 title: Barbecue and sermon
 wordpress_id: 1716

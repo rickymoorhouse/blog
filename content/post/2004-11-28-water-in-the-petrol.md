@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-11-28T08:59:46Z"
-link: http://blog.rickymoorhouse.co.uk/2004/11/28/water-in-the-petrol/
+link: https://rickymoorhouse.uk/2004/11/28/water-in-the-petrol/
 slug: water-in-the-petrol
 title: Water in the petrol
 wordpress_id: 1596

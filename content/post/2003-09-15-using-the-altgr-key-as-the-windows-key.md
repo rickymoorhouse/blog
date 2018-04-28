@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-09-15T04:38:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/09/15/using-the-altgr-key-as-the-windows-key/
+link: https://rickymoorhouse.uk/2003/09/15/using-the-altgr-key-as-the-windows-key/
 slug: using-the-altgr-key-as-the-windows-key
 title: Using the AltGr key as the windows key
 wordpress_id: 1711

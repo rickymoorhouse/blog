@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2008-11-26T21:47:21Z"
-link: http://blog.rickymoorhouse.co.uk/2008/11/26/read-to-you/
+link: https://rickymoorhouse.uk/2008/11/26/read-to-you/
 slug: read-to-you
 title: Read to you
 wordpress_id: 1441

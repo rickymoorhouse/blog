@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2003-06-08T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/06/08/my-firebird-extensions/
 slug: my-firebird-extensions
 title: My Firebird Extensions
 wordpress_id: 1731

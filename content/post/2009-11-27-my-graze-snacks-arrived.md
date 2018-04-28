@@ -4,7 +4,7 @@ categories:
 - Random
 comments: true
 date: "2009-11-27T14:03:19Z"
-link: http://blog.rickymoorhouse.co.uk/2009/11/27/my-graze-snacks-arrived/
+link: https://rickymoorhouse.uk/2009/11/27/my-graze-snacks-arrived/
 slug: my-graze-snacks-arrived
 title: My graze snacks arrived!
 wordpress_id: 1401

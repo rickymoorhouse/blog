@@ -4,7 +4,7 @@ categories:
 - Tech
 comments: true
 date: "2011-10-05T12:02:31Z"
-link: http://blog.rickymoorhouse.co.uk/2011/10/05/firewall-rules-for-synergy-in-iptables/
+link: https://rickymoorhouse.uk/2011/10/05/firewall-rules-for-synergy-in-iptables/
 slug: firewall-rules-for-synergy-in-iptables
 title: Firewall rules for Synergy in iptables
 wordpress_id: 7318

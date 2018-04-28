@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-05-29T01:18:23Z"
-link: http://blog.rickymoorhouse.co.uk/2004/05/29/home-group-was-promising/
+link: https://rickymoorhouse.uk/2004/05/29/home-group-was-promising/
 slug: home-group-was-promising
 title: Home group was promising
 wordpress_id: 1617

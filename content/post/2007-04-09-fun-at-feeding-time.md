@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2007-04-09T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2007/04/09/fun-at-feeding-time/
+link: https://rickymoorhouse.uk/2007/04/09/fun-at-feeding-time/
 slug: fun-at-feeding-time
 title: Fun at feeding time
 wordpress_id: 1515

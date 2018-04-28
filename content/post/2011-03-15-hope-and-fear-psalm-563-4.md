@@ -4,7 +4,7 @@ categories:
 - Bible Study
 comments: true
 date: "2011-03-15T18:55:01Z"
-link: http://blog.rickymoorhouse.co.uk/2011/03/15/hope-and-fear-psalm-563-4/
+link: https://rickymoorhouse.uk/2011/03/15/hope-and-fear-psalm-563-4/
 slug: hope-and-fear-psalm-563-4
 tags:
 - fb

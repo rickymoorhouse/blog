@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2007-07-07T13:40:08Z"
-link: http://blog.rickymoorhouse.co.uk/2007/07/07/adventures-with-abi/
+link: https://rickymoorhouse.uk/2007/07/07/adventures-with-abi/
 slug: adventures-with-abi
 title: Adventures with Abi
 wordpress_id: 1494

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-21T21:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/21/feeling-much-better/
+link: https://rickymoorhouse.uk/2004/01/21/feeling-much-better/
 slug: feeling-much-better
 title: Feeling much better!
 wordpress_id: 1656

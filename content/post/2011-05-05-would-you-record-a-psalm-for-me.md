@@ -4,7 +4,7 @@ categories:
 - Bible Study
 comments: true
 date: "2011-05-05T01:00:56Z"
-link: http://blog.rickymoorhouse.co.uk/2011/05/05/would-you-record-a-psalm-for-me/
+link: https://rickymoorhouse.uk/2011/05/05/would-you-record-a-psalm-for-me/
 slug: would-you-record-a-psalm-for-me
 title: Would you record a Psalm for me?
 wordpress_id: 7195

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-15T23:09:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/15/christian-bookshop-mothers-of-the-plaza-lord-of-the-rings/
+link: https://rickymoorhouse.uk/2004/01/15/christian-bookshop-mothers-of-the-plaza-lord-of-the-rings/
 slug: christian-bookshop-mothers-of-the-plaza-lord-of-the-rings
 title: Christian bookshop, Mothers of the plaza & Lord of the rings
 wordpress_id: 1661

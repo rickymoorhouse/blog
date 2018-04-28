@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2008-07-16T12:55:44Z"
-link: http://blog.rickymoorhouse.co.uk/2008/07/16/blog-workings/
+link: https://rickymoorhouse.uk/2008/07/16/blog-workings/
 slug: blog-workings
 title: Blog workings
 wordpress_id: 1449

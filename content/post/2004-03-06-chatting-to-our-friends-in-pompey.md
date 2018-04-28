@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-03-06T16:19:45Z"
-link: http://blog.rickymoorhouse.co.uk/2004/03/06/chatting-to-our-friends-in-pompey/
+link: https://rickymoorhouse.uk/2004/03/06/chatting-to-our-friends-in-pompey/
 slug: chatting-to-our-friends-in-pompey
 title: Chatting to our friends in Pompey
 wordpress_id: 1643

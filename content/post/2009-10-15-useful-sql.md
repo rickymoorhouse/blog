@@ -4,7 +4,7 @@ categories:
 - MySQL
 comments: true
 date: "2009-10-15T09:00:11Z"
-link: http://blog.rickymoorhouse.co.uk/2009/10/15/useful-sql/
+link: https://rickymoorhouse.uk/2009/10/15/useful-sql/
 slug: useful-sql
 title: Useful SQL
 wordpress_id: 1411

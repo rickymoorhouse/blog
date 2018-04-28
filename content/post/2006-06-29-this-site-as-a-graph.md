@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-06-29T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2006/06/29/this-site-as-a-graph/
+link: https://rickymoorhouse.uk/2006/06/29/this-site-as-a-graph/
 slug: this-site-as-a-graph
 title: This site as a graph
 wordpress_id: 1563

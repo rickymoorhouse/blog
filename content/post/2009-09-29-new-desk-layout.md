@@ -4,7 +4,7 @@ categories:
 - Random
 comments: true
 date: "2009-09-29T14:35:09Z"
-link: http://blog.rickymoorhouse.co.uk/2009/09/29/new-desk-layout/
+link: https://rickymoorhouse.uk/2009/09/29/new-desk-layout/
 slug: new-desk-layout
 title: New desk layout
 wordpress_id: 1415

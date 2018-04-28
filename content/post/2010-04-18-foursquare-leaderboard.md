@@ -4,7 +4,7 @@ categories:
 - Random
 comments: true
 date: "2010-04-18T19:43:53Z"
-link: http://blog.rickymoorhouse.co.uk/?p=1893
+link: https://rickymoorhouse.uk/?p=1893
 published: false
 slug: foursquare-leaderboard
 title: foursquare leaderboard

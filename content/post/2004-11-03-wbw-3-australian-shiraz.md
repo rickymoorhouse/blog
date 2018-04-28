@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-11-03T23:59:59Z"
-link: http://blog.rickymoorhouse.co.uk/2004/11/03/wbw-3-australian-shiraz/
+link: https://rickymoorhouse.uk/2004/11/03/wbw-3-australian-shiraz/
 slug: wbw-3-australian-shiraz
 title: WBW 3 - Australian Shiraz
 wordpress_id: 1598

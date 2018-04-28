@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2005-10-03T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2005/10/03/useful-html-tags/
+link: https://rickymoorhouse.uk/2005/10/03/useful-html-tags/
 slug: useful-html-tags
 title: Useful HTML tags
 wordpress_id: 1572

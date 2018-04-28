@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2007-09-17T08:17:43Z"
-link: http://blog.rickymoorhouse.co.uk/2007/09/17/first-step/
+link: https://rickymoorhouse.uk/2007/09/17/first-step/
 slug: first-step
 title: First Step
 wordpress_id: 1478

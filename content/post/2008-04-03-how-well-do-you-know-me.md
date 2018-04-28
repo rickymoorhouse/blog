@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2008-04-03T07:12:29Z"
-link: http://blog.rickymoorhouse.co.uk/2008/04/03/how-well-do-you-know-me/
+link: https://rickymoorhouse.uk/2008/04/03/how-well-do-you-know-me/
 slug: how-well-do-you-know-me
 title: How well do you know me?
 wordpress_id: 1462

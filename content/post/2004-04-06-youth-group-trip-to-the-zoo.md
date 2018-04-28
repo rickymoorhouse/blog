@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-04-06T20:16:21Z"
-link: http://blog.rickymoorhouse.co.uk/2004/04/06/youth-group-trip-to-the-zoo/
+link: https://rickymoorhouse.uk/2004/04/06/youth-group-trip-to-the-zoo/
 slug: youth-group-trip-to-the-zoo
 title: Youth group trip to the Zoo
 wordpress_id: 1628

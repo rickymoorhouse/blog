@@ -5,7 +5,7 @@ categories:
 - Tech
 comments: false
 date: "2014-07-17T09:23:54Z"
-link: http://blog.rickymoorhouse.co.uk/2014/07/17/traffic-pi/
+link: https://github.com/rickymoorhouse/trafficpi
 post_format:
 - Link
 slug: traffic-pi

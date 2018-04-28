@@ -4,7 +4,7 @@ categories:
 - But God...
 comments: true
 date: "2011-09-08T19:47:42Z"
-link: http://blog.rickymoorhouse.co.uk/2011/09/08/abimilech/
+link: https://rickymoorhouse.uk/2011/09/08/abimilech/
 slug: abimilech
 title: But God came to Abimilech in a dream
 wordpress_id: 7350

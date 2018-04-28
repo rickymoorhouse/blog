@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-17T22:58:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/12/17/were-going-to-chile/
+link: https://rickymoorhouse.uk/2003/12/17/were-going-to-chile/
 slug: were-going-to-chile
 title: We're going to Chile!
 wordpress_id: 1677

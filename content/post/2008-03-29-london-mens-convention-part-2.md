@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2008-03-29T18:28:55Z"
-link: http://blog.rickymoorhouse.co.uk/?p=1463
+link: https://rickymoorhouse.uk/?p=1463
 published: false
 slug: london-mens-convention-part-2
 title: London mens convention part 2

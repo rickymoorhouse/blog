@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-14T23:08:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/14/day-in-buenos-aires/
+link: https://rickymoorhouse.uk/2004/01/14/day-in-buenos-aires/
 slug: day-in-buenos-aires
 title: Day in Buenos Aires
 wordpress_id: 1662

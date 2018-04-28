@@ -4,7 +4,7 @@ categories:
 - Asides
 comments: true
 date: "2012-06-19T21:32:15Z"
-link: http://blog.rickymoorhouse.co.uk/2012/06/19/send-out-your-light-and-your-truth/
+link: https://rickymoorhouse.uk/2012/06/19/send-out-your-light-and-your-truth/
 post_format:
 - Quote
 slug: send-out-your-light-and-your-truth

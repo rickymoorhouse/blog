@@ -4,7 +4,7 @@ categories:
 - Ubuntu
 comments: true
 date: "2010-03-24T09:08:31Z"
-link: http://blog.rickymoorhouse.co.uk/2010/03/24/restore-default-panels/
+link: https://rickymoorhouse.uk/2010/03/24/restore-default-panels/
 slug: restore-default-panels
 title: Restore Default Panels
 wordpress_id: 1855

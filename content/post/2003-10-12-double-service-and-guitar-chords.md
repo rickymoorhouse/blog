@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-10-12T16:04:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/10/12/double-service-and-guitar-chords/
+link: https://rickymoorhouse.uk/2003/10/12/double-service-and-guitar-chords/
 slug: double-service-and-guitar-chords
 title: Double service and guitar chords
 wordpress_id: 1691

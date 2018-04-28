@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-08-18T06:32:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/08/18/chile-and-uruguay-most-stable-in-the-region/
+link: https://rickymoorhouse.uk/2003/08/18/chile-and-uruguay-most-stable-in-the-region/
 slug: chile-and-uruguay-most-stable-in-the-region
 title: Chile and Uruguay most stable in the region
 wordpress_id: 1719

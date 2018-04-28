@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-10-08T18:20:40Z"
-link: http://blog.rickymoorhouse.co.uk/2006/10/08/2-minutes-apart/
+link: https://rickymoorhouse.uk/2006/10/08/2-minutes-apart/
 slug: 2-minutes-apart
 title: 2 Minutes apart
 wordpress_id: 1553

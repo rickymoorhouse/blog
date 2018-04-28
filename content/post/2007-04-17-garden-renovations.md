@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2007-04-17T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2007/04/17/garden-renovations/
+link: https://rickymoorhouse.uk/2007/04/17/garden-renovations/
 slug: garden-renovations
 title: Garden Renovations
 wordpress_id: 1512

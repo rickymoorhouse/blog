@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-09-08T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2006/09/08/four-years-and-counting/
+link: https://rickymoorhouse.uk/2006/09/08/four-years-and-counting/
 slug: four-years-and-counting
 title: Four Years and counting!
 wordpress_id: 1559

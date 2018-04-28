@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2008-03-29T11:39:13Z"
-link: http://blog.rickymoorhouse.co.uk/2008/03/29/london-mens-convention-2/
+link: https://rickymoorhouse.uk/2008/03/29/london-mens-convention-2/
 slug: london-mens-convention-2
 title: London mens convention 2008
 wordpress_id: 8176

@@ -4,7 +4,7 @@ categories:
 - Food
 comments: true
 date: "2012-08-22T21:24:46Z"
-link: http://blog.rickymoorhouse.co.uk/2012/08/22/bagel-making/
+link: https://rickymoorhouse.uk/2012/08/22/bagel-making/
 slug: bagel-making
 title: Bagel making
 wordpress_id: 7461

@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-03T19:24:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/12/03/diocese-of-uruguay-site-up/
+link: https://rickymoorhouse.uk/2003/12/03/diocese-of-uruguay-site-up/
 slug: diocese-of-uruguay-site-up
 title: Diocese of Uruguay site up!
 wordpress_id: 1684

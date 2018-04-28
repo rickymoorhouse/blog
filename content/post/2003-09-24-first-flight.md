@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-09-24T21:01:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/09/24/first-flight/
+link: https://rickymoorhouse.uk/2003/09/24/first-flight/
 slug: first-flight
 title: First flight!
 wordpress_id: 1707

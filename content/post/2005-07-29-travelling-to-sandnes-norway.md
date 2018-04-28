@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2005-07-29T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2005/07/29/travelling-to-sandnes-norway/
+link: https://rickymoorhouse.uk/2005/07/29/travelling-to-sandnes-norway/
 slug: travelling-to-sandnes-norway
 title: Travelling to Sandnes, Norway
 wordpress_id: 1578

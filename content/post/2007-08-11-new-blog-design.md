@@ -4,7 +4,7 @@ categories:
 - Design
 comments: true
 date: "2007-08-11T23:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2007/08/12/new-blog-design/
+link: https://rickymoorhouse.uk/2007/08/12/new-blog-design/
 slug: new-blog-design
 title: New Blog Design
 wordpress_id: 1488

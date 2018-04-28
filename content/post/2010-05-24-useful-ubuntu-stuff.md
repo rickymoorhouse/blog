@@ -4,7 +4,7 @@ categories:
 - Ubuntu
 comments: true
 date: "2010-05-24T13:50:13Z"
-link: http://blog.rickymoorhouse.co.uk/2010/05/24/useful-ubuntu-stuff/
+link: https://rickymoorhouse.uk/2010/05/24/useful-ubuntu-stuff/
 slug: useful-ubuntu-stuff
 tags:
 - apt-get

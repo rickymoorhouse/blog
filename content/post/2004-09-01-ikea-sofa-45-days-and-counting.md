@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-09-01T16:06:42Z"
-link: http://blog.rickymoorhouse.co.uk/2004/09/01/ikea-sofa-45-days-and-counting/
+link: https://rickymoorhouse.uk/2004/09/01/ikea-sofa-45-days-and-counting/
 slug: ikea-sofa-45-days-and-counting
 title: Ikea Sofa - 45 days and counting!
 wordpress_id: 1605

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-03-22T02:01:03Z"
-link: http://blog.rickymoorhouse.co.uk/2004/03/22/iguazu-falls-brazilian-side/
+link: https://rickymoorhouse.uk/2004/03/22/iguazu-falls-brazilian-side/
 slug: iguazu-falls-brazilian-side
 title: Iguazu Falls (Brazilian Side)
 wordpress_id: 1634

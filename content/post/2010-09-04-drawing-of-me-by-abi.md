@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2010-09-04T07:20:17Z"
-link: http://blog.rickymoorhouse.co.uk/2010/09/04/drawing-of-me-by-abi/
+link: https://rickymoorhouse.uk/2010/09/04/drawing-of-me-by-abi/
 slug: drawing-of-me-by-abi
 title: Drawing of me by Abi
 wordpress_id: 7548

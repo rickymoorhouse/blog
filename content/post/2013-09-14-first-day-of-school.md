@@ -4,7 +4,7 @@ categories:
 - Family
 comments: false
 date: "2013-09-14T10:11:16Z"
-link: http://blog.rickymoorhouse.co.uk/2013/09/14/first-day-of-school/
+link: https://rickymoorhouse.uk/2013/09/14/first-day-of-school/
 slug: first-day-of-school
 tags:
 - school jessica

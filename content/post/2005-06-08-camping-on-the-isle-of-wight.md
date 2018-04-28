@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2005-06-08T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2005/06/08/camping-on-the-isle-of-wight/
+link: https://rickymoorhouse.uk/2005/06/08/camping-on-the-isle-of-wight/
 location:
   lat: 50.6721595
   lng: -1.5600907

@@ -4,7 +4,7 @@ categories:
 - Food
 comments: true
 date: "2011-02-13T16:16:49Z"
-link: http://blog.rickymoorhouse.co.uk/2011/02/13/banana-chocolate-chip-muffins/
+link: https://rickymoorhouse.uk/2011/02/13/banana-chocolate-chip-muffins/
 slug: banana-chocolate-chip-muffins
 tags:
 - banana

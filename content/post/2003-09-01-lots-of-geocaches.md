@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-09-01T18:59:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/09/01/lots-of-geocaches/
+link: https://rickymoorhouse.uk/2003/09/01/lots-of-geocaches/
 slug: lots-of-geocaches
 title: Lots of geocaches!
 wordpress_id: 1715

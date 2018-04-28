@@ -4,7 +4,7 @@ categories:
 - Tech
 comments: true
 date: "2012-01-27T12:41:09Z"
-link: http://blog.rickymoorhouse.co.uk/2012/01/27/tweeting-google-calendar-reminders-with-postmark/
+link: https://rickymoorhouse.uk/2012/01/27/tweeting-google-calendar-reminders-with-postmark/
 slug: tweeting-google-calendar-reminders-with-postmark
 title: Tweeting Google Calendar reminders with Postmark
 wordpress_id: 7374

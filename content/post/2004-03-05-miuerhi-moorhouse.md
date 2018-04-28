@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2004-03-05T10:04:38Z"
-link: http://blog.rickymoorhouse.co.uk/2004/03/05/miuerhi-moorhouse/
+link: https://rickymoorhouse.uk/2004/03/05/miuerhi-moorhouse/
 slug: miuerhi-moorhouse
 title: Miuerhi = Moorhouse?
 wordpress_id: 1645

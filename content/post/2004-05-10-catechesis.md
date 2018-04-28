@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-05-10T00:38:23Z"
-link: http://blog.rickymoorhouse.co.uk/2004/05/10/catechesis/
+link: https://rickymoorhouse.uk/2004/05/10/catechesis/
 slug: catechesis
 title: Catechesis
 wordpress_id: 1620

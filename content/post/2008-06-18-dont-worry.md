@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2008-06-18T11:47:29Z"
-link: http://blog.rickymoorhouse.co.uk/2008/06/18/dont-worry/
+link: https://rickymoorhouse.uk/2008/06/18/dont-worry/
 slug: dont-worry
 title: Don’t worry
 wordpress_id: 1451

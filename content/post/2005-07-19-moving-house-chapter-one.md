@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2005-07-19T04:54:04Z"
-link: http://blog.rickymoorhouse.co.uk/2005/07/19/moving-house-chapter-one/
+link: https://rickymoorhouse.uk/2005/07/19/moving-house-chapter-one/
 slug: moving-house-chapter-one
 title: Moving House - Chapter One
 wordpress_id: 1580

@@ -4,7 +4,7 @@ categories:
 - Bible Study
 comments: true
 date: "2011-03-27T07:25:23Z"
-link: http://blog.rickymoorhouse.co.uk/2011/03/27/sanctification-rom-121-2/
+link: https://rickymoorhouse.uk/2011/03/27/sanctification-rom-121-2/
 post_format:
 - Aside
 slug: sanctification-rom-121-2

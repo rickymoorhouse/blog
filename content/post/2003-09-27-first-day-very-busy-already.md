@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-09-27T16:34:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/09/27/first-day-very-busy-already/
+link: https://rickymoorhouse.uk/2003/09/27/first-day-very-busy-already/
 slug: first-day-very-busy-already
 title: First day - very busy already!
 wordpress_id: 1705

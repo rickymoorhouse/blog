@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-05-31T02:11:49Z"
-link: http://blog.rickymoorhouse.co.uk/2004/05/31/escuelita-pentecost/
+link: https://rickymoorhouse.uk/2004/05/31/escuelita-pentecost/
 slug: escuelita-pentecost
 title: Escuelita - Pentecost
 wordpress_id: 1615

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-02T14:33:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/02/latest-itinerary/
+link: https://rickymoorhouse.uk/2004/01/02/latest-itinerary/
 slug: latest-itinerary
 title: Latest Itinerary
 wordpress_id: 1672

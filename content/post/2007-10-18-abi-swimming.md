@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2007-10-18T23:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2007/10/19/abi-swimming/
+link: https://rickymoorhouse.uk/2007/10/19/abi-swimming/
 slug: abi-swimming
 title: Abi Swimming
 wordpress_id: 1472

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-04-22T20:20:55Z"
-link: http://blog.rickymoorhouse.co.uk/2004/04/22/brrrrrrrr/
+link: https://rickymoorhouse.uk/2004/04/22/brrrrrrrr/
 slug: brrrrrrrr
 title: Brrrrrrrr!
 wordpress_id: 1622

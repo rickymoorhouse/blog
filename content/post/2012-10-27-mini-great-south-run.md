@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: false
 date: "2012-10-27T16:42:48Z"
-link: http://blog.rickymoorhouse.co.uk/2012/10/27/mini-great-south-run/
+link: https://rickymoorhouse.uk/2012/10/27/mini-great-south-run/
 slug: mini-great-south-run
 title: Mini Great South Run
 wordpress_id: 7499

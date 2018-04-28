@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2003-06-14T11:07:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/06/14/missing-laura-and-party/
 slug: missing-laura-and-party
 title: missing Laura...and party
 wordpress_id: 1729

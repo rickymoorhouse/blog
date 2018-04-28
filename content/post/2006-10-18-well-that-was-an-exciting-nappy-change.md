@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-10-18T21:32:24Z"
-link: http://blog.rickymoorhouse.co.uk/2006/10/18/well-that-was-an-exciting-nappy-change/
+link: https://rickymoorhouse.uk/2006/10/18/well-that-was-an-exciting-nappy-change/
 slug: well-that-was-an-exciting-nappy-change
 title: Well that was an exciting nappy change...
 wordpress_id: 1549

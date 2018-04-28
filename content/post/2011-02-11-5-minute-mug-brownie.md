@@ -4,7 +4,7 @@ categories:
 - Random
 comments: true
 date: "2011-02-11T22:27:40Z"
-link: http://blog.rickymoorhouse.co.uk/2011/02/11/5-minute-mug-brownie/
+link: https://rickymoorhouse.uk/2011/02/11/5-minute-mug-brownie/
 slug: 5-minute-mug-brownie
 tags:
 - chocolate

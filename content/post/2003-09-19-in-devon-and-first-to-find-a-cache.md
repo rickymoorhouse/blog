@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-09-19T16:44:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/09/19/in-devon-and-first-to-find-a-cache/
+link: https://rickymoorhouse.uk/2003/09/19/in-devon-and-first-to-find-a-cache/
 slug: in-devon-and-first-to-find-a-cache
 title: In Devon, and first to find a cache!
 wordpress_id: 1710

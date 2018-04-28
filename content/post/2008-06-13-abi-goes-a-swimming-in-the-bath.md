@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2008-06-13T04:54:37Z"
-link: http://blog.rickymoorhouse.co.uk/2008/06/13/abi-goes-a-swimming-in-the-bath/
+link: https://rickymoorhouse.uk/2008/06/13/abi-goes-a-swimming-in-the-bath/
 slug: abi-goes-a-swimming-in-the-bath
 title: Abi goes a swimming…in the bath
 wordpress_id: 1454

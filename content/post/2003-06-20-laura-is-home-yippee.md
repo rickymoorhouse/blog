@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-06-20T13:38:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/06/20/laura-is-home-yippee/
+link: https://rickymoorhouse.uk/2003/06/20/laura-is-home-yippee/
 slug: laura-is-home-yippee
 title: Laura is home! yippee!
 wordpress_id: 1726

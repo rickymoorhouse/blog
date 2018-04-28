@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2007-02-18T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2007/02/18/abis-first-typed-words/
+link: https://rickymoorhouse.uk/2007/02/18/abis-first-typed-words/
 slug: abis-first-typed-words
 title: Abi's first (typed) words
 wordpress_id: 1525

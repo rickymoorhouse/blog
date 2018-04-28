@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-10-07T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2006/10/07/labour-has-started/
+link: https://rickymoorhouse.uk/2006/10/07/labour-has-started/
 slug: labour-has-started
 title: Labour has started...
 wordpress_id: 1555

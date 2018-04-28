@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2009-08-11T15:16:04Z"
-link: http://blog.rickymoorhouse.co.uk/?p=1427
+link: https://rickymoorhouse.uk/?p=1427
 published: false
 slug: midwife-situation
 title: Midwife situation

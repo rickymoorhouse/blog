@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-27T16:19:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/12/27/people-we-know/
+link: https://rickymoorhouse.uk/2003/12/27/people-we-know/
 slug: people-we-know
 title: People we know!
 wordpress_id: 1674

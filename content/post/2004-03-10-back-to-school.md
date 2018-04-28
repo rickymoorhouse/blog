@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2004-03-10T10:55:39Z"
-link: http://blog.rickymoorhouse.co.uk/2004/03/10/back-to-school/
+link: https://rickymoorhouse.uk/2004/03/10/back-to-school/
 slug: back-to-school
 title: Back to school
 wordpress_id: 1641

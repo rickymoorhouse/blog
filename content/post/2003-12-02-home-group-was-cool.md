@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-02T23:49:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/12/02/home-group-was-cool/
+link: https://rickymoorhouse.uk/2003/12/02/home-group-was-cool/
 slug: home-group-was-cool
 title: Home group was cool!
 wordpress_id: 1685

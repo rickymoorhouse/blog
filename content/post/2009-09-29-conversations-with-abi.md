@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2009-09-29T20:50:36Z"
-link: http://blog.rickymoorhouse.co.uk/?p=1414
+link: https://rickymoorhouse.uk/?p=1414
 published: false
 slug: conversations-with-abi
 title: Conversations with Abi

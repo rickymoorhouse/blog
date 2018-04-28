@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-03-19T17:03:58Z"
-link: http://blog.rickymoorhouse.co.uk/2004/03/19/iguazu-falls-argentinian-side-day-2/
+link: https://rickymoorhouse.uk/2004/03/19/iguazu-falls-argentinian-side-day-2/
 slug: iguazu-falls-argentinian-side-day-2
 title: Iguazu Falls (Argentinian Side) - Day 2
 wordpress_id: 1637

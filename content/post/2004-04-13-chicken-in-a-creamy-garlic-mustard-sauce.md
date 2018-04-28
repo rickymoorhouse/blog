@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-04-13T20:17:37Z"
-link: http://blog.rickymoorhouse.co.uk/2004/04/13/chicken-in-a-creamy-garlic-mustard-sauce/
+link: https://rickymoorhouse.uk/2004/04/13/chicken-in-a-creamy-garlic-mustard-sauce/
 slug: chicken-in-a-creamy-garlic-mustard-sauce
 title: Chicken in a creamy garlic & mustard sauce
 wordpress_id: 1626

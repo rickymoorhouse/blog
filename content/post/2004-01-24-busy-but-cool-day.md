@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-24T23:01:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/24/busy-but-cool-day/
+link: https://rickymoorhouse.uk/2004/01/24/busy-but-cool-day/
 slug: busy-but-cool-day
 title: Busy but cool day!
 wordpress_id: 1654

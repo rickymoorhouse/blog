@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-05-14T19:56:17Z"
-link: http://blog.rickymoorhouse.co.uk/2006/05/14/were-expecting/
+link: https://rickymoorhouse.uk/2006/05/14/were-expecting/
 slug: were-expecting
 title: We're Expecting!
 wordpress_id: 1566

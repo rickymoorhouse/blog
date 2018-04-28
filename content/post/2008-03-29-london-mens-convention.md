@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2008-03-29T11:39:13Z"
-link: http://blog.rickymoorhouse.co.uk/?p=1464
+link: https://rickymoorhouse.uk/?p=1464
 published: false
 slug: london-mens-convention
 title: London mens convention

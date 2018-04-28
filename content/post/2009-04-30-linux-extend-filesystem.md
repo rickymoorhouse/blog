@@ -4,7 +4,7 @@ categories:
 - Linux
 comments: true
 date: "2009-04-30T15:08:34Z"
-link: http://blog.rickymoorhouse.co.uk/2009/04/30/linux-extend-filesystem/
+link: https://rickymoorhouse.uk/2009/04/30/linux-extend-filesystem/
 slug: linux-extend-filesystem
 title: 'Linux: Extend Filesystem'
 wordpress_id: 1434

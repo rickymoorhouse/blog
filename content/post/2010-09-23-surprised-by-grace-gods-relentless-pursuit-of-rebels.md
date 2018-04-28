@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2010-09-23T21:50:52Z"
-link: http://blog.rickymoorhouse.co.uk/2010/09/23/surprised-by-grace-gods-relentless-pursuit-of-rebels/
+link: https://rickymoorhouse.uk/2010/09/23/surprised-by-grace-gods-relentless-pursuit-of-rebels/
 slug: surprised-by-grace-gods-relentless-pursuit-of-rebels
 title: 'Review: Surprised by Grace'
 wordpress_id: 6246

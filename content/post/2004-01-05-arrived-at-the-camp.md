@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-05T15:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/05/arrived-at-the-camp/
+link: https://rickymoorhouse.uk/2004/01/05/arrived-at-the-camp/
 slug: arrived-at-the-camp
 title: Arrived at the camp
 wordpress_id: 1671

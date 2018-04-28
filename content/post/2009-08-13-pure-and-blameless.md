@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2009-08-13T13:24:32Z"
-link: http://blog.rickymoorhouse.co.uk/?p=1425
+link: https://rickymoorhouse.uk/?p=1425
 published: false
 slug: pure-and-blameless
 title: Pure and Blameless

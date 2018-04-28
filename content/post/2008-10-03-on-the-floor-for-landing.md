@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2008-10-03T15:20:15Z"
-link: http://blog.rickymoorhouse.co.uk/2008/10/03/on-the-floor-for-landing/
+link: https://rickymoorhouse.uk/2008/10/03/on-the-floor-for-landing/
 slug: on-the-floor-for-landing
 title: On the floor for landing
 wordpress_id: 1444

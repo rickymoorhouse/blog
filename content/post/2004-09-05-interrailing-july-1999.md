@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-09-05T18:18:06Z"
-link: http://blog.rickymoorhouse.co.uk/2004/09/05/interrailing-july-1999/
+link: https://rickymoorhouse.uk/2004/09/05/interrailing-july-1999/
 slug: interrailing-july-1999
 title: Interrailing July 1999
 wordpress_id: 1604

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2005-01-05T12:48:31Z"
-link: http://blog.rickymoorhouse.co.uk/2005/01/05/use-multimap-for-get-map-links/
+link: https://rickymoorhouse.uk/2005/01/05/use-multimap-for-get-map-links/
 slug: use-multimap-for-get-map-links
 title: Use Multimap for Get Map links
 wordpress_id: 1593

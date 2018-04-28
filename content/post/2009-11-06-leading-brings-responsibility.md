@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2009-11-06T15:42:20Z"
-link: http://blog.rickymoorhouse.co.uk/?p=1405
+link: https://rickymoorhouse.uk/?p=1405
 published: false
 slug: leading-brings-responsibility
 title: Leading brings responsibility

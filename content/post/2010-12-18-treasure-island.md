@@ -4,7 +4,7 @@ categories:
 - Family
 comments: true
 date: "2010-12-18T22:07:26Z"
-link: http://blog.rickymoorhouse.co.uk/2010/12/18/treasure-island/
+link: https://rickymoorhouse.uk/2010/12/18/treasure-island/
 slug: treasure-island
 tags:
 - pirates

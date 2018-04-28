@@ -4,7 +4,7 @@ categories:
 - Random
 comments: true
 date: "2010-05-16T21:11:08Z"
-link: http://blog.rickymoorhouse.co.uk/?p=1915
+link: https://rickymoorhouse.uk/?p=1915
 published: false
 slug: thoughts-and-stuff
 title: Thoughts and stuff

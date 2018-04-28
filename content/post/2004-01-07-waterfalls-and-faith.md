@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-07T23:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/07/waterfalls-and-faith/
+link: https://rickymoorhouse.uk/2004/01/07/waterfalls-and-faith/
 slug: waterfalls-and-faith
 title: Waterfalls and faith
 wordpress_id: 1669

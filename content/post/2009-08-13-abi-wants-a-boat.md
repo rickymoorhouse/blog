@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2009-08-13T12:49:59Z"
-link: http://blog.rickymoorhouse.co.uk/2009/08/13/abi-wants-a-boat/
+link: https://rickymoorhouse.uk/2009/08/13/abi-wants-a-boat/
 slug: abi-wants-a-boat
 title: Abi wants a boat
 wordpress_id: 1426

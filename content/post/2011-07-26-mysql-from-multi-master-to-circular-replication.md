@@ -4,7 +4,7 @@ categories:
 - MySQL
 comments: true
 date: "2011-07-26T12:32:52Z"
-link: http://blog.rickymoorhouse.co.uk/2011/07/26/mysql-from-multi-master-to-circular-replication/
+link: https://rickymoorhouse.uk/2011/07/26/mysql-from-multi-master-to-circular-replication/
 slug: mysql-from-multi-master-to-circular-replication
 title: 'MySQL: From multi-master to circular replication'
 wordpress_id: 7280

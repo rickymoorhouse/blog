@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-09-23T10:37:47Z"
-link: http://blog.rickymoorhouse.co.uk/2004/09/23/going-to-bulgaria/
+link: https://rickymoorhouse.uk/2004/09/23/going-to-bulgaria/
 slug: going-to-bulgaria
 title: Going to Bulgaria
 wordpress_id: 1602

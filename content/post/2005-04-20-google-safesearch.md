@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2005-04-20T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2005/04/20/google-safesearch/
+link: https://rickymoorhouse.uk/2005/04/20/google-safesearch/
 slug: google-safesearch
 title: Google SafeSearch
 wordpress_id: 1584

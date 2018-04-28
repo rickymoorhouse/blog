@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2003-06-10T10:39:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/06/10/server-dead-now-back-to-life/
 slug: server-dead-now-back-to-life
 title: server dead...now back to life
 wordpress_id: 1730

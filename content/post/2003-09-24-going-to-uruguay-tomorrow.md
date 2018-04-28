@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-09-24T18:05:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/09/24/going-to-uruguay-tomorrow/
+link: https://rickymoorhouse.uk/2003/09/24/going-to-uruguay-tomorrow/
 slug: going-to-uruguay-tomorrow
 title: Going to Uruguay tomorrow!!!
 wordpress_id: 1708

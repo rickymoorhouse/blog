@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2011-06-17T11:47:40Z"
-link: http://blog.rickymoorhouse.co.uk/2011/06/17/my-new-profile-pic/
+link: https://rickymoorhouse.uk/2011/06/17/my-new-profile-pic/
 post_format:
 - Image
 slug: my-new-profile-pic

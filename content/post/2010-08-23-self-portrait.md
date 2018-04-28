@@ -4,7 +4,7 @@ categories:
 - Asides
 comments: true
 date: "2010-08-23T12:47:45Z"
-link: http://blog.rickymoorhouse.co.uk/2010/08/23/self-portrait/
+link: https://rickymoorhouse.uk/2010/08/23/self-portrait/
 slug: self-portrait
 title: Self portrait
 wordpress_id: 3561

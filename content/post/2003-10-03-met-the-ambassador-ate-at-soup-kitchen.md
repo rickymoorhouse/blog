@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-10-03T17:09:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/10/03/met-the-ambassador-ate-at-soup-kitchen/
+link: https://rickymoorhouse.uk/2003/10/03/met-the-ambassador-ate-at-soup-kitchen/
 slug: met-the-ambassador-ate-at-soup-kitchen
 title: Met the Ambassador, ate at soup kitchen
 wordpress_id: 1700

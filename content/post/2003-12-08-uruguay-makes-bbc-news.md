@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-08T23:02:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/12/08/uruguay-makes-bbc-news/
+link: https://rickymoorhouse.uk/2003/12/08/uruguay-makes-bbc-news/
 slug: uruguay-makes-bbc-news
 title: Uruguay makes BBC News!!
 wordpress_id: 1680

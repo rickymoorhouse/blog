@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-05-24T01:54:54Z"
-link: http://blog.rickymoorhouse.co.uk/2004/05/24/preaching-in-spanish/
+link: https://rickymoorhouse.uk/2004/05/24/preaching-in-spanish/
 slug: preaching-in-spanish
 title: Preaching in Spanish!
 wordpress_id: 1618

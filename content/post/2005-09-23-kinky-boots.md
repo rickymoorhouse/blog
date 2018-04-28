@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2005-09-23T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2005/09/23/kinky-boots/
+link: https://rickymoorhouse.uk/2005/09/23/kinky-boots/
 slug: kinky-boots
 title: Kinky Boots
 wordpress_id: 1573

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-10-09T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2006/10/09/introducing/
+link: https://rickymoorhouse.uk/2006/10/09/introducing/
 slug: introducing
 title: Introducing...
 wordpress_id: 1552

@@ -4,7 +4,7 @@ categories:
 - Random
 comments: true
 date: "2009-05-24T20:36:58Z"
-link: http://blog.rickymoorhouse.co.uk/2009/05/24/my-dads-van/
+link: https://rickymoorhouse.uk/2009/05/24/my-dads-van/
 slug: my-dads-van
 title: My Dad’s van
 wordpress_id: 1432

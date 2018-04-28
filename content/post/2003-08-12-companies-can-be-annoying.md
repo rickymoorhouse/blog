@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-08-12T16:35:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/08/12/companies-can-be-annoying/
+link: https://rickymoorhouse.uk/2003/08/12/companies-can-be-annoying/
 slug: companies-can-be-annoying
 title: Companies can be annoying!
 wordpress_id: 1720

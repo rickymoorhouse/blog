@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-09-26T17:05:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/09/26/after-36-hours-travelling/
+link: https://rickymoorhouse.uk/2003/09/26/after-36-hours-travelling/
 slug: after-36-hours-travelling
 title: After 36 hours travelling!
 wordpress_id: 1706

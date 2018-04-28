@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-08T22:10:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/08/did-judas-have-a-choice/
+link: https://rickymoorhouse.uk/2004/01/08/did-judas-have-a-choice/
 slug: did-judas-have-a-choice
 title: Did Judas have a choice?
 wordpress_id: 1668

@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2008-12-12T21:05:15Z"
-link: http://blog.rickymoorhouse.co.uk/2008/12/12/too-much-cbeebies/
+link: https://rickymoorhouse.uk/2008/12/12/too-much-cbeebies/
 slug: too-much-cbeebies
 title: Too much CBeebies?
 wordpress_id: 1440

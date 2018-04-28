@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-06T08:09:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/12/06/football-crazy/
+link: https://rickymoorhouse.uk/2003/12/06/football-crazy/
 slug: football-crazy
 title: Football crazy!
 wordpress_id: 1682

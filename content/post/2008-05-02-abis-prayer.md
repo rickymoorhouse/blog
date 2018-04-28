@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2008-05-02T08:26:21Z"
-link: http://blog.rickymoorhouse.co.uk/2008/05/02/abis-prayer/
+link: https://rickymoorhouse.uk/2008/05/02/abis-prayer/
 slug: abis-prayer
 title: Abi’s Prayer
 wordpress_id: 1458

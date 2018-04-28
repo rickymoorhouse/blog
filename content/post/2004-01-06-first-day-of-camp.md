@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-06T22:58:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/06/first-day-of-camp/
+link: https://rickymoorhouse.uk/2004/01/06/first-day-of-camp/
 slug: first-day-of-camp
 title: First day of camp
 wordpress_id: 1670

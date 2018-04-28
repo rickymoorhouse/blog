@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-06-18T15:53:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/06/18/navigation-sermon-title/
+link: https://rickymoorhouse.uk/2003/06/18/navigation-sermon-title/
 slug: navigation-sermon-title
 title: navigation & sermon title!
 wordpress_id: 1727

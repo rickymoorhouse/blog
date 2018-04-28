@@ -4,7 +4,7 @@ categories:
 - MySQL
 comments: true
 date: "2010-01-12T11:20:58Z"
-link: http://blog.rickymoorhouse.co.uk/2010/01/12/load-csv-data-into-mysql/
+link: https://rickymoorhouse.uk/2010/01/12/load-csv-data-into-mysql/
 slug: load-csv-data-into-mysql
 title: Load CSV data into MySQL
 wordpress_id: 1396

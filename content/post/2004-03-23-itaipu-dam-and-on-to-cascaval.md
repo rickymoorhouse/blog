@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-03-23T22:23:31Z"
-link: http://blog.rickymoorhouse.co.uk/2004/03/23/itaipu-dam-and-on-to-cascaval/
+link: https://rickymoorhouse.uk/2004/03/23/itaipu-dam-and-on-to-cascaval/
 slug: itaipu-dam-and-on-to-cascaval
 title: Itaipu Dam and on to Cascaval
 wordpress_id: 1633

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-06-25T20:07:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/06/25/bits-and-bobs/
+link: https://rickymoorhouse.uk/2003/06/25/bits-and-bobs/
 slug: bits-and-bobs
 title: Bits and bobs
 wordpress_id: 1725

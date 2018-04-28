@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2005-03-10T15:08:08Z"
-link: http://blog.rickymoorhouse.co.uk/2005/03/10/small-groups-discussion-or-teaching/
+link: https://rickymoorhouse.uk/2005/03/10/small-groups-discussion-or-teaching/
 slug: small-groups-discussion-or-teaching
 title: Small Groups - Discussion or Teaching
 wordpress_id: 1587

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-08-12T11:01:09Z"
-link: http://blog.rickymoorhouse.co.uk/2006/08/12/less-than-2-months-to-go/
+link: https://rickymoorhouse.uk/2006/08/12/less-than-2-months-to-go/
 slug: less-than-2-months-to-go
 title: Less than 2 months to go!
 wordpress_id: 1562

@@ -4,7 +4,7 @@ categories:
 - Asides
 comments: true
 date: "2010-09-06T16:39:57Z"
-link: http://blog.rickymoorhouse.co.uk/2010/09/06/jonah-header/
+link: https://rickymoorhouse.uk/2010/09/06/jonah-header/
 slug: jonah-header
 title: Jonah Header
 wordpress_id: 5538

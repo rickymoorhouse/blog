@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2005-05-18T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2005/05/18/happy-birthday-to-me/
+link: https://rickymoorhouse.uk/2005/05/18/happy-birthday-to-me/
 slug: happy-birthday-to-me
 title: Happy Birthday to me!
 wordpress_id: 1583

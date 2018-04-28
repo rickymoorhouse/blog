@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-09-18T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2006/09/18/free-bible-software-for-windows/
+link: https://rickymoorhouse.uk/2006/09/18/free-bible-software-for-windows/
 slug: free-bible-software-for-windows
 title: Free Bible Software for Windows
 wordpress_id: 1557

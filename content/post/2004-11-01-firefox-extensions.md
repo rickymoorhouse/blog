@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-11-01T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/11/01/firefox-extensions/
+link: https://rickymoorhouse.uk/2004/11/01/firefox-extensions/
 slug: firefox-extensions
 title: Firefox Extensions
 wordpress_id: 1599

@@ -4,7 +4,7 @@ categories:
 - Linux
 comments: true
 date: "2007-08-30T23:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2007/08/31/watching-log-files-for-something/
+link: https://rickymoorhouse.uk/2007/08/31/watching-log-files-for-something/
 slug: watching-log-files-for-something
 title: Watching log files for something
 wordpress_id: 1483

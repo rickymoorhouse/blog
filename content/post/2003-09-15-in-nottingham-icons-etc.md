@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-09-15T04:05:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/09/15/in-nottingham-icons-etc/
+link: https://rickymoorhouse.uk/2003/09/15/in-nottingham-icons-etc/
 slug: in-nottingham-icons-etc
 title: In Nottingham, Icons, etc...
 wordpress_id: 1712

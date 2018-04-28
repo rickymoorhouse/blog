@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-12-06T02:22:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/12/06/only-in-america/
+link: https://rickymoorhouse.uk/2003/12/06/only-in-america/
 slug: only-in-america
 title: Only in America!
 wordpress_id: 1683

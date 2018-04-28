@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-12-10T13:08:23Z"
-link: http://blog.rickymoorhouse.co.uk/2006/12/10/css-and-xhtml-workshop/
+link: https://rickymoorhouse.uk/2006/12/10/css-and-xhtml-workshop/
 slug: css-and-xhtml-workshop
 title: CSS and XHTML Workshop
 wordpress_id: 1540

@@ -4,7 +4,7 @@ categories:
 - Linux
 comments: true
 date: "2009-04-27T12:50:43Z"
-link: http://blog.rickymoorhouse.co.uk/2009/04/27/linux-what-is-using-up-disk-space/
+link: https://rickymoorhouse.uk/2009/04/27/linux-what-is-using-up-disk-space/
 slug: linux-what-is-using-up-disk-space
 title: 'Linux: What is using up disk space?'
 wordpress_id: 1435

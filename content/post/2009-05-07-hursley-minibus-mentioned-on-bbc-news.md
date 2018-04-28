@@ -4,7 +4,7 @@ categories:
 - Tech
 comments: true
 date: "2009-05-07T10:30:50Z"
-link: http://blog.rickymoorhouse.co.uk/2009/05/07/hursley-minibus-mentioned-on-bbc-news/
+link: https://rickymoorhouse.uk/2009/05/07/hursley-minibus-mentioned-on-bbc-news/
 slug: hursley-minibus-mentioned-on-bbc-news
 title: Hursley minibus mentioned on BBC News
 wordpress_id: 1433

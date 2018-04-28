@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2004-06-03T13:42:37Z"
-link: http://blog.rickymoorhouse.co.uk/2004/06/03/changing-flights-ii/
+link: https://rickymoorhouse.uk/2004/06/03/changing-flights-ii/
 slug: changing-flights-ii
 title: Changing flights II
 wordpress_id: 1613

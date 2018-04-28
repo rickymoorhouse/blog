@@ -4,7 +4,7 @@ categories:
 - But God...
 comments: true
 date: "2011-11-10T22:45:31Z"
-link: http://blog.rickymoorhouse.co.uk/2011/11/10/but-god-did-not-permit-harm/
+link: https://rickymoorhouse.uk/2011/11/10/but-god-did-not-permit-harm/
 slug: but-god-did-not-permit-harm
 title: But God did not permit Laban harm
 wordpress_id: 7342

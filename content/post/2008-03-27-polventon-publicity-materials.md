@@ -4,7 +4,7 @@ categories:
 - Design
 comments: true
 date: "2008-03-27T11:46:10Z"
-link: http://blog.rickymoorhouse.co.uk/2008/03/27/polventon-publicity-materials/
+link: https://rickymoorhouse.uk/2008/03/27/polventon-publicity-materials/
 slug: polventon-publicity-materials
 tags:
 - portfolio

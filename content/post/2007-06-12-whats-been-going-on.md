@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2007-06-12T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2007/06/12/whats-been-going-on/
+link: https://rickymoorhouse.uk/2007/06/12/whats-been-going-on/
 slug: whats-been-going-on
 title: What's been going on...
 wordpress_id: 1500

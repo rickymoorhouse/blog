@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2008-07-26T21:33:24Z"
-link: http://blog.rickymoorhouse.co.uk/2008/07/26/what-a-fun-day/
+link: https://rickymoorhouse.uk/2008/07/26/what-a-fun-day/
 slug: what-a-fun-day
 title: What a fun day!
 wordpress_id: 1447

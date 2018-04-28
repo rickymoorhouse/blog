@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2006-12-24T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2006/12/24/the-santa-dilemma/
+link: https://rickymoorhouse.uk/2006/12/24/the-santa-dilemma/
 slug: the-santa-dilemma
 title: The Santa dilemma
 wordpress_id: 1537

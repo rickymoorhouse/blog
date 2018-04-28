@@ -5,7 +5,7 @@ categories:
 - Web
 comments: true
 date: "2011-07-14T12:10:47Z"
-link: http://blog.rickymoorhouse.co.uk/2011/07/14/distraction-free-writing-artsy-editor-or-wordpress-3-2/
+link: https://rickymoorhouse.uk/2011/07/14/distraction-free-writing-artsy-editor-or-wordpress-3-2/
 slug: distraction-free-writing-artsy-editor-or-wordpress-3-2
 title: Distraction free writing - Artsy Editor or Wordpress 3.2
 wordpress_id: 7254

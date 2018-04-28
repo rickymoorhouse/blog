@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2007-04-14T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2007/04/14/300th-post-prizes-to-be-won/
+link: https://rickymoorhouse.uk/2007/04/14/300th-post-prizes-to-be-won/
 slug: 300th-post-prizes-to-be-won
 title: 300th post! Prizes to be won!
 wordpress_id: 1514

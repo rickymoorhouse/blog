@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-02T22:13:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/12/02/annoying-uruguayan-advertising-christmas-shopping/
+link: https://rickymoorhouse.uk/2003/12/02/annoying-uruguayan-advertising-christmas-shopping/
 slug: annoying-uruguayan-advertising-christmas-shopping
 title: Annoying Uruguayan Advertising &Christmas shopping!
 wordpress_id: 1686

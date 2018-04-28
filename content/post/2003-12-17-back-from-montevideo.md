@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-17T08:59:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/12/17/back-from-montevideo/
+link: https://rickymoorhouse.uk/2003/12/17/back-from-montevideo/
 slug: back-from-montevideo
 title: Back from Montevideo
 wordpress_id: 1678

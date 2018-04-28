@@ -4,7 +4,7 @@ categories:
 - Tech
 comments: true
 date: "2009-03-03T20:19:01Z"
-link: http://blog.rickymoorhouse.co.uk/2009/03/03/sharing-a-printer-from-xp-to-vista/
+link: https://rickymoorhouse.uk/2009/03/03/sharing-a-printer-from-xp-to-vista/
 slug: sharing-a-printer-from-xp-to-vista
 title: Sharing a printer from XP to Vista
 wordpress_id: 1437

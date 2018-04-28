@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2008-06-18T12:22:25Z"
-link: http://blog.rickymoorhouse.co.uk/2008/06/18/help-firefox-set-a-world-record/
+link: https://rickymoorhouse.uk/2008/06/18/help-firefox-set-a-world-record/
 slug: help-firefox-set-a-world-record
 title: Help Firefox set a World Record
 wordpress_id: 1452

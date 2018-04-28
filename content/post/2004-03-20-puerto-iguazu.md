@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-03-20T17:04:17Z"
-link: http://blog.rickymoorhouse.co.uk/2004/03/20/puerto-iguazu/
+link: https://rickymoorhouse.uk/2004/03/20/puerto-iguazu/
 slug: puerto-iguazu
 title: Puerto Iguazu
 wordpress_id: 1636

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2003-09-20T04:01:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/09/20/weve-planted-a-geocache/
+link: https://rickymoorhouse.uk/2003/09/20/weve-planted-a-geocache/
 slug: weve-planted-a-geocache
 title: We've planted a geocache!
 wordpress_id: 1709

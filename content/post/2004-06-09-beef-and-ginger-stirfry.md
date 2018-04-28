@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-06-09T13:10:46Z"
-link: http://blog.rickymoorhouse.co.uk/2004/06/09/beef-and-ginger-stirfry/
+link: https://rickymoorhouse.uk/2004/06/09/beef-and-ginger-stirfry/
 slug: beef-and-ginger-stirfry
 title: Beef and Ginger Stirfry
 wordpress_id: 1612

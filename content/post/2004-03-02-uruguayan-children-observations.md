@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2004-03-02T00:25:05Z"
-link: http://blog.rickymoorhouse.co.uk/2004/03/02/uruguayan-children-observations/
+link: https://rickymoorhouse.uk/2004/03/02/uruguayan-children-observations/
 slug: uruguayan-children-observations
 title: Uruguayan children - observations
 wordpress_id: 1646

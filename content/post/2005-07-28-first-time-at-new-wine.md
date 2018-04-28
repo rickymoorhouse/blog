@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2005-07-28T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2005/07/28/first-time-at-new-wine/
+link: https://rickymoorhouse.uk/2005/07/28/first-time-at-new-wine/
 slug: first-time-at-new-wine
 title: First time at New Wine
 wordpress_id: 1579

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2007-11-02T00:00:00Z"
-link: http://blog.rickymoorhouse.co.uk/2007/11/02/british-gas-website-regression/
+link: https://rickymoorhouse.uk/2007/11/02/british-gas-website-regression/
 slug: british-gas-website-regression
 title: British Gas Website Regression
 wordpress_id: 1470

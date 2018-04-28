@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-13T23:06:00Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/13/no-dollars-in-mendoza/
+link: https://rickymoorhouse.uk/2004/01/13/no-dollars-in-mendoza/
 slug: no-dollars-in-mendoza
 title: No dollars in Mendoza!
 wordpress_id: 1663

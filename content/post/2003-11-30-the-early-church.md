@@ -4,7 +4,7 @@ categories:
 - Uruguay
 comments: true
 date: "2003-11-30T17:50:00Z"
-link: http://blog.rickymoorhouse.co.uk/2003/11/30/the-early-church/
+link: https://rickymoorhouse.uk/2003/11/30/the-early-church/
 slug: the-early-church
 title: The early church
 wordpress_id: 1688

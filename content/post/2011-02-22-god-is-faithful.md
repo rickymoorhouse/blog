@@ -4,7 +4,7 @@ categories:
 - Bible Study
 comments: true
 date: "2011-02-22T13:07:28Z"
-link: http://blog.rickymoorhouse.co.uk/2011/02/22/god-is-faithful/
+link: https://rickymoorhouse.uk/2011/02/22/god-is-faithful/
 slug: god-is-faithful
 tags:
 - fb

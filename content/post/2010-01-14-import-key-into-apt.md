@@ -4,7 +4,7 @@ categories:
 - Ubuntu
 comments: true
 date: "2010-01-14T10:09:13Z"
-link: http://blog.rickymoorhouse.co.uk/2010/01/14/import-key-into-apt/
+link: https://rickymoorhouse.uk/2010/01/14/import-key-into-apt/
 slug: import-key-into-apt
 title: Import key into apt
 wordpress_id: 1395

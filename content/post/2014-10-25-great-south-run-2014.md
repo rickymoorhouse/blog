@@ -6,7 +6,7 @@ categories:
 - Jessica
 comments: false
 date: "2014-10-25T14:49:30Z"
-link: http://blog.rickymoorhouse.co.uk/2014/10/25/great-south-run-2014/
+link: https://rickymoorhouse.uk/2014/10/25/great-south-run-2014/
 slug: great-south-run-2014
 title: Great South Run 2014
 wordpress_id: 8216

@@ -2,7 +2,7 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-30T11:34:54Z"
-link: http://blog.rickymoorhouse.co.uk/2004/01/30/outdoor-service-and-party/
+link: https://rickymoorhouse.uk/2004/01/30/outdoor-service-and-party/
 slug: outdoor-service-and-party
 title: Outdoor service and party!
 wordpress_id: 1652

@@ -4,7 +4,7 @@ categories:
 - Abi
 comments: true
 date: "2009-08-28T20:30:24Z"
-link: http://blog.rickymoorhouse.co.uk/2009/08/28/watch-out-for-the-abirazzi/
+link: https://rickymoorhouse.uk/2009/08/28/watch-out-for-the-abirazzi/
 post_format:
 - Image
 slug: watch-out-for-the-abirazzi
