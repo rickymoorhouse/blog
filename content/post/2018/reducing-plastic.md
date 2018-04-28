@@ -1,12 +1,9 @@
 ---
-author: rickymoorhouse
-comments: true
 date: 2018-04-21 14:30:00+00:00
 layout: post
 slug: reducing-plastic
 title: Reducing our plastic use
-categories:
-- Random
+tags: ["environment"]
 ---
 
 Over the last few months we've started to try and reduce our use of plastics - especially single use plastics. Here are some of the areas where we've made changes.
