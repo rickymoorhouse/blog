@@ -44,4 +44,3 @@ I then have a [list layout for travel items](https://github.com/rickymoorhouse/b
                         ]
             ...
 
-The 
