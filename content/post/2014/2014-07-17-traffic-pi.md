@@ -1,13 +1,10 @@
 ---
 author: rickymoorhouse
-categories:
-- Raspberry Pi
-- Tech
+tags:
+- raspberrypi
+- tech
 comments: false
 date: "2014-07-17T09:23:54Z"
-link: https://github.com/rickymoorhouse/trafficpi
-post_format:
-- Link
 slug: traffic-pi
 title: Traffic Pi
 wordpress_id: 8159

@@ -1,10 +1,9 @@
 ---
 author: rickymoorhouse
-categories:
-- Tech
+tags:
+- tech
 comments: true
 date: "2014-10-18T06:11:17Z"
-link: https://rickymoorhouse.uk/2014/10/18/disabling-sslv3/
 slug: disabling-sslv3
 title: Disabling SSLv3
 wordpress_id: 8205

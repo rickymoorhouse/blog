@@ -1,8 +1,6 @@
 ---
 author: rickymoorhouse
-categories:
-- Random
-comments: true
+tags: ["raspberrypi"]
 date: "2016-12-05T21:01:12Z"
 slug: pizero-desklight
 title: Pi Zero as a desklight

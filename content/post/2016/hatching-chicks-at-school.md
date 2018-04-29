@@ -1,8 +1,6 @@
 ---
 author: rickymoorhouse
-categories:
-- Random
-comments: true
+tags: ["chicks"]
 date: "2016-02-24T07:52:12Z"
 slug: hatching-chicks-at-school
 title: Hatching chicks at school
