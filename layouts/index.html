@@ -59,9 +59,9 @@ h2 { margin: 0;}
 </section>
 <section id="writing">
 <h2>Writing</h2>
-<p>I write articles for <a href="/post/">my blog</a> irregularly on a variety of topics.</p>
+<p>I write articles for <a href="/blog/">my blog</a> irregularly on a variety of topics.</p>
 <ul id="writings">
-  {{ range (.Paginator 8).Pages  }}{{ if eq .Type "post" }}<li class=""><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}
+  {{ range first 8 (where .Data.Pages "Section" "blog")  }}<li class=""><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
 </ul>
 
 <!--<h2>Tweets</h2>

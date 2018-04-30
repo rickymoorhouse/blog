@@ -14,7 +14,7 @@ pluralizelisttitles = false
 #    font = "Alegreya" # should match the name on Google Fonts!
     copyright = "&copy; Ricky Moorhouse"
     highlight = true
-    highlightLanguages = ["python", "js", "yaml"]
+    highlightLanguages = ["python", "javascript", "yaml"]
 
 #  js = ["https://api.mapbox.com/mapbox.js/v0.44.2/mapbox.js"]
 #  css = ["https://api.mapbox.com/mapbox.js/v0.44.2/mapbox.css"]
@@ -47,10 +47,10 @@ pluralizelisttitles = false
     name = "twitter"
     weight = 3
 
-[[menu.icon]]
-    url = "https://www.linkedin.com/in/rickymoorhouse/"
-    name = "linkedin"
-    weight = 4
+#[[menu.icon]]
+#    url = "https://www.linkedin.com/in/rickymoorhouse/"
+#    name = "linkedin"
+#    weight = 4
 
 [[menu.icon]]
     url = "https://www.instagram.com/rickymoorhouse/"
