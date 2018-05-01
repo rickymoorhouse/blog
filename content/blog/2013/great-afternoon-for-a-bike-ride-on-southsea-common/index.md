@@ -13,7 +13,3 @@ title: Great afternoon for a bike ride on Southsea Common
 wordpress_id: 8105
 ---
 
-![20130818-154652.jpg](/images/2013/20130818-154652.jpg)
-  
-  
-![20130818-181443.jpg](/images//2013/20130818-181443.jpg)
