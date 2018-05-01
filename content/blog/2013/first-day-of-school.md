@@ -11,6 +11,6 @@ title: First day of school
 wordpress_id: 8117
 ---
 
-![](first-day-of-school.jpg)
+![First day of school](../first-day-of-school.jpg)
 
 Jessica on her first day at school
