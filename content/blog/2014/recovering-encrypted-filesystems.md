@@ -2,10 +2,10 @@
 author: rickymoorhouse
 comments: false
 date: "2014-02-25T10:25:55Z"
-link: https://rickymoorhouse.uk/2014/02/25/recovering-encrypted-filesystems/
 slug: recovering-encrypted-filesystems
 title: Recovering encrypted filesystems
-wordpress_id: 8164
+tags:
+- tech
 ---
 
 1. Boot from Live CD / USB
