@@ -7,7 +7,7 @@ tags: ["environment"]
 ---
 
 Over the last few months we've started to try and reduce our use of plastics - especially single use plastics. Here are some of the areas where we've made changes.
-
+<!--more-->
 ## Reusable drinks containers/straws
 
 We've been making an effort to take our reusable cups, bottles and stainless steel straws with us when we're out and about - and if we don't have them asking for drinks in non-plastic cups.
