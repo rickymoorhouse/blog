@@ -1,0 +1,65 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: datePosted
+  label: Dateposted
+  type: datetime
+  hidden: false
+  default: ''
+- name: photo
+  label: Photo
+  type: file
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: travel
+- name: lat
+  label: Lat
+  type: text
+  hidden: false
+  default: 50.8495
+- name: lng
+  label: Lng
+  type: text
+  hidden: false
+  default: -1.1382
+- name: type
+  label: Type
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: 
+- name: tags
+  label: Tags
+  type: tag_list
+  hidden: false
+  default: []
+- name: image
+  label: Image
+  type: text
+  hidden: false
+  default: ''
+- name: exif
+  label: Exif
+  type: field_group
+  fields:
+  - name: dateTaken
+    label: Datetaken
+    type: datetime
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
