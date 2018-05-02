@@ -20,7 +20,7 @@ Splosh is the great new way to buy essentials like washing up liquid, laundry de
 
 ## Milk bottles
 
-We've started to have milk (and occasionally juice) delivered by milk and more in glass bottles, which can then be returned for reuse.
+We've started to have milk (and occasionally juice) delivered by [milk and more](https://www.milkandmore.co.uk/) in glass bottles, which can then be returned for reuse.
 
 ## Present wrapping
 
