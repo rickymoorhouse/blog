@@ -46,7 +46,7 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 // So the CSV file must be on the same domain as the Javascript, or the server
 // delivering it should support CORS.
 var featureLayer = L.mapbox.featureLayer()
-    .loadURL('map.geojson') //'/travel/map.geojson')
+    .loadURL('/map/index.json') // Should be {{ .Params.geojson }}')
     .addTo(map);
 
 featureLayer.on('layeradd', function(e) {
