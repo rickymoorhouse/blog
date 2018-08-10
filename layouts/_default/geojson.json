@@ -1,7 +1,8 @@
 [{{ range $i, $e := .Site.Pages }}{{ if .Params.lat }}
-{{ if $i }}, {{ end }}
 { 
     "lat":{{ .Params.lat }},
     "lng":{{ .Params.lng }},
     "name":"{{ .Title }}"
-}{{ end }}{{ end }}]
+},
+{{ end }}{{ end }}
+{}]
