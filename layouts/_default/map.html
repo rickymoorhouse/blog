@@ -33,6 +33,9 @@
         <div class="page-content">
         {{ .Content }}
         </div>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
 <script>
 
 document.getElementById('map').style.height=(window.innerHeight-110) + "px";
@@ -47,8 +50,28 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 // delivering it should support CORS.
 var featureLayer = L.mapbox.featureLayer()
     .loadURL('/map/index.json') // Should be {{ .Params.geojson }}')
-    .addTo(map);
-
+    .on('ready', function(e) {
+      function makeGroup(color) {
+        return new L.MarkerClusterGroup({
+          iconCreateFunction: function(cluster) {
+            return new L.DivIcon({
+              iconSize: [20, 20],
+              html: '<div style="text-align:center;color:#fff;background:' +
+              color + '">' + cluster.getChildCount() + '</div>'
+            });
+          }
+        }).addTo(map);
+      }
+    // create a marker cluster group for each type of rail station
+    var groups = {
+      green: makeGroup('green'),
+      blue: makeGroup('blue'),
+    };
+    e.target.eachLayer(function(layer) {
+      // add each to its specific group.
+      groups['blue'].addLayer(layer);
+    });
+  });
 featureLayer.on('layeradd', function(e) {
     var marker = e.layer,
     feature = marker.feature;

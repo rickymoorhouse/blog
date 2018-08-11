@@ -1,8 +1,21 @@
-[{{ range $i, $e := .Site.Pages }}{{ if .Params.lat }}
-{ 
-    "lat":{{ .Params.lat }},
-    "lng":{{ .Params.lng }},
-    "name":"{{ .Title }}"
-},
+{
+ "type":"FeatureCollection",
+ "features": [{{ range $i, $e := .Site.Pages }}{{ if .Params.lat }}
+ { 
+  "type":"Feature", 
+  "geometry": { 
+   "type":"Point", 
+   "coordinates": [{{ .Params.lng }},{{ .Params.lat }}]
+  },
+  "properties": {
+   "title":"{{ .Title }}",
+   "marker-symbol":"circle",
+   "marker-size":"small",
+   "marker-color":"#fc4353",
+   "url":"{{ .RelPermalink }}"
+  }
+ },
 {{ end }}{{ end }}
-{}]
+ {}
+ ]
+}
