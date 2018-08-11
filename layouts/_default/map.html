@@ -53,13 +53,9 @@ var featureLayer = L.mapbox.featureLayer()
     .on('ready', function(e) {
       function makeGroup(color) {
         return new L.MarkerClusterGroup({
-          iconCreateFunction: function(cluster) {
-            return new L.DivIcon({
-              iconSize: [20, 20],
-              html: '<div style="text-align:center;color:#fff;background:' +
-              color + '">' + cluster.getChildCount() + '</div>'
-            });
-          }
+            disableClusteringAtZoom: 5,
+            maxClusterRadius: 100,
+            spiderfyOnMaxZoom: false
         }).addTo(map);
       }
     // create a marker cluster group for each type of rail station

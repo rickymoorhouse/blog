@@ -3,9 +3,9 @@ title: "Lake Garda"
 layout: travel
 datePosted: 2018
 photo: "/travel/image.jpg"
-lat: 45.7312038
-lng: -8.5764833
+lat: 45.597576
+lng: 10.549266
 ---
-# Lake Garda
+# Camping Eden, Lake Garda
 
 Year: 2018
