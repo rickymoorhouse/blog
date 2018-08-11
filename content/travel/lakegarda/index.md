@@ -1,8 +1,9 @@
 ---
 title: "Lake Garda"
 layout: travel
-datePosted: 2018
-photo: "/travel/image.jpg"
+travel: true
+date: 2018-08-09 00:00:00
+photo: "/travel/lakegarda.jpg"
 lat: 45.597576
 lng: 10.549266
 ---
