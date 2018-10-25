@@ -1,8 +1,8 @@
 [
-{{ range .Pages }}
+{{ range $.Site.Data.travel }}
 { 
-    "lat":{{ .Params.lat }},
-    "lng":{{ .Params.lng }},
+    "lat":{{ .lat }},
+    "lng":{{ .lng }},
 
     "name":"{{ .Title }}"
 },

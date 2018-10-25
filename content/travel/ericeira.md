@@ -1,9 +1,0 @@
----
-title: "Ericeira"
-date: 2000-04-11
-layout: travel
-tags: []
-lat: 38.961956
-lng: -9.4184517
----
-# Ericeira
