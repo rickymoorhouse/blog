@@ -1,18 +1,18 @@
 {
  "type":"FeatureCollection",
- "features": [{{ range $i, $e := .Site.Pages }}{{ if .Params.lat }}
+ "features": [{{ range $i, $e := $.Site.Data.travel }}{{ if .lat }}
  { 
   "type":"Feature", 
   "geometry": { 
    "type":"Point", 
-   "coordinates": [{{ .Params.lng }},{{ .Params.lat }}]
+   "coordinates": [{{ .lng }},{{ .lat }}]
   },
   "properties": {
-   "title":"{{ .Title }}",
+   "title":"{{ .title }}",
+   {{ if .photo }}"image":"{{ .photo }}",{{ end }}
    "marker-symbol":"circle",
    "marker-size":"small",
-   "marker-color":"#fc4353",
-   "url":"{{ .RelPermalink }}"
+   "marker-color":"#fc4353"
   }
  },
 {{ end }}{{ end }}

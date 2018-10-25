@@ -1,0 +1,15 @@
+{{ partial "header" . }}
+    <div class="site">
+      <div class="site-content">
+      </div>
+      <!-- site-content -->
+        <div class="page-content">
+
+{{ range $.Site.Data.photos }}
+<p><a href="{{.Link}}"><img src="{{.Image}}" /></a></p>
+<p>{{.Description | markdownify}}</p>
+{{ end }}
+        </div>
+    </div>
+  </body>
+</html>
