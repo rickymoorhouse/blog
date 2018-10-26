@@ -10,6 +10,9 @@
         height: 100%;
         margin-top: -20px;
         }
+        .leaflet-popup-content {
+     /*     width: 200px;*/
+        }
         div.page-content {
         position:fixed;
         bottom: 100px;
@@ -21,6 +24,7 @@
         padding: 0.5em;
         box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
         }
+
         footer { display: none;}
   </style>
     <div class="site">
@@ -79,8 +83,11 @@ featureLayer.on('layeradd', function(e) {
     }
     if (feature.properties.image) {
       content = content + '<br /><img src="' + feature.properties.image + '"/>';
+      params = {minWidth: 200, autoPanPaddingTopLeft: 200}
+    } else {
+      params = {}
     }
-    marker.bindPopup(content);
+    marker.bindPopup(content, params);
 });
 
 (function () {
