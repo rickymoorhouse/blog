@@ -13,18 +13,12 @@ pluralizelisttitles = false
     githubUsername = "rickymoorhouse"
     accent = "#009988"
     showBorder = true
+    images = ["images/siteicon.png"]
     backgroundColor = "white"
 #    font = "Alegreya" # should match the name on Google Fonts!
     copyright = "&copy; Ricky Moorhouse"
     highlight = true
     highlightLanguages = ["python", "javascript", "yaml"]
-
-#  js = ["https://api.mapbox.com/mapbox.js/v0.44.2/mapbox.js"]
-#  css = ["https://api.mapbox.com/mapbox.js/v0.44.2/mapbox.css"]
-#[[menu.main]]
-#    url = "/"
-#    name = "Home"
-#    weight = 1
 
 [[menu.main]]
     url = "/blog/"
