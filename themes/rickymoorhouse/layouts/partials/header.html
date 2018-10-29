@@ -16,9 +16,7 @@
     {{ end }}
     {{ template "_internal/twitter_cards.html" . }}
     <meta name="twitter:creator" content="@rickymoorhouse" />
-    <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:image:height" content="120" />
-    <meta property="og:image:width" content="120" />
+    {{ template "_internal/opengraph.html" . }}
   </head>
   <body>
         {{ partial "body-open" . }}
