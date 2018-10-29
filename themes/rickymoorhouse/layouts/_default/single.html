@@ -7,9 +7,6 @@
     {{ range .Params.tags }}
     <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"><kbd class="item-tag">{{ . }}</kbd></a>
     {{ end }}
-    {{ range .Params.Images }}
-    <br> <div class="text-justify"><img src="{{ . }}" /></div>
-    {{ end }}
     <br> <div class="text-justify">{{ .Content }}</div>
 
     <!-- related posts with the same tags -->
