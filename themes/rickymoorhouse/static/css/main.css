@@ -67,7 +67,9 @@ a:hover {
 .pages-icon {
     padding: 0 15px;
 }
-
+div.Image img {
+margin: 4px 2px;
+}
 /*list item for posts and projects*/
 
 .item {
