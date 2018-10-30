@@ -18,7 +18,10 @@
     <meta name="twitter:card" content="summary_large_image">
     {{ with .Resources.ByType "image" }}
     {{ range first 1 . }}
-    <meta name="twitter:image" property="og:image" content="https://rickymoorhouse.uk{{ .RelPermalink }}" />
+    <meta name="twitter:image" content="https://rickymoorhouse.uk{{ .RelPermalink }}" />
+    <meta property="og:image" content="https://rickymoorhouse.uk{{ .RelPermalink }}" />
+    <meta property="og:image:height" content="{{ .Height }}" />
+    <meta property="og:image:width" content="{{ .Width }}" />
     {{ end }}
     {{ end }}
     {{ else }}
