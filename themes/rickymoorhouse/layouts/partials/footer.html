@@ -3,7 +3,14 @@
             <p class="copyright text-muted">{{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io) and [Minimal](https://github.com/calintat/minimal)" | markdownify }}</p>
 
         </footer>
-       
+      <script type="text/javascript">
+$('div.Image a').magnificPopup({
+  type: 'image',
+  image: {
+    verticalFit: true
+  }
+});
+      </script> 
     </body>
 
 </html>
