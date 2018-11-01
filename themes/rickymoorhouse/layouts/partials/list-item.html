@@ -24,4 +24,12 @@
     <div class="text-justify">
     <!--{{ .Summary }}-->
     </div>
+{{ with .Resources.ByType "image" }}
+    <div class="Image">
+    {{ range . }}
+        {{ $image := .Fill "80x80" }} 
+        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}"></a>
+    {{ end }}
+    </div>
+{{ end }}
 </div>
