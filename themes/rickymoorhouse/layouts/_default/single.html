@@ -3,7 +3,8 @@
 <main>
 
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    {{ if .Date }}<h5>{{ $.Scratch.Get "subtitle" }}</h5>{{ end }}
+
+    {{ if .Date }}<h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</h5>{{ end }}
     {{ range .Params.tags }}
     <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"><kbd class="item-tag">{{ . }}</kbd></a>
     {{ end }}
@@ -30,10 +31,13 @@
 {{ with .Resources.ByType "image" }}
     <div class="Image">
     {{ range . }}
-        <a href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" style="width: 30%"></a>
+        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" style="width: 30%"></a>
     {{ end }}
     </div>
 {{ end }}
+    {{ if .Params.lat }}
+<img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/{{ .Params.lat }},{{ .Params.lng }},14.0,0,0/700x200@2x?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" style="width: 700px;padding: 0 21pt;" />
+    {{ end }}
 </main>
 
 {{ partial "footer.html" . }}

@@ -1,6 +1,8 @@
 ---
 Title: QE Park and Butser Hill Sunset
 date: 2018-10-28
+lat: -0.9803
+lng: 50.9779
 Images:
  - src: DSC_0167.jpg
  - src: DSC_0244.jpg

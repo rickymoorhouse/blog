@@ -13,6 +13,7 @@ pluralizelisttitles = false
     githubUsername = "rickymoorhouse"
     accent = "#009988"
     showBorder = true
+    dateFormat = "2 January 2006"
     images = ["images/siteicon.png"]
     backgroundColor = "white"
 #    font = "Alegreya" # should match the name on Google Fonts!
