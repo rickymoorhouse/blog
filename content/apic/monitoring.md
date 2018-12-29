@@ -26,13 +26,17 @@ Standard system metrics collected by collectd from the individual VMs and push t
 
 #### API Invocation 
  - Transactions per second [ Count of ExtLatency logs from datapower ] <sup>l</sup>
- - Rate of errors (for stable APIs) [ Analysis of response codes from branding ] <sup>l</sup>
+ - Rate of errors (for stable APIs) [ Analysis of response codes from analytics ] <sup>a</sup>
+ - Response time <sup>a</sup>
+ - Spread of traffic across gateways <sup>a</sup>
+ - Deep dive into individual APIs <sup>a</sup>
 
 #### Analytics 
 
 ##### Ingestion of Analytics Events 
  - Error level for inbound data to Analytics <sup>l</sup>
  - WSM Agent lost record count from DataPower <sup>cs</sup>
+ - Logstash pipeline stats <sup>s</sup>
 
 ##### Health of Analytics Cluster
  - Cluster health <sup>cs</sup>
@@ -41,10 +45,11 @@ Standard system metrics collected by collectd from the individual VMs and push t
 
 #### API Manager
  - Apache connection levels <sup>cp</sup>
-
+ - Kibana health <sup>s</sup>
+ 
 #### Informix
  - Tablespace usage <sup>cs</sup>
-
+ - Bufferpool usage <sup>cs</sup>
 
 #### Overall Product usage
 
@@ -68,6 +73,8 @@ Internal REST endpoints used to regularly generate reports for data such as
 
  - <sup>cs</sup> - CollectD custom script
  - <sup>cp</sup> - CollectD plugin
+ - <sup>s</sup> - Custom script
+ - <sup>a</sup> - Analytics records from ELK
  - <sup>l</sup> - Log analysis in ELK
 
 
