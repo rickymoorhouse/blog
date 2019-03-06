@@ -1,0 +1,24 @@
+  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+ 
+      <div class="site-content" id="map">
+        <span class="mapbox-maplogo"></span>
+      </div>
+
+<script>
+document.getElementById('map').style.height="300px";
+document.getElementById('map').style.width="750px";
+L.mapbox.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
+var  geojson = {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'LineString',
+        'coordinates': {{ .Params.geojson }}
+      }
+    };
+var map = L.mapbox.map('map', 'mapbox.outdoors', {
+    attributionControl: {position: 'topright'}
+    }).setView([{{ .Params.lat }}, {{ .Params.lon }}], 13)
+    .featureLayer.setGeoJSON(geojson);
+
+</script>
