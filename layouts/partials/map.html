@@ -13,7 +13,7 @@ var  geojson = {
       'type': 'Feature',
       'geometry': {
         'type': 'LineString',
-        'coordinates': {{ .Params.geojson }}
+        'coordinates': {{ .Params.coordinates }}
       }
     };
 var map = L.mapbox.map('map', 'mapbox.outdoors', {
@@ -22,3 +22,8 @@ var map = L.mapbox.map('map', 'mapbox.outdoors', {
     .featureLayer.setGeoJSON(geojson);
 
 </script>
+<style type="text/css">
+#map path.leaflet-interactive {
+stroke: #cc0099;
+}
+</style>
