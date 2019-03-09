@@ -1,3 +1,24 @@
+
+html body {
+    background-color: #fefefe;
+}
+@media (prefers-color-scheme: dark) {
+  html body {
+    background-color: #222522;
+    color: #ccc;
+  }
+  body .navbar-default {
+    background-color: #333;
+    border-color: #222;
+  }
+  body .navbar-default .navbar-nav>li>a {
+    color: #aaa;
+  }
+  #logo_header #logo_m {opacity:1;fill:#098;fill-opacity:.6;stroke:#098;stroke-width: 1pt}
+  #logo_header #logo_r {opacity:1;fill:#7fe;fill-opacity:.6;stroke:#098;stroke-width: 1pt}
+  
+}
+
 html, body {
     height: 100%;
 }
@@ -8,7 +29,6 @@ body {
     text-align: center;
     flex-direction: column;
 }
-
 main {
     margin: auto;
     padding: 25px;
