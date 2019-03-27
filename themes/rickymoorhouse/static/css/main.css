@@ -122,7 +122,7 @@ img {
 }
 
 main h1 { font: 20pt/24pt Alegreya, serif; color: #098; text-transform: uppercase;}
-main h2 { font: 20pt/24pt Alegreya, serif;}
+main h2 { font: 20pt/24pt Alegreya, serif;clear: both;}
 main h3:first-line { font: 16pt/24pt sans-serif; }
 main h3 { font: 10pt/12pt sans-serif; color: #555;}
 main h4 { font-size: 12pt;}
@@ -478,3 +478,8 @@ main h4 { font-size: 12pt;}
     .mfp-container {
       padding-left: 6px;
       padding-right: 6px; } }
+main figure {
+width: 30%;
+margin: 1%;
+float:left;
+}
