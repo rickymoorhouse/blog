@@ -6,7 +6,13 @@
       </div>
 
 <script>
-document.getElementById('map').style.height="300px";
+var mdl = window.matchMedia('(prefers-color-scheme: dark)');
+var mapStyle = 'mapbox.outdoors';
+if (mdl.matches) {
+    console.log('dark');
+    mapStyle = 'mapbox.dark';
+}
+document.getElementById('map').style.height="330px";
 document.getElementById('map').style.width="750px";
 L.mapbox.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
 var  geojson = {
@@ -16,9 +22,9 @@ var  geojson = {
         'coordinates': {{ .Params.coordinates }}
       }
     };
-var map = L.mapbox.map('map', 'mapbox.outdoors', {
+var map = L.mapbox.map('map', mapStyle, {
     attributionControl: {position: 'topright'}
-    }).setView([{{ .Params.lat }}, {{ .Params.lon }}], 13)
+    }).setView([{{ .Params.lat }}, {{ .Params.lon }}], {{ .Params.zoom }})
     .featureLayer.setGeoJSON(geojson);
 
 </script>

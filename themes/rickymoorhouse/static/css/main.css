@@ -478,8 +478,23 @@ main h4 { font-size: 12pt;}
     .mfp-container {
       padding-left: 6px;
       padding-right: 6px; } }
+
 main figure {
-width: 30%;
-margin: 1%;
+width: 31.3%;
+margin: 0 1% 0 1%;
 float:left;
+}
+main figure.right {
+  float: right;
+  clear: both;
+  margin-left: 1em;
+}
+main figure.left {
+  float: left;
+  margin-right: 1em;
+  clear: both;
+}
+figcaption h4 {
+  text-align: center;
+  font: italic 10pt serif;
 }

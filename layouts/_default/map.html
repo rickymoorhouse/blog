@@ -53,7 +53,8 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 // So the CSV file must be on the same domain as the Javascript, or the server
 // delivering it should support CORS.
 var featureLayer = L.mapbox.featureLayer()
-    .loadURL('/map/index.json') // Should be {{ .Params.geojson }}')
+    //.loadURL('/map/index.json') // Should be {{ .Params.geojson }}')
+    .loadURL({{ .Params.geojson }})
     .on('ready', function(e) {
       function makeGroup(color) {
         return new L.MarkerClusterGroup({
