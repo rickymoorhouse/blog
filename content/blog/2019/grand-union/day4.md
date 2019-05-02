@@ -14,15 +14,18 @@ layout: walk
 - 7 locks
 - 8.6 miles
 
-Then the morning started properly with the only rain we had the whole week away, so we waited for it to pass before walking back into Stoke Bruerne to visit the [Canal Museum](https://canalrivertrust.org.uk/places-to-visit/stoke-bruerne).
+{{< figure class="right" link="../grand-union/day4-289.jpg" src="../grand-union/day4-289.jpg" title="Model boat in the Canal museum" >}}
 
-{{< figure link="../grand-union/day4-252.jpg" src="../grand-union/day4-252.jpg" title="Lock at Stoke Bruerne" >}}
-{{< figure link="../grand-union/day4-253.jpg" src="../grand-union/day4-253.jpg" title="Old single Lock at Stoke Bruerne" >}}
-{{< figure link="../grand-union/day4-302.jpg" src="../grand-union/day4-302.jpg" title="Stoke Bruerne" >}}
+Laura and I woke up with the dawn chorus and decided to go out first thing for an exploratory walk.  We headed up over the tunnel mouth where we found an air vent tower, a field with rabbits and a group of bee hives. It was lovely being the only ones about, with just the wildlife awake with us. Later the morning started properly with the only rain we had the whole week away, so we waited for it to pass before walking back into Stoke Bruerne to visit the [Canal Museum](https://canalrivertrust.org.uk/places-to-visit/stoke-bruerne).
 
-Hello
+There was a lot to see in the Canal museum and it's well worth a visit.  It's fascinating to see how the Blisworth tunnel had been constructed and how before the days of motor powered boats the leggers would have walked the boat along from the legging boards off the sides of the boat, pushing against the tunnel walls with their feet.
 
+{{< figure link="../grand-union/day4-347.jpg" src="../grand-union/day4-347.jpg" title="Red kite" >}}
+After a lovely morning at Stoke Bruerne, we started our journey down the lock flight to continue our journey south.  The locks at Stoke Bruerne were different to the others we'd seen as they were overflowing with water over the tops of the gates - later I found out this was because these ones don't have a mechanism to redirect the overflow around the locks. 
 
-{{< figure link="../grand-union/day4-284.jpg" src="../grand-union/day4-284.jpg" title="Our mooring by the tunnel mouth" >}}
-{{< figure link="../grand-union/day4-289.jpg" src="../grand-union/day4-289.jpg" title="Model boat in the Canal museum" >}}
-{{< figure link="../grand-union/day4-295.jpg" src="../grand-union/day4-295.jpg" title="Model of Foxton locks and inclined plane" >}}
+Soon after the last lock we found ourselves a spot to stop for lunch before continuing on our journey. Along the way we saw quite a bit of wild life, including a sheep drinking from the side of the canal whilst her lambs were trying to get their milk from her and a fantastic Red Kite hovering above the fields to the side of the canal.
+We stopped for the night at Cosgrove, and went for a walk along the canal to the [Iron Trunk aqueduct](http://transportheritage.com/find-heritage-locations.html?sobi2Task=sobi2Details&sobi2Id=860) where the Grand Union canal crosses the Great Ouse River.  Over the years there have been different ways of handling this crossing - this is the second attempt at an Aqueduct - built in 1811 and has lasted well unlike the previous one.  In between and before they aqueducts, the approach was to have locks down to the river so the canal could meet it and then locks up again the other side - leaving a watery cross roads of a still canal and a fast flowing river in the middle which the towing horses would have had to cross.  Below the aqueduct along the side of the River is the [Ouse Valley Park](https://www.theparkstrust.com/parks/ouse-valley-park) which was a beautiful place for a riverside walk and looks like we only scratched the surface of what there is there to explore.
+
+{{< figure link="../grand-union/day4-357.jpg" src="../grand-union/day4-357.jpg" title="Our mooring by the tunnel mouth" >}}
+{{< figure link="../grand-union/day4-361.jpg" src="../grand-union/day4-361.jpg" title="Our mooring by the tunnel mouth" >}}
+{{< figure link="../grand-union/day4-365.jpg" src="../grand-union/day4-365.jpg" title="Our mooring by the tunnel mouth" >}}

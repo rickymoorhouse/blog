@@ -489,6 +489,13 @@ main figure.right {
   clear: both;
   margin-left: 1em;
 }
+main figure.leftportrait, main figure.rightportrait {
+  height: 180pt;
+  width: 110pt;
+}
+main figure.leftportrait img, main figure.rightportrait img{
+  height: 160pt;
+}
 main figure.left {
   float: left;
   margin-right: 1em;
