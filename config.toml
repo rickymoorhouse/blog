@@ -5,7 +5,7 @@ theme = "rickymoorhouse"
 disqusShortname = "" # delete this to disable disqus comments
 pluralizelisttitles = false
 [permalinks]
-  blog = "/blog/:year/:title/"
+  blog = "/blog/:year/:slug/"
 
 [params]
     author = "Ricky Moorhouse"

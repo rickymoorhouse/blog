@@ -10,7 +10,10 @@
     {{ partial "map" . }}
       <!-- site-content -->
     <br> <div class="text-left">{{ .Content }}</div>
+    {{ if .Params.hideImages }}<!-- no images -->
+    {{ else }}
     {{ partial "images" . }}
+    {{ end }}
     </div>
   </main>
 {{ partial "footer.html" . }}

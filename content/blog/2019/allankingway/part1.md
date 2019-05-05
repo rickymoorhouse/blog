@@ -3,6 +3,7 @@ title: "Allan King Way - Part 1, Kings Worthy to Ovington"
 date: 2019-05-04
 tags: 
  - walk
+ - allan-king-way
 lat: 51.09
 lon: -1.258
 zoom: 13
