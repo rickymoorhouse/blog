@@ -15,11 +15,18 @@ layout: walk
 - No locks
 - 10.1 miles
 
-This day got off to a slow start as the engine wouldn't start, although after phoning Calcutt Boats, Dad managed to get it going, so we arranged to meet the engineer at bridge 29, getting water on the way.  Filling up the boat took so long with the water - they have huge tanks and the water seemed to take forever to fill so in the end the engineer met us at the next bridge after the water instead. The problem with the engine was the starter motor and the engineer had to go back and collect the part, so we were stuck in Weedon for most of the morning, but were able to have a nice walk along the towpath there. 
 
 {{< figure link="../grand-union/day3-142.jpg" src="../grand-union/day3-142.jpg" title="View through the branches" >}}
 {{< figure link="../grand-union/day3-150.jpg" src="../grand-union/day3-150.jpg" title="Reeds" >}}
 {{< figure link="../grand-union/day3-183.jpg" src="../grand-union/day3-183.jpg" title="A couple of flying ducks" >}}
+This day got off to a slow start as the engine wouldn't start, although after phoning Calcutt Boats, Dad managed to get it going, so we arranged to meet the engineer at bridge 29, getting water on the way.  Filling up the boat took so long with the water - they have huge tanks and the water seemed to take forever to fill so in the end the engineer met us at the next bridge after the water instead. The problem with the engine was the starter motor and the engineer had to go back and collect the part, so we were stuck in Weedon for most of the morning, but were able to have a nice walk along the towpath there. 
+
 {{< figure link="../grand-union/day3-195.jpg" src="../grand-union/day3-195.jpg" title="Heron by bridge 44" >}}
 {{< figure link="../grand-union/day3-676.jpg" src="../grand-union/day3-676.jpg" title="Bridge 25 reflections" >}}
 {{< figure link="../grand-union/day3-679.jpg" src="../grand-union/day3-679.jpg" title="Reflections on the water" >}}
+
+Even with the delayed start to the day, we managed to cover quite a distance as there were no locks and made it all the way through the Blisworth tunnel to Stoke Bruerne.
+
+{{< figure link="../grand-union/day4-252.jpg" src="../grand-union/day4-252.jpg" title="Lock at Stoke Bruerne" >}}
+{{< figure link="../grand-union/day4-253.jpg" src="../grand-union/day4-253.jpg" title="Old single Lock at Stoke Bruerne" >}}
+{{< figure link="../grand-union/day4-302.jpg" src="../grand-union/day4-302.jpg" title="Stoke Bruerne" >}}
