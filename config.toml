@@ -9,7 +9,7 @@ pluralizelisttitles = false
 
 [params]
     author = "Ricky Moorhouse"
-    description = "I'm a Christian, living in the south of England with my lovely wife Laura and our 2 fantastic daughters Abi & Jessica. With a background in system management and security I currently lead the UK part of a worldwide cloud operations team that support a number of IBM SaaS offerings."
+    description = "I live in the south of England with my wife and daughters. I work at IBM running the API Connect cloud services as part of a worldwide team. I enjoy walking, photography and spending time with my family."
     githubUsername = "rickymoorhouse"
     accent = "#009988"
     backgroundColor = "black"
