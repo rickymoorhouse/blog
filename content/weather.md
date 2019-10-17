@@ -2,5 +2,10 @@
 layout: page
 title: Weather
 ---
-![Wind speed](https://pi.api.me.uk/render?height=250&target=weather.wind-speed&colorList=%23009988&from=-3d&format=svg&vtitle=km/h)
-![Temperature](https://pi.api.me.uk/render?height=250&target=aliasByNode(removeAboveValue(removeBelowValue(weather.*temp,-10),100),1)&colorList=%23009988,%23990088&from=-3d&format=svg&vtitle=Temperature+C)
+
+
+<picture>
+  <source srcset="https://rickymoorhouse.uk/grafana/render/d-solo/ZjaRJ0TZz/weatherweb?orgId=1&from=1571325064806&to=1571346664806&theme=dark&panelId=2&width=1000&height=500&tz=UTC" media="(prefers-color-scheme: dark)">
+  <img src="https://rickymoorhouse.uk/grafana/render/d-solo/ZjaRJ0TZz/weatherweb?orgId=1&from=1571325064806&to=1571346664806&theme=light&panelId=2&width=1000&height=500&tz=UTC" >
+</picture>
+
