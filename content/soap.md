@@ -2,6 +2,17 @@
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="//use.edgefonts.net/londrina-shadow.js"></script>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://rickymoorhouse.uk/images/allotmint.png" />
+    <meta property="og:image" content="https://rickymoorhouse.uk/images/allotmint.png" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:width" content="375" />
+    <meta name="twitter:description" property="og:description" content="Small batches made by small hands. £5 a bar, UK Postage: £2.50)" />
+    <meta name="twitter:creator" content="@rickymoorhouse" />
+    <meta name="twitter:title" property="og:title" content="Allotmint Soap Available Online!" />
+    <meta property="og:url" content="https://rickymoorhouse.uk/soap/" />
+    <meta name="twitter:site" content="@rickymoorhouse" />
+    <link rel="apple-touch-icon" href="https://rickymoorhouse.uk/images/soap.png" />
 	</head>
 <style>
 body {
