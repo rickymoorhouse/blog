@@ -15,6 +15,12 @@
     <link rel="apple-touch-icon" href="https://rickymoorhouse.uk/images/soap.png" />
 	</head>
 <style>
+@media (min-width: 38em) {
+        section {
+        width: 30%;
+        float:left;
+        }
+}
 body {
 	background: #cfe;
 	color: #476;
@@ -22,8 +28,7 @@ body {
 	font: 16pt/24pt Baskerville, serif;
 }
 section {
-	width: 30%; 
-	margin: 0 10%;
+	margin: 10%;
 	float:left;
 	font: 10pt/12pt Helvetica, sans-serif;
 }
@@ -82,7 +87,7 @@ img.border {
 <h2>Allotmint Soap</h2>
 <p align="center"><img src="/images/allotmint.png" class="border"/></p>
 <p align="center">
-Vegan, Palm Oil free and Plastic free traditional Soap bar made with mint grown by <a href="http://wicor.hants.sch.uk">Wicor Primary school</a> and made with <a href="http://southseabathinghut.co.uk">Southsea Bathing Hut</a>
+Vegan, palm oil free and plastic free traditional soap bar made with mint grown by <a href="http://wicor.hants.sch.uk">Wicor Primary School</a> and made with <a href="http://southseabathinghut.co.uk">Southsea Bathing Hut</a>
 <br /><em>(&pound;5 a bar, UK Postage: &pound;2.50)</em>
 </p>
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
