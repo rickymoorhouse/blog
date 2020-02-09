@@ -4,8 +4,6 @@ title: Weather
 ---
 
 
-<picture>
-  <source srcset="https://rickymoorhouse.uk/grafana/render/d-solo/ZjaRJ0TZz/weatherweb?orgId=1&from=1571325064806&to=1571346664806&theme=dark&panelId=2&width=1000&height=500&tz=UTC" media="(prefers-color-scheme: dark)">
-  <img src="https://rickymoorhouse.uk/grafana/render/d-solo/ZjaRJ0TZz/weatherweb?orgId=1&from=1571325064806&to=1571346664806&theme=light&panelId=2&width=1000&height=500&tz=UTC" >
-</picture>
+<iframe src="https://rickymoorhouse.uk/grafana/d-solo/ZjaRJ0TZz/weatherweb?orgId=1&panelId=2" width="450" height="200" frameborder="0"></iframe>
+<iframe src="https://rickymoorhouse.uk/grafana/d-solo/ZjaRJ0TZz/weatherweb?orgId=1&panelId=5" width="450" height="200" frameborder="0"></iframe>
 
