@@ -62,3 +62,5 @@ pluralizelisttitles = false
     url = "https://www.instagram.com/rickymoorhouse/"
     name = "instagram"
     weight = 3
+[markup.goldmark.renderer]
+unsafe= true
