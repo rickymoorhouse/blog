@@ -10,11 +10,8 @@
     <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
     {{ end }}
     {{ partial "css" . }} {{ partial "js" . }} {{ .Hugo.Generator }}
-    {{ if .RSSLink }}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link rel="alternate" type="application/rss+xml" title="Ricky Moorhouse (RSS Feed)" href="https://rickymoorhouse.uk/index.xml" />
     <link rel="alternate" type="application/json" title="Ricky Moorhouse (JSON Feed)" href="https://rickymoorhouse.uk/jsonfeed/" />
-    {{ end }}
     {{ if .Params.featured }}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://rickymoorhouse.uk{{ .Params.featured }}" />

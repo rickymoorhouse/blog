@@ -60,7 +60,8 @@ h2 { margin: 0;}
 <h2>Writing</h2>
 <p>I write articles for <a href="/blog/">my blog</a> irregularly on a variety of topics.</p>
 <ul id="writings">
-  {{ range first 8 (where .Data.Pages "Section" "blog")  }}<li class=""><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ range first 8 $pages  }}<li class=""><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
 </ul>
 
 <!--<h2>Tweets</h2>
