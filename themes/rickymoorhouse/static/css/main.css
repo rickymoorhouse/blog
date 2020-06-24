@@ -75,7 +75,7 @@ a.icon:hover {
 }
 
 a:hover {
-    color: var(--accent) !important;
+    color: var(--accent);
 }
 
 /*paginator at bottom of list view*/
@@ -93,11 +93,33 @@ margin: 4px 2px;
 /*list item for posts and projects*/
 
 .item {
-    padding: 10px 0;
+  padding: 0 1em;
+  margin: 4em 1em;
 }
-
-.item-tag {
-    background-color: var(--accent);
+.item .header {
+  position: relative;
+  text-align: left;
+  margin: -1em -1em 1em -1em;
+}
+.header h5 {
+  color: var(--secondary);
+}
+.header .tags {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+a.item-tag {
+    background: var(--secondary);
+    opacity: 0.4;
+    padding: 1pt 4pt;
+    border-radius: 4pt;
+    color: #000;
+}
+a.item-tag:active, a.item-tag:hover  {
+  opacity: 1;
+  color: #000;
+  text-decoration: none;
 }
 
 /*navigation bar icons*/
@@ -121,11 +143,11 @@ img {
     max-width: 100%;
 }
 
-main h1 { font: 20pt/24pt Alegreya, serif; color: #098; text-transform: uppercase;}
+main h1 { font: 20pt/24pt Alegreya, serif; color: var(--accent); text-transform: uppercase;}
 main h2 { font: 20pt/24pt Alegreya, serif;clear: both;}
 main h3:first-line { font: 16pt/24pt sans-serif; }
 main h3 { font: 10pt/12pt sans-serif; color: #555;}
-main h4 { font-size: 12pt;}
+main h4 { font: 18pt/24pt serif; color: var(--accent);}
 /* Lightbox */
 /* Magnific Popup CSS */
 .mfp-bg {

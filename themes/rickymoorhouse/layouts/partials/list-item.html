@@ -15,21 +15,33 @@
 
     {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" }}
     {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
-
-    <h4><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a></h4>
-    <h5>{{ $.Scratch.Get "subtitle" }}</h5>
-    {{ range .Params.tags }}
-    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"><kbd class="item-tag">{{ . }}</kbd></a>
-    {{ end }}
-    <div class="text-justify">
-    <!--{{ .Summary }}-->
+    <div class="header">
+        <h4><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a></h4>
+        <div class="tags">
+        {{ range .Params.tags }}
+        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag">{{ . }}</a>
+        {{ end }}
+        </div>
+        <h5>{{ $.Scratch.Get "subtitle" }}</h5>
     </div>
+    {{ $.Scratch.Set "images" "False" }}
 {{ with .Resources.ByType "image" }}
     <div class="Image">
-    {{ range . }}
+        {{ range first 1  . }}
+        {{ $.Scratch.Set "images" "True" }} 
+        {{ $image := .Fill "400x300" }} 
+        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}"></a><br />
+    {{ end }}
+    {{ range after 1  . }}
+        {{ $.Scratch.Set "images" "True" }} 
         {{ $image := .Fill "80x80" }} 
         <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}"></a>
     {{ end }}
     </div>
 {{ end }}
+<div class="text-justify">
+    {{ if eq "False" (.Scratch.Get "images") }}
+    {{ .Summary }}
+    {{ end }}
+</div>
 </div>

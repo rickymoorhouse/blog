@@ -5,7 +5,7 @@
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     {{ if .Date }}<h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</h5>{{ end }}
     {{ range .Params.tags }}
-    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"><kbd class="item-tag">{{ . }}</kbd></a>
+    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag">{{ . }}</a>
     {{ end }}
     <br> <div class="text-left">{{ .Content }}</div>
 
@@ -28,6 +28,7 @@
 
     {{ end }}
     {{ if .Params.hideImages }}{{ else }}
+    {{ .Params.type }}
 {{ with .Resources.ByType "image" }}
     <div class="Image">
     {{ range . }}

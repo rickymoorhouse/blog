@@ -9,7 +9,7 @@
     {{ if .Site.Params.favicon }}
     <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
     {{ end }}
-    {{ partial "css" . }} {{ partial "js" . }} {{ .Hugo.Generator }}
+    {{ partial "css" . }} {{ partial "js" . }} {{ hugo.Generator }}
     <link rel="alternate" type="application/rss+xml" title="Ricky Moorhouse (RSS Feed)" href="https://rickymoorhouse.uk/index.xml" />
     <link rel="alternate" type="application/json" title="Ricky Moorhouse (JSON Feed)" href="https://rickymoorhouse.uk/jsonfeed/" />
     {{ if .Params.featured }}
@@ -57,8 +57,8 @@
 <li><a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Home">
 <svg version="1.1" xmlns="http://w3.org/2000/svg" id="logo_header" style="height:32pt; width:32pt;margin-top: -3pt;">
 			<style>
-			#logo_m {opacity:1;fill:#098;fill-opacity:0.25;stroke:#098;stroke-width: 1pt}
-			#logo_r {fill:#098;fill-opacity:1;stroke:#098;stroke-width:8pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5}
+			#logo_m {opacity:1;fill:#869ba0;fill-opacity:0.25;stroke:#869ba0;stroke-width: 1pt}
+			#logo_r {fill:#2b486a;fill-opacity:1;stroke:#2b486a;stroke-width:8pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5}
 		
 			</style>
 			<switch>
