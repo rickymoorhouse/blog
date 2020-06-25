@@ -1,19 +1,23 @@
 {{ partial "header" . }}
   <main>
     <div class="site">
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <div class="header">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 
-    {{ if .Date }}<h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</h5>{{ end }}
-    {{ range .Params.tags }}
-    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"><kbd class="item-tag">{{ . }}</kbd></a>
-    {{ end }}
-    {{ partial "map" . }}
-      <!-- site-content -->
-    <br> <div class="text-left">{{ .Content }}</div>
-    {{ if .Params.hideImages }}<!-- no images -->
-    {{ else }}
-    {{ partial "images" . }}
-    {{ end }}
-    </div>
+        {{ if .Date }}<h5 class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</h5>{{ end }}
+        <div class="tags">
+        {{ range .Params.tags }}
+        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag">{{ . }}</a>
+        {{ end }}
+        </div>
+      </div>
+      {{ partial "map" . }}
+        <!-- site-content -->
+      <br> <div class="text-left">{{ .Content }}</div>
+      {{ if .Params.hideImages }}<!-- no images -->
+      {{ else }}
+      {{ partial "images" . }}
+      {{ end }}
+      </div>
   </main>
 {{ partial "footer.html" . }}
