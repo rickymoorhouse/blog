@@ -78,21 +78,17 @@ map.on('load', function() {
     type: 'circle',
     source: 'points',
     paint: {
-      'circle-color': '#009988',
+      'circle-color': ['get', 'colour'],
       'circle-radius': 5,
     }
   });
 
-  var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false});
-
-  // When a click event occurs on a feature in
-  // the unclustered-point layer, open a popup at
-  // the location of the feature, with
-  // description HTML from its properties.
+  var popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true});
 
   map.on('mouseenter', 'points', function(e) {
     map.getCanvas().style.cursor = 'pointer';
-
+  });
+  map.on('click', 'points', function(e) {
     var coordinates = e.features[0].geometry.coordinates.slice();
     var content = ''
     if (e.features[0].properties.url) {

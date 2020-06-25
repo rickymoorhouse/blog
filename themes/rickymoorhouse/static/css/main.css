@@ -105,9 +105,7 @@ margin: 4px 2px;
   color: var(--secondary);
 }
 .header .tags {
-  position: absolute;
-  right: 1em;
-  top: 1em;
+  float: right;
 }
 a.item-tag {
     background: var(--secondary);
@@ -116,6 +114,7 @@ a.item-tag {
     border-radius: 4pt;
     color: #000;
 }
+a.tag-walk {background: green;}
 a.item-tag:active, a.item-tag:hover  {
   opacity: 1;
   color: #000;
@@ -527,3 +526,10 @@ figcaption h4 {
   text-align: center;
   font: italic 10pt serif;
 }
+
+@media (max-width: 767px) {
+  main { width: 90%;}
+  main h4 {display: none;}
+  .nav .navbar-brand {float: none;}
+}
+#map { width: 100% !important }

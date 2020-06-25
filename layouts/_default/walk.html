@@ -1,16 +1,8 @@
 {{ partial "header" . }}
   <main>
     <div class="site">
-      <div class="header">
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ partial "item-header" . }} 
 
-        {{ if .Date }}<h5 class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</h5>{{ end }}
-        <div class="tags">
-        {{ range .Params.tags }}
-        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag">{{ . }}</a>
-        {{ end }}
-        </div>
-      </div>
       {{ partial "map" . }}
         <!-- site-content -->
       <br> <div class="text-left">{{ .Content }}</div>
