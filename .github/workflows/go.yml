@@ -7,18 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Set up Go 1.12
-      uses: actions/setup-go@v1
-      with:
-        go-version: 1.12
-      id: go
-
-    - name: Check out code into the Go module directory
+    - name: Check out code
       uses: actions/checkout@v1
 
-    - name: Get dependencies
+    - name: Get hugo
       run: |
-        go get github.com/spf13/hugo
+        curl -LO https://github.com/gohugoio/hugo/releases/download/v0.73.0/hugo_0.73.0_Linux-64bit.tar.gz
+        tar -vzxf hugo_0.73.0_Linux-64bit.tar.gz
+        chmod a+x hugo
 
     - name: Build
       run: hugo build 
