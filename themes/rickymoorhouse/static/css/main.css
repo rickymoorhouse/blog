@@ -526,10 +526,14 @@ figcaption h4 {
   text-align: center;
   font: italic 10pt serif;
 }
-
+img {max-width: 100%}
 @media (max-width: 767px) {
-  main { width: 90%;}
+  .navbar,.navbar-header {
+    min-height: 64px;
+  }
+  main { width: 99%;}
   main h4 {display: none;}
-  .nav .navbar-brand {float: none;}
+  .navbar-brand {max-width: 80%}
+  .mr-0 {float: none !important; max-width:100%;}
 }
 #map { width: 100% !important }
