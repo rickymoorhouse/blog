@@ -17,4 +17,6 @@ jobs:
         chmod a+x hugo
 
     - name: Build
-      run: ./hugo build 
+      run: ./hugo
+
+       
