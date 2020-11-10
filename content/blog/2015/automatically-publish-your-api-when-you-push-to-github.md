@@ -1,6 +1,6 @@
 ---
 author: rickymoorhouse
-tags: ["api-connect"]
+tags: ["apiconnect"]
 date: "2015-12-12T08:40:57Z"
 slug: automatically-publish-your-api-when-you-push-to-github
 title: Automatically publish your API when you push to github
