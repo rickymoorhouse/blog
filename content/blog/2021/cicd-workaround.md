@@ -1,5 +1,5 @@
 ---
-title: "v10 APIC RI workaround for CI/CD"
+title: "API Connect v10 Reserved - workaround for CI/CD"
 date: 2021-03-09
 tags: 
  - apiconnect
