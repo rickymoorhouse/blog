@@ -25,10 +25,9 @@ jobs:
         KNOWN_HOSTS: ${{ secrets.known_hosts }}
       run: |
         mkdir -p ~/.ssh
-        echo "${DEPLOY_KEY}" > ~/.ssh/my_rsync_key
+        echo "${DEPLOY_KEY}" > ~/.ssh/rsync_key
         echo "${KNOWN_HOSTS}" >> ~/.ssh/known_hosts
-        echo "IdentityFile ~/.ssh/my_rsync_key" >> ~/.ssh/config
         chmod -R 700 ~/.ssh
     - name: Rsync deployment
       run: |
-        rsync -e 'ssh -p 22022' -arvz public/* github@graphite.rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
+        rsync -e 'ssh -p 22022 -i ~/.ssh/rsync_key' -arvz public/* github@graphite.rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
