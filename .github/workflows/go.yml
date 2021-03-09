@@ -19,4 +19,15 @@ jobs:
     - name: Build
       run: ./hugo
 
-       
+    - name: SSH setup
+      env:
+        DEPLOY_KEY: ${{ secrets.ssh_private_key }}
+        KNOWN_HOSTS: ${{ secrets.known_hosts }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "${DEPLOY_KEY}" > ~/.ssh/rsync_key
+        echo "${KNOWN_HOSTS}" >> ~/.ssh/known_hosts
+        chmod -R 700 ~/.ssh
+    - name: Rsync deployment
+      run: |
+        rsync -e 'ssh -p 22022 -i ~/.ssh/rsync_key' -arvz --no-t public/* github@graphite.rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
