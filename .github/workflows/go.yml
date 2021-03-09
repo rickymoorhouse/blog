@@ -17,7 +17,7 @@ jobs:
         chmod a+x hugo
 
     - name: Set build ref
-      if: if: github.ref != 'refs/heads/master'
+      if: github.ref != 'refs/heads/master'
       run: sed -i s/build = "main"/build = "preview"/ config.toml
 
     - name: Build
