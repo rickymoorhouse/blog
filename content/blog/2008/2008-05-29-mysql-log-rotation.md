@@ -1,6 +1,6 @@
 ---
 author: rickymoorhouse
-categories:
+tags:
 - MySQL
 comments: true
 date: "2008-05-29T15:08:27Z"

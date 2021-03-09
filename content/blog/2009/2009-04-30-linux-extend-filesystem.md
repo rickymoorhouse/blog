@@ -1,7 +1,7 @@
 ---
 author: rickymoorhouse
-categories:
-- Linux
+tags:
+- linux
 comments: true
 date: "2009-04-30T15:08:34Z"
 link: https://rickymoorhouse.uk/2009/04/30/linux-extend-filesystem/

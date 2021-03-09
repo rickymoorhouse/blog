@@ -1,7 +1,7 @@
 ---
 author: rickymoorhouse
-categories:
-- Abi
+tags:
+- abi
 comments: true
 date: "2008-06-13T04:54:37Z"
 link: https://rickymoorhouse.uk/2008/06/13/abi-goes-a-swimming-in-the-bath/

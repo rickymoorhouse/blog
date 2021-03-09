@@ -1,7 +1,5 @@
 ---
 author: rickymoorhouse
-categories:
-- Family
 comments: true
 date: "2010-12-18T22:07:26Z"
 link: https://rickymoorhouse.uk/2010/12/18/treasure-island/
@@ -9,7 +7,7 @@ slug: treasure-island
 tags:
 - pirates
 - theatre
-- treasure island
+- family
 title: Treasure Island
 wordpress_id: 6906
 ---

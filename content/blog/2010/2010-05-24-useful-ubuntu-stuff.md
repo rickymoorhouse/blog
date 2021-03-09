@@ -1,13 +1,11 @@
 ---
 author: rickymoorhouse
-categories:
-- Ubuntu
 comments: true
 date: "2010-05-24T13:50:13Z"
 link: https://rickymoorhouse.uk/2010/05/24/useful-ubuntu-stuff/
 slug: useful-ubuntu-stuff
 tags:
-- apt-get
+- ubuntu
 - screenshot
 - sharing
 title: Useful Ubuntu Stuff

@@ -1,7 +1,7 @@
 ---
 author: rickymoorhouse
-categories:
-- Linux
+tags:
+- linux
 comments: true
 date: "2008-04-24T12:08:20Z"
 link: https://rickymoorhouse.uk/2008/04/24/extending-a-logical-volume-using-reiserfs/

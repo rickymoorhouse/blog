@@ -6,6 +6,9 @@ link: https://rickymoorhouse.uk/2004/04/13/chicken-in-a-creamy-garlic-mustard-sa
 slug: chicken-in-a-creamy-garlic-mustard-sauce
 title: Chicken in a creamy garlic & mustard sauce
 wordpress_id: 1626
+tags:
+- chicken
+- recipe
 ---
 
 Just a recipe I cooked for tea tonight!

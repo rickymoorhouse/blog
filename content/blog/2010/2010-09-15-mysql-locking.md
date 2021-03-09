@@ -1,7 +1,8 @@
 ---
 author: rickymoorhouse
-categories:
+tags:
 - MySQL
+- tech
 comments: true
 date: "2010-09-15T15:17:56Z"
 link: https://rickymoorhouse.uk/2010/09/15/mysql-locking/

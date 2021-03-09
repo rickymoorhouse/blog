@@ -3,7 +3,7 @@ title: "Raspberry Pi Weather Station"
 date: 2018-05-12
 slug: weather-station
 tags:
- - raspberry pi
+ - raspberrypi
  - weather
 ---
 

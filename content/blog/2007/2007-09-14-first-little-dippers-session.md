@@ -1,7 +1,7 @@
 ---
 author: rickymoorhouse
-categories:
-- Abi
+tags:
+- abi
 comments: true
 date: "2007-09-14T23:00:00Z"
 link: https://rickymoorhouse.uk/2007/09/15/first-little-dippers-session/

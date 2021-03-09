@@ -1,7 +1,7 @@
 ---
 author: rickymoorhouse
-categories:
-- Asides
+tags:
+- art
 comments: true
 date: "2010-08-23T12:47:45Z"
 link: https://rickymoorhouse.uk/2010/08/23/self-portrait/

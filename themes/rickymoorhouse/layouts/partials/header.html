@@ -83,8 +83,9 @@
                     {{ if .Site.Menus.icon }}
                         <ul class="nav navbar-nav navbar-right">
                             {{ range sort .Site.Menus.icon }}
-                                <li class="navbar-icon"><a href="{{ .URL }}"><i class="fa fa-{{ .Name }}"></i></a></li>
+                                <li class="navbar-icon"><a href="{{ .URL }}"><i class="fab fa-{{ .Name }}"></i></a></li>
                             {{ end }}
+
                         </ul>
                     {{ end }}
 

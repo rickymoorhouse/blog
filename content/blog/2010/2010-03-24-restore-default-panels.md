@@ -1,7 +1,8 @@
 ---
 author: rickymoorhouse
-categories:
+tags:
 - Ubuntu
+- tech
 comments: true
 date: "2010-03-24T09:08:31Z"
 link: https://rickymoorhouse.uk/2010/03/24/restore-default-panels/

@@ -4,6 +4,9 @@ date: 2019-03-26
 tags: []
 hideImages: true
 layout: post
+tags:
+- travel
+- wildlife
 ---
 As I hadn't adapted to Central time and still waking up close to UK time I headed out early and drove down to Galveston Island to try and see the local brown pelicans.  In Galveston, they get both the brown pelicans, and the invasive white pelicans which have tried to take over.  
 

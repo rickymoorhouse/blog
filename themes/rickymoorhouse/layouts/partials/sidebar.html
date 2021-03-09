@@ -1,0 +1,25 @@
+<aside id="sidebar">
+
+<p>{{ markdownify .Site.Params.Description }}</p>
+<h3></h3>
+
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<h3>See Also</h3>
+<ul>
+	{{ range . }}
+	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+	{{ end }}
+</ul>
+{{ end }}
+
+<h3>Tags</h3>
+<div class="tagcloud">
+    {{ range .Site.Taxonomies.tags }}
+        {{ if and (gt .Count 1) (ne .Page.Title "abi") (ne .Page.Title "jessica") }}
+            <a class="item-tag" title="{{ .Count }}" style="font-size:1{{ .Count }}pt" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        {{ end }}
+    {{ end }}
+</div>
+
+</aside>

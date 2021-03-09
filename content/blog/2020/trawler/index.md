@@ -10,7 +10,7 @@ featured: /blog/2020/trawler-metric-gathering-for-api-connect/trawler-grafana.pn
 ---
 
 As part of our work in running and monitoring our API Connect cloud deployments we've built some of our own tooling to assist with monitoring what is going on within the deployments.  Trawler is one of these items which is used to gather metrics from a Kubernetes based deployment of API Connect. 
-
+<!--more-->
 Trawler runs within kubernetes alongside API Connect and identifies the API Connect components and exposes metrics to prometheus (or other compatible monitoring tooling)
 
 This data can then be used to feed into dashboards such as this one in Grafana:

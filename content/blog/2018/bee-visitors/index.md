@@ -5,6 +5,7 @@ slug: bee-visitors
 layout: post
 tags:
  - garden
+ - wildlife
 ---
 
 Here are a few of the bees that have visited our garden so far this weekend:

@@ -1,6 +1,6 @@
 ---
 author: rickymoorhouse
-categories:
+tags:
 - Tech
 comments: true
 date: "2009-05-07T10:30:50Z"

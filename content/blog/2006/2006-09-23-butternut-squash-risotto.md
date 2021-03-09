@@ -1,7 +1,9 @@
 ---
 author: rickymoorhouse
-categories:
-- Food
+tags:
+- recipe
+- butternut-squash
+- risotto
 comments: true
 date: "2006-09-23T23:00:00Z"
 link: https://rickymoorhouse.uk/2006/09/24/butternut-squash-risotto/

@@ -1,7 +1,7 @@
 ---
 author: rickymoorhouse
 categories:
-- Abi
+- abi
 comments: true
 date: "2008-11-26T21:47:21Z"
 link: https://rickymoorhouse.uk/2008/11/26/read-to-you/

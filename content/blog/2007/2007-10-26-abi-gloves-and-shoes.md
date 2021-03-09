@@ -1,7 +1,7 @@
 ---
 author: rickymoorhouse
 categories:
-- Abi
+- abi
 comments: true
 date: "2007-10-26T20:05:12Z"
 link: https://rickymoorhouse.uk/2007/10/26/abi-gloves-and-shoes/

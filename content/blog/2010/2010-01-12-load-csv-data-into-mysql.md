@@ -2,6 +2,7 @@
 author: rickymoorhouse
 categories:
 - MySQL
+- tech
 comments: true
 date: "2010-01-12T11:20:58Z"
 link: https://rickymoorhouse.uk/2010/01/12/load-csv-data-into-mysql/

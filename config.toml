@@ -9,7 +9,7 @@ pluralizelisttitles = false
 
 [params]
     author = "Ricky Moorhouse"
-    description = "I live in the south of England with my wife and daughters. I work at IBM running the API Connect cloud services as part of a worldwide team. I enjoy walking, photography and spending time with my family."
+    description = "I live in the south of England with my wife and daughters. I work at IBM on the hosted API Connect cloud services. I enjoy running, walking, photography and spending time with my family."
     githubUsername = "rickymoorhouse"
     accent = "#869ba0"
     secondary = "#d2bba2"
@@ -54,14 +54,15 @@ pluralizelisttitles = false
     name = "twitter"
     weight = 3
 
-#[[menu.icon]]
-#    url = "https://www.linkedin.com/in/rickymoorhouse/"
-#    name = "linkedin"
-#    weight = 4
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/rickymoorhouse/"
+    name = "linkedin"
+    weight = 4
 
 [[menu.icon]]
     url = "https://www.instagram.com/rickymoorhouse/"
     name = "instagram"
     weight = 3
+
 [markup.goldmark.renderer]
 unsafe= true

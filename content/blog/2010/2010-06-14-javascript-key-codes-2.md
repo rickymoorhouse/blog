@@ -10,7 +10,7 @@ title: Javascript Key Codes
 wordpress_id: 2253
 ---
 
-37: left
+    37: left
     
     38: up
     

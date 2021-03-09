@@ -1,7 +1,8 @@
 ---
 author: rickymoorhouse
-categories:
-- Linux
+tags:
+- linux
+- tech
 comments: true
 date: "2009-04-27T12:50:43Z"
 link: https://rickymoorhouse.uk/2009/04/27/linux-what-is-using-up-disk-space/

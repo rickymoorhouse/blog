@@ -1,6 +1,6 @@
 ---
 author: rickymoorhouse
-categories:
+tags:
 - Javascript
 comments: true
 date: "2010-10-20T12:19:35Z"
@@ -11,8 +11,6 @@ wordpress_id: 6388
 ---
 
 One of the things I really like about the interface in Tweetie / Twitter for iPhone is being able to swipe a tweet to reveal actions beneath it.  This is my attempt to recreate it using HTML, CSS3 and Javascript.  The main swiping action seems to work nicely, but to complete it, I'd like to add a bit more bounciness, a sound effect on swipe (using ?) and have better handling of non-swipe actions.
-
-[View the Demo](http://rickymoorhouse.co.uk/experiments/swipe.html) (only tested on iPhone)
 
 The HTML used in the demo is very simple - just an unordered list. This currently uses jQuery because I already had it in the code I intend to use this with, but it's unnecessary for this part. The javascript adds the div containing the actions and event listeners for touch events. When your finger moves across the screen, if the vertical movement of the swipe is less than 10 pixels the default action is stopped to prevent the view-port moving sideways. If the horizontal movement is greater than 30 pixels, this indicates a swipe to the right, and the "swiped" class is added to the element. There may well be a better way to ensure normal scrolling and link clicking can take place, but this seems to work for now.
 

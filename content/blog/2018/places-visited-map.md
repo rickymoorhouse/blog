@@ -1,7 +1,7 @@
 ---
 title: "Places Visited Map"
 date: 2018-04-26
-tags: ["map"]
+tags: ["map","travel","blog"]
 ---
 
 For a while I've had a variation on my map of the places I've visited - here's a summary of how my current version is working. 

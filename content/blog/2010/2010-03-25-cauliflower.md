@@ -1,7 +1,7 @@
 ---
 author: rickymoorhouse
 categories:
-- Abi
+- abi
 comments: true
 date: "2010-03-25T12:09:40Z"
 link: https://rickymoorhouse.uk/2010/03/25/cauliflower/

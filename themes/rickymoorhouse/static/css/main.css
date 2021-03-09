@@ -1,6 +1,30 @@
+body {
+    position: relative;
+}
+
+body::after {
+    /* Change the `height` parameter here to match your base line-height. */
+    background: url('data:image/svg+xml;utf8,<svg height="16pt" width="1" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="0.5" style="fill:rgba(0, 255, 255, 0.3)" /></svg>') repeat top left;
+    
+    content: "";
+    display: block;
+    pointer-events: none;
+    top: 55px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    position: absolute;
+}
+
+body:active::after {
+    display: none;
+}
+
 
 html body {
     background-color: #fefefe;
+    font: 10pt/16pt sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   html body {
@@ -14,6 +38,9 @@ html body {
   body .navbar-default .navbar-nav>li>a {
     color: #aaa;
   }
+  body .navbar-default .navbar-nav > li > a:focus, body .navbar-default .navbar-nav > li > a:hover {
+    color: #098;
+  }
   #logo_header #logo_m {opacity:1;fill:#098;fill-opacity:.6;stroke:#098;stroke-width: 1pt}
   #logo_header #logo_r {opacity:1;fill:#7fe;fill-opacity:.6;stroke:#098;stroke-width: 1pt}
   
@@ -25,15 +52,34 @@ html, body {
 
 body {
     padding-top: 55px;
-    display: flex;
     text-align: center;
+}
+body main {
+    margin: auto;
+    padding: 16pt;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+body main.list {
     flex-direction: column;
 }
-main {
+section, article, aside { 
     margin: auto;
-    padding: 25px;
+    padding: 16pt;
+}
+section,
+article { 
+    max-width: 750px; 
+    flex: 2 0 auto;
+}
+aside { 
+    max-width: 350px; 
+    margin: 0 auto ;
     flex: 1 0 auto;
-    max-width: 750px;
+}
+aside ul, aside li {
+text-align: left;
 }
 
 /*footer*/
@@ -99,7 +145,7 @@ margin: 4px 2px;
 .header {
   position: relative;
   text-align: left;
-  margin: -1em -1em 1em -1em;
+  margin: -1em -1em 0 -1em;
 }
 .header h5 {
   color: var(--secondary);
@@ -112,6 +158,7 @@ a.item-tag {
     opacity: 0.4;
     padding: 1pt 4pt;
     border-radius: 4pt;
+    text-transform: lowercase;
     color: #000;
 }
 a.tag-walk {background: green;}
@@ -142,11 +189,14 @@ img {
     max-width: 100%;
 }
 
-main h1 { font: 20pt/24pt Alegreya, serif; color: var(--accent); text-transform: uppercase;}
-main h2 { font: 20pt/24pt Alegreya, serif;clear: both;}
-main h3:first-line { font: 16pt/24pt sans-serif; }
-main h3 { font: 10pt/12pt sans-serif; color: #555;}
-main h4 { font: 18pt/24pt serif; color: var(--accent);}
+main h1 { font: 20pt/32pt Alegreya, serif; color: var(--accent); text-transform: uppercase;}
+main h2 { font: 20pt/32pt Alegreya, serif;clear: both;text-transform: capitalize}
+main h3:first-line { font: 16pt/32pt sans-serif; }
+main h3 { font: 10pt/16pt sans-serif; color: #555; margin: 0 0 0 0;}
+main h4 { font: 20pt/32pt Alegreya, serif; color: var(--accent); margin: 0 0 8pt 0;}
+main h5 { font: 10pt/16pt sans-serif; color: var(--secondary); margin: 0;}
+main ul, 
+main p  { margin-bottom: 16pt;}
 /* Lightbox */
 /* Magnific Popup CSS */
 .mfp-bg {
@@ -524,7 +574,7 @@ main figure.left {
 }
 figcaption h4 {
   text-align: center;
-  font: italic 10pt serif;
+  font: italic 12pt Alegreya,serif;
 }
 img {max-width: 100%}
 @media (max-width: 767px) {
@@ -537,3 +587,26 @@ img {max-width: 100%}
   .mr-0 {float: none !important; max-width:100%;}
 }
 #map { width: 100% !important }
+.tagcloud a {
+    padding: 0 5px;
+    line-height: 20pt;
+}
+article.quote {
+min-height: 100vh;
+}
+article.quote figure {
+width: auto;
+}
+article.quote blockquote {
+border-left-color: var(--accent);
+}
+article.quote blockquote p {
+font: 36pt/48pt Alegreya;
+}
+.quote figcaption::before {
+content: '\2014 \2009';
+color: var(--secondary);
+}
+article.quote figcaption {
+font: italic 20pt/24pt Alegreya;
+}

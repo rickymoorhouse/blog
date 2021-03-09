@@ -4,6 +4,8 @@ slug: this-year
 date: 2019-12-31
 featured: /blog/2019/this-year/DSC_0342.jpeg
 hideImages: true
+tags:
+- photos
 
 ---
 

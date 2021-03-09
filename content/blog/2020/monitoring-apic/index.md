@@ -11,7 +11,7 @@ featured: /blog/2020/trawler-metric-gathering-for-api-connect/trawler-grafana.pn
 ---
 
 Even though a lot has changed within the API Connect product and the types and numbers of stacks we're running since I first posted an overview of [monitoring API Connect](/apic/monitoring/) , the main areas we  monitor haven't.  
-
+<!--more-->
 We are still using [Grafana](https://grafana.com) as a central location for dashboarding and analysing data across different data sources but some of the tools we're using to collect the data have changed. Having access to all the data in a single UI is really powerful, especially when troubleshooting or investigating events across the systems, being able to identify correlations between data from external load balancing, response times parsed from logs and pod utilisation metrics can really help narrrow in on specific components and how they impact the wider solution. 
 
 

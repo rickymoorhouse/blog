@@ -1,7 +1,8 @@
 ---
 author: rickymoorhouse
-categories:
-- Abi
+tags:
+- abi
+- running
 comments: false
 date: "2012-10-27T16:42:48Z"
 link: https://rickymoorhouse.uk/2012/10/27/mini-great-south-run/

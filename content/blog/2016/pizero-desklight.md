@@ -1,9 +1,11 @@
 ---
 author: rickymoorhouse
-tags: ["raspberrypi"]
 date: "2016-12-05T21:01:12Z"
 slug: pizero-desklight
 title: Pi Zero as a desklight
+tags:
+- raspberrypi
+
 ---
 
 When we set up our office earlier in the year I decided on a standing desk which

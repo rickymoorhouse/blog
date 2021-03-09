@@ -10,6 +10,7 @@ tags:
 - banana
 - chocolate
 - eggless
+- recipe
 title: Banana & Chocolate chip muffins
 wordpress_id: 6988
 ---

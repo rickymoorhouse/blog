@@ -1,7 +1,8 @@
 ---
 author: rickymoorhouse
-categories:
-- Abi
+tags:
+- abi
+- art
 comments: true
 date: "2010-09-04T07:20:17Z"
 link: https://rickymoorhouse.uk/2010/09/04/drawing-of-me-by-abi/

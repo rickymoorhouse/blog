@@ -1,6 +1,6 @@
 ---
 author: rickymoorhouse
-categories:
+tags:
 - Javascript
 comments: true
 date: "2010-06-21T14:01:59Z"

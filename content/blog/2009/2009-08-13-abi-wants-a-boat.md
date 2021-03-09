@@ -1,7 +1,7 @@
 ---
 author: rickymoorhouse
-categories:
-- Abi
+tags:
+- abi
 comments: true
 date: "2009-08-13T12:49:59Z"
 link: https://rickymoorhouse.uk/2009/08/13/abi-wants-a-boat/
@@ -21,7 +21,7 @@ Me: How much do you need?
 
 Abi: Mummy, how much do we need?  
 
-Mummy: Â£20,000   
+Mummy: £20,000   
 
 Abi: Yes (looking at me)  
 

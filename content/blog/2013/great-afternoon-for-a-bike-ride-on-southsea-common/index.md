@@ -1,9 +1,9 @@
 ---
 author: rickymoorhouse
 categories:
-- Abi
-- Family
-- Jessica
+- abi
+- family
+- jessica
 comments: false
 date: "2013-08-18T14:47:39Z"
 post_format:

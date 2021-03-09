@@ -1,5 +1,6 @@
-<div class="item">
-    {{ partial "item-header" . }} 
+<article class="item">
+  {{ partial "item-header" . }} 
+  {{ if or (in .Params.tags "photos") (in .Params.tags "art")}}
     {{ $.Scratch.Set "images" "False" }}
 {{ with .Resources.ByType "image" }}
     <div class="Image">
@@ -14,10 +15,10 @@
         <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}"></a>
     {{ end }}
     </div>
-{{ end }}
-<div class="text-justify">
-    {{ if eq "False" (.Scratch.Get "images") }}
-    {{ .Summary }}
     {{ end }}
-</div>
-</div>
+{{ else }}
+  <div class="text-justify">
+    {{ .Summary }}
+  </div>
+{{ end }}
+</article>

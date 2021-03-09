@@ -1,14 +1,12 @@
 ---
 author: rickymoorhouse
-categories:
-- Abi
 comments: true
 date: "2011-11-01T20:30:15Z"
 link: https://rickymoorhouse.uk/?p=7329
 published: false
 slug: first-parents-evening
 tags:
-- Abi
+- abi
 - parents evening
 - reading
 - school
