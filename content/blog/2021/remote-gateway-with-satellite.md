@@ -32,7 +32,8 @@ For the three hosts to form the control plane, you will need to assign them to t
 ## Install DataPower in the Satellite location
  - [Download](https://www.ibm.com/support/knowledgecenter/SSMNED_v10cloud/com.ibm.apic.install.doc/ri_gw_download_install.html) the DataPower rpms from your reserved instance. 
  - [Install DataPower](https://www.ibm.com/support/knowledgecenter/SS9H2Y_10.0/com.ibm.dp.doc/virtual_forlinux.html?view=kc) on your RHEL VM.  In order to do this along with the pre-reqs I used the following commands:
-```
+
+```bash
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install schroot ipvsadm telnet
 yum install idg_cloud1.10011.common.x86_64.rpm idg_cloud1.10011.kernel-build-tool.x86_64.rpm idg_cloud1.10011.image.x86_64.rpm
