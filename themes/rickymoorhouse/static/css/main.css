@@ -2,6 +2,17 @@ html body {
     background-color: #fefefe;
     font: 10pt/16pt sans-serif;
 }
+body.preview::after {
+    content: "DRAFT PREVIEW";
+    position: fixed;
+    top: 60px;
+    left: 30pt;
+    font: 30pt/40pt sans-serif;
+    color: white;
+    opacity: 0.5;
+    background: red;
+    padding: 3pt 5pt;
+}
 @media (prefers-color-scheme: dark) {
   html body {
     background-color: #222522;

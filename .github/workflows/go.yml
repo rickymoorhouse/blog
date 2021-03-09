@@ -3,7 +3,7 @@ on: [push]
 jobs:
 
   build:
-    name: Build
+    name: Build-draft
     runs-on: ubuntu-latest
     steps:
 
@@ -17,7 +17,8 @@ jobs:
         chmod a+x hugo
 
     - name: Set build ref
-      run: sed -i s/%%main%%/${GITHUB_REF#refs/heads/}/ config.toml
+      if: if: github.ref != 'refs/heads/master'
+      run: sed -i s/build = "main"/build = "preview"/ config.toml
 
     - name: Build
       run: ./hugo
