@@ -1,6 +1,7 @@
 ---
 title: "API Connect v10 Reserved - workaround for CI/CD"
 date: 2021-03-09
+slug: cicd-workaround
 tags: 
  - apiconnect
 ---
