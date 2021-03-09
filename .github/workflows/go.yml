@@ -19,16 +19,14 @@ jobs:
     - name: Build
       run: ./hugo
 
-  deploy:
-    name: Deploy Job
-    runs-on: ubuntu-18.04
-    steps:
     - name: SSH setup
       env:
-        DEPLOY_KEY: ${{ secrets.deploy_key }}
+        DEPLOY_KEY: ${{ secrets.ssh_private_key }}
+        KNOWN_HOSTS: ${{ secrets.known_hosts }}
       run: |
         mkdir -p ~/.ssh
         echo "${DEPLOY_KEY}" > ~/.ssh/my_rsync_key
+        echo "${KNOWN_HOSTS}" >> ~/.ssh/known_hosts
         echo "IdentityFile ~/.ssh/my_rsync_key" >> ~/.ssh/config
         chmod -R 700 ~/.ssh
     - name: Rsync deployment
