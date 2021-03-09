@@ -31,4 +31,4 @@ jobs:
         chmod -R 700 ~/.ssh
     - name: Rsync deployment
       run: |
-        rsync -e 'ssh -p 22022' -arvz public/* codeship@93.95.228.83:/var/www/rickymoorhouse.uk/
+        rsync -e 'ssh -p 22022' -arvz public/* codeship@graphite.rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
