@@ -16,6 +16,9 @@ jobs:
         tar -vzxf hugo_0.73.0_Linux-64bit.tar.gz
         chmod a+x hugo
 
+    - name: Set build ref
+      run: sed -i s/%%main%%/${GITHUB_REF#refs/heads/}/ config.toml
+
     - name: Build
       run: ./hugo
 
