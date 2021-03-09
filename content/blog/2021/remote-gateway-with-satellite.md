@@ -8,7 +8,7 @@ tags:
 ---
 
 API Connect Reserved instance provides the ability to add remote API gateways so that you can co-locate the gateway service with your back-end systems for improved performance.  With the new announcement of [IBM Cloud Satellite](https://cloud.ibm.com/satellite/overview), you can make use of this to securely expand your API Connect footprint across cloud providers and into the on-premise datacenter close to where your applications are running.
-
+<!--more-->
 ## Create your Satellite location
 
 To create a Satellite location you will need 3 hosts for the control plane, and at least one host to deploy DataPower on.  For each of the hosts you will need to do the following:
