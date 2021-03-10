@@ -6,7 +6,7 @@ tags:
  - apiconnect
 ---
 
-Currently the v10 Reserved Instance of API Connect doesn't yet have a simple approach for headless use of the CLI toolkit.  The following workaround details how to create a separate user in the API Manager user registry to use the toolkit in a headless environment such as a CI/CD pipeline.
+Currently the v10 Reserved Instance of API Connect doesn't yet have a simple approach for headless use of the CLI toolkit.  The following details how to use an IBM Cloud IAM bearer token with the API Connect CLI and REST API in a headless environment such as a CI/CD pipeline.
 
 <!--more-->
 
@@ -39,7 +39,7 @@ test-porg     [state: enabled]   https://api...apiconnect.cloud.ibm.com/api/orgs
 
 ## Invoking the API Connect REST APIs
 
-To invoke the [API Connect REST APIs]() in Reserved Instance v10, you can use an IBM Cloud IAM token which can be obtained using the `ibmcloud iam oauth-tokens` CLI command or with an API call as detailed in the [IAM API documentation](https://cloud.ibm.com/apidocs/iam-identity-token-api#authentication).  This token can then be used as a bearer token to invoke the API Connect REST APIs.
+To invoke the [API Connect REST APIs](https://apic-api.apiconnect.ibmcloud.com/v10/) in Reserved Instance v10, you can use an IBM Cloud IAM token which can be obtained using the `ibmcloud iam oauth-tokens` CLI command or with an API call as detailed in the [IAM API documentation](https://cloud.ibm.com/apidocs/iam-identity-token-api#authentication).  This token can then be used as a bearer token to invoke the API Connect REST APIs.
 
 The full process looks like this:
 
