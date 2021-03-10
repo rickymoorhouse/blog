@@ -11,6 +11,7 @@ pluralizelisttitles = false
     author = "Ricky Moorhouse"
     description = "I live in the south of England with my wife and daughters. I work at IBM on the hosted API Connect cloud services. I enjoy running, walking, photography and spending time with my family."
     githubUsername = "rickymoorhouse"
+    build = "main"
     accent = "#869ba0"
     secondary = "#d2bba2"
     backgroundColor = "black"

@@ -3,7 +3,7 @@ on: [push]
 jobs:
 
   build:
-    name: Build
+    name: Build-draft
     runs-on: ubuntu-latest
     steps:
 
@@ -15,6 +15,10 @@ jobs:
         curl -LO https://github.com/gohugoio/hugo/releases/download/v0.73.0/hugo_0.73.0_Linux-64bit.tar.gz
         tar -vzxf hugo_0.73.0_Linux-64bit.tar.gz
         chmod a+x hugo
+
+    - name: Set build ref
+      if: github.ref != 'refs/heads/master'
+      run: sed -i 's/build = "main"/build = "preview"/' config.toml
 
     - name: Build
       run: ./hugo
