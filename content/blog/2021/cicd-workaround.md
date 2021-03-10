@@ -19,7 +19,7 @@ apic-slim login --server {apic-api-endpoint} --sso
 However if you want to use the CLI in a non-interactive context such as a CI/CD pipeline you need to retrieve an IBM Cloud IAM Bearer token for the toolkit to use. This can be obtained using `ibmcloud iam oauth-tokens` and then placed in `~/.apiconnect/token` for the `apic` CLI to use.
 
 The token file needs to contain:
-```
+```yaml
 {apic-api-endpoint}/api: |
   refresh_token: ""
   access_token: {access_token} 
