@@ -36,9 +36,9 @@ jobs:
     - name: Deploy to drafts
       if: github.ref != 'refs/heads/master'
       run: |
-        rsync -e 'ssh -p 22022 -i ~/.ssh/rsync_key' -arvz --no-t public/* github@drafts.rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
+        rsync -e 'ssh -p 22022 -i ~/.ssh/rsync_key' -arz --no-t public/* github@drafts.rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
 
     - name: Deploy to live site
       if: github.ref == 'refs/heads/master'
       run: |
-        rsync -e 'ssh -p 22022 -i ~/.ssh/rsync_key' -arvz --no-t public/* github@rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
+        rsync -e 'ssh -p 22022 -i ~/.ssh/rsync_key' -arz --no-t public/* github@rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
