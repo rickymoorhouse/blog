@@ -1,0 +1,69 @@
+baseURL = "https://rickymoorhouse.uk/"
+languageCode = "en-gb"
+title = "Ricky Moorhouse"
+theme = "rickymoorhouse"
+disqusShortname = "" # delete this to disable disqus comments
+pluralizelisttitles = false
+[permalinks]
+  blog = "/blog/:year/:slug/"
+
+[params]
+    author = "Ricky Moorhouse"
+    description = "I live in the south of England with my wife and daughters. I work at IBM on the hosted API Connect cloud services. I enjoy running, walking, photography and spending time with my family."
+    githubUsername = "rickymoorhouse"
+    build = "main"
+    accent = "#869ba0"
+    secondary = "#d2bba2"
+    backgroundColor = "black"
+    showBorder = true
+    dateFormat = "2 January 2006"
+    images = ["images/siteicon.png"]
+#    font = "Alegreya" # should match the name on Google Fonts!
+    copyright = "&copy; Ricky Moorhouse"
+    highlight = true
+    highlightLanguages = ["python", "javascript", "yaml"]
+
+#[[menu.main]]
+#    url = "/blog/"
+#    name = "Blog"
+#    weight = 2
+
+[[menu.main]]
+    url = "/travel/"
+    name = "Travel"
+    weight = 3
+[[menu.main]]
+    url = "/photos/"
+    name = "Photos"
+    weight = 4
+[[menu.main]]
+    url = "/weather/"
+    name = "Weather"
+    weight = 5
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+    url = "https://github.com/rickymoorhouse/"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://twitter.com/rickymoorhouse/"
+    name = "twitter"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/rickymoorhouse/"
+    name = "linkedin"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://www.instagram.com/rickymoorhouse/"
+    name = "instagram"
+    weight = 3
+
+[markup.goldmark.renderer]
+unsafe= true
