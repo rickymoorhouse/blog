@@ -3,6 +3,17 @@
 <p>{{ markdownify .Site.Params.Description }}</p>
 <h3></h3>
 
+{{ if .IsTranslated }}
+<h4>{{ i18n "translations" }}</h4>
+<ul>
+    {{ range .Translations }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
+
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
 <h3>See Also</h3>
