@@ -23,9 +23,11 @@ params:
   highlightLanguages: ["python", "javascript", "yaml"]
 languages:
   en:
-    title: "Ricky Moorhouse"
+    #baseURL: https://rickymoorhouse.uk/
+    title: "In English"
   es:
-    title: "ES: Ricky Moorhouse"
+    #baseURL: https://rickymoorhouse.uk/es/
+    title: "En Espanol"
     description: "Vivo en el sur de Inglaterra con mi esposa y hijas. Yo trabajo en las ofertas de nube de IBM API Connect. Me gusta corriendo, caminando, fotografia y passando tiempo con mi familia."
     menu: 
       main:
