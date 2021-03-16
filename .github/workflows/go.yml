@@ -41,7 +41,7 @@ jobs:
     - name: Check HTML
       uses: chabad360/htmlproofer@master
       with:
-        directory: "./public"
+        directory: "."
 
   deploy:
     name: Upload-site
@@ -52,11 +52,6 @@ jobs:
       uses: actions/download-artifact@v2
       with: 
         name: blog-content
-    - name: Debug
-      run: |
-        pwd
-        ls -lah
-        ls -lah public
     - name: SSH setup
       env:
         DEPLOY_KEY: ${{ secrets.ssh_private_key }}
@@ -70,9 +65,9 @@ jobs:
     - name: Deploy to drafts
       if: github.ref != 'refs/heads/master'
       run: |
-        rsync -e 'ssh -p 22022 -i ~/.ssh/rsync_key' -arz --no-t public/* github@drafts.rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
+        rsync -e 'ssh -p 22022 -i ~/.ssh/rsync_key' -arz --no-t * github@drafts.rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
 
     - name: Deploy to live site
       if: github.ref == 'refs/heads/master'
       run: |
-        rsync -e 'ssh -p 22022 -i ~/.ssh/rsync_key' -arz --no-t public/* github@rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
+        rsync -e 'ssh -p 22022 -i ~/.ssh/rsync_key' -arz --no-t * github@rickymoorhouse.uk:/var/www/rickymoorhouse.uk/
