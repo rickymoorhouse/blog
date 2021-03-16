@@ -8,7 +8,8 @@
 <ul>
     {{ range .Translations }}
     <li>
-        <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}</a>
+        <i class="fab fa-{{ .Language }}"></i>
+        <a href="{{ .Permalink }}">{{ .Language }}: {{ .Title }}</a>
     </li>
     {{ end }}
 </ul>
@@ -16,7 +17,7 @@
 
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
-<h3>See Also</h3>
+<h4>{{ i18n "seeAlso" }}</h4>
 <ul>
 	{{ range . }}
 	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
@@ -24,7 +25,7 @@
 </ul>
 {{ end }}
 
-<h3>Tags</h3>
+<h4>{{ i18n "seeAlso" }}</h4>
 <div class="tagcloud">
     {{ range .Site.Taxonomies.tags }}
         {{ if and (gt .Count 1) (ne .Page.Title "abi") (ne .Page.Title "jessica") }}
