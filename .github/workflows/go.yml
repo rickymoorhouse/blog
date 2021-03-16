@@ -31,6 +31,7 @@ jobs:
 
   proof:
     name: Check-site
+    runs-on: ubuntu-latest
     needs: Build-site
     steps:
     - name: Download site content
@@ -44,6 +45,7 @@ jobs:
 
   deploy:
     name: Upload-site
+    runs-on: ubuntu-latest
     needs: Build-site
     steps:
     - name: Download site content
