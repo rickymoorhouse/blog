@@ -62,8 +62,8 @@ Internal REST endpoints used to regularly generate reports for data such as
 
 
 ### Externals
- - Synthetic monitoring - response status and times using [Hem](https://rickymoorhouse.co.uk/post/introducing-hem/) and [Uptime](https://github.com/fzaninotto/uptime)
-    - Sample APIs - [echo](https://api.us.apiconnect.ibmcloud.com/api-connect-ops/live/public/echo?text=monitoring), [proxy](https://api.us.apiconnect.ibmcloud.com/api-connect-ops/live/public/proxy), etc.
+ - Synthetic monitoring - response status and times using [Hem](/blog/2018/introducing-hem/) and [Uptime](https://github.com/fzaninotto/uptime)
+    - Sample APIs - [echo](https://api.us.apiconnect.ibmcloud.com/api-connect-ops/live/public/echo?text=monitoring), proxy, etc. 
     - Product APIs - LB Healthcheck, v1/me/orgs
 
 

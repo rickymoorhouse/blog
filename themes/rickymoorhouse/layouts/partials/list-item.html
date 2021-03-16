@@ -7,12 +7,12 @@
         {{ range first 1  . }}
         {{ $.Scratch.Set "images" "True" }} 
         {{ $image := .Fill "400x300" }} 
-        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}"></a><br />
+        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a><br />
     {{ end }}
     {{ range after 1  . }}
         {{ $.Scratch.Set "images" "True" }} 
         {{ $image := .Fill "80x80" }} 
-        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}"></a>
+        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
     {{ end }}
     </div>
     {{ end }}
