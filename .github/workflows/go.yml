@@ -29,7 +29,7 @@ jobs:
         path: |
           public
 
-  build:
+  proof:
     name: Check-site
     needs: Build-site
     steps:
@@ -42,7 +42,7 @@ jobs:
       with:
         directory: "./public"
 
-  build:
+  deploy:
     name: Upload-site
     needs: Build-site
     steps:
