@@ -3,7 +3,7 @@ on: [push]
 jobs:
 
   build:
-    name: Build-draft
+    name: Build-site
     runs-on: ubuntu-latest
     steps:
 
@@ -22,12 +22,34 @@ jobs:
 
     - name: Build
       run: ./hugo
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: blog-content
+        path: |
+          public
 
+  build:
+    name: Check-site
+    needs: Build-site
+    steps:
+    - name: Download site content
+      uses: actions/download-artifact@v2
+      with: 
+        name: blog-content
     - name: Check HTML
       uses: chabad360/htmlproofer@master
       with:
         directory: "./public"
 
+  build:
+    name: Upload-site
+    needs: Build-site
+    steps:
+    - name: Download site content
+      uses: actions/download-artifact@v2
+      with: 
+        name: blog-content
     - name: SSH setup
       env:
         DEPLOY_KEY: ${{ secrets.ssh_private_key }}
