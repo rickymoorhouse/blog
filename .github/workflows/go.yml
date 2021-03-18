@@ -42,7 +42,7 @@ jobs:
       uses: chabad360/htmlproofer@master
       with:
         directory: "."
-        arguments: --allow-missing-href
+        arguments: --disable_external
 
   deploy:
     name: Upload-site
