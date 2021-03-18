@@ -42,15 +42,15 @@ pluralizelisttitles = false
     weight = 5
 
 [[languages.es.menu.main]]
-    url = "/viaje/"
+    url = "/es/viaje/"
     name = "Viaje"
     weight = 3
 [[languages.es.menu.main]]
-    url = "/fotos/"
+    url = "/photos/"
     name = "Fotos"
     weight = 4
 [[languages.es.menu.main]]
-    url = "/meteo/"
+    url = "/es/meteo/"
     name = "Meteo"
 
 # Social icons to be shown on the right-hand side of the navigation bar
