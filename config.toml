@@ -22,12 +22,12 @@ pluralizelisttitles = false
     copyright = "&copy; Ricky Moorhouse"
     highlight = true
     highlightLanguages = ["python", "javascript", "yaml"]
-
-#[[menu.main]]
-#    url = "/blog/"
-#    name = "Blog"
-#    weight = 2
-
+[languages]
+  [languages.en]
+    title = "Ricky Moorhouse"
+  [languages.es]
+    title = "Ricky Moorhouse en Español"
+    description = "Vivo en el sur de Inglaterra con mi esposa y hijas. Yo trabajo en las ofertas de nube de IBM API Connect. Me gusta corriendo, caminando, fotografia y passando tiempo con mi familia."
 [[menu.main]]
     url = "/travel/"
     name = "Travel"
@@ -40,6 +40,18 @@ pluralizelisttitles = false
     url = "/weather/"
     name = "Weather"
     weight = 5
+
+[[languages.es.menu.main]]
+    url = "/es/viaje/"
+    name = "Viaje"
+    weight = 3
+[[languages.es.menu.main]]
+    url = "/photos/"
+    name = "Fotos"
+    weight = 4
+[[languages.es.menu.main]]
+    url = "/es/meteo/"
+    name = "Meteo"
 
 # Social icons to be shown on the right-hand side of the navigation bar
 # The "name" field should match the name of the icon to be used
@@ -65,5 +77,23 @@ pluralizelisttitles = false
     name = "instagram"
     weight = 3
 
+[[languages.es.menu.icon]]
+    url = "https://github.com/rickymoorhouse/"
+    name = "github"
+    weight = 2
+
+[[languages.es.menu.icon]]
+    url = "https://twitter.com/rickymoorhouse/"
+    name = "twitter"
+    weight = 3
+
+[[languages.es.menu.icon]]
+    url = "https://www.linkedin.com/in/rickymoorhouse/"
+    name = "linkedin"
+    weight = 4
+
+[[languages.es.menu.icon]]
+    url = "https://www.instagram.com/rickymoorhouse/"
+    name = "instagram"
 [markup.goldmark.renderer]
 unsafe= true

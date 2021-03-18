@@ -7,14 +7,6 @@
     <!-- related posts with the same tags -->
     {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
 
-    {{ if $related }}
-
-        <h4 class="page-header">Related</h4>
-
-        {{ range $related }} {{ partial "list-item" . }} {{ end }}
-
-    {{ end }}
-
     {{ if and .Site.DisqusShortname (not .Params.disableComments) }}
 
         <h4 class="page-header">Comments</h4>
@@ -28,6 +20,9 @@
     <div class="Image">
     {{ range . }}
         <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" style="width: 30%"></a>
+        {{ with .Exif }}
+        {{ .Tags.ImageDescription }}
+        {{ end }}
     {{ end }}
     </div>
 {{ end }}
