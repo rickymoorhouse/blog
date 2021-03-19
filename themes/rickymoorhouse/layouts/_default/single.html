@@ -16,16 +16,22 @@
     {{ end }}
     {{ if .Params.hideImages }}{{ else }}
     {{ .Params.type }}
-{{ with .Resources.ByType "image" }}
-    <div class="Image">
-    {{ range . }}
-        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" style="width: 30%"></a>
-        {{ with .Exif }}
-        {{ .Tags.ImageDescription }}
+        {{ with .Resources.ByType "image" }}
+        <div class="Image">
+        {{ range . }}
+            <figure>
+               {{ if (isset .Exif.Tags "ImageDescription") }}
+                   <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}"></a>
+                   <figcaption>
+                   <h4>{{ .Exif.Tags.ImageDescription }}</h4>
+                    </figcaption>
+               {{ else }}
+                   <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" alt="."></a>
+               {{ end }}
+            </figure>
         {{ end }}
-    {{ end }}
-    </div>
-{{ end }}
+        </div>
+        {{ end }}
     {{ end }}
     {{ if .Params.lat }}
 <img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/{{ .Params.lat }},{{ .Params.lng }},14.0,0,0/700x200@2x?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" style="width: 700px;padding: 0 21pt;" />
