@@ -20,13 +20,12 @@
         <div class="Image">
         {{ range . }}
             <figure>
-               {{ if (isset .Exif.Tags "ImageDescription") }}
-                   <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}"></a>
-                   <figcaption>
-                   <h4>{{ .Exif.Tags.ImageDescription }}</h4>
-                    </figcaption>
-               {{ else }}
-                   <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" alt="."></a>
+               <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" 
+               {{ with .Exif }}alt="{{ .Tags.ImageDescription }}"{{ end }}></a>
+               {{ with .Exif }}
+               <figcaption>
+               <h4>{{ .Tags.ImageDescription }}</h4>
+               </figcaption>
                {{ end }}
             </figure>
         {{ end }}
