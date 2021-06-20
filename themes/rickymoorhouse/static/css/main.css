@@ -64,6 +64,7 @@ aside {
     max-width: 350px; 
     margin: 0 auto ;
     flex: 1 0 auto;
+    border-left: 1px dotted var(--secondary);
 }
 aside ul, aside li {
 text-align: left;
