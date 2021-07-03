@@ -3,6 +3,7 @@ Title: Devil's Punch Bowl walk
 date: 2019-01-20
 lng:
 lat:
+tags: [photos]
 Images:
  - src: featured-a3route.jpg
    title: The old route of the A3, going back to nature

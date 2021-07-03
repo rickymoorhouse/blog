@@ -4,3 +4,11 @@ other = "Translations"
 other = "See also"
 [tags]
 other = "Tags"
+[writing]
+other = "Writing"
+[writeBefore]
+other = "I write articles for "
+[myBlog]
+other = "my blog"
+[writeAfter]
+other = " irregularly on a variety of topics."
