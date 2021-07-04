@@ -577,7 +577,6 @@ img {max-width: 100%}
     width: 99%;
   }
   .navbar-brand {max-width: 80%}
-  .mr-0 {float: none !important; max-width:100%;}
   main {
     flex-direction: column;
   }
