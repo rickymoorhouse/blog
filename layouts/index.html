@@ -60,8 +60,8 @@ h2 { margin: 0;}
         <p>{{ markdownify .Site.Params.Description }}</p>
 </section>
 <section id="writing">
-<h2>Writing</h2>
-<p>I write articles for <a href="/blog/">my blog</a> irregularly on a variety of topics.</p>
+<h2>{{ i18n "writing" }}</h2>
+<p>{{ i18n "writeBefore" }}<a href="/blog/">{{ i18n "myBlog" }}</a>{{ i18n "writeAfter" }}</p>
 <ul id="writings">
   {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
   {{ range first 8 $pages  }}<li class=""><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}

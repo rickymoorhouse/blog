@@ -3,8 +3,9 @@
 <main>
     <section>
     <h2>{{ .Title }}</h2>
+{{ $articles := where .Site.RegularPages "Section" .Type  }}
+{{ $paginator := .Paginate $articles }} 
     {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
-
 {{ partial "paginator" . }}
 </section>
 {{ partial "sidebar" . }}
