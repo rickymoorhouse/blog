@@ -45,21 +45,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">{{ .Title }}</a>
-
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                </div>
-
-                <div class="collapse navbar-collapse">
-
-                    {{ if .Site.Menus.main }}
-                        <ul class="nav navbar-nav">
-<li><a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Home">
+<a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Home">
 <svg version="1.1" xmlns="http://w3.org/2000/svg" id="logo_header" style="height:32pt; width:32pt;margin-top: -3pt;">
 			<style>
 			#logo_m {opacity:1;fill:#869ba0;fill-opacity:0.25;stroke:#869ba0;stroke-width: 1pt}
@@ -78,7 +64,19 @@
 				</foreignObject>
 			</switch>
 		</svg>
-</a></li>
+</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    {{ if .Site.Menus.main }}
+                        <ul class="nav navbar-nav">
                             {{ range sort .Site.Menus.main }}
                                 <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                             {{ end }}

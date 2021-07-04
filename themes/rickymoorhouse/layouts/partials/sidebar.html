@@ -28,7 +28,7 @@
 <h4>{{ i18n "seeAlso" }}</h4>
 <div class="tagcloud">
     {{ range .Site.Taxonomies.tags }}
-        {{ if and (gt .Count 1) (ne .Page.Title "abi") (ne .Page.Title "jessica") }}
+        {{ if and (gt .Count 1) (ne .Page.Title "abi") (ne .Page.Title "jessica") (ne .Page.Title "photos") }}
             <a class="item-tag" title="{{ .Count }}" style="font-size:1{{ .Count }}pt" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
         {{ end }}
     {{ end }}

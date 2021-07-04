@@ -569,14 +569,13 @@ figcaption h4 {
   font: italic 12pt Alegreya,serif;
 }
 img {max-width: 100%}
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .navbar,.navbar-header {
     min-height: 64px;
   }
   main { 
     width: 99%;
   }
-  main h4 {display: none;}
   .navbar-brand {max-width: 80%}
   .mr-0 {float: none !important; max-width:100%;}
   main {
