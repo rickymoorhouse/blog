@@ -543,6 +543,10 @@ width: 31.3%;
 margin: 0 1% 0 1%;
 float:left;
 }
+main.photos figure {
+width: 100%;
+float: none;
+}
 main figure.right {
   float: right;
   clear: both;
@@ -565,17 +569,27 @@ figcaption h4 {
   font: italic 12pt Alegreya,serif;
 }
 img {max-width: 100%}
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar,.navbar-header {
     min-height: 64px;
   }
   main { 
     width: 99%;
-    flex-direction: column;
   }
   main h4 {display: none;}
   .navbar-brand {max-width: 80%}
   .mr-0 {float: none !important; max-width:100%;}
+  main {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1140px) {
+  aside {
+    border-left: none;
+    border-top: 1px dotted var(--secondary);
+    padding-top: 2em;
+    margin-top: 2em;
+  }
 }
 #map { width: 100% !important }
 .tagcloud a {
