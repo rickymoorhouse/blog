@@ -58,7 +58,7 @@ section, article, aside {
 section,
 article { 
     max-width: 750px; 
-    flex: 2 0 auto;
+    flex: 1 1 auto;
 }
 aside { 
     max-width: 350px; 
@@ -569,7 +569,10 @@ img {max-width: 100%}
   .navbar,.navbar-header {
     min-height: 64px;
   }
-  main { width: 99%;}
+  main { 
+    width: 99%;
+    flex-direction: column;
+  }
   main h4 {display: none;}
   .navbar-brand {max-width: 80%}
   .mr-0 {float: none !important; max-width:100%;}
