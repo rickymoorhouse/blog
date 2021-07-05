@@ -1,6 +1,6 @@
 {{ partial "header" . }}
 
-<main>
+<main class="{{ .Type }}">
     <section>
     <h2>{{ .Title }}</h2>
 {{ $articles := where .Site.RegularPages "Section" .Type  }}

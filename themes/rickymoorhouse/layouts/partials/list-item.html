@@ -6,7 +6,7 @@
     <div class="Image">
         {{ range first 1  . }}
         {{ $.Scratch.Set "images" "True" }} 
-        {{ $image := .Fill "400x300" }} 
+        {{ $image := .Fill "293x293" }} 
         {{ if (isset .Exif.Tags "ImageDescription") }}
         <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}"></a><br />
         {{ else }}

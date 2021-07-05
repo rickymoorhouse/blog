@@ -552,6 +552,16 @@ main.photos figure {
 width: 100%;
 float: none;
 }
+main.photos div.header .tags{
+display: none;
+}
+main.photos div.header {
+margin: 0;
+}
+main.photos h4 {
+font-size: 16pt;
+margin: 0;
+}
 main figure.right {
   float: right;
   clear: both;
@@ -578,15 +588,18 @@ img {max-width: 100%}
   .navbar,.navbar-header {
     min-height: 64px;
   }
-  main { 
-    width: 99%;
-    padding: 16pt 4pt;
+  body main {
+    width: 100%;
+    padding: 16pt 0;
+  }
+  main div.header {
+    padding: 0 16pt;
   }
   main figure {
     margin: 0 0 0 0;
   }
   article.singlephoto {
-    padding: 4pt;
+    padding: 0;
   }
   .navbar-brand {max-width: 80%}
   main {
