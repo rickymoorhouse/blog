@@ -17,9 +17,9 @@
         {{ with .Resources.ByType "image" }}
         <div class="Image">
         {{ range . }}
-            <figure>
+            <figure style="overflow-y: scroll">
                <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" 
-               {{ with .Exif }}alt="{{ .Tags.ImageDescription }}"{{ end }}></a>
+               {{ with .Exif }}alt="{{ .Tags.ImageDescription }}"{{ end }} style="max-width: {{ .Width }}px;width: {{ .Width }}px; height: {{ .Height }}px;"></a>
                {{ with .Exif }}
                <figcaption>
                <h4>{{ .Tags.ImageDescription }}</h4>

@@ -580,6 +580,13 @@ img {max-width: 100%}
   }
   main { 
     width: 99%;
+    padding: 16pt 4pt;
+  }
+  main figure {
+    margin: 0 0 0 0;
+  }
+  article.singlephoto {
+    padding: 4pt;
   }
   .navbar-brand {max-width: 80%}
   main {
