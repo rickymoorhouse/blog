@@ -56,9 +56,14 @@ section, article, aside {
     padding: 16pt;
 }
 section,
+article.singlephoto div.header, 
 article { 
+    margin: auto;
     max-width: 750px; 
     flex: 1 1 auto;
+}
+article.singlephoto {
+    max-width: 100%;
 }
 aside { 
     max-width: 350px; 

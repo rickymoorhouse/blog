@@ -1,15 +1,38 @@
 {{ partial "header" . }}
-    <div class="site">
-      <div class="site-content">
-      </div>
-      <!-- site-content -->
-        <div class="page-content">
+<main class="{{ .Type }}">
+    <article class="singlephoto">
+    {{ partial "item-header" . }} 
+    <br> <div class="text-left">{{ .Content }}</div>
 
-{{ range $.Site.Data.photos }}
-<p><a href="{{.Link}}"><img src="{{.Image}}" /></a></p>
-<p>{{.Description | markdownify}}</p>
-{{ end }}
+    <!-- related posts with the same tags -->
+    {{ if and .Site.DisqusShortname (not .Params.disableComments) }}
+
+        <h4 class="page-header">Comments</h4>
+
+        {{ template "_internal/disqus.html" . }}
+
+    {{ end }}
+    {{ if .Params.hideImages }}{{ else }}
+    {{ .Params.type }}
+        {{ with .Resources.ByType "image" }}
+        <div class="Image">
+        {{ range . }}
+            <figure>
+               <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" 
+               {{ with .Exif }}alt="{{ .Tags.ImageDescription }}"{{ end }}></a>
+               {{ with .Exif }}
+               <figcaption>
+               <h4>{{ .Tags.ImageDescription }}</h4>
+               </figcaption>
+               {{ end }}
+            </figure>
+        {{ end }}
         </div>
-    </div>
-  </body>
-</html>
+        {{ end }}
+    {{ end }}
+    {{ if .Params.lat }}
+<img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/{{ .Params.lat }},{{ .Params.lng }},14.0,0,0/700x200@2x?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" style="width: 700px;padding: 0 21pt;" />
+    {{ end }}
+</article>
+</main>
+{{ partial "footer.html" . }}
