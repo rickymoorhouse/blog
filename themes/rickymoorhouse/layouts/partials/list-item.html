@@ -6,20 +6,22 @@
     <div class="Image">
         {{ range first 1  . }}
         {{ $.Scratch.Set "images" "True" }} 
-        {{ $image := .Fill "293x293" }} 
+        {{ $image := .Fill "586x586" }} 
         {{ if (isset .Exif.Tags "ImageDescription") }}
-        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}"></a><br />
+        <a class="image-popup-vertical-fit" dhref="{{ .RelPermalink }}">
+        </a>
+        <img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}">
         {{ else }}
-        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a><br />
+        <a class="image-popup-vertical-fit" dhref="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
         {{ end }}
     {{ end }}
     {{ range after 1  . }}
         {{ $.Scratch.Set "images" "True" }} 
-        {{ $image := .Fill "80x80" }} 
+        {{ $image := .Fill "586x586" }} 
         {{ if (isset .Exif.Tags "ImageDescription") }}
-        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}"></a>
+        <a class="image-popup-vertical-fit" dhref="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}"></a>
         {{ else }}
-        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
+        <a class="image-popup-vertical-fit" dhref="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
         {{ end }}
     {{ end }}
     </div>

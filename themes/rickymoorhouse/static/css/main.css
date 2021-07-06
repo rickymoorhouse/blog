@@ -1,6 +1,8 @@
 html body {
     background-color: #fefefe;
     font: 10pt/16pt sans-serif;
+    color: #888;
+    margin: 0;
 }
 body.preview::after {
     content: "DRAFT PREVIEW";
@@ -13,6 +15,52 @@ body.preview::after {
     background: red;
     padding: 3pt 5pt;
 }
+.text-left {
+  text-align: left;
+}
+nav.navbar {
+  position:absolute;
+  top: 0px;
+  height: 50px;
+  background: #f8f8f8;
+  width: 100%;
+  border-top: var(--border-width) solid var(--accent);
+  border-bottom: 1px solid #e8e8e8;
+}
+nav .container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+nav .nav {
+  list-style: none;
+}
+.nav>li>a {
+position: relative;
+display: block;
+padding: 14px 15px 7px 15px;
+width: 30px;
+height: 30px;
+text-decoration: none;
+}
+nav ul.navbar-right a{
+  padding: 14px 5px 7px 0px;
+}
+nav ul.navbar-right {
+  float: right;
+  margin-right: 30px;
+}
+nav li { display: inline-block;}   
+nav ul { float: left; margin: 0;}     
+nav.navbar::before { content: " "; box-sizing: border-box;}
+nav.navbar .navbar-header { float: left;}
+nav .navbar-brand {
+  height: 30px;
+  position: relative;
+  display: block;
+  padding: 13px 0 7px 15px;
+}
+
 @media (prefers-color-scheme: dark) {
   html body {
     background-color: #222522;
@@ -176,6 +224,9 @@ a.item-tag:active, a.item-tag:hover  {
 
 footer {
     border-bottom: var(--border-width) solid var(--accent);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;    
 }
 
 img {
@@ -584,10 +635,21 @@ figcaption h4 {
   font: italic 12pt Alegreya,serif;
 }
 img {max-width: 100%}
+body main.photos section {
+max-width: 1024px;
+width: 100%;
+}
+body main.photos article.item {
+width: 293px;
+height: 356px;
+float: left;
+clear: none;
+overflow: hidden;
+margin: 0 28px 28px 0;
+padding: 3pt;
+}
+
 @media (max-width: 600px) {
-  .navbar,.navbar-header {
-    min-height: 64px;
-  }
   body main {
     width: 100%;
     padding: 16pt 0;
@@ -595,8 +657,23 @@ img {max-width: 100%}
   main div.header {
     padding: 0 16pt;
   }
-  main.photos section {
-    width: 600px;
+  body main.photos article.item {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  body main.photos article.item img {
+    width: 100vw;
+    margin: 0;
+  }
+  body main.photos article.item div.Image {
+    width: 900vw;
+    text-align: left;
+    overflow-y: scroll;
+  }
+  body main.photos section {
+    padding: 0;
   }
   main figure {
     margin: 0 0 0 0;
@@ -617,6 +694,8 @@ img {max-width: 100%}
     margin-top: 2em;
   }
 }
+
+
 #map { width: 100% !important }
 .tagcloud a {
     padding: 0 5px;
