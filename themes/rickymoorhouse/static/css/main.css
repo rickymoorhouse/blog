@@ -595,6 +595,9 @@ img {max-width: 100%}
   main div.header {
     padding: 0 16pt;
   }
+  main.photos section {
+    width: 600px;
+  }
   main figure {
     margin: 0 0 0 0;
   }

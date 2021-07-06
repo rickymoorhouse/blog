@@ -1,0 +1,30 @@
+
+{{ partial "header" . }}
+
+<main class="photos">
+    <section>
+    <h2>{{ .Title }}</h2>
+    {{ range (.Paginator 6).Pages }} {{ partial "list-item" . }} {{ end }}
+<br style="clear: both">
+{{ partial "paginator" . }}
+</section>
+<!--{{ partial "sidebar" . }}-->
+</main>
+
+{{ partial "footer" . }}
+
+<style>
+body main.photos section {
+max-width: 1024px;
+width: 100%;
+}
+body main article.item {
+width: 293px;
+height: 356px;
+float: left;
+clear: none;
+overflow: hidden;
+margin: 0 28px 28px 0;
+padding: 3pt;
+/* box-shadow: 0 0 1pt rgba(0,0,0,0.5); */
+</style>
