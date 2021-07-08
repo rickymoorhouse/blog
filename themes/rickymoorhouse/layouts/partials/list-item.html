@@ -8,11 +8,11 @@
         {{ $.Scratch.Set "images" "True" }} 
         {{ $image := .Fill "586x586" }} 
         {{ if (isset .Exif.Tags "ImageDescription") }}
-        <a class="image-popup-vertical-fit" dhref="{{ .RelPermalink }}">
+        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
         </a>
         <img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}">
         {{ else }}
-        <a class="image-popup-vertical-fit" dhref="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
+        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
         {{ end }}
     {{ end }}
     {{ range after 1  . }}
