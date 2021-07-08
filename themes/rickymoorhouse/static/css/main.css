@@ -225,7 +225,6 @@ a.item-tag:active, a.item-tag:hover  {
 
 footer {
     border-bottom: var(--border-width) solid var(--accent);
-    position: fixed;
     bottom: 0px;
     width: 100%;    
 }
