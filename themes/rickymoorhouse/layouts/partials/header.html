@@ -17,12 +17,16 @@
     {{ partial "css" . }} {{ partial "js" . }} {{ hugo.Generator }}
     <link rel="alternate" type="application/rss+xml" title="Ricky Moorhouse (RSS Feed)" href="https://rickymoorhouse.uk/index.xml" />
     <link rel="alternate" type="application/json" title="Ricky Moorhouse (JSON Feed)" href="https://rickymoorhouse.uk/jsonfeed/" />
-    {{ if .Params.featured }}
+    {{ if .Resources.ByType "image" }}
+        {{ with .Resources.ByType "image" }}
+        {{ range first 1 . }}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://rickymoorhouse.uk{{ .Params.featured }}" />
-    <meta property="og:image" content="https://rickymoorhouse.uk{{ .Params.featured }}" />
-    <meta property="og:image:width" content="1024" />
-    <meta property="og:image:height" content="681" />
+    <meta name="twitter:image" content="{{ .RelPermalink }}" />
+    <meta property="og:image" content="{{ .Permalink }}" />
+    <meta property="og:image:width" content="{{ .Width }}" />
+    <meta property="og:image:height" content="{{ .Height }}" />
+        {{ end }}
+        {{ end }}
     {{ else }}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" property="og:image" content="https://rickymoorhouse.uk/images/siteicon.png" />
@@ -65,12 +69,6 @@
 			</switch>
 		</svg>
 </a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
                 </div>
 
                 <div class="collapse navbar-collapse">
