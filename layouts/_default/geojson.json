@@ -12,7 +12,7 @@
    {{ if .photo }}"image":"{{ .photo }}",{{ end }}
    "marker-symbol":"circle",
    "marker-size":"small",
-   "marker-color":"#fc4353"
+   "marker-color":"#869ba0"
   }
  },
 {{ end }}{{ end }}
