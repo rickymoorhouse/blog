@@ -10,7 +10,9 @@
     <link href="https://github.com/rickymoorhouse" rel="me">
     <link rel="webmention" href="https://webmention.io/rickymoorhouse.uk/webmention" />
     <link rel="pingback" href="https://webmention.io/rickymoorhouse.uk/xmlrpc" />
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter&family=Telex&display=swap" rel="stylesheet">
     {{ if .Site.Params.favicon }}
     <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
     {{ end }}
@@ -18,14 +20,22 @@
     <link rel="alternate" type="application/rss+xml" title="Ricky Moorhouse (RSS Feed)" href="https://rickymoorhouse.uk/index.xml" />
     <link rel="alternate" type="application/json" title="Ricky Moorhouse (JSON Feed)" href="https://rickymoorhouse.uk/jsonfeed/" />
     {{ if .Resources.ByType "image" }}
-        {{ with .Resources.ByType "image" }}
-        {{ range first 1 . }}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ .RelPermalink }}" />
-    <meta property="og:image" content="{{ .Permalink }}" />
-    <meta property="og:image:width" content="{{ .Width }}" />
-    <meta property="og:image:height" content="{{ .Height }}" />
-        {{ end }}
+        {{ if .Params.featured }}
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image" content="{{ .Params.featured }}" />
+            <meta property="og:image" content="https://rickymoorhouse.uk{{ .Params.featured }}" />
+            <meta property="og:image:width" content="" />
+            <meta property="og:image:height" content="" />
+        {{ else }}
+            {{ with .Resources.ByType "image" }}
+            {{ range first 1 . }}
+                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:image" content="{{ .RelPermalink }}" />
+                <meta property="og:image" content="{{ .Permalink }}" />
+                <meta property="og:image:width" content="{{ .Width }}" />
+                <meta property="og:image:height" content="{{ .Height }}" />
+            {{ end }}
+            {{ end }}
         {{ end }}
     {{ else }}
     <meta name="twitter:card" content="summary" />

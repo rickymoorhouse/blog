@@ -1,18 +1,9 @@
 {{ partial "header" . }}
 <main class="{{ .Type }}">
-    <article class="singlephoto">
+    <article>
     {{ partial "item-header" . }} 
     <br> <div class="text-left">{{ .Content }}</div>
 
-    <!-- related posts with the same tags -->
-    {{ if and .Site.DisqusShortname (not .Params.disableComments) }}
-
-        <h4 class="page-header">Comments</h4>
-
-        {{ template "_internal/disqus.html" . }}
-
-    {{ end }}
-    {{ if .Params.hideImages }}{{ else }}
     {{ .Params.type }}
         {{ with .Resources.ByType "image" }}
         <div class="Image">
@@ -26,13 +17,29 @@
                </figcaption>
                {{ end }}
             </figure>
-        {{ end }}
         </div>
-        {{ end }}
+    </article>
+    <aside>
+    {{ with .Exif }}
+      <ul>
+      {{ with .Date }}<li>Date: {{ .Format "January 02, 2006" }}</li>{{ end }}
+      {{ with .Tags.ApertureValue }}<li>Aperture: {{ lang.NumFmt 2 . }}</li>{{ end }}
+      {{ with .Tags.BrightnessValue }}<li>Brightness: {{ lang.NumFmt 2 . }}</li>{{ end }}
+      {{ with .Tags.ExposureTime }}<li>Exposure Time: {{ . }}</li>{{ end }}
+      {{ with .Tags.FNumber }}<li>F Number: {{ . }}</li>{{ end }}
+      {{ with .Tags.FocalLength }}<li>Focal Length: {{ . }}</li>{{ end }}
+      {{ with .Tags.ISOSpeedRatings }}<li>ISO Speed Ratings: {{ . }}</li>{{ end }}
+      {{ with .Tags.Model }}<li>Lens Model: {{ . }}</li>{{ end }}
+      {{ with .Tags.LensInfo }}<li>Model: {{ . }}</li>{{ end }}
+      </ul>
     {{ end }}
-    {{ if .Params.lat }}
-<img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/{{ .Params.lat }},{{ .Params.lng }},14.0,0,0/700x200@2x?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" style="width: 700px;padding: 0 21pt;" />
+    {{ if .Exif.Lat }}
+      <img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/{{ .Exif.Long }},{{ .Exif.Lat }},14.0,0,0/350x200@2x?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" style="width: 350px;padding: 0 21pt;" />
+    {{ else if .Params.lat }}
+<img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/{{ .Params.lat }},{{ .Params.lng }},14.0,0,0/350x200@2x?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" style="width: 350px;padding: 0 21pt;" />
     {{ end }}
+  {{ end }} <!-- range -->
+  {{ end }} <!-- params -->
 </article>
 </main>
 {{ partial "footer.html" . }}
