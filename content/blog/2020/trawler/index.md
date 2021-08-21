@@ -6,7 +6,7 @@ tags:
  - apiconnect
  - monitoring
 hideImages: true
-featured: /blog/2020/trawler-metric-gathering-for-api-connect/trawler-grafana.png
+featured: trawler-grafana.png
 ---
 
 As part of our work in running and monitoring our API Connect cloud deployments we've built some of our own tooling to assist with monitoring what is going on within the deployments.  Trawler is one of these items which is used to gather metrics from a Kubernetes based deployment of API Connect. 

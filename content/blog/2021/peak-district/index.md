@@ -5,6 +5,6 @@ slug: peak-district
 tags:
  - family
  - photos
-featured: /blog/2021/peak-district/featured-millstone.jpeg
+featured: featured-millstone.jpeg
 ---
 

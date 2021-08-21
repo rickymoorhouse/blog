@@ -7,7 +7,7 @@ tags:
  - apiconnect
  - monitoring
 hideImages: true
-featured: /blog/2020/trawler-metric-gathering-for-api-connect/trawler-grafana.png
+featured: trawler-grafana.png
 ---
 
 Even though a lot has changed within the API Connect product and the types and numbers of stacks we're running since I first posted an overview of [monitoring API Connect](/apic/monitoring/) , the main areas we  monitor haven't.  

@@ -238,6 +238,7 @@ main h2 { font: 20pt/32pt Alegreya, serif;clear: both;text-transform: capitalize
 main h3:first-line { font: 16pt/32pt sans-serif; }
 main h3 { font: 10pt/16pt sans-serif; color: #555; margin: 0 0 0 0;}
 main h4 { font: 20pt/32pt Alegreya, serif; color: var(--accent); margin: 0 0 8pt 0;}
+main h4.external::before { content: "\279a";}
 main h5 { font: 10pt/16pt sans-serif; color: var(--secondary); margin: 0;}
 main ul, 
 main p  { margin-bottom: 16pt;}
@@ -679,7 +680,7 @@ padding: 3pt;
     padding: 0;
   }
   main figure {
-    margin: 0 0 0 0;
+    width: 97%;
   }
   article.singlephoto {
     padding: 0;
