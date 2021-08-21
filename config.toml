@@ -37,6 +37,10 @@ pluralizelisttitles = false
     name = "Photos"
     weight = 4
 [[menu.main]]
+    url = "/blog/"
+    name = "Blog"
+    weight = 4
+[[menu.main]]
     url = "/weather/"
     name = "Weather"
     weight = 5
