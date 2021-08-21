@@ -241,7 +241,7 @@ main h4 { font: 20pt/32pt Alegreya, serif; color: var(--accent); margin: 0 0 8pt
 main h4.external::before { content: "\279a";}
 main h5 { font: 10pt/16pt sans-serif; color: var(--secondary); margin: 0;}
 main ul, 
-main p  { margin-bottom: 16pt;}
+main p  { margin-bottom: 16pt; clear: left;}
 /* Lightbox */
 /* Magnific Popup CSS */
 .mfp-bg {

@@ -1,7 +1,9 @@
 <aside id="sidebar">
-
-<p>{{ markdownify .Site.Params.Description }}</p>
-<h3></h3>
+{{ if .Params.lat }}
+<p>
+    <img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/pin-s+869ba0({{ .Params.lng }},{{ .Params.lat }})/{{ .Params.lng }},{{ .Params.lat }},13.0,0,0/350x200@2x?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" style="width: 350px;" />
+</p>
+{{ end }}
 
 {{ if .IsTranslated }}
 <h4>{{ i18n "translations" }}</h4>
@@ -25,7 +27,6 @@
 </ul>
 {{ end }}
 
-<h4>{{ i18n "seeAlso" }}</h4>
 <div class="tagcloud">
     {{ range .Site.Taxonomies.tags }}
         {{ if and (gt .Count 1) (ne .Page.Title "abi") (ne .Page.Title "jessica") (ne .Page.Title "photos") }}

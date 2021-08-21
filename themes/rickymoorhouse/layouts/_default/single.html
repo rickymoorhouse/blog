@@ -33,9 +33,6 @@
         {{ end }}
     {{ end }}
 
-    {{ if .Params.lat }}
-<img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/{{ .Params.lat }},{{ .Params.lng }},14.0,0,0/700x200@2x?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" style="width: 700px;padding: 0 21pt;" />
-    {{ end }}
 </article>
 {{ partial "sidebar.html" . }}
 </main>
