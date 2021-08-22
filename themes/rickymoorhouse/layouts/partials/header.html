@@ -23,7 +23,7 @@
         {{ if .Params.featured }}
         {{ with .Resources.Match .Params.featured }}
             {{ range first 1 . }}
-            {{ $image := .Fit "600x300" }}
+            {{ $image := .Fit "900x450" }}
                 <meta name="twitter:card" content="summary_large_image">
                 <meta name="twitter:image" content="{{ $image.Permalink }}" />
                 <meta property="og:image" content="{{ $image.Permalink }}" />
