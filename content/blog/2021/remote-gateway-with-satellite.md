@@ -38,7 +38,7 @@ For the three hosts to form the control plane, you will need to assign them to t
 ```bash
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install schroot ipvsadm telnet
-yum install idg_cloud1.10011.common.x86_64.rpm idg_cloud1.10011.kernel-build-tool.x86_64.rpm idg_cloud1.10011.image.x86_64.rpm
+yum install idg_cloud1.10011.common.x86_64.rpm idg_cloud1.10011.image.x86_64.rpm
 ``` 
 
 ## Set up link endpoint 
