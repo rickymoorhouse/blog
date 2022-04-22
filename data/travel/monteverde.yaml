@@ -1,0 +1,10 @@
+title: "Monteverde"
+layout: travel
+datePosted: 2022
+photo: /travel/photos/monteverde.jpg
+lat: 10.312516
+lng: -84.8131851
+description: >
+    # Hotel Belmar, Monteverde
+    
+Year: 2022
