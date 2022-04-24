@@ -1,0 +1,119 @@
+{{ partial "header" . }}
+<!--<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+-->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+  
+  <style>
+        #map {
+        height: 100%;
+        margin-top: -20px;
+        }
+        div.page-content {
+        position:fixed;
+        text-align: left;
+        bottom: 1em;
+        left: 1em;
+        z-index: 999;
+        background: white;
+        width: 25%;
+        margin: 1em auto;
+        padding: 0.5em;
+        box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
+        }
+        .mapboxgl-popup-content ul {
+          margin: 0;padding: 0 0 0 1em;
+        }
+        @media (prefers-color-scheme: dark) {
+          div.page-content {
+            background-color: #222;
+            color: #ccc;
+          }
+          .mapboxgl-popup-anchor-left .mapboxgl-popup-tip { border-right-color: #222;}
+          .mapboxgl-popup-anchor-right .mapboxgl-popup-tip { border-left-color: #222;}
+          .mapboxgl-popup-anchor-top .mapboxgl-popup-tip { border-bottom-color: #222;}
+          .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip { border-top-color: #222;}
+          .mapboxgl-popup-content {
+            background: #222;
+            color: #ccc;
+          }          
+        }
+
+        footer { display: none;}
+  </style>
+    <div class="site">
+.
+
+      <div class="site-content" id="map">
+        <span class="mapbox-maplogo"></span>
+      </div>
+      <!-- site-content -->
+        <div class="page-content"><ul>
+        {{ .Content }}
+        </div>
+<script type="text/javascript">
+
+document.getElementById('map').style.height=(window.innerHeight-57) + "px";
+mapboxgl.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
+
+var style = 'mapbox://styles/mapbox/light-v10';
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  style = 'mapbox://styles/mapbox/dark-v10'
+}
+
+var map = new mapboxgl.Map({
+  container: 'map', // container id
+  style: style, // stylesheet location
+  center: [{{ .Params.lng }}, {{ .Params.lat }}], // starting position [lng, lat]
+  zoom: {{ .Params.zoom }} // starting zoom
+});
+
+map.on('load', function() {
+  const geojson = {{ .Params.geojson }};
+
+  map.addSource('points', {
+    type: 'geojson', 
+    data: geojson,
+    cluster: false,
+    })
+  map.addLayer({
+    id: 'points',
+    type: 'circle',
+    source: 'points',
+    paint: {
+      'circle-color': '#cc9966',
+      'circle-radius': 6,
+    }
+  });
+
+  var popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true});
+
+  map.on('mouseenter', 'points', function(e) {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+  map.on('click', 'points', function(e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var content = e.features[0].properties.content;
+  
+    popup.setLngLat(coordinates)
+      .setHTML(content)
+      .addTo(map);
+  });
+  map.on('mouseleave', 'places', function() {
+      map.getCanvas().style.cursor = '';
+      popup.remove();
+  });
+});
+
+(function () {
+    'use strict';
+
+    // Your additional js should go there
+
+}());
+
+</script>
+    </div>
+  </body>
+</html>
