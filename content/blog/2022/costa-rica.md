@@ -2,9 +2,12 @@
 outputs: [html]
 layout: custom-map
 title: Costa Rica 2022
-lat: 9.8
+slug: costa-rica
+date: 2022-04-12
+lat: 10.2
 lng: -84.4
 zoom: 7
+static: https://api.mapbox.com/styles/v1/mapbox/light-v10/static/pin-s+555555(-84.8131851,10.312516),pin-s+555555(-84.6824846,10.5007697),pin-s+555555(-83.5132126,10.5623131),pin-s+555555(-84.120568,10.415602)/-84.4,9.8,6,13/350x250@2x
 geojson: 
     type: FeatureCollection
     features:
