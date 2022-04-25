@@ -6,28 +6,43 @@
   <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
   
   <style>
-        #map {
-        height: 100%;
-        margin-top: -20px;
-        }
-        div.page-content {
-        position:fixed;
+    @media (max-width: 768px) {
+      div.page-content {
+        float: left;
+        width: 100%;
         text-align: left;
-        bottom: 1em;
-        left: 1em;
-        z-index: 999;
-        background: white;
-        width: 25%;
-        margin: 1em auto;
+        clear: left;
         padding: 0.5em;
-        box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
-        }
+      }
+      #custom #map {
+        height: 40% !important;
+        min-height: 200pt;
+        margin-top: -20px;
+      }
+    }
+    @media (min-width: 768px) {
+      #map {
+          height: 100%;
+          margin-top: -20px;
+      }
+      div.page-content {
+          position:fixed;
+          text-align: left;
+          bottom: 1em;
+          left: 1em;
+          z-index: 999;
+          width: 25%;
+          margin: 1em auto;
+          padding: 0.5em;
+          /*box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);*/
+      }
+    }
+
         .mapboxgl-popup-content ul {
           margin: 0;padding: 0 0 0 1em;
         }
         @media (prefers-color-scheme: dark) {
           div.page-content {
-            background-color: #222;
             color: #ccc;
           }
           .mapboxgl-popup-anchor-left .mapboxgl-popup-tip { border-right-color: #222;}
@@ -39,15 +54,18 @@
             color: #ccc;
           }          
         }
-
+        #static { display: none;}
         footer { display: none;}
   </style>
-    <div class="site">
+    <div class="site" id="custom">
 .
 
       <div class="site-content" id="map">
         <span class="mapbox-maplogo"></span>
       </div>
+      <!--<div class="static">
+        <img src="{{ .Params.static }}?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" />
+      </div>-->
       <!-- site-content -->
         <div class="page-content"><ul>
         {{ .Content }}
