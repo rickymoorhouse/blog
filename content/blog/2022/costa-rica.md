@@ -12,6 +12,14 @@ geojson:
     type: FeatureCollection
     features:
      - type: Feature
+       geometry:
+         type: Point
+         coordinates: [-84.0776586, 9.9332828]
+       properties:
+         title: San José
+         content: |
+           <strong>San José</strong> 
+     - type: Feature
        geometry: 
          type: Point
          coordinates: [ -84.8131851 ,  10.312516 ]
