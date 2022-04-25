@@ -70,8 +70,8 @@ geojson:
     - <a href="/blog/2022/arenal-volcano-hike">Volcano Hike</a>
     - Zip-lining
  - Monteverde (18-20 Apr)
-    - <a href="/blog/2022/belmar-arrival">Arrival at Hotel Belmar</a>
-    - <a href="/blog/2022/monteverde-day-two">Cloud Forest Reserve</a>
-    - <a href="/blog/2022/finca-madre-tierra">Finca Madre Tierra</a>
+    - Hotel Belmar<!--<a href="/blog/2022/belmar-arrival">Arrival at Hotel Belmar</a>-->
+    - Cloud Forest Reserve <!--<a href="/blog/2022/monteverde-day-two">Cloud Forest Reserve</a>-->
+    - Finca Madre Tierra<!--<a href="/blog/2022/finca-madre-tierra">Finca Madre Tierra</a>-->
     - Hanging bridges
 

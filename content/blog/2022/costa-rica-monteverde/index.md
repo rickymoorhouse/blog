@@ -5,6 +5,7 @@ date: 2022-04-18
 tags: 
 - costa-rica
 hideImages: true
+draft: true
 lng: 10.312516
 lat: -84.8131851
 ---
