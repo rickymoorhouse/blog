@@ -1,6 +1,6 @@
 ---
 title: "Arenal Volcano Hike"
-date: 2022-04-15
+date: 2022-04-16
 tags: 
  - costa-rica
 lng: 10.5007697
@@ -34,5 +34,6 @@ Along the hike we saw lots of epiphytes, in particular bromeliads and orchids su
 We finished the hike in time to watch the sunset over the lake bathing the volcano in a reddish glow before heading to [Eco Termales](https://ecotermalesfortuna.cr) to bathe in volcanic heated springs under the stars.
 
 {{<fig "DSC_0442.jpeg">}}
+{{<fig "DSC_0446.jpeg">}}
 {{<fig "DSC_0451.jpeg">}}
 

@@ -19,7 +19,7 @@ The tour took us across a hanging bridge into the primary forest and around a ci
 {{<fig "DSC_0309.jpeg">}}
 {{<fig "DSC_0310.jpeg">}}
 
-Some of the highlights were ... 
+Some of the highlights were the views into the trees from the hanging bridge, the walking palm with nibbed roots and the closer view of a sloth. 
 
 {{<fig "DSC_0319.jpeg">}}
 {{<fig "DSC_0322.jpeg">}}
