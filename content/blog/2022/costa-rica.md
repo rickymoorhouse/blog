@@ -31,7 +31,8 @@ geojson:
             <li><a href="/blog/2022/belmar-arrival">Arrival at Hotel Belmar</a></li>
             <li><a href="/blog/2022/monteverde-day-two">Cloud Forest Reserve</a></li>
             <li><a href="/blog/2022/finca-madre-tierra">Finca Madre Tierra</a></li>
-            <li>Hanging bridges</li>
+            <li><a href="/blog/2022/monteverde-selvatura">Hanging bridges</a></li>
+            <li><a href="/blog/2022/belmar-garden-to-glass">Garden to Glass</a></li>
             </ul>
      - type: Feature
        geometry: 
@@ -76,10 +77,11 @@ geojson:
  - <a href="/blog/2022/tirimbina-a-bonus">Tirimbina</a> (15 Apr)
  - Arenal (15-17 Apr)
     - <a href="/blog/2022/arenal-volcano-hike">Volcano Hike</a>
-    - Zip-lining
+    - <a href="/blog/2022/ziplining-arenal">Zip-lining</a>
  - Monteverde (18-20 Apr)
-    - Hotel Belmar<!--<a href="/blog/2022/belmar-arrival">Arrival at Hotel Belmar</a>-->
-    - Cloud Forest Reserve <!--<a href="/blog/2022/monteverde-day-two">Cloud Forest Reserve</a>-->
-    - Finca Madre Tierra<!--<a href="/blog/2022/finca-madre-tierra">Finca Madre Tierra</a>-->
-    - Hanging bridges
+    - <a href="/blog/2022/belmar-arrival">Arrival at Hotel Belmar</a>
+    - <a href="/blog/2022/monteverde-day-two">Cloud Forest Reserve</a>
+    - <a href="/blog/2022/finca-madre-tierra">Finca Madre Tierra</a>
+    - <a href="/blog/2022/monteverde-selvatura">Hanging bridges</a>
+    - <a href="/blog/2022/belmar-garden-to-glass">Garden to glass</a>
 
