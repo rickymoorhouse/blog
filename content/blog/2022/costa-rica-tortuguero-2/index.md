@@ -17,13 +17,13 @@ We started the day with an early wake up (not too hard as we weren't adapted to 
 {{<fig "DSC_0114.jpeg">}}
 {{<fig "DSC_0119.jpeg">}}
 
-We then headed down into the national park, stopping briefly for José to provide our ticket reference numbers at the rangers office to confirm we could all enter the park. As we passed through the parks more vibrant canals we saw a number of birds including herons, cormorants and then noticed all the tour boats gathered in a circle around something in the water. We joined the circle and then realised what they were watching - dolphins! We continued to watch them as all the boats proceeded to chase them down the river for a while - could see a group of them with young, but I didn't manage to time it right to capture a photo of them - was amazing seeing them making their way along the river breaching the surface in their group. 
+We then headed down into the national park, stopping briefly for José to provide our ticket reference numbers at the ranger's office to confirm we could all enter the park. As we passed through the parks more vibrant canals, we saw a number of birds including herons, cormorants and then noticed all the tour boats gathered in a circle around something in the water. We joined the circle and then realised what they were watching - dolphins! We continued to watch them as all the boats proceeded to chase them down the river for a while - could see a group of them with young, but I didn't manage to time it right to capture a photo of them - was amazing seeing them making their way along the river breaching the surface in their group. 
 
 {{<fig "DSC_0120.jpeg">}}
 {{<fig "DSC_0125.jpeg">}}
 {{<fig "DSC_0171.jpeg">}}
 
-After following the dolphins for a bit we then headed back down the river and heard the sounds of a group of Howler Monkeys and then saw them including a mother with a baby on it's back swinging through the trees. 
+After following the dolphins for a while, we then headed back down the river and heard the sounds of a group of Howler Monkeys and then saw them including a mother with a baby on its back swinging through the trees. 
 {{<fig "DSC_0136.jpeg">}}
 {{<fig "DSC_0137.jpeg">}}
 {{<fig "DSC_0140.jpeg">}}
@@ -46,7 +46,7 @@ On this tour we went a slightly different route through the park, into some of t
 {{<fig "DSC_0234.jpeg">}}
 {{<fig "DSC_0250.jpeg">}}
 
-After lunch we had a walking tour around the gardens of the hotel where we saw a surprising amount of things just around the hotel grounds. Some of the highlights were the banana flowers, the hanging nests of Montezuma Oropendola birds, the Green Macaws and the Iguana that was relaxing in the bushes metres away from our rooms!
+After lunch we had a walking tour around the gardens of the hotel where we saw a surprising number of things just around the hotel grounds. Some of the highlights were the banana flowers, the hanging nests of Montezuma Oropendola birds, the Green Macaws and the Iguana that was relaxing in the bushes metres away from our rooms!
 
 {{<fig "DSC_0259.jpeg">}}
 {{<fig "DSC_0262.jpeg">}}
