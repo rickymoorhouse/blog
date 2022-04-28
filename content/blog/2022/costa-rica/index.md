@@ -4,7 +4,7 @@ layout: custom-map
 title: Costa Rica 2022
 slug: costa-rica
 date: 2022-04-12
-featured: https://rickymoorhouse.uk/blog/2022/arenal-volcano-hike/DSC_0366.jpeg
+featured: DSC_0366.jpeg
 lat: 10.2
 lng: -84.4
 zoom: 7
