@@ -4,6 +4,7 @@ layout: custom-map
 title: Costa Rica 2022
 slug: costa-rica
 date: 2022-04-12
+featured: https://rickymoorhouse.uk/blog/2022/arenal-volcano-hike/DSC_0366.jpeg
 lat: 10.2
 lng: -84.4
 zoom: 7
@@ -43,7 +44,7 @@ geojson:
          content: |
             <strong>Arenal</strong>
             <ul><li><a href="/blog/2022/arenal-volcano-hike">Volcano Hike</a></li>
-            <li>Zip-lining</li>
+            <li><a href="/blog/2022/zip-lining-arenal/">Zip-lining</a></li>
             </ul>
      - type: Feature
        geometry: 
@@ -77,7 +78,7 @@ geojson:
  - <a href="/blog/2022/tirimbina-a-bonus">Tirimbina</a> (15 Apr)
  - Arenal (15-17 Apr)
     - <a href="/blog/2022/arenal-volcano-hike">Volcano Hike</a>
-    - <a href="/blog/2022/ziplining-arenal">Zip-lining</a>
+    - <a href="/blog/2022/zip-lining-arenal">Zip-lining</a>
  - Monteverde (18-20 Apr)
     - <a href="/blog/2022/belmar-arrival">Arrival at Hotel Belmar</a>
     - <a href="/blog/2022/monteverde-day-two">Cloud Forest Reserve</a>

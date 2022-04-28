@@ -10,7 +10,7 @@ featured: DSC_0366.jpeg
 ---
 
 
-This morning we had a relaxing morning in the pool enjoying the swim-up bar and the views across to the volcano whose peak kept peeping out from behind the clouds. We got wood-fired pizzas for lunch by the pool overlooking the volcno and watching wildlife by the lake.
+This morning we had a relaxing morning in the pool enjoying the swim-up bar and the views across to the volcano whose peak kept peeping out from behind the clouds. We got wood-fired pizzas for lunch by the pool overlooking the volcano and watching wildlife by the lake.
 
 {{<fig "DSC_0560.jpeg">}}
 {{<fig "DSC_0346.jpeg">}}

@@ -3,10 +3,11 @@ title: Zip-lining, Arenal
 tags: 
  - costa-rica
 hideImages: true
+fetured: GPTempDownload.jpeg
 date: 2022-04-17
 ---
 
-We started with an early breakfast at 7 with seats right by the front of the restaurant overloking the volcano watching birds over the water and then headed over to the reception to be picked up at 8:15 for Sky trek. 
+We started with an early breakfast at 7 with seats right by the front of the restaurant overlooking the volcano watching birds over the water and then headed over to the reception to be picked up at 8:15 for Sky trek. 
 
 {{<fig "DSC_0473.jpeg">}}
 
@@ -21,7 +22,7 @@ There were 7 zip lines in all including the longest which was nearly half a mile
 {{<fig "SKY_9847.jpeg">}}
 {{<fig "SKY_9928.jpeg">}}
 
-After we finished the course we had chips at the restaurant overloooking the volcano and headed back to the hotel for a chilled out afternoon by the pool and finished off the evening in the hotels termales. 
+After we finished the course we had chips at the restaurant overlooking the volcano and headed back to the hotel for a chilled out afternoon by the pool and finished off the evening in the hotels termales. 
 
 {{<fig "IMG_4179.jpeg">}}
 {{<fig "IMG_4190.jpeg">}}
