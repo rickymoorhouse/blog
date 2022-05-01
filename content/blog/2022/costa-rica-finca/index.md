@@ -44,3 +44,7 @@ Crushing sugar cane to drink
 {{<fig "DSC_0725.jpeg">}}
 {{<fig "DSC_0726.jpeg">}}
 {{<fig "DSC_0728.jpeg">}}
+
+<a href="/blog/2022/monteverde-selvatura">Hanging bridges</a>
+
+

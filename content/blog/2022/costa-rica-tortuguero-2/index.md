@@ -55,3 +55,5 @@ After lunch we had a walking tour around the gardens of the hotel where we saw a
 The last adventure of the day was an evening tree-frog hunt in the trees around the swimming pool by torch light.  We managed to see two different tree frogs high in the leaves.
 
  {{<fig "DSC_0271.jpeg">}}
+
+<a href="/blog/2022/tirimbina-a-bonus">Tirimbina</a> (15 Apr)

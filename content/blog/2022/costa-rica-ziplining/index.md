@@ -26,3 +26,5 @@ After we finished the course we had chips at the restaurant overlooking the volc
 
 {{<fig "IMG_4179.jpeg">}}
 {{<fig "IMG_4190.jpeg">}}
+
+<a href="/blog/2022/belmar-arrival">Arrival at Hotel Belmar</a>

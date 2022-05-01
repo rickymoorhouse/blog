@@ -32,3 +32,7 @@ Seeing the forest canopy from above was amazing, so much variety in colours and 
 After the tour finished, we had a quick look in the shop and lunch in the restaurant - I wouldn't recommend these, just get the transport back. 
 
 {{<fig "DSC_0735.jpeg">}}
+
+<a href="/blog/2022/belmar-garden-to-glass">Garden to glass</a>
+
+

@@ -37,3 +37,4 @@ We finished the hike in time to watch the sunset over the lake bathing the volca
 {{<fig "DSC_0446.jpeg">}}
 {{<fig "DSC_0451.jpeg">}}
 
+<a href="/blog/2022/zip-lining-arenal">Zip-lining</a>
