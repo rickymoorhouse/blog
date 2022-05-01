@@ -33,6 +33,6 @@ After the tour finished, we had a quick look in the shop and lunch in the restau
 
 {{<fig "DSC_0735.jpeg">}}
 
-<a href="/blog/2022/belmar-garden-to-glass">Garden to glass</a>
+<i class="fa fa-arrow-right"></i> on to <a href="/blog/2022/belmar-garden-to-glass">Garden to glass</a>
 
 

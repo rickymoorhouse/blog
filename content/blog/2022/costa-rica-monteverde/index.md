@@ -23,4 +23,4 @@ After lunch we were shown to our beautiful wooden floored and panelled forest ro
 {{<fig "DSC_0600.jpeg">}}
 {{<fig "DSC_0610.jpeg">}}
 
-<a href="/blog/2022/monteverde-day-two">Cloud Forest Reserve</a>
+<i class="fa fa-arrow-right"></i> on to <a href="/blog/2022/monteverde-day-two">Cloud Forest Reserve</a>

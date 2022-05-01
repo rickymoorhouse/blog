@@ -56,4 +56,5 @@ The last adventure of the day was an evening tree-frog hunt in the trees around 
 
  {{<fig "DSC_0271.jpeg">}}
 
-<a href="/blog/2022/tirimbina-a-bonus">Tirimbina</a> (15 Apr)
+
+<i class="fa fa-arrow-right"></i> on to <a href="/blog/2022/tirimbina-a-bonus">Tirimbina</a>

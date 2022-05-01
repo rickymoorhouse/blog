@@ -44,4 +44,4 @@ We had lunch at Laguna lodge and in the afternoon visited the town of Tortuguero
 {{<fig "IMG_4102.jpeg">}}
 {{<fig "DSC_0087.jpeg">}}
  
-<a href="/blog/2022/tortuguero-day-two">Exploring Tortuguero</a>
+<i class="fa fa-arrow-right"></i> on to <a href="/blog/2022/tortuguero-day-two">Exploring Tortuguero</a>

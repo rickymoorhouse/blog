@@ -25,4 +25,4 @@ Some of the highlights were the views into the trees from the hanging bridge, th
 {{<fig "DSC_0322.jpeg">}}
 {{<fig "DSC_0323.jpeg">}}
 
-<a href="/blog/2022/arenal-volcano-hike">Arenal - Volcano Hike</a>
+<i class="fa fa-arrow-right"></i> on to <a href="/blog/2022/arenal-volcano-hike">Arenal - Volcano Hike</a>

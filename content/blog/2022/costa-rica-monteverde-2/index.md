@@ -27,7 +27,7 @@ After the walk around the reserve, we went over to the hummingbird viewing area 
 {{<fig "DSC_0664.jpeg">}}
 {{<fig "DSC_0677.jpeg">}}
 
-On the way back we opted to be dropped off in the town of Santa Elena to have a look around and make our own way back to the hotel - it was nice to see, but the walk back was much further than the '15 minutes' we'd been told! We had a juice for lunch and then relaxed for a bit before our trip to the farm we'd booked for the afternoon. 
+On the way back we opted to be dropped off in the town of Santa Elena to have a look around and make our own way back to the hotel - it was nice to see, but the walk back was much further than the '15 minutes' we'd been told! We had a juice for lunch and then relaxed for a bit before our [trip to the farm](/blog/2022/finca-madre-tierra) we'd booked for the afternoon. 
 
 
-<a href="/blog/2022/finca-madre-tierra">Finca Madre Tierra</a>
+<i class="fa fa-arrow-right"></i> on to <a href="/blog/2022/finca-madre-tierra">Finca Madre Tierra</a>
