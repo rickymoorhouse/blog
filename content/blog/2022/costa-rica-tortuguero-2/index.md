@@ -17,13 +17,16 @@ We started the day with an early wake up (not too hard as we weren't adapted to 
 {{<fig "DSC_0114.jpeg">}}
 {{<fig "DSC_0119.jpeg">}}
 
-We then headed down into the national park, stopping briefly for José to provide our ticket reference numbers at the ranger's office to confirm we could all enter the park. As we passed through the parks more vibrant canals, we saw a number of birds including herons, cormorants and then noticed all the tour boats gathered in a circle around something in the water. We joined the circle and then realised what they were watching - dolphins! We continued to watch them as all the boats proceeded to chase them down the river for a while - could see a group of them with young, but I didn't manage to time it right to capture a photo of them - was amazing seeing them making their way along the river breaching the surface in their group. 
+We then headed down into the national park, stopping briefly for José to provide our ticket reference numbers at the ranger's office to confirm we could all enter the park. As we passed through the parks more vibrant canals, we saw a number of birds including herons, cormorants and then noticed all the tour boats gathered in a circle around something in the water. We joined the circle and then realised what they were watching - dolphins! We continued to watch them for a while - could see a group of them with young, but I didn't manage to time it right to capture a photo of them - was amazing seeing them making their way along the river breaching the surface in their group. 
 
 {{<fig "DSC_0120.jpeg">}}
 {{<fig "DSC_0125.jpeg">}}
 {{<fig "DSC_0171.jpeg">}}
 
-After following the dolphins for a while, we then headed back down the river and heard the sounds of a group of Howler Monkeys and then saw them including a mother with a baby on its back swinging through the trees. 
+After following the dolphins for a while, we then headed back down the river and heard the sounds of a group of Howler Monkeys and then saw them including a mother with a baby on its back swinging through the trees.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p2HX5cipwKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 {{<fig "DSC_0136.jpeg">}}
 {{<fig "DSC_0137.jpeg">}}
 {{<fig "DSC_0140.jpeg">}}
