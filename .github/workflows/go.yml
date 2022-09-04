@@ -24,6 +24,11 @@ jobs:
 
     - name: Build
       run: ./hugo
+
+    - name: Deploy
+      if: github.ref == 'refs/heads/master'
+      run: ./hugo deploy
+
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
       with:

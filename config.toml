@@ -101,3 +101,18 @@ pluralizelisttitles = false
     name = "instagram"
 [markup.goldmark.renderer]
 unsafe= true
+
+[deployment]
+order = [".jpg$", ".gif$"]
+
+[[deployment.targets]]
+name = "s3"
+URL = "s3://blog.rickymoorhouse.co.uk?region=eu-west-1"
+cloudFrontDistributionID = "E23ZIB9AOTAEC9"
+
+[[deployment.matchers]]
+# Cache static assets for 1 year.
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
