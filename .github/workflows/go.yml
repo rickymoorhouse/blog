@@ -12,12 +12,12 @@ jobs:
 
       - name: Get hugo
         env:
-          VERSION: "0.73.0"
+          VERSION: "0.86.1"
         run: |
-          curl -LO https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz
-          tar -vzxf hugo_$VERSION_Linux-64bit.tar.gz
-          chmod a+x hugo
-
+          HUGO_DOWNLOAD=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+          wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_DOWNLOAD}
+          tar xvzf ${HUGO_DOWNLOAD} hugo
+          mv hugo $HOME/hugo
       - name: Set build ref
         if: github.ref != 'refs/heads/master'
         run: |
@@ -25,11 +25,11 @@ jobs:
           sed -i 's/rickymoorhouse.uk/drafts.rickymoorhouse.uk/' config.toml
 
       - name: Build
-        run: ./hugo
+        run: $HOME/hugo
 
       - name: Deploy
         if: github.ref == 'refs/heads/master'
-        run: ./hugo deploy --maxDeletes -1
+        run: $HOME/hugo deploy --maxDeletes -1
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
