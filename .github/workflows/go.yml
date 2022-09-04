@@ -12,7 +12,7 @@ jobs:
 
       - name: Get hugo
         env:
-          VERSION: "0.86.1"
+          HUGO_VERSION: "0.86.1"
         run: |
           HUGO_DOWNLOAD=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
           wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_DOWNLOAD}
