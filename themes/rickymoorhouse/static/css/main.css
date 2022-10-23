@@ -1,9 +1,23 @@
 html body {
     background-color: #fefefe;
-    font: 10pt/16pt sans-serif;
+    font-size: 12pt;
+    line-height: 16pt;
     color: #888;
     margin: 0;
 }
+/*html body:after {
+clip: unset;
+position: absolute;
+width: auto;
+height: auto;
+z-index: 99999;
+content: "";
+display: block;
+pointer-events: none;
+inset: 0px;
+background: linear-gradient(to right, rgba(136, 41, 208, 0.5) 1px, transparent 1px) left top / 16pt 100% repeat-x, linear-gradient(rgba(205, 77, 40, .5) 1px, transparent 1px) left top / 100% 16pt repeat-y;
+}*/
+
 body.preview::after {
     content: "DRAFT PREVIEW";
     position: fixed;
@@ -18,13 +32,18 @@ body.preview::after {
 .text-left {
   text-align: left;
 }
+#logo_header {height:32pt; width:32pt;margin-top: 0pt;}
+#logo_header #logo_m {opacity:1;fill:var(--primary);fill-opacity:0.50;stroke:var(--primary);stroke-width: 1pt}
+#logo_header #logo_r {fill:var(--primary);fill-opacity:1;stroke:var(--primary);stroke-opacity:0.5}
+
 nav.navbar {
   position:absolute;
   top: 0px;
-  height: 50px;
-  background: #f8f8f8;
+  height: 48pt;
+  background:  var(--header);
+  color: #fff;
   width: 100%;
-  border-top: var(--border-width) solid var(--accent);
+  border-top: var(--border-width) solid var(--header);
   border-bottom: 1px solid #e8e8e8;
 }
 nav .container {
@@ -34,24 +53,26 @@ nav .container {
 }
 nav .nav {
   list-style: none;
+  padding-top: 8pt;
 }
 .nav>li>a {
+color: #ddd;
 position: relative;
 display: block;
-padding: 14px 15px 7px 15px;
-width: 30px;
-height: 30px;
+height: 32pt;
+line-height: 32pt;
+margin: auto 4pt;
 text-decoration: none;
 }
-nav ul.navbar-right a{
-  padding: 14px 5px 7px 0px;
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+  color: #098;
 }
 nav ul.navbar-right {
   float: right;
   margin-right: 30px;
 }
 nav li { display: inline-block;}   
-nav ul { float: left; margin: 0;}     
+nav ul { float: left; margin: 0 0 0 32pt;padding: 0;}
 nav.navbar::before { content: " "; box-sizing: border-box;}
 nav.navbar .navbar-header { float: left;}
 nav .navbar-brand {
@@ -76,8 +97,6 @@ nav .navbar-brand {
   body .navbar-default .navbar-nav > li > a:focus, body .navbar-default .navbar-nav > li > a:hover {
     color: #098;
   }
-  #logo_header #logo_m {opacity:1;fill:#098;fill-opacity:.6;stroke:#098;stroke-width: 1pt}
-  #logo_header #logo_r {opacity:1;fill:#7fe;fill-opacity:.6;stroke:#098;stroke-width: 1pt}
   
 }
 
@@ -86,12 +105,12 @@ html, body {
 }
 
 body {
-    padding-top: 55px;
+    padding-top: 48pt;
     text-align: center;
 }
 body main {
     margin: auto;
-    padding: 16pt;
+    padding: 0 16pt 16pt 16pt;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -152,10 +171,10 @@ text-align: left;
     border-radius: 50%;
 }
 
-/*apply accent colour to links*/
+/*apply colour to links*/
 
 a:link, a:visited {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 a.icon:hover {
@@ -163,7 +182,7 @@ a.icon:hover {
 }
 
 a:hover {
-    color: var(--accent);
+    color: var(--primry);
 }
 
 /*paginator at bottom of list view*/
@@ -181,13 +200,13 @@ margin: 4px 2px;
 /*list item for posts and projects*/
 
 .item {
-  padding: 0 1em;
-  margin: 4em 1em;
+  padding: 0 16pt;
+  margin: 4em 16pt;
 }
 .header {
   position: relative;
   text-align: left;
-  margin: -1em -1em 0 -1em;
+  margin: 0 -16pt 0 -16pt;
 }
 .header h5 {
   color: var(--secondary);
@@ -196,12 +215,10 @@ margin: 4px 2px;
   float: right;
 }
 a.item-tag {
-    background: var(--secondary);
-    opacity: 0.4;
+    color: var(--tertiary);
     padding: 1pt 4pt;
     border-radius: 4pt;
     text-transform: lowercase;
-    color: #000;
 }
 a.tag-walk {background: green;}
 a.item-tag:active, a.item-tag:hover  {
@@ -214,32 +231,22 @@ a.item-tag:active, a.item-tag:hover  {
 
 .navbar-icon {
     font-size: 125%;
+    line-height: 32pt;
     display: inline-block !important;
-}
-
-/*coloured borders at top and bottom of the page*/
-
-.navbar.navbar-default {
-    border-top: var(--border-width) solid var(--accent);
-}
-
-footer {
-    border-bottom: var(--border-width) solid var(--accent);
-    bottom: 0px;
-    width: 100%;    
 }
 
 img {
     max-width: 100%;
 }
 
-main h1 { font: 20pt/32pt Alegreya, serif; color: var(--accent); text-transform: uppercase;}
-main h2 { font: 20pt/32pt Alegreya, serif;clear: both;text-transform: capitalize}
-main h3:first-line { font: 16pt/32pt sans-serif; }
-main h3 { font: 10pt/16pt sans-serif; color: #555; margin: 0 0 0 0;}
-main h4 { font: 20pt/32pt Alegreya, serif; color: var(--accent); margin: 0 0 8pt 0;}
+main h1 { font-size: 20pt; line-height: 32pt; color: var(--secondary); text-transform: uppercase;}
+main h2 { font-size: 20pt; line-height: 32pt;clear: both;text-transform: capitalize; margin: 0 0 16pt 0;}
+main h3:first-line { font-size: 16pt; line-height:32pt; }
+main h3 { font-size: 10pt; line-height: 16pt; color: var(--secondary); margin: 0 0 0 0;}
+main h4 { font-size: 20pt; line-height: 32pt; font-weight: 700; color: var(--secondary); margin: 0; /* 0 8pt 0;*/}
+main h4 a:link, main h4 a:visited {text-decoration: none; color: var(--secondary);}
 main h4.external::before { content: "\279a";}
-main h5 { font: 10pt/16pt sans-serif; color: var(--secondary); margin: 0;}
+main h5 { font-size: 10pt;line-height:16pt; color: var(--secondary); margin: 0; /*margin-bottom: 8pt;*/}
 main ul, 
 main p  { margin-bottom: 16pt; clear: left;}
 /* Lightbox */
