@@ -2,7 +2,7 @@
 <main class="{{ .Type }}">
     <article>
     {{ partial "item-header" . }} 
-    <br> <div class="text-left">{{ .Content }}</div>
+    <div class="text-left">{{ .Content }}</div>
 
     <!-- related posts with the same tags -->
     {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}

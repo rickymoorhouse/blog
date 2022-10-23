@@ -9,16 +9,18 @@ pluralizelisttitles = false
 
 [params]
     author = "Ricky Moorhouse"
-    description = "I live in the south of England with my wife and daughters. I work at IBM on the hosted API Connect cloud services. I enjoy running, walking, photography and spending time with my family."
+    description = "I live in the south of England with my wife and two children. I work at IBM as a Cloud Architect for API Connect cloud services. I enjoy running, walking, photography and spending time with my family."
     githubUsername = "rickymoorhouse"
     build = "main"
-    accent = "#869ba0"
-    secondary = "#d2bba2"
+    accent = "#354F52"
+    primary = "#009988"
+    secondary = "#446644"
+    tertiary = "#D96040"
     backgroundColor = "black"
-    showBorder = true
+    showBorder = false
     dateFormat = "2 January 2006"
     images = ["images/siteicon.png"]
-#    font = "Alegreya" # should match the name on Google Fonts!
+    font = "IBM Plex Sans" # should match the name on Google Fonts!
     copyright = "&copy; Ricky Moorhouse"
     highlight = true
     highlightLanguages = ["python", "javascript", "yaml"]
