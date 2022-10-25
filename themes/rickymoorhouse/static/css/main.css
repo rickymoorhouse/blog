@@ -243,16 +243,20 @@ img {
 }
 
 main h1 { font-size: 20pt; line-height: 32pt; color: var(--secondary); text-transform: uppercase;}
-main h2 { font-size: 28pt; line-height: 64pt;clear: both;text-transform: capitalize; font-weight: normal; margin: 0 0 16pt 0;}
-main.single h4 { font-size: 28pt; line-height: 64pt; color: var(--secondary); margin: 0; /* 0 8pt 0;*/}
-main h3:first-line { font-size: 16pt; line-height:32pt; }
+main h2 { font-size: 24pt; line-height: 32pt;clear: both;text-transform: capitalize; font-weight: normal; margin: 0 0 16pt 0;}
 main h3 { font-size: 10pt; line-height: 16pt; color: var(--secondary); margin: 0;}
 main h4 { font-size: 20pt; line-height: 32pt; font-weight: normal; margin: 0;}
+main h5 { font-size: 10pt;line-height:16pt; color: var(--secondary); margin: 0; /*margin-bottom: 8pt;*/}
+
+main.single h4 { font-size: 24pt; line-height: 32pt; color: var(--secondary); margin: 8pt 0;*/}
+main article h2 { font-size: 20pt; line-height: 32pt; font-weight: normal; clear: both;}
+main article h3 { font-size: 18pt; line-height: 32pt; font-weight: normal; clear: both;}
+
+main h3:first-line { font-size: 16pt; line-height:32pt; }
 
 
 main h4 a:link, main h4 a:visited {text-decoration: none; color: var(--secondary);}
 main h4.external::before { content: "\279a";}
-main h5 { font-size: 10pt;line-height:16pt; color: var(--secondary); margin: 0; /*margin-bottom: 8pt;*/}
 main ul, 
 main p  { margin-bottom: 16pt; clear: left;}
 /* Lightbox */
@@ -644,9 +648,11 @@ main figure.left {
   margin-right: 1em;
   clear: both;
 }
-figcaption h4 {
+main.single figcaption h4 {
   text-align: center;
-  font: italic 12pt Alegreya,serif;
+  font-style: italic;
+  font-size: 10pt;
+  line-height: 16pt;
 }
 img {max-width: 100%}
 body main.photos section {
