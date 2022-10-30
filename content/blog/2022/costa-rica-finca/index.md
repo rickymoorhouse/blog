@@ -6,8 +6,8 @@ tags:
 - costa-rica
 - monteverde
 hideImages: true
-lng: 10.312516
-lat: -84.8131851
+lat: 10.312516
+lng: -84.8131851
 ---
 
 Finca Madre Tierra was the first carbon-neutral farm in Costa Rica and we were really excited to visit and learn more about it. We met at reception at 2pm to travel with Oscar, one of the people who run the farm, to travel to the farm, which was about 25 minutes away from the hotel.  When we arrived, we were greeted by the farm dogs and the sounds of the animals who after washing our hands we went inside the barn to meet.  

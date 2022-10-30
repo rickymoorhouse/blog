@@ -4,8 +4,8 @@ date: 2022-04-16
 tags: 
  - costa-rica
  - arenal
-lng: 10.5007697
-lat: -84.6824846
+lat: 10.5007697
+lng: -84.6824846
 hideImages: true
 featured: DSC_0366.jpeg
 ---

@@ -6,8 +6,8 @@ tags:
  - costa-rica
  - tortuguero
 hideImages: true
-lng: 10.5623131
-lat: -83.5132126
+lat: 10.5623131
+lng: -83.5132126
 featuredImage: IMG_4102.jpeg
 ---
 

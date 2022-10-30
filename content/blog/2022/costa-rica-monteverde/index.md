@@ -7,8 +7,8 @@ tags:
  - monteverde
 hideImages: true
 draft: true
-lng: 10.312516
-lat: -84.8131851
+lat: 10.312516
+lng: -84.8131851
 ---
 
 Pickup was 11 o'clock so had time to get sorted and have a relaxed morning.  Has an early breakfast watching the clay coloured thrush babies by the restaurant. We then went on the hunt for some ibuprofen which ended up with Laura taking a taxi into La Fortuna.  We checekd out and met our driver to discover that our transfer to Monteverde was no longer going to be taxi-boat-taxi, but instead taxi all the way around the lake.  We stopped at a view point along the way where we could see three volcanoes and local crafts were on sale. The remainder of the journey was very bumpy and pot-holed, but our driver did a great job avoiding and slowing down for them.

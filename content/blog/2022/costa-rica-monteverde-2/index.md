@@ -6,8 +6,8 @@ tags:
 - costa-rica
 - monteverde
 hideImages: true
-lng: 10.312516
-lat: -84.8131851
+lat: 10.312516
+lng: -84.8131851
 ---
 
 
