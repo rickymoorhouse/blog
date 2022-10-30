@@ -1,9 +1,7 @@
 {{ partial "header" . }}
-<!--<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
 -->
-  <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
   
   <style>
         #map {
@@ -62,6 +60,7 @@ var map = new mapboxgl.Map({
   container: 'map', // container id
   style: style, // stylesheet location
   center: [-20, 20], // starting position [lng, lat]
+  projection: 'equalEarth',
   zoom: 2 // starting zoom
 });
 

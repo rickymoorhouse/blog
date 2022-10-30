@@ -1,20 +1,17 @@
-  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
-  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
- 
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script> 
       <div class="site-content" id="map">
         <span class="mapbox-maplogo"></span>
       </div>
-
 <script>
-var mdl = window.matchMedia('(prefers-color-scheme: dark)');
-var mapStyle = 'mapbox.outdoors';
-if (mdl.matches) {
-    console.log('dark');
-    mapStyle = 'mapbox.dark';
+var mapStyle = 'mapbox://styles/mapbox/light-v10';
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  mapStyle = 'mapbox://styles/mapbox/dark-v10'
 }
+
 document.getElementById('map').style.height="330px";
-document.getElementById('map').style.width="750px";
-L.mapbox.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
+/*document.getElementById('map').style.width="750px";*/
+mapboxgl.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
 var  geojson = {
       'type': 'Feature',
       'geometry': {
@@ -22,11 +19,34 @@ var  geojson = {
         'coordinates': {{ .Params.coordinates }}
       }
     };
-var map = L.mapbox.map('map', mapStyle, {
-    attributionControl: {position: 'topright'}
-    }).setView([{{ .Params.lat }}, {{ .Params.lon }}], {{ .Params.zoom }})
-    .featureLayer.setGeoJSON(geojson);
 
+const map = new mapboxgl.Map({
+  container: 'map',
+  zoom: 13,
+  pitch: 30,  
+  center: [{{ .Params.lon }}, {{ .Params.lat }}],
+  style: mapStyle
+});
+
+map.on('load', () => {
+  map.addSource('route', {
+    type: 'geojson', 
+    data: geojson,
+    })
+  map.addLayer({
+    'id': 'route',
+    'type': 'line',
+    'source': 'route',
+    'layout': {
+      'line-join': 'round',
+      'line-cap': 'round'
+    },
+    'paint': {
+      'line-color': '{{ .Site.Params.tertiary }}',
+      'line-width': 2
+    }
+  });
+});
 </script>
 <style type="text/css">
 #map path.leaflet-interactive {

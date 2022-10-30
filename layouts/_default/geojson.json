@@ -13,7 +13,7 @@
    {{ if .link }}"url":"{{ .link }}",{{ end }}
    "marker-symbol":"circle",
    "marker-size":"small",
-   "marker-color":"#869ba0"
+   "marker-color":"{{ $.Site.Params.tertiary | default "#869ba0" }}"
   }
  },
 {{ end }}{{ end }}
