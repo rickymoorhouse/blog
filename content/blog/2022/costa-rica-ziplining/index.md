@@ -2,6 +2,7 @@
 title: Zip-lining, Arenal
 tags: 
  - costa-rica
+ - arenal
 hideImages: true
 fetured: GPTempDownload.jpeg
 date: 2022-04-17

@@ -3,7 +3,8 @@ title: "Travel to Hotel Bel Mar,  Monteverde"
 slug: belmar-arrival
 date: 2022-04-18
 tags: 
-- costa-rica
+ - costa-rica
+ - monteverde
 hideImages: true
 draft: true
 lng: 10.312516

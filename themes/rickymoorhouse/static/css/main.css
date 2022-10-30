@@ -223,7 +223,6 @@ a.item-tag {
     border-radius: 4pt;
     text-transform: lowercase;
 }
-a.tag-walk {background: green;}
 a.item-tag:active, a.item-tag:hover  {
   opacity: 1;
   color: #000;

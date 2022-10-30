@@ -4,6 +4,7 @@ slug: tortuguero-day-two
 date: 2022-04-14
 tags: 
  - costa-rica
+ - tortuguero
 hideImages: true
 lng: 10.5623131
 lat: -83.5132126

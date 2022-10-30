@@ -10,6 +10,7 @@
   "properties": {
    "title":"{{ .title }}",
    {{ if .photo }}"image":"{{ .photo }}",{{ end }}
+   {{ if .link }}"url":"{{ .link }}",{{ end }}
    "marker-symbol":"circle",
    "marker-size":"small",
    "marker-color":"#869ba0"

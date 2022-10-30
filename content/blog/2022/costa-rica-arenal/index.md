@@ -3,6 +3,7 @@ title: "Arenal Volcano Hike"
 date: 2022-04-16
 tags: 
  - costa-rica
+ - arenal
 lng: 10.5007697
 lat: -84.6824846
 hideImages: true
