@@ -72,7 +72,10 @@ pluralizelisttitles = false
     url = "https://twitter.com/rickymoorhouse/"
     name = "twitter"
     weight = 3
-
+[[menu.icon]]
+    url = "https://mastodon.cloud/@rickymoorhouse"
+    name = "mastodon"
+    weight = 3
 [[menu.icon]]
     url = "https://www.linkedin.com/in/rickymoorhouse/"
     name = "linkedin"
