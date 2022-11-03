@@ -2,10 +2,7 @@ html body {
     background-color: #161719;
     color: #ccc;
 }
-body .navbar-default {
-/*  background-color: #333;
-  border-color: #222;*/
-}
+
 body .navbar-default .navbar-nav>li>a {
   color: #aaa;
 }

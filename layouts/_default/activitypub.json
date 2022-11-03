@@ -1,0 +1,30 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "type": "OrderedCollection",
+  "summary": "{{ .Site.Title }}",
+  "orderedItems": [
+  {{- range $i, $e := first 10 .Site.RegularPages -}}
+  {{- if $i -}}, {{- end -}}
+    {
+      {{- if .Params.link -}}
+      "name": "{{ .Title }}",
+      "type": "Link",
+      "href": "{{ .Params.link }}",
+      "hreflang": "en",
+      "mediaType": "text/html",
+      {{- else if eq .Type "photos" -}}
+      "type": "Image",
+          {{- with .Resources.ByType "image" -}}{{- range first 1 . -}}
+      "href": "{{ .Permalink }}",
+      "mediaType": "image/jpeg",
+          {{- end -}}{{- end -}}
+        {{- else -}}
+      "type": "Article",
+      "name": "{{ .Title }}",
+      "content": {{ .Summary | jsonify }},
+      {{- end -}}
+      "published": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
+    }
+    {{ end -}}
+  ]
+}
