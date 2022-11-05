@@ -73,7 +73,7 @@ pluralizelisttitles = false
     name = "twitter"
     weight = 3
 [[menu.icon]]
-    url = "https://mastodon.cloud/@rickymoorhouse"
+    url = "https://hachyderm.io/@ricky"
     name = "mastodon"
     weight = 3
 [[menu.icon]]
@@ -124,3 +124,6 @@ gzip = true
 [[deployment.matchers]]
 pattern = "^.+\\.(html|xml|json)$"
 gzip = true 
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+
