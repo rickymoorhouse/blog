@@ -86,15 +86,16 @@ map.on('load', function() {
     var coordinates = e.features[0].geometry.coordinates.slice();
     var content = ''
     if (e.features[0].properties.url) {
-      content = content + '<a href="'+e.features[0].properties.url+'">' + e.features[0].properties.title + '</a>';
+      content = content + '<a href="'+e.features[0].properties.url+'">';
+      if (e.features[0].properties.image) {
+        content = content + '<img src="' + e.features[0].properties.image + '"/><br />';
+        params = {minWidth: 200, autoPanPaddingTopLeft: 200}
+      } else {
+        params = {}
+      }
+      content = content + e.features[0].properties.title + '</a>';
     } else {
       content = content + e.features[0].properties.title;
-    }
-    if (e.features[0].properties.image) {
-      content = content + '<br /><img src="' + e.features[0].properties.image + '"/>';
-      params = {minWidth: 200, autoPanPaddingTopLeft: 200}
-    } else {
-      params = {}
     }
 
   
