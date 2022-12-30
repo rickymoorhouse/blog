@@ -18,7 +18,7 @@
             <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ $.Scratch.Get "subtitle" }}</time>
             <div class="tags">
             {{ range .Params.tags }}
-            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag tag-{{ . }}">{{ . }}</a>
+            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag p-category tag-{{ . }}">{{ . }}</a>
             {{ end }}
             </div>
         </h5>
