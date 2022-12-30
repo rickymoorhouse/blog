@@ -11,11 +11,11 @@
                 <a class="external" href="{{ .Scratch.Get "link" }}">{{ .Title }}</a>
             </h4>
         {{ else }}
-            <h4><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a></h4>
+            <h4 class="p-name"><a href="{{ .Scratch.Get "link" }}" class="u-url">{{ .Title }}</a></h4>
         {{ end }}
         {{ if eq "1 January 0001" ($.Scratch.Get "subtitle") }}&nbsp;{{ else }}
         <h5>
-            {{ $.Scratch.Get "subtitle" }}
+            <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ $.Scratch.Get "subtitle" }}</time>
             <div class="tags">
             {{ range .Params.tags }}
             <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag tag-{{ . }}">{{ . }}</a>
