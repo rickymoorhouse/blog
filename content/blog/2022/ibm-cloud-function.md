@@ -4,3 +4,4 @@ title: "Invoke IBM Cloud Functions from API Connect"
 date: 2022-10-25
 ---
 
+Blog post describing how you can integrate your IBM Cloud functions into API Connect so they can be managed and socialised along with your other APIs. 

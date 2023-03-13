@@ -1,7 +1,10 @@
 title: "Dubai"
 layout: travel
+tags: 
+ - work
 datePosted: 2023-02-19
 photo: /travel/photos/dubai.jpg
+link: /blog/2023/ibm-tech-2023/
 lat: 25.234568 
 lng: 55.323742
 description: >

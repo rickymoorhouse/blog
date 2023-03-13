@@ -1,5 +1,6 @@
 ---
-title: "API Days Paris"
+title: "API Days - Paris"
+slug: api-days-paris
 date: 2022-12-16
 hideImages: true
 layout: post
