@@ -106,7 +106,6 @@ html, body {
 
 body {
     padding-top: 48pt;
-    text-align: center;
 }
 body main {
     margin: auto;
@@ -647,7 +646,7 @@ main figure.left {
   margin-right: 1em;
   clear: both;
 }
-main.single figcaption h4 {
+main figcaption h4 {
   text-align: center;
   font-style: italic;
   font-size: 10pt;
