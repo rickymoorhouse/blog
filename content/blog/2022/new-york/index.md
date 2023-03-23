@@ -3,7 +3,8 @@ title: "New York"
 date: 2022-07-12
 hideImages: true
 layout: post
-draft: true
+slug: new-york
+draft: false
 tags:
 - travel
 ---
