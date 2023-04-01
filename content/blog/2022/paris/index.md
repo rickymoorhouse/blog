@@ -8,6 +8,7 @@ draft: false
 featured: IMG_1704.jpeg
 tags:
 - travel
+summary: I attended API Days in Paris to run a workshop on AI in API Testing, help man the API Connect stand and a couple of Smart Talks.
 ---
 
 I travelled to Paris the day before the conference with Matt and we got to the Hotel in the evening, later than expected as we'd not considered traffic when getting a taxi in to Paris from the airport, I think next time I'd probably take the train in. We then met up with Tom and found a local restaurant/bar to have dinner. 

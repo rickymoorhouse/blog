@@ -2,7 +2,9 @@
 
 <main class="{{ .Type }}">
     <section>
+    {{ if eq .Title "Blog"}} {{else}}
     <h2>{{ .Title }}</h2>
+    {{ end }}
 {{ $articles := where .Site.RegularPages "Section" .Type  }}
 {{ $paginator := .Paginate $articles }} 
     {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}

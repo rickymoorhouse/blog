@@ -18,7 +18,7 @@
     {{ end }}
     {{ partial "css" . }} {{ partial "js" . }} {{ hugo.Generator }}
     <link rel="alternate" type="application/rss+xml" title="Ricky Moorhouse (RSS Feed)" href="https://rickymoorhouse.uk/index.xml" />
-    <link rel="alternate" type="application/json" title="Ricky Moorhouse (JSON Feed)" href="https://rickymoorhouse.uk/jsonfeed/" />
+    <link rel="alternate" type="application/json" title="Ricky Moorhouse (JSON Feed)" href="https://rickymoorhouse.uk/index.json/" />
     {{ if .Resources.ByType "image" }}
         {{ if .Params.featured }}
         {{ with .Resources.Match .Params.featured }}
@@ -89,7 +89,7 @@
                 <div class="collapse navbar-collapse">
 
                     {{ if .Site.Menus.main }}
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav navbar-left">
                             {{ range sort .Site.Menus.main }}
                                 <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                             {{ end }}

@@ -1,0 +1,36 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "{{ .Site.Title }}",
+  "home_page_url": "{{ .Site.BaseURL }}",
+  "feed_url": "{{ .Permalink}}",
+  {{ if isset .Site.Params "description" }}
+  "description": "{{ .Site.Params.description }}",
+  {{ end }}
+  {{ if isset .Site.Params "author" }}
+  "author": { "name": "{{ .Site.Params.author }}" },
+  {{ end }}
+  "items": [
+  {{ range $i, $e := first 10 .Site.RegularPages }}
+  {{ if $i }}, {{ end }}
+    {
+      "id": "{{ .Permalink }}",
+      "title": "{{ .Title }}",
+      {{ if .Params.link }}
+      "content_html": "<a href=\"{{ .Params.link }}\">{{ .Title }}</a>",
+      {{ else if eq .Type "photos" }}
+      "content_html": "{{ with .Resources.ByType "image" }}{{ range first 1 . }}<img src=\"{{ .Permalink }}\" />{{ end }}{{ end }}",
+        {{ else }}
+      "type": {{ .Type | jsonify }},
+      "content_text": {{ .Summary | jsonify }},
+      {{ end }}
+{{ with .Resources.ByType "image" }}{{ range first 1 . }}      "image":"{{ .Permalink }}",{{ end }}{{ end }}
+      {{ if .Params.link }}
+      "url": "{{ .Params.link }}",
+      {{ else }}
+      "url": "{{ .Permalink }}",
+      {{ end }}
+      "date_published": "{{ replace .Date "-0700 -0700" "-0700"}}"
+    }
+    {{ end }}
+  ]
+}
