@@ -78,6 +78,14 @@ content: "\279a";
 		opacity: 0.4;
 	}
 }
+@media (prefers-color-scheme: dark) {
+	img#me {
+		opacity:0.6;
+	}
+	section.image p {
+  	color: #cdd;
+	}
+}
 </style>
 <main style="display:flex;flex-direction: row;">
 	<div id="left-column">
@@ -123,7 +131,7 @@ content: "\279a";
 	
 	<div id="right-column">
 		<section id="basics">
-			<img src="/profile.jpeg">
+			<img id="me" src="/bw-profile.png">
 		<h1><a href="https://rickymoorhouse.uk/" class="h-card" rel="me">Ricky Moorhouse</a></h1>
 		<p class="p-note">{{ markdownify .Site.Params.Description }}</p>
 		</section>
