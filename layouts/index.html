@@ -5,7 +5,9 @@
 section {
 	margin: 0;
 }
-
+a:link, a:visited {
+	color: var(--secondary);
+}
 div#right-column {
 	width: 25vw;
 	margin-left: 3vw;
@@ -78,6 +80,17 @@ content: "\279a";
 		opacity: 0.4;
 	}
 }
+@media screen and (min-width: 800px) {
+
+div#profile {
+  border: 1px dotted var(--tertiary);
+  border-radius: 5pt;
+  margin-top: -4pt;
+  padding: 5pt;
+  box-shadow: 2px 2px 5pt rgba(0,0,0,0.3);
+  background: #eef0ef;
+}
+
 @media (prefers-color-scheme: dark) {
 	img#me {
 		opacity:0.6;
@@ -85,6 +98,7 @@ content: "\279a";
 	section.image p {
   	color: #cdd;
 	}
+	div#profile { background: var(--header)}
 }
 </style>
 <main style="display:flex;flex-direction: row;">
@@ -132,8 +146,10 @@ content: "\279a";
 	<div id="right-column">
 		<section id="basics">
 			<img id="me" src="/bw-profile.png">
-		<h1><a href="https://rickymoorhouse.uk/" class="h-card" rel="me">Ricky Moorhouse</a></h1>
-		<p class="p-note">{{ markdownify .Site.Params.Description }}</p>
+			<div id="profile">
+				<h1><a href="https://rickymoorhouse.uk/" class="h-card" rel="me">Ricky Moorhouse</a></h1>
+				<p class="p-note">{{ markdownify .Site.Params.Description }}</p>
+			</div>
 		</section>
 
 	</div>
