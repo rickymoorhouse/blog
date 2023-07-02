@@ -3,3 +3,4 @@ public/
 resources/_gen/
 themes/ricky-new
 mb/
+.hugo_build.lock

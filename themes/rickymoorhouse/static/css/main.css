@@ -216,6 +216,7 @@ main.single .header {
 }
 .header h5 {
   color: var(--secondary);
+  font-weight: normal;
 }
 .header .tags {
   float: right;
@@ -623,6 +624,9 @@ width: 31.3%;
 margin: 0 1% 0 1%;
 float:left;
 }
+main figure.full { 
+  width: 98%;
+}
 main.photos figure {
 width: 100%;
 float: none;
@@ -676,6 +680,13 @@ padding: 3pt;
 }
 
 @media (max-width: 600px) {
+  pre {
+   width: 100vw;
+    margin: 0 0 0 -48pt;
+    display: inline-block;
+    overflow-x: scroll;
+    padding: 0 16pt;
+  }
   body main {
     width: 100%;
     padding: 16pt 0;
