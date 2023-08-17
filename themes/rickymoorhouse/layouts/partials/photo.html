@@ -1,0 +1,13 @@
+<div class="Image"><figure>
+    <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
+        {{ $image := .Fill "400x400 center" }}
+            <img src="{{ $image.RelPermalink }}" 
+                {{ with .Exif }}alt="{{ .Tags.ImageDescription }}"{{ end }}>
+    </a>
+    {{ with .Exif }}
+    <figcaption>
+    {{ .Tags.ImageDescription }}
+    </figcaption>
+    {{ end }}
+ </figure>
+</div>

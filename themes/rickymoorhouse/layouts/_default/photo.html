@@ -1,0 +1,47 @@
+{{ partial "header" . }}
+<main class="{{ .Type }}">
+    <article>
+    {{ partial "item-header" . }} 
+    <br> <div class="text-left">{{ .Content }}</div>
+
+    {{ .Params.type }}
+        {{ with .Resources.ByType "image" }}
+        <div class="Image">
+        {{ range . }}
+            <figure style="overflow-y: scroll">
+               <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" 
+               {{ with .Exif }}alt="{{ .Tags.ImageDescription }}"{{ end }} style="aspect-ratio: {{ .Width }} / {{ .Height }};"></a>
+               {{ with .Exif }}
+               <figcaption>
+               <h4>{{ .Tags.ImageDescription }}</h4>
+               </figcaption>
+               {{ end }}
+            </figure>
+        </div>
+    {{ with .Exif }}
+    <div class="exif">
+
+      <table class="exif">
+        {{ with .Date }}<tr><th>Date: </th><td>{{ .Format "January 02, 2006" }}</td></tr>{{ end }}
+        {{ with .Tags.ApertureValue }}<tr><th>Aperture: </th><td>{{ lang.NumFmt 2 . }}</td></tr>{{ end }}
+        {{ with .Tags.BrightnessValue }}<tr><th>Brightness: </th><td>{{ . }}</td></tr>{{ end }}
+        {{ with .Tags.ExposureTime }}<tr><th>Exposure Time: </th><td>{{ . }}</td></tr>{{ end }}
+        {{ with .Tags.FNumber }}<tr><th>F Number: </th><td>{{ . }}</td></tr>{{ end }}
+        {{ with .Tags.FocalLength }}<tr><th>Focal Length: </th><td>{{ . }}</td></tr>{{ end }}
+        {{ with .Tags.ISOSpeedRatings }}<tr><th>ISO Speed Ratings: </th><td>{{ . }}</td></tr>{{ end }}
+        {{ with .Tags.Model }}<tr><th>Lens Model: </th><td>{{ . }}</td></tr>{{ end }}
+        {{ with .Tags.LensInfo }}<tr><th>Model: </th><td>{{ . }}</td></tr>{{ end }}
+      </table>
+    
+    {{ end }}
+    {{ if .Exif.Lat }}
+      <img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/{{ .Exif.Long }},{{ .Exif.Lat }},6.0,0,0/350x200@2x?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" style="width: 350px;padding: 0;" />
+    {{ else if .Params.lat }}
+<img src="https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/static/{{ .Params.lat }},{{ .Params.lng }},14.0,0,0/350x200@2x?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" style="width: 350px;padding: 0;" />
+    {{ end }}
+    </div>
+  {{ end }} <!-- range -->
+  {{ end }} <!-- params -->
+</article>
+</main>
+{{ partial "footer.html" . }}

@@ -1,7 +1,6 @@
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script> 
-      <div class="site-content" id="map">
-        <span class="mapbox-maplogo"></span>
+      <div class="site-content" id="map" >
       </div>
 <script>
 var mapStyle = 'mapbox://styles/mapbox/light-v10';
@@ -22,9 +21,9 @@ var  geojson = {
 
 const map = new mapboxgl.Map({
   container: 'map',
-  zoom: 13,
+  zoom: {{ .Params.zoom }},
   pitch: 30,  
-  center: [{{ .Params.lon }}, {{ .Params.lat }}],
+  center: [{{ .Params.lng }}, {{ .Params.lat }}],
   style: mapStyle
 });
 

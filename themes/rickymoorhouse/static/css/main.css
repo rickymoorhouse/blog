@@ -252,7 +252,7 @@ main h1 { font-size: 20pt; line-height: 32pt; color: var(--secondary); }
 main h1 a { text-decoration: none;}
 main h2 { font-size: 24pt; line-height: 32pt;clear: both; font-weight: normal; margin: 0 0 16pt 0;}
 main h3 { font-size: 10pt; line-height: 16pt; color: var(--secondary); margin: 0;}
-main h4 { font-size: 20pt; line-height: 32pt; font-weight: normal; margin: 0;}
+main h4 { font-size: 20pt; line-height: 32pt; font-weight: normal; margin: 0; clear: left;}
 main h5 { font-size: 10pt;line-height:16pt; color: var(--secondary); margin: 0; /*margin-bottom: 8pt;*/}
 
 main.single h4 { font-size: 24pt; line-height: 32pt; color: var(--secondary); margin: 8pt 0;*/}
@@ -762,4 +762,17 @@ color: var(--secondary);
 }
 article.quote figcaption {
 font: italic 20pt/24pt Alegreya;
+}
+table.exif {
+  font-size: 14px;
+  float: left;
+}
+table.exif th {
+  text-align: left;
+}
+.photos .Image figure {
+margin: 0;
+}
+div.exif img {
+float:right;
 }
