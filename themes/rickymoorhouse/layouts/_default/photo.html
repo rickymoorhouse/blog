@@ -23,7 +23,7 @@
 
       <table class="exif">
         {{ with .Date }}<tr><th>Date: </th><td>{{ .Format "January 02, 2006" }}</td></tr>{{ end }}
-        {{ with .Tags.ApertureValue }}<tr><th>Aperture: </th><td>{{ lang.NumFmt 2 . }}</td></tr>{{ end }}
+        {{ with .Tags.ApertureValue }}<tr><th>Aperture: </th><td>{{ lang.FormatNumberCustom 2 . }}</td></tr>{{ end }}
         {{ with .Tags.BrightnessValue }}<tr><th>Brightness: </th><td>{{ . }}</td></tr>{{ end }}
         {{ with .Tags.ExposureTime }}<tr><th>Exposure Time: </th><td>{{ . }}</td></tr>{{ end }}
         {{ with .Tags.FNumber }}<tr><th>F Number: </th><td>{{ . }}</td></tr>{{ end }}

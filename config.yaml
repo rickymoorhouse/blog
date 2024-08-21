@@ -2,7 +2,6 @@ baseURL: "https://rickymoorhouse.uk/"
 languageCode: "en-gb"
 title: "Ricky Moorhouse"
 theme: "rickymoorhouse"
-disqusShortname: "" # delete this to disable disqus comments
 permalinks:
   blog: "/blog/:year/:slug/"
 params:
