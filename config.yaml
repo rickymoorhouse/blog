@@ -41,10 +41,12 @@ menu:
   
 languages:
   en:
-    title: "Ricky Moorhouse"
+    params:
+      title: "Ricky Moorhouse"
   es:
-    title: "Ricky Moorhouse en Español"
-    description: "Vivo en el sur de Inglaterra con mi esposa y hijas. Yo trabajo en las ofertas de nube de IBM API Connect. Me gusta corriendo, caminando, fotografia y passando tiempo con mi familia."
+    params:
+      title: "Ricky Moorhouse en Español"
+      description: "Vivo en el sur de Inglaterra con mi esposa y hijas. Yo trabajo en las ofertas de nube de IBM API Connect. Me gusta corriendo, caminando, fotografia y passando tiempo con mi familia."
     menu:
       main:
       - url: "/photos/"
