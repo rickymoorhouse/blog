@@ -21,8 +21,8 @@ jobs:
       - name: Set build ref
         if: github.ref != 'refs/heads/main'
         run: |
-          sed -i 's/build = "main"/build = "preview"/' config.toml
-          sed -i 's/rickymoorhouse.uk/drafts.rickymoorhouse.uk/' config.toml
+          sed -i 's/build = "main"/build = "preview"/' config.yaml
+          sed -i 's/rickymoorhouse.uk/drafts.rickymoorhouse.uk/' config.yaml
 
       - name: Build
         run: $HOME/hugo
