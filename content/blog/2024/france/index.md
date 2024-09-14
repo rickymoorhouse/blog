@@ -4,8 +4,9 @@ layout: custom-map
 title: France 2024
 slug: france
 date: 2024-08-24
-featured: DSC_0366.jpeg
-lat: 48
+featured: IMG_6075.jpeg
+hideImages: true
+lat: 48.3
 lng: -1
 zoom: 7
 static: https://api.mapbox.com/styles/v1/mapbox/light-v10/static/pin-s+555555(-84.8131851,10.312516),pin-s+555555(-84.6824846,10.5007697),pin-s+555555(-83.5132126,10.5623131),pin-s+555555(-84.120568,10.415602)/-84.4,9.8,6,13/350x250@2x
