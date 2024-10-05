@@ -11,3 +11,4 @@ lng: 1.0677256
 zoom: 12
 ---
 
+The Château de Chenonceau is built spanning the river Cher and is one of the best-known châteaux of the Loire Valley. 
