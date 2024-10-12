@@ -3,7 +3,7 @@ author: rickymoorhouse
 comments: true
 date: "2008-06-16T21:35:32Z"
 link: https://rickymoorhouse.uk/?p=1453
-published: false
+draft: true
 slug: is-jesus-god
 title: Is Jesus God?
 wordpress_id: 1453
