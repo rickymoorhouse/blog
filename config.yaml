@@ -26,8 +26,8 @@ menu:
   - url: "https://github.com/rickymoorhouse/"
     name: "github"
     weight: 2
-  - url: "https://twitter.com/rickymoorhouse/"
-    name: "twitter"
+  - url: "https://bsky.app/profile/rickymoorhouse.uk"
+    name: "bluesky"
     weight: 3
   - url: "https://hachyderm.io/@ricky"
     name: "mastodon"
