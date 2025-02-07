@@ -1,0 +1,53 @@
+apiVersion: gateway.apiconnect.ibm.com/v1beta1
+kind: GatewayCluster
+metadata:
+  name: api-gateway
+  namespace: apicri-gateway
+spec:
+  peeringLogLevel: internal
+  license:
+    accept: true
+    license: L-HTFS-UAXYM3
+    metric: MONTHLY_API_CALL
+    use: nonproduction
+  apicGatewayServiceTLS:
+    secretName: gateway-service
+  imagePullSecrets:
+    - ibm-entitlement-key
+    - {{PULL_SECRET}}
+  imageRegistry: {{IMAGE_REGISTRY}}
+  configSequenceInterval: 3000
+  profile: n1xc4.m8
+  webGUIManagementPort: 9090
+  mtlsValidateClient: false
+  jwksUrl: https://{{RI_PLATFORM_API}}/api/cloud/oauth2/certs
+  apiDebugProbeMaxRecords: 1000
+  apicGatewayPeeringTLS:
+    secretName: gateway-peering
+  mgmtPlatformEndpointCASecret:
+    secretName: isrg-root-x2
+  apiDebugProbe: true
+  webGUIManagementEnabled: false
+  version: 10.0.8.1
+  apiDebugProbeExpirationMinutes: 60
+  tokenManagementService:
+    enabled: false
+  gatewayEndpoint:
+    annotations:
+      cert-manager.io/issuer: ingress-issuer
+    hosts:
+      - name: {{INVOKE_HOSTNAME}}
+        secretName: gateway-endpoint-secret
+  apicGatewayServiceV5CompatibilityMode: false
+  defaultLogFormat: text
+  adminUser:
+    secretName: admin-secret
+  datapowerLogLevel: 4
+  updateStrategy:
+    mode: automatic
+  gatewayManagerEndpoint:
+    annotations:
+      cert-manager.io/issuer: ingress-issuer
+    hosts:
+      - name: c-01.private.us-south.link.satellite.cloud.ibm.com
+        secretName: gateway-manager-endpoint-secret
