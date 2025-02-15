@@ -3,8 +3,6 @@ author: rickymoorhouse
 tags:
 - running
 - family
-- abi
-- jessica
 comments: false
 date: "2014-10-25T14:49:30Z"
 slug: great-south-run-2014

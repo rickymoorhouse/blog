@@ -1,13 +1,13 @@
 ---
 author: rickymoorhouse
 tags:
-- abi
+- family
 - art
 comments: true
 date: "2010-09-04T07:20:17Z"
-link: https://rickymoorhouse.uk/2010/09/04/drawing-of-me-by-abi/
-slug: drawing-of-me-by-abi
-title: Drawing of me by Abi
+
+slug: drawing-of-me
+title: Drawing of me
 wordpress_id: 7548
 ---
 

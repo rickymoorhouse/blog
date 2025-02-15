@@ -1,7 +1,7 @@
 ---
 author: rickymoorhouse
 categories:
-- abi
+- family
 comments: true
 date: "2008-05-02T08:26:21Z"
 link: https://rickymoorhouse.uk/2008/05/02/abis-prayer/
