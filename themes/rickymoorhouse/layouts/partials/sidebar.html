@@ -26,11 +26,10 @@
 	{{ end }}
 </ul>
 {{ end }}
-
 <div class="tagcloud">
     {{ range .Site.Taxonomies.tags }}
-        {{ if and (gt .Count 1) (ne .Page.Title "abi") (ne .Page.Title "jessica") (ne .Page.Title "photos") }}
-            <a class="item-tag" title="{{ .Count }}" style="font-size:1{{ div .Count 3}}pt" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        {{ if and (gt .Count 1) (ne .Page.Title "Abi") (ne .Page.Title "Jessica") (ne .Page.Title "Photos") }}
+            <a class="item-tag" title="{{ .Count }}" style="font-size:1{{ div .Count 5}}pt" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
         {{ end }}
     {{ end }}
 </div>
