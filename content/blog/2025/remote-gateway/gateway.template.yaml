@@ -13,7 +13,6 @@ spec:
   apicGatewayServiceTLS:
     secretName: gateway-service
   imagePullSecrets:
-    - ibm-entitlement-key
     - {{PULL_SECRET}}
   imageRegistry: {{IMAGE_REGISTRY}}
   configSequenceInterval: 3000
