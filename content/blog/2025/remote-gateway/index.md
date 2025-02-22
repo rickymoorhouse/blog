@@ -7,6 +7,8 @@ hideImages: true
 
 This post should guide you through the steps on how to deploy a datapower gateway to use as a remote gateway with API Connect Reserved instance, optionally configuring the inbound management traffic through IBM Cloud Satellite Connector.
 
+<!--more-->
+
 ![Overview diagram](overview.png)
 
 ## Installing the Operators

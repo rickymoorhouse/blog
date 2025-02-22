@@ -3,12 +3,12 @@
 <div class="pages">
 
     {{ if .Paginator.HasPrev }}
-    <a class="icon pages-icon" href="{{ .Paginator.Prev.URL }}" rel="prev">
-        <i class="fa fa-arrow-left"></i>
+    <a class="previous" href="{{ .Paginator.Prev.URL }}" rel="prev">
+        <svg class="icon" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4.928,1.34c-0,0 -0.793,1.484 -0.788,2.029c0.004,0.544 0.78,2.129 0.78,2.129l-2.923,-2.118l2.931,-2.04Z" style="fill:#098;"/></svg>
     </a>
     {{ end }} {{ if .Paginator.HasNext }}
-    <a class="icon pages-icon" href="{{ .Paginator.Next.URL }}" rel="next">
-        <i class="fa fa-arrow-right"></i>
+    <a class="next" href="{{ .Paginator.Next.URL }}" rel="next">
+        <svg class="icon" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M1.997,1.34c0,0 0.793,1.484 0.788,2.029c-0.004,0.544 -0.779,2.129 -0.779,2.129l2.922,-2.118l-2.931,-2.04Z" style="fill:#098;"/></svg>
     </a>
     {{ end }}
 

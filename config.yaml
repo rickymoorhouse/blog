@@ -1,7 +1,7 @@
 baseURL: "https://rickymoorhouse.uk/"
 languageCode: "en-gb"
 title: "Ricky Moorhouse"
-theme: "rickymoorhouse"
+theme: "2025"
 permalinks:
   blog: "/blog/:year/:slug/"
 params:
