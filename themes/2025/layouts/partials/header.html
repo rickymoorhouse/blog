@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta name="theme-color" content="{{ .Site.Params.header | default "#354F52" }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }}</title>
+    {{ if .Site.Params.favicon }}
+    <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
+    {{ end }}
+    {{ partial "css" . }}
+    {{ hugo.Generator }}
+    {{ if .Resources.ByType "image" }}
+        {{ if .Params.featured }}
+        {{ with .Resources.Match .Params.featured }}
+            {{ range first 1 . }}
+            {{ $image := .Fit "900x450" }}
+                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:image" content="{{ $image.Permalink }}" />
+                <meta property="og:image" content="{{ $image.Permalink }}" />
+                <meta property="og:image:width" content="{{ $image.Width }}" />
+                <meta property="og:image:height" content="{{ $image.Height }}" />
+            {{ end }}
+        {{ end }}
+        {{ else }}
+            {{ with .Resources.ByType "image" }}
+            {{ range first 1 . }}
+                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:image" content="{{ .RelPermalink }}" />
+                <meta property="og:image" content="{{ .Permalink }}" />
+                <meta property="og:image:width" content="{{ .Width }}" />
+                <meta property="og:image:height" content="{{ .Height }}" />
+            {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ else }}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" property="og:image" content="https://rickymoorhouse.uk/images/siteicon.png" />
+    <meta property="og:image:height" content="120" />
+    <meta property="og:image:width" content="120" />
+    {{ end }}
+    <meta name="twitter:description" property="og:description" content="{{ .Summary }}" />
+    <meta name="twitter:creator" content="@rickymoorhouse" />
+    <meta name="twitter:title" property="og:title" content="{{ .Title }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta name="twitter:site" content="@rickymoorhouse" />
+    <link rel="apple-touch-icon" href="https://rickymoorhouse.uk/images/siteicon.png" />
+  </head>
+  <body class="{{ .Site.Params.build }}">
+      <div class="side">
+        <svg id="logo" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+            <path d="M2.954,3.045c-0.013,0.708 0.079,2.467 0.079,2.467l0.858,0.005c0,-0 -0.311,-3.08 0.614,-3.088c0.915,-0.007 0.719,3.094 0.719,3.094l0.898,-0.003c-0,-0 0.274,-4.119 -1.227,-4.162c-1.29,-0.037 -1.931,1.101 -1.941,1.687Z" style="fill:#098;fill-opacity:0.6;"/>
+            <path d="M2.949,3.056c-0.125,-0.375 -0.276,-0.639 -0.457,-0.634c-0.981,0.028 -0.71,3.131 -0.71,3.131l-0.857,0.001l-0.004,-4.167l0.756,-0.008l0.002,0.331c-0,-0 0.345,-0.334 0.977,-0.323c0.611,0.011 0.955,0.709 1.009,0.827l-0.716,0.842Z" style="fill:#098;"/>
+        </svg>
+        <h1><a href="{{ .Site.URL }}">{{ .Site.Title }}</a></h1>
+        <nav>
+            {{ if .Site.Menus.main }}
+            <ul class="nav navbar-nav navbar-left">
+                {{ range sort .Site.Menus.main }}
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </nav>
+        <aside>
+
+        </aside>
+    </div>

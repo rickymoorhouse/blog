@@ -1,0 +1,18 @@
+{{ partial "header" . }}
+<main>
+	<h2>Blog</h2>
+	{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+	{{ range first 8 $pages  }}
+	{{ $.Scratch.Set "link" .RelPermalink }}
+	{{ if .Params.link }}
+	<h3><a class="external" href="{{ .Params.link }}">{{ .Title }}</a></h3>
+	{{ else }}
+	<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+	{{ end }}
+	<article>
+		{{ .Summary}}
+	</article>
+	{{ end }}
+
+</main>	
+{{ partial "footer" . }}

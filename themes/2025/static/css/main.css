@@ -1,0 +1,142 @@
+
+:root {
+    --primary: #009988;
+}
+body {
+    margin: 0px;
+
+}
+html {
+    font-family: "IBM Plex Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    border-top: 5px solid var(--primary);
+}
+
+@media (prefers-color-scheme: dark) {
+    html body {
+      background-color: #222522;
+      color: #ccc;
+    }
+    a {
+        color: #cdf;
+    }
+    :root {
+        --primary: #009988;
+    }
+        
+}
+@media screen and (max-width: 1000px) {
+    /* Smaller screen */
+    div.side, main {
+        margin: 8pt;
+    }
+    div.side {
+        position: inherit;
+        width: 100%;
+        text-align: center;
+    }
+
+    svg#logo {
+        width: 30vw;
+        margin: 0 auto;
+    }
+    html div.side h1 {
+        margin-top: -20pt;
+        color: var(--primary)
+    }
+}
+@media screen and (min-width: 1000px) {
+    /* Larger screen */
+    div.side {
+        position: fixed;
+        width: 18vw;
+        padding: 16pt 0 0 1vw;
+        margin: 0;
+        text-align: center;
+        z-index: 9999;
+    }
+    main {
+        padding: 16pt;
+        /*width: 63vw;*/
+        margin: 0 0 0 20vw;
+        border: 1px red dotted ;
+    }
+    main p {
+        max-width: 60rem;
+    }
+    div.side h1 {
+        font-size: 30pt;
+        line-height: 40pt;
+    }    
+    svg#logo {
+        width: 100%;
+        max-width: 230px;
+    }
+}
+
+div.side ul {
+    margin: 10pt 0 0 0;
+    padding: 0;
+}
+div.side li {
+    list-style: none;
+    display: inline;
+    padding: 0 1em 0 0;
+}
+
+main img {
+    width: 95%;
+    margin: 0 auto;
+}
+html div.side h1 a { color: var(--primary)}
+a.external::before { content: "\279a"; text-decoration: none;}
+
+h1 {
+    font-size: 30pt;
+    line-height: 40pt;
+}
+h2, div.side h1 {
+    line-height: 30pt;
+    margin: 0;
+    padding: 0;
+    color: var(--primary);
+}
+article h2 {
+    font-size: 18pt;
+    line-height: 20pt;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: 400;
+}
+h1 a:link,h2 a:link,h3 a:visited, h4 a:link {
+    text-decoration: none;
+    color: var(--primary);
+}
+h3 {
+    font-size: 18pt;
+    line-height: 20pt;
+    color: var(--primary);
+}
+
+h4 {
+    font-size: 18pt;
+    line-height: 20pt;
+}
+
+p {
+    font-size: 14pt;
+    line-height: 20pt;
+}
+
+
+footer {
+    display: block;
+    width: 100%;
+    border-bottom: 5px solid var(--primary);
+}
+footer p.copyright {
+    font-size: 10pt;
+    text-align: center;
+}

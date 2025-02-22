@@ -1,0 +1,54 @@
+<article class="item">
+  {{ partial "item-header" . }} 
+  {{ if or (in .Params.tags "photos") (in .Params.tags "art")}}
+    {{ $.Scratch.Set "images" "False" }}
+    <div class="Image">
+      {{ if .Params.featured }}
+        {{ with .Resources.Match .Params.featured }}
+          {{ range first 1 . }}
+            {{ $.Scratch.Set "images" "True" }} 
+            {{ $image := .Fill "586x586" }} 
+            {{ if (isset .Exif.Tags "ImageDescription") }}
+            <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
+            </a>
+              <img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}">
+            {{ else }}
+            <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ with .Resources.ByType "image" }}
+          {{ range first 1 . }}
+            {{ $.Scratch.Set "images" "True" }} 
+            {{ $image := .Fill "586x586" }} 
+            {{ if (isset .Exif.Tags "ImageDescription") }}
+            <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
+            </a>
+              <img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}">
+            {{ else }}
+            <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end}}
+      {{ with .Resources.ByType "image" }}
+        {{ range first 1 . }}
+        {{ end }}
+      {{ range first 6 (after 1  .) }}
+        {{ $.Scratch.Set "images" "True" }} 
+        {{ $image := .Fill "100x100" }} 
+        {{ if (isset .Exif.Tags "ImageDescription") }}
+          <a class="image-popup-vertical-fit" dhref="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}"></a>
+        {{ else }}
+          <a class="image-popup-vertical-fit" dhref="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
+        {{ end }}
+    {{ end }}
+    </div>
+    {{ end }}
+{{ else }}
+{{ end }}
+  <div class="text-left">
+    {{ .Content }}
+  </div>
+</article>
