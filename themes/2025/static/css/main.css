@@ -10,8 +10,10 @@ html {
     font-family: "IBM Plex Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    height: 100%;
-    border-top: 5px solid var(--primary);
+    height: calc(100% - 5pt);
+    overflow-y: hidden;
+    border-top: 5pt solid var(--primary);
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,9 +26,16 @@ html {
     }
     :root {
         --primary: #009988;
+        --callout-bg: #222;
+        --callout-fg: #ccc;
     }
 }
 @media (prefers-color-scheme: light) {
+    :root {
+        --primary: #009988;
+        --callout-bg: rgba(255,255,255,0.8);
+        --callout-fg: #222;
+    }
     div.side {
       background-color: rgba(255,255,255,0.8);
     }
@@ -39,7 +48,7 @@ html {
     }
     div.side {
         position: inherit;
-        width: 100%;
+        width: calc(100vw - 16pt);
         text-align: center;
     }
 
@@ -59,7 +68,7 @@ html {
     /* Larger screen */
     div.side {
         position: fixed;
-        width: 20vw;
+        width: 24vw;
         padding: 16pt 0 16pt 1vw;
         margin: 0;
         text-align: center;
@@ -67,8 +76,7 @@ html {
     }
     main {
         padding: 16pt;
-        /*width: 63vw;*/
-        margin: 0 0 0 22vw;
+        margin: 0 0 0 25vw;
         border: 1px rgba(0,0,0,0.5) dotted ;
     }
     main p {
@@ -102,14 +110,19 @@ div.side li {
     display: inline;
     padding: 0 1em 0 0;
 }
-
+main {
+    min-height: calc(100vh - 80pt);
+}
 main img {
     width: 95%;
     margin: 0 auto;
 }
+main.photos img {
+    width: 100%;
+}
 html div.side h1 a { color: var(--primary)}
 a.external::before { content: "\279a"; text-decoration: none;}
-
+div.side a {text-decoration: none;}
 h1 {
     font-size: 30pt;
     line-height: 40pt;
@@ -151,10 +164,11 @@ p {
 footer {
     display: block;
     width: 100%;
-    border-bottom: 5px solid var(--primary);
+    border-bottom: 5pt solid var(--primary);
 }
 footer p.copyright {
     font-size: 10pt;
+    margin: 5pt;
     text-align: center;
 }
 

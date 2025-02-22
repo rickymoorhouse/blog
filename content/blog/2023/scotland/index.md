@@ -102,7 +102,8 @@ geojson:
 
 <style>
 #custom .page-content {
-  background: #ddd;
+  background: var(--callout-bg);
+  color: var(--callout-fg);
   padding: 0 3rem 1rem 0;
   margin: 0;
   width: 18em;
