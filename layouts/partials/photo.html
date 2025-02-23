@@ -1,7 +1,7 @@
 <div class="Image"><figure>
     <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
         {{ $image := .Fill "400x400 center" }}
-            <img src="{{ $image.RelPermalink }}" 
+            <img style="width:200px;height:200px" src="{{ $image.RelPermalink }}" 
                 {{ with .Exif }}alt="{{ .Tags.ImageDescription }}"{{ end }}>
     </a>
     {{ with .Exif }}

@@ -2,6 +2,9 @@
 title: Remote Gateway on Openshift
 date: 2025-02-07
 layout: blog
+tags:
+ - apiconnect
+ - gateway
 hideImages: true
 ---
 

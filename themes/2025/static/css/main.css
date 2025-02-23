@@ -8,6 +8,7 @@ body {
 }
 html {
     font-family: "IBM Plex Sans", sans-serif;
+    font-display: swap;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: calc(100% - 5pt);
@@ -20,11 +21,10 @@ html {
       background-color: #222522;
       color: #ccc;
     }
-    a {
-        color: #cdf;
-    }
     :root {
         --primary: #009988;
+        --secondary: #c60;
+        --link: #ccddff;
         --callout-bg: #222;
         --callout-fg: #ccc;
     }
@@ -33,12 +33,21 @@ html {
 @media (prefers-color-scheme: light) {
     :root {
         --primary: #009988;
+        --secondary: #dd8800;        
+        --link: #006699;
         --callout-bg: rgba(255,255,255,0.8);
         --callout-fg: #222;
     }
     div.side {
       background-color: rgba(255,255,255,0.8);
     }
+}
+
+a {
+    color: var(--link);
+}
+a:hover, a:active {
+    color: var(--secondary);
 }
 
 @media screen and (max-width: 1000px) {
@@ -111,7 +120,9 @@ main {
     min-height: calc(100vh - 80pt);
 }
 main img {
-    width: 95%;
+    width: auto;
+    max-width: 95%;
+    height: auto;
     margin: 0 auto;
 }
 main.photos img {
@@ -153,7 +164,7 @@ h4 {
 }
 
 p {
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 20pt;
 } 
 footer {
@@ -178,4 +189,40 @@ a.contact {
 text-decoration: none;
 color: var(--primary);
 font-weight: bold;
+}
+
+.Image {
+    display: inline-block;
+    clear: both;
+}
+.Image figure {
+    margin: 5pt;
+}
+.Image img {
+    width: 200pt;
+    height: 200pt;
+}
+p {
+    clear: both;
+}
+
+/* Headers */
+h4.p-name {
+    margin-bottom: 0;
+}
+h5 {padding:0;margin: 5pt 0 15pt 0;}
+h5 div.tags {display: inline;}
+div.tags::before {content: " - Tags: "}
+a.item-tag {
+    background: var(--secondary);
+    color: var(--callout-bg);
+    text-decoration: none;
+    display: inline-block;
+    padding:.25em.75em;
+    margin:.10em;
+    border-radius: 20em;
+}
+a.item-tag:hover {
+    background: var(--link);
+    color: var(--callout-bg);
 }

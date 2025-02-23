@@ -11,7 +11,7 @@ lng: 0.0539977
 ---
 
 Candes-Saint-Martin is close to the confluence of the Loire and the Vienne rivers.  We went on a [lovely circular walk](http://cdt37.media.tourinsoft.eu/upload/Hiking-Candes-st-Martin.pdf) from the town up through the nearby vineyards to the view point. 
-
+<!--more-->
 
 ![Candes-Saint-Martin walking route](/blog/2024/candes/map.png)
 
