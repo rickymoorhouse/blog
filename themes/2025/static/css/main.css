@@ -96,17 +96,17 @@ a:hover, a:active {
         width: 100%;
         max-width: 230px;
     }
-    main.photos article.item {
-        width: 293px;
-        height: 356px;
-        float: left;
-        clear: none;
-        overflow: hidden;
-        margin: 0 16pt 16pt 0;
-        padding: 3pt;
-      }
 }
 
+main.photos article.item {
+    width: 293px;
+    height: 356px;
+    float: left;
+    clear: none;
+    overflow: hidden;
+    margin: 0 16pt 16pt 0;
+    padding: 3pt;
+  }
 div.side ul {
     margin: 10pt 0 0 0;
     padding: 0;
@@ -225,4 +225,13 @@ a.item-tag {
 a.item-tag:hover {
     background: var(--link);
     color: var(--callout-bg);
+}
+
+@media screen and (max-width: 500px) {
+    main.photos article.item,
+    main.photos article.item img{
+        width: 100%;
+        height: auto;
+      }
+    
 }
