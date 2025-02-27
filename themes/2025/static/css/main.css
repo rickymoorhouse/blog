@@ -198,7 +198,7 @@ font-weight: bold;
 .Image figure {
     margin: 5pt;
 }
-.Image img {
+main .Image img {
     width: 200pt;
     height: 200pt;
 }
