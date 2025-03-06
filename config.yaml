@@ -95,4 +95,3 @@ deployment:
     gzip: true 
 outputs:
   home: ["HTML", "RSS", "JSON"]
-
