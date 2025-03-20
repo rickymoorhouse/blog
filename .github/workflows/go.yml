@@ -33,7 +33,7 @@ jobs:
         with:
           source: "public"
           destination: "www"
-          storageZoneName: "${{ secrets.STORAGE_NAME }}"
+          storageZoneName: "rm-storage-std"
           storagePassword: "${{ secrets.STORAGE_PASSWORD }}"
           accessKey: "${{ secrets.STORAGE_KEY }}"
           pullZoneId: "${{ secrets.ZONE_ID }}"
