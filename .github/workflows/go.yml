@@ -27,20 +27,19 @@ jobs:
       - name: Build
         run: $HOME/hugo
 
-      - name: Deploy
-        if: github.ref == 'refs/heads/main'
-        uses: ayeressian/bunnycdn-storage-deploy@v2.2.5
+      - name: Deploy to Bunny
+        uses: R-J-dev/bunny-deploy@v2.0.6 # Select the version you wish to use
         with:
-          source: "public"
-          destination: "www"
-          storageZoneName: "rm-storage-std"
-          storagePassword: "${{ secrets.STORAGE_PASSWORD }}"
-          accessKey: "${{ secrets.STORAGE_KEY }}"
-          pullZoneId: "${{ secrets.ZONE_ID }}"
-          upload: "true"
-          remove: "true"
-          purgePullZone: "true"  
-
+          access-key: ${{ secrets.STORAGE_KEY }}
+          directory-to-upload: "./public"
+          storage-endpoint: "https://uk.storage.bunnycdn.com"
+          storage-zone-name: "rm-uk-standard"
+          storage-zone-password: ${{ secrets.STORAGE_PASSWORD }}
+          concurrency: "50" # Make sure to check the docs about concurrency before choosing this setting
+          enable-delete-action: false
+          enable-purge-pull-zone: false
+          pull-zone-id: "3422848"
+          replication-timeout: "15000"
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
