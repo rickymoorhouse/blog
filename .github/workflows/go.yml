@@ -37,7 +37,7 @@ jobs:
           storage-zone-password: ${{ secrets.STORAGE_PASSWORD }}
           concurrency: "50" # Make sure to check the docs about concurrency before choosing this setting
           enable-delete-action: false
-          enable-purge-pull-zone: false
+          enable-purge-pull-zone: true
           pull-zone-id: "3422848"
           replication-timeout: "15000"
       - name: Archive production artifacts
