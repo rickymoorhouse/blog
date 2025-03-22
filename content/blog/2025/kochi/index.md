@@ -1,5 +1,6 @@
 ---
-title: Kochi
+title: Time with the team in Kochi
+slug: Kochi
 date: 2025-03-16
 layout: blog
 tags:
