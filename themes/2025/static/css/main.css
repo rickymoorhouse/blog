@@ -99,8 +99,8 @@ a:hover, a:active {
 }
 
 main.photos article.item {
-    width: 293px;
-    height: 356px;
+    width: 210pt;
+    height: 310pt;
     float: left;
     clear: none;
     overflow: hidden;
@@ -121,12 +121,12 @@ main {
 }
 main img {
     width: auto;
-    max-width: 95%;
+   /*max-width: 95%;*/
     height: auto;
     margin: 0 auto;
 }
 main.photos img {
-    width: 100%;
+    max-width: 100%;
 }
 html div.side h1 a { color: var(--primary)}
 a.external::before { content: "\279a"; text-decoration: none;}
@@ -167,6 +167,12 @@ p {
     font-size: 12pt;
     line-height: 20pt;
 } 
+
+blockquote {
+    border-left: 3pt solid var(--primary);
+    padding-left: 1em;
+}
+
 footer {
     display: block;
     width: 100%;
@@ -191,9 +197,9 @@ color: var(--primary);
 font-weight: bold;
 }
 
-.Image {
+main .Image {
     display: inline-block;
-    clear: both;
+    vertical-align: top;
 }
 .Image figure {
     margin: 5pt;
@@ -226,6 +232,20 @@ a.item-tag:hover {
     background: var(--link);
     color: var(--callout-bg);
 }
+.photos table.exif {
+    float: left;
+    padding: 0 3em;
+}
+.Image a {
+    position: relative;
+    top: -205pt;
+}
+.Image a img {
+    rotate: 5deg;
+    opacity: .5;
+}
+.Image a:first-child { top: 0; z-index: 100}
+.Image a:first-child img{ rotate: 0deg;opacity: 1;}
 
 @media screen and (max-width: 500px) {
     main.photos article.item,
@@ -233,5 +253,24 @@ a.item-tag:hover {
         width: 100%;
         height: auto;
       }
-    
+    main.photos article.item .Image a {
+        position: relative;
+        top: calc(16pt - 100vw);
+    }
+    main.photos article.item .Image a:first-child {
+        position: relative;
+        top: 0;
+    }
+    main.photos article.item {
+        height: 410pt;
+        float: left;
+        clear: none;
+        overflow: hidden;
+        margin: 0 16pt 16pt 0;
+        padding: 3pt;
+      }    
+
 }
+
+/* Glightbox */
+#glightbox-body .glightbox-clean .gslide-description { background: #000; color: #eee;}

@@ -2,48 +2,54 @@
   {{ partial "item-header" . }} 
   {{ if or (in .Params.tags "photos") (in .Params.tags "art")}}
     {{ $.Scratch.Set "images" "False" }}
+    {{ $.Scratch.Set "link" .RelPermalink }}
+    {{ if eq 1 (.Resources.ByType "image" | len) }}
+    {{ $.Scratch.Set "number" "single" }}
+    {{ else }}
+    {{ $.Scratch.Set "number" "multi" }}
+    {{ end }}
     <div class="Image">
       {{ if .Params.featured }}
         {{ with .Resources.Match .Params.featured }}
           {{ range first 1 . }}
             {{ $.Scratch.Set "images" "True" }} 
-            {{ $image := .Fill "586x586" }} 
-            {{ if (isset .Exif.Tags "ImageDescription") }}
-            <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
+            {{ $image := .Fill "586x586" }}
+            <a class="glightbox" {{ if (isset .Exif.Tags "ImageDescription") }}data-title="{{ .Exif.Tags.ImageDescription }}"{{ end }} href="{{ .RelPermalink }}">
+              <img src="{{ $image.RelPermalink }}" alt=".">
             </a>
-              <img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}">
-            {{ else }}
-            <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
-            {{ end }}
           {{ end }}
         {{ end }}
       {{ else }}
         {{ with .Resources.ByType "image" }}
-          {{ range first 1 . }}
+          {{ range first 6 . }}
             {{ $.Scratch.Set "images" "True" }} 
             {{ $image := .Fill "586x586" }} 
             {{ if (isset .Exif.Tags "ImageDescription") }}
-            <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
+            <a class="glightbox" data-title="{{ .Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}">
             </a>
               <img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}">
             {{ else }}
-            <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
+            <a class="glightbox" href="{{ $image.RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
             {{ end }}
           {{ end }}
         {{ end }}
       {{ end}}
       {{ with .Resources.ByType "image" }}
-        {{ range first 1 . }}
+        {{ range first 1 (after 1  .) }}
+          {{ $image := .Fill "100x100" }} 
+          {{ if (isset .Exif.Tags "ImageDescription") }}
+            <a class="glightbox" data-title="{{ .Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}"></a>
+          {{ else }}
+            <a class="glightbox" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
+          {{ end }}
         {{ end }}
-      {{ range first 6 (after 1  .) }}
-        {{ $.Scratch.Set "images" "True" }} 
-        {{ $image := .Fill "100x100" }} 
-        {{ if (isset .Exif.Tags "ImageDescription") }}
-          <a class="image-popup-vertical-fit" dhref="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}"></a>
-        {{ else }}
-          <a class="image-popup-vertical-fit" dhref="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
+        {{ range (after 2  .) }}
+          {{ if (isset .Exif.Tags "ImageDescription") }}
+            <a class="glightbox" data-title="{{ .Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}"></a>
+          {{ else }}
+            <a class="glightbox" href="{{ .RelPermalink }}"></a>
+          {{ end }}
         {{ end }}
-    {{ end }}
     </div>
     {{ end }}
 {{ else }}
