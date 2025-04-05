@@ -1,5 +1,5 @@
 <div class="Image"><figure>
-    <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
+    <a class="glightbox" href="{{ .RelPermalink }}" {{ with .Exif }}data-description="{{ .Tags.ImageDescription }}"{{ end }}>
         {{ $image := .Fill "400x400 center" }}
             <img style="width:200px;height:200px" src="{{ $image.RelPermalink }}" 
                 {{ with .Exif }}alt="{{ .Tags.ImageDescription }}"{{ end }}>
