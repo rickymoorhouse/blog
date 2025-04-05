@@ -1,5 +1,5 @@
 ---
-title: Copenhagen Workshop Visit
+title: Copenhagen
 date: 2025-02-27
 layout: photo
 tags: [photos]
