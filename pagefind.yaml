@@ -4,3 +4,4 @@ output_subdir: pagefind
 exclude_selectors:
   - "aside"
   - ".bloglist"
+glob: "{photos/[2]*/**/*.html,blog/[2]*/[!page]*/**/*.html}"
