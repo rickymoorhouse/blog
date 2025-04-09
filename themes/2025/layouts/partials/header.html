@@ -53,7 +53,7 @@
                 <path d="M2.842,3.056c-0.124,-0.375 -0.276,-0.639 -0.457,-0.634c-0.98,0.028 -0.71,3.131 -0.71,3.131l-0.857,0.001l-0.004,-4.167l0.756,-0.008l0.002,0.331c-0,-0 0.346,-0.334 0.977,-0.323c0.611,0.011 0.955,0.709 1.009,0.827l-0.716,0.842Z" style="fill:#098;"/>
             </svg>
         </a>
-        <h1><a href="/">{{ .Site.Title }}</a></h1>
+        <div id="sitetitle"><a href="/">{{ .Site.Title }}</a></div>
         <nav>
             {{ if .Site.Menus.main }}
             <ul class="nav navbar-nav navbar-left">
@@ -64,6 +64,13 @@
             {{ end }}
         </nav>
         <aside>
-
+            <!--<link href="/css/pagefind-ui.css" rel="stylesheet">
+            <script src="/pagefind/pagefind-ui.js"></script>
+            <div id="search"></div>
+            <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
+                    new PagefindUI({ element: "#search", showSubResults: true });
+                });
+            </script>-->
         </aside>
     </div>
