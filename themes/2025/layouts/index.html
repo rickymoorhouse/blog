@@ -1,5 +1,5 @@
 {{ partial "header" . }}
-<main>
+<main class="bloglist">
 	<h2>Blog</h2>
 	{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 	{{ range first 8 $pages  }}

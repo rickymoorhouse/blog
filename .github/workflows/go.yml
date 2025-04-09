@@ -10,14 +10,19 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v1
 
-      - name: Get hugo
+      - name: Get hugo and pagefind
         env:
           HUGO_VERSION: "0.133.0"
+          PAGEFIND_VERSION: "1.3.0"
         run: |
           HUGO_DOWNLOAD=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
           wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_DOWNLOAD}
           tar xvzf ${HUGO_DOWNLOAD} hugo
           mv hugo $HOME/hugo
+          PAGEFIND_DOWNLOAD=pagefind-v${PAGEFIND_VERSION}-x86_64-unknown-linux-musl.tar.gz
+          wget https://github.com/CloudCannon/pagefind/releases/download/v${PAGEFIND_VERSION}/${PAGEFIND_DOWNLOAD}
+          tar xvzf ${PAGEFIND_DOWNLOAD} 
+          mv pagefind $HOME/pagefind
       - name: Set build ref
         if: github.ref != 'refs/heads/main'
         run: |
@@ -25,7 +30,9 @@ jobs:
           sed -i 's/rickymoorhouse.uk/drafts.rickymoorhouse.uk/' config.yaml
 
       - name: Build
-        run: $HOME/hugo
+        run: | 
+          $HOME/hugo
+          $HOME/pagefind
 
       - name: Deploy to Bunny
         uses: R-J-dev/bunny-deploy@v2.0.6 # Select the version you wish to use

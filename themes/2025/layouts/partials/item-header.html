@@ -8,7 +8,11 @@
         <a class="external" href="{{ .Scratch.Get "link" }}">{{ .Title }}</a>
     </h4>
 {{ else }}
-    <h4 class="p-name"><a href="{{ .Scratch.Get "link" }}" class="u-url">{{ .Title }}</a></h4>
+    {{ if eq "single" ($.Scratch.Get "template") }}
+        <h1 class="p-name"><a href="{{ .Scratch.Get "link" }}" class="u-url">{{ .Title }}</a></h1>
+    {{ else }}
+        <h4 class="p-name"><a href="{{ .Scratch.Get "link" }}" class="u-url">{{ .Title }}</a></h1>
+    {{ end }}
 {{ end }}
 {{ if eq "1 January 0001" ($.Scratch.Get "subtitle") }}&nbsp;{{ else }}
 <h5>
