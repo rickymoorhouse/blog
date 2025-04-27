@@ -30,7 +30,7 @@ menu:
   - url: "https://bluesky.com/profile/rickymoorhouse.uk/"
     name: "bluesky"
     weight: 3
-  - url: "https://www.threads.net/@rickymoorhouse"
+  - url: "https://www.threads.com/@rickymoorhouse"
     name: "threads"
     weight: 3    
   - url: "https://hachyderm.io/@ricky"
