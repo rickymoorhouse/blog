@@ -30,6 +30,10 @@ You can see the code for this in the `light` directory.
 
 This part runs on my laptop and detects when the webcam is in use through monitoring the system log - if a change in state is detected, it then sends an API call to the Raspberry Pi to switch the light on or off as appropriate.
 
+The tricky part here was the detection of the webcam - I found a few different samples and a useful reddit thread (which I can't find now - will add the link later!) on ways to detect the webcam being operational on MacOS and it seems it is liable to change between MacOS versions - looking for eventMessages containing `AVCaptureSessionDidStartRunningNotification`, `AVCaptureSessionDidStopRunningNotification` or `stopRunning` seems to work for the things I've tested on Sequoia. 
+
+The alternative route I was considering was to use [OverSight](https://github.com/objective-see/OverSight) to trigger a CLI app and leave the detection to them - but having the CLI detect it was more interesting to build. 
+
 You can see the code for this part in the `cli` directory. 
 
 The code for this project lives at [github.com/rickymoorhouse/status-light](https://github.com/rickymoorhouse/status-light/).
