@@ -221,7 +221,7 @@ main .Image img {
     height: 200pt;
 }
 p {
-    clear: both;
+    /*clear: both;*/
 }
 
 /* Headers */
@@ -289,3 +289,9 @@ a.item-tag:hover {
 
 /* Pagefind */
 #search { margin: 1em;}
+img[src*="floatleft"] {
+    float:left;
+}
+img[src*="floatright"] {
+    float:right;
+}
