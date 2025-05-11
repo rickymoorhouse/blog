@@ -3,6 +3,9 @@ title: Status Light
 date: 2025-05-11
 layout: blog
 hideImages: true
+tags: 
+- raspberrypi
+- coding
 description: Status light for video calls powered by Raspberry Pi
 featured: robot-large.png
 ---
