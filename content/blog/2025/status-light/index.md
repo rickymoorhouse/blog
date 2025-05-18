@@ -6,7 +6,6 @@ hideImages: true
 tags: 
 - raspberrypi
 - coding
-description: Status light for video calls powered by Raspberry Pi
 featured: robot-large.png
 ---
 

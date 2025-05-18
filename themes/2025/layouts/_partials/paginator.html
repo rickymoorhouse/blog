@@ -1,6 +1,6 @@
 {{ if or .Paginator.HasPrev .Paginator.HasNext }}
 
-<div class="pages">
+<div class="pages clear">
 
     {{ if .Paginator.HasPrev }}
     <a class="previous" href="{{ .Paginator.Prev.URL }}" rel="prev">

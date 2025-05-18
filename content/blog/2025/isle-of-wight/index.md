@@ -5,16 +5,18 @@ layout: blog
 tags: 
 - travel
 hideImages: true
+featured: img_7849.jpeg
 ---
 
 We decided to take a short family break on the Isle of Wight dung the school Easter holidays. We found accommodation in Yarmouth through Airbnb at a lovely spot overlooking the River Yar. 
 
-![Panorama from cottage](img_7849.jpeg)
-
 On Thursday morning we took the WightLink ferry over to the island in the morning and as we got there early they put us on the earlier ferry so we arrived to the Isle of Wight just after ten o'clock. We decided to head to Alum Bay and spend the day there. We first went to the viewpoint to see the Needles and then took the stairs down to the bay as dogs weren't allowed on the chair lift we knew we had to do this both ways!
+
+<!--more-->
 
 {{<fig "P1030475.jpeg">}}
 {{<fig "P1030478.jpeg">}}
+{{<fig "img_7849.jpeg">}}
 
 We found a nice spot on the beach to sit and have our picnic and relax. Nova had a good time exploring around us and found her comfiest spot to sit was on Jess. 
 

@@ -1,3 +1,6 @@
+{{ if eq "flight" .Params.layout }}
+  {{ partial "flight" . }} 
+{{ else }}
 <article class="item">
   {{ partial "item-header" . }} 
   {{ if or (in .Params.tags "photos") (in .Params.tags "art")}}
@@ -58,3 +61,4 @@
     {{ .Content }}
   </div>
 </article>
+{{ end }}

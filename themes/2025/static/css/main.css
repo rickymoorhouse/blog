@@ -1,6 +1,8 @@
 
 :root {
     --primary: #009988;
+    --primary-bright: #00bb88;
+    --gray: #444;
     --pagefind-ui-scale: 1;
     --pagefind-ui-primary: #009988;
     --pagefind-ui-border: inherit;
@@ -250,13 +252,14 @@ a.item-tag:hover {
 }
 .Image a {
     position: relative;
-    top: -205pt;
+    top: -5pt;
+    left: -195pt;
 }
 .Image a img {
     rotate: 5deg;
     opacity: .5;
 }
-.Image a:first-child { top: 0; z-index: 100}
+.Image a:first-child { top: 0; left: 0; z-index: 100}
 .Image a:first-child img{ rotate: 0deg;opacity: 1;}
 
 @media screen and (max-width: 500px) {
@@ -289,9 +292,54 @@ a.item-tag:hover {
 
 /* Pagefind */
 #search { margin: 1em;}
-img[src*="floatleft"] {
+img[src*="floatleft"], img.floatleft {
     float:left;
+    margin: 15px;
 }
-img[src*="floatright"] {
+img[src*="floatright"], img.floatright {
     float:right;
+    margin: 15px;
+}
+
+
+
+article {
+clear: left;
+}
+
+.clear {
+    clear: both;
+}
+aside.flight {
+    padding: 20pt;
+    background-color: var(--callout-bg);
+    color: var(--callout-fg);
+    text-align: center;
+    border-right: 1px solid var(--gray);
+    float: left;
+}
+aside.flight p {
+    text-align: left;
+}
+.flight div {
+    float: left;
+    padding: 10pt 20pt;
+}
+aside.flight .airport strong {
+    background-color: var(--primary-bright);
+    color: var(--callout-bg);
+    padding: 0 5pt;
+    font-size: 26pt;
+    line-height: 40pt;
+}
+aside.flight .plane {
+    font-size: 30pt;
+    line-height: 30pt;
+    margin: 15pt 0 0 0;
+}
+aside.flight .plane small {
+    display: inline-block;
+    font-size: 12pt;
+    line-height: 20pt;
+    margin-top: -2pt
 }

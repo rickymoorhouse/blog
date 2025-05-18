@@ -1,0 +1,40 @@
+{{ partial "header" . }}
+<main class="bloglist">
+	<h2>Blog</h2>
+	{{ partial "paginator" . }}
+
+	{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+	{{ range (.Paginator 10).Pages }} {{ partial "list-item" . }} {{ end }}
+
+	<!--<article>   
+		{{ if eq "flight" .Params.layout }}
+		{{ partial "flight" . }}
+	
+		{{ else }}
+	{{ partial "item-header" . }} 
+		{{ if .Resources.ByType "image" }}
+        {{ if .Params.featured }}
+        {{ with .Resources.Match .Params.featured }}
+            {{ range first 1 . }}
+            {{ $image := .Fill "200x200 Center" }}
+                <img class="floatleft" src="{{ $image.Permalink }}" width="100" height="100" />
+            {{ end }}
+        {{ end }}
+        {{ else }}
+            {{ with .Resources.ByType "image" }}
+			{{ range first 1 . }}
+				{{ $image := .Fill "200x200 Center" }}
+				<img class="floatleft" src="{{ $image.Permalink }}" width="100" height="100" />
+				{{ end }}
+            {{ end }}
+        {{ end }}
+    	{{ end }}
+		{{ .Summary}}
+
+		{{ end }}
+	</article>-->
+
+	{{ partial "paginator" . }}
+
+</main>	
+{{ partial "footer" . }}
