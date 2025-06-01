@@ -1,7 +1,7 @@
 {{ if eq "flight" .Params.layout }}
   {{ partial "flight" . }} 
 {{ else }}
-<article class="item">
+<article class="item {{ .Type }}">
   {{ partial "item-header" . }} 
   {{ if or (in .Params.tags "photos") (in .Params.tags "art")}}
     {{ $.Scratch.Set "images" "False" }}
@@ -11,7 +11,7 @@
     {{ else }}
     {{ $.Scratch.Set "number" "multi" }}
     {{ end }}
-    <div class="Image">
+    <div class="Image {{ $.Scratch.Get "number" }}">
       {{ if .Params.featured }}
         {{ with .Resources.Match .Params.featured }}
           {{ range first 1 . }}
@@ -38,15 +38,7 @@
         {{ end }}
       {{ end}}
       {{ with .Resources.ByType "image" }}
-        {{ range first 1 (after 1  .) }}
-          {{ $image := .Fill "100x100" }} 
-          {{ if (isset .Exif.Tags "ImageDescription") }}
-            <a class="glightbox" data-title="{{ .Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}"></a>
-          {{ else }}
-            <a class="glightbox" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
-          {{ end }}
-        {{ end }}
-        {{ range (after 2  .) }}
+        {{ range (after 1  .) }}
           {{ if (isset .Exif.Tags "ImageDescription") }}
             <a class="glightbox" data-title="{{ .Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}"></a>
           {{ else }}

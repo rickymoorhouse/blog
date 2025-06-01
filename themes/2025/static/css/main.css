@@ -67,7 +67,8 @@ a:hover, a:active {
 @media screen and (max-width: 1000px) {
     /* Smaller screen */
     div.side, main {
-        margin: 8pt;
+        padding: 1vw;
+        margin: 0;
     }
     div.side {
         position: inherit;
@@ -118,7 +119,6 @@ main.photos article.item {
     float: left;
     clear: none;
     overflow: hidden;
-    margin: 0 16pt 16pt 0;
     padding: 3pt;
   }
 div.side ul {
@@ -211,20 +211,6 @@ color: var(--primary);
 font-weight: bold;
 }
 
-main .Image {
-    display: inline-block;
-    vertical-align: top;
-}
-.Image figure {
-    margin: 5pt;
-}
-main .Image img {
-    width: 200pt;
-    height: 200pt;
-}
-p {
-    /*clear: both;*/
-}
 
 /* Headers */
 h4.p-name {
@@ -246,45 +232,66 @@ a.item-tag:hover {
     background: var(--link);
     color: var(--callout-bg);
 }
+/* Common Image styles */
+main .Image {
+    display: inline-block;
+    vertical-align: top;
+}
+.Image figure {
+    margin: 5pt;
+}
+main .Image img {
+    width: 200pt;
+    height: 200pt;
+}
+
+/* Photos */
 .photos table.exif {
     float: left;
     padding: 0 3em;
 }
-.Image a {
-    position: relative;
-    top: -5pt;
-    left: -195pt;
-}
-.Image a img {
-    rotate: 5deg;
-    opacity: .5;
-}
-.Image a:first-child { top: 0; left: 0; z-index: 100}
-.Image a:first-child img{ rotate: 0deg;opacity: 1;}
 
-@media screen and (max-width: 500px) {
+main.photos h4.p-name {
+    min-height: 40pt;
+}
+
+main.photos article.item {
+    margin: 0 16pt 16pt 0;
+}
+main .multi::after {
+    content: "⊞";
+    color: white;
+    position: relative;
+    display: block;
+    top: -30pt;
+    left: calc(100% - 20pt);
+    /* text-align: center; */
+    font-size: 20pt;
+    width: 30pt;
+}
+
+@media screen and (max-width: 640px) {
     main.photos article.item,
     main.photos article.item img{
         width: 100%;
         height: auto;
+        margin: 0;
+        padding: 0;
       }
-    main.photos article.item .Image a {
-        position: relative;
-        top: calc(16pt - 100vw);
-    }
+      
+
     main.photos article.item .Image a:first-child {
         position: relative;
         top: 0;
     }
     main.photos article.item {
-        height: 410pt;
         float: left;
         clear: none;
         overflow: hidden;
-        margin: 0 16pt 16pt 0;
-        padding: 3pt;
       }    
-
+    main.photos h4.p-name {
+        min-height: 20pt;
+    }
 }
 
 /* Glightbox */
@@ -315,8 +322,8 @@ aside.flight {
     background-color: var(--callout-bg);
     color: var(--callout-fg);
     text-align: center;
-    border-right: 1px solid var(--gray);
     float: left;
+    clear: both;
 }
 aside.flight p {
     text-align: left;
