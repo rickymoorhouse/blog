@@ -1,11 +1,27 @@
 {{ partial "header" . }}
 <main class="bloglist">
-	<h2>Blog</h2>
-	{{ partial "paginator" . }}
-
 	{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+	{{ if eq .Paginator.PageNumber 1 }}
+	<p>
+		{{ if .Site.Params.description }}
+			{{ .Site.Params.description }}
+		{{ else }}
+			{{ .Site.Params.title }} is a blog about various topics that interest me.
+		{{ end }}
+	</p>
+	
+	You can find me elsewhere on the web
+		{{- if .Site.Menus.icon -}}
+			{{- range sort .Site.Menus.icon -}}
+			- <a rel="me" href="{{ .URL }}">{{ .Name }}</a>
+			{{- end -}}
+		{{- end -}}	
+	{{- else -}}
+	<h2>Blog</h2>
+	{{- end -}}
+	
+	{{ partial "paginator" . }}
 	{{ range (.Paginator 10).Pages }} {{ partial "list-item" . }} {{ end }}
-
 	<!--<article>   
 		{{ if eq "flight" .Params.layout }}
 		{{ partial "flight" . }}
