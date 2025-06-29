@@ -1,0 +1,5 @@
+{{ with .Resources.ByType "image" }}
+{{ range . }}
+    {{ partial "photo" .}}
+{{ end }}
+{{ end }}

@@ -1,6 +1,6 @@
 ---
 title: Copenhagen
-date: 2025-02-27
+date: 2025-02-27 08:00:00
 layout: photo
 tags: [photos]
 featured: IMG_7335.jpeg

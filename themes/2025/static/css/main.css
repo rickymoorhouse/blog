@@ -1,6 +1,9 @@
 
 :root {
     --primary: #009988;
+    --primary-bright: #00bb88;
+    --primary-dark:hsl(from var(--primary) h calc(s - 10)  calc(l - 10));
+    --gray: #444;
     --pagefind-ui-scale: 1;
     --pagefind-ui-primary: #009988;
     --pagefind-ui-border: inherit;
@@ -10,11 +13,17 @@
     --pagefind-ui-image-border-radius: 8px;
     --pagefind-ui-image-box-ratio: 3 / 2;
     --pagefind-ui-font:  "IBM Plex Sans", sans-serif;    
+
+    --side-bar: var(--primary);
+    --side-bar-text: #fefefe;
+    --logo-color: hsl(from var(--primary) h calc(s - 15)  calc(l + 15));
+
 }
 
 body {
     margin: 0px;
-
+    background: var(--background);
+    color: var(--text);
 }
 html {
     font-family: "IBM Plex Sans", sans-serif;
@@ -22,8 +31,6 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: calc(100% - 5pt);
-    border-top: 5pt solid var(--primary);
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,25 +40,27 @@ html {
     }
     :root {
         --primary: #009988;
-        --secondary: #c60;
+        --side-bar: var(--primary-dark);
+        --background: #222522;
+        --secondary: #da7;
+        --secondary-bright: #d80;
         --link: #ccddff;
         --callout-bg: #222;
         --callout-fg: #ccc;
         --pagefind-ui-text: #ccc;
-        --pagefind-ui-background: #222;    
+        --pagefind-ui-background: #222522;    
     }
 
 }
 @media (prefers-color-scheme: light) {
     :root {
         --primary: #009988;
-        --secondary: #dd8800;        
+        --background: #fafefd;
+        --secondary: #dd8800;
+        --secondary-bright: #da7;
         --link: #006699;
         --callout-bg: rgba(255,255,255,0.8);
         --callout-fg: #222;
-    }
-    div.side {
-      background-color: rgba(255,255,255,0.8);
     }
 }
 
@@ -62,51 +71,93 @@ a:hover, a:active {
     color: var(--secondary);
 }
 
-@media screen and (max-width: 1000px) {
-    /* Smaller screen */
-    div.side, main {
-        margin: 8pt;
-    }
-    div.side {
-        position: inherit;
-        width: calc(100vw - 16pt);
-        text-align: center;
-    }
 
-    svg#logo {
-        width: 30vw;
-        margin: 0 auto;
+main {
+    padding: 1em;
+    margin: 0;
+}
+svg#logo {
+    width: 30vw;
+    margin: 0 auto;
+}
+
+#sitetitle a {
+    font-size: 20pt;
+    line-height: 50pt;
+    margin-left: 1em;
+}
+div.side a {
+    color: var(--side-bar-text);
+}
+
+div.side {
+    background-color: var(--side-bar);
+    height: 55pt;
+    z-index: 999;
+}
+div.side svg#logo {
+    height: 50pt;
+    width: 50pt;
+    margin-left: 1em;
+}
+
+div.side svg#logo path {
+    fill: var(--logo-color);
+}
+div.side nav ul {
+    padding: 0 2em;
+    margin: 0;
+}
+div.side a.logo, div.side #sitetitle, div.side nav {
+    width: auto;
+    float:left;
+}
+div.side nav {
+    margin: 0 0 0 2em;
+    line-height: 50pt;
+    float:right
+}
+
+@media screen and (max-width: 600px) {
+    /* Smaller screen */
+    div.side {
+        height: 90pt;
     }
-    html div.side #sitetitle {
-        margin-top: -20pt;
-        color: var(--primary)
+    div.side #sitetitle {
+        font-size: 20pt;
+        line-height: 30pt;
+        margin-left: 1em;
+    }
+    div.side nav {
+        line-height: 30pt;;
+        clear: both;
+        width: auto;
+        float: none;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    /* Smaller screen */
+    div.side {
+        transform-origin: bottom left;
+        transform: rotate(0deg) translateX(0pt);
+        background: linear-gradient(to top,hsl(from var(--side-bar) h s  calc(l - 10)) 0, var(--side-bar) 3pt, var(--side-bar) 100%);
+    }
+}
+
 @media screen and (min-width: 1000px) {
     /* Larger screen */
     div.side {
+        transform-origin: bottom left;
+        transform: rotate(90deg) translateX(-60pt);
+        width: 100vh;
+        padding-right: 5vh;
         position: fixed;
-        width: 24vw;
-        padding: 16pt 0 16pt 1vw;
-        margin: 0;
-        text-align: center;
-        z-index: 9999;
+        background: linear-gradient(to bottom,hsl(from var(--side-bar) h s  calc(l - 10)) 0, var(--side-bar) 5pt, var(--side-bar) 100%);
     }
     main {
-        padding: 16pt;
-        margin: 0 0 0 25vw;
-        border: 1px rgba(0,0,0,0.5) dotted ;
-    }
-    main p {
-        max-width: 60rem;
-    }
-    div.side h1 {
-        font-size: 26pt;
-        line-height: 40pt;
-    }    
-    svg#logo {
-        width: 100%;
-        max-width: 230px;
+        margin-left: 55pt;
+        box-shadow: -5pt -5pt 6pt rgba(0,0,0,0.2);
     }
 }
 
@@ -116,7 +167,6 @@ main.photos article.item {
     float: left;
     clear: none;
     overflow: hidden;
-    margin: 0 16pt 16pt 0;
     padding: 3pt;
   }
 div.side ul {
@@ -140,7 +190,6 @@ main img {
 main.photos img {
     max-width: 100%;
 }
-html div.side #sitetitle a { color: var(--primary)}
 a.external::before { content: "\279a"; text-decoration: none;}
 div.side a {text-decoration: none;}
 h1, #sitetitle {
@@ -174,6 +223,10 @@ h4 {
     font-size: 18pt;
     line-height: 20pt;
 }
+h5 {
+    font-size: 10pt;
+    line-height: 20pt;
+}
 
 p {
     font-size: 12pt;
@@ -183,6 +236,23 @@ p {
 blockquote {
     border-left: 3pt solid var(--primary);
     padding-left: 1em;
+}
+
+ul.inline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.inline li {
+    display: inline;
+    padding: 0;
+    margin: 0 -3pt 0 0 ;
+}
+ul.inline li::before {
+    content: ", ";
+}
+ul.inline li:first-child:before {
+    content: " ";
 }
 
 footer {
@@ -209,6 +279,30 @@ color: var(--primary);
 font-weight: bold;
 }
 
+
+/* Headers */
+h4.p-name {
+    margin-bottom: 0;
+}
+h5 {padding:0;margin: 5pt 0 15pt 0;}
+h5 div.tags {display: inline;}
+div.tags::before {content: " - Tags: "}
+a.item-tag {
+    background: var(--secondary-bright);
+    color: var(--callout-bg);
+    text-decoration: none;
+    display: inline-block;
+    padding: 3pt 5pt;
+    border-radius: 8pt;
+    font-size: 10pt;
+    line-height: 12pt
+}
+a.item-tag:hover {
+    background: var(--link);
+    color: var(--callout-bg);
+}
+
+/* Common Image styles */
 main .Image {
     display: inline-block;
     vertical-align: top;
@@ -220,68 +314,54 @@ main .Image img {
     width: 200pt;
     height: 200pt;
 }
-p {
-    clear: both;
-}
 
-/* Headers */
-h4.p-name {
-    margin-bottom: 0;
-}
-h5 {padding:0;margin: 5pt 0 15pt 0;}
-h5 div.tags {display: inline;}
-div.tags::before {content: " - Tags: "}
-a.item-tag {
-    background: var(--secondary);
-    color: var(--callout-bg);
-    text-decoration: none;
-    display: inline-block;
-    padding:.25em.75em;
-    margin:.10em;
-    border-radius: 20em;
-}
-a.item-tag:hover {
-    background: var(--link);
-    color: var(--callout-bg);
-}
+/* Photos */
 .photos table.exif {
     float: left;
     padding: 0 3em;
 }
-.Image a {
-    position: relative;
-    top: -205pt;
-}
-.Image a img {
-    rotate: 5deg;
-    opacity: .5;
-}
-.Image a:first-child { top: 0; z-index: 100}
-.Image a:first-child img{ rotate: 0deg;opacity: 1;}
 
-@media screen and (max-width: 500px) {
+main.photos h4.p-name {
+    min-height: 40pt;
+}
+
+main.photos article.item {
+    margin: 0 16pt 16pt 0;
+}
+main .multi::after {
+    content: "⊞";
+    color: white;
+    position: relative;
+    display: block;
+    top: -30pt;
+    left: calc(100% - 20pt);
+    /* text-align: center; */
+    font-size: 20pt;
+    width: 30pt;
+}
+
+@media screen and (max-width: 640px) {
     main.photos article.item,
     main.photos article.item img{
         width: 100%;
         height: auto;
+        margin: 0;
+        padding: 0;
       }
-    main.photos article.item .Image a {
-        position: relative;
-        top: calc(16pt - 100vw);
-    }
+      
+
     main.photos article.item .Image a:first-child {
         position: relative;
         top: 0;
     }
     main.photos article.item {
-        height: 410pt;
         float: left;
         clear: none;
         overflow: hidden;
-        margin: 0 16pt 16pt 0;
-        padding: 3pt;
       }    
-
+    main.photos h4.p-name {
+        min-height: 20pt;
+    }
 }
 
 /* Glightbox */
@@ -289,3 +369,54 @@ a.item-tag:hover {
 
 /* Pagefind */
 #search { margin: 1em;}
+img[src*="floatleft"], img.floatleft {
+    float:left;
+    margin: 15px;
+}
+img[src*="floatright"], img.floatright {
+    float:right;
+    margin: 15px;
+}
+
+
+
+article {
+clear: left;
+}
+
+.clear {
+    clear: both;
+}
+aside.flight {
+    padding: 20pt;
+    background-color: var(--callout-bg);
+    color: var(--callout-fg);
+    text-align: center;
+    float: left;
+    clear: both;
+}
+aside.flight p {
+    text-align: left;
+}
+.flight div {
+    float: left;
+    padding: 10pt 20pt;
+}
+aside.flight .airport strong {
+    background-color: var(--primary-bright);
+    color: var(--callout-bg);
+    padding: 0 5pt;
+    font-size: 26pt;
+    line-height: 40pt;
+}
+aside.flight .plane {
+    font-size: 30pt;
+    line-height: 30pt;
+    margin: 15pt 0 0 0;
+}
+aside.flight .plane small {
+    display: inline-block;
+    font-size: 12pt;
+    line-height: 20pt;
+    margin-top: -2pt
+}

@@ -9,6 +9,7 @@ params:
     description: "I live in the south of England with my wife, two children and our dog Nova. I work at IBM as a Cloud Architect for API Connect cloud services. I enjoy running, walking, photography and spending time with my family."
     githubUsername: "rickymoorhouse"
     build: "main"
+    mainSections: ["blog", "flights", "photos"]
     accent: "#354F52"
     primary: "#009988"
     header: "#009988"
@@ -22,13 +23,13 @@ params:
     copyright: "&copy; Ricky Moorhouse"
     highlight: true
     highlightLanguages: ["python", "javascript", "yaml"]
+
 menu:
   icon:
   - url: "https://github.com/rickymoorhouse/"
     name: "github"
     weight: 2
   - url: "https://bsky.app/profile/rickymoorhouse.uk"
-  - url: "https://bluesky.com/profile/rickymoorhouse.uk/"
     name: "bluesky"
     weight: 3
   - url: "https://www.threads.com/@rickymoorhouse"

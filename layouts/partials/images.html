@@ -1,7 +1,0 @@
-{{ with .Resources.ByType "image" }}
-    <div class="Image">
-    {{ range . }}
-        <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" style="width: 30%"></a>
-    {{ end }}
-    </div>
-{{ end }}

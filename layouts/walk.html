@@ -1,0 +1,19 @@
+{{ partial "header" . }}
+  <main>
+    <div class="site">
+      {{ partial "item-header" . }} 
+      {{ if .Params.distance }}
+      <dl>
+        <dt>Distance:</dt><dd>{{ .Params.distance }}</dd>
+      </dl>
+        {{ end }}
+      {{ partial "map" . }}
+        <!-- site-content -->
+      <br> <div class="text-left">{{ .Content }}</div>
+      {{ if .Params.hideImages }}<!-- no images -->
+      {{ else }}
+      {{ partial "images" . }}
+      {{ end }}
+      </div>
+  </main>
+{{ partial "footer.html" . }}

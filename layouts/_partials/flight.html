@@ -1,0 +1,56 @@
+<aside class="flight">
+<h5>
+    <time>
+        {{ .Params.date | dateFormat .Site.Params.dateFormat }}
+    </time>
+</h5>
+
+{{ if .Params.flights }}
+{{ range .Params.flights }}
+    {{ if .airport }}
+    <div class="airport">
+    {{ .label }}<br />
+    <strong>{{ .airport }}</strong><br />
+    {{ if .arrive }}{{ .arrive | dateFormat "15:04" }}{{ if .depart }} - {{ end }}{{ end }}
+    {{ if .depart }}{{ .depart | dateFormat "15:04" }}{{ end }}
+    </div>
+    {{ else if .flight}}
+<div class="plane">
+    <a title="{{ .aircraft }}">&#x2708;</a><br />
+    <small>{{ .airline }} {{ .flight}}</small>
+</div>    
+    {{ end }}
+{{ end }}
+{{ else }}
+<div class="from airport">
+    from<br />
+    <strong>{{ .Params.from }}</strong><br />
+    {{ if .Params.depart }}{{ .Params.depart | dateFormat "15:04" }}{{ end}}
+</div>
+<div class="plane">
+    <a title="{{ .Params.aircraft }}">&#x2708;</a><br />
+    <small>{{.Params.airline }} {{ .Params.flight}}</small>
+</div>
+{{ if .Params.via }}
+<div class="via airport">
+    via<br />
+    <strong>{{ .Params.via.airport }}</strong><br />
+    {{ if .Params.via.arrive }} {{ .Params.via.arrive | dateFormat "15:04" }}{{ end }} - 
+    {{ if .Params.via.depart }} {{ .Params.via.depart | dateFormat "15:04" }}{{ end }}
+</div>
+<div class="plane">
+    <a title="{{ .Params.aircraft }}">&#x2708;</a><br />
+    <small>{{.Params.airline }} {{ .Params.flight}}</small>
+</div>
+{{ end }}
+<div class="to airport">
+    to<br />
+    <strong>{{ .Params.to }}</strong><br />
+    {{ if .Params.arrive }} {{ .Params.arrive | dateFormat "15:04" }}{{ end }}
+</div>
+<p class="clear">
+    <strong>{{ .Title }}</strong>
+    {{ .Summary }}
+</p>
+{{ end }}
+</aside>
