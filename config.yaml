@@ -11,6 +11,7 @@ params:
     build: "main"
     accent: "#354F52"
     primary: "#009988"
+    header: "#009988"
     secondary: "#447777"
     tertiary: "#D96040"
     backgroundColor: "black"
