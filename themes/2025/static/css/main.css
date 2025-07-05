@@ -183,9 +183,11 @@ main {
 }
 main img {
     width: auto;
-   /*max-width: 95%;*/
     height: auto;
     margin: 0 auto;
+}
+main article.blog img {
+    max-width: 95%;
 }
 main.photos img {
     max-width: 100%;
