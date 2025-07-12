@@ -32,6 +32,9 @@ html {
     -moz-osx-font-smoothing: grayscale;
     height: calc(100% - 5pt);
 }
+main p {
+    max-width: 60rem;
+}
 
 @media (prefers-color-scheme: dark) {
     html body {
@@ -73,7 +76,7 @@ a:hover, a:active {
 
 
 main {
-    padding: 1em;
+    padding: 1rem;
     margin: 0;
 }
 svg#logo {
@@ -234,7 +237,10 @@ p {
     font-size: 12pt;
     line-height: 20pt;
 } 
-
+div.highlight pre {
+padding: 1em;
+max-width: 60rem;
+}
 blockquote {
     border-left: 3pt solid var(--primary);
     padding-left: 1em;
@@ -272,8 +278,18 @@ svg.icon {
     width: 32pt;
     height: 32pt;
 }
-div.pages {text-align: center;}
-.pages a {display: inline-block;width: 30%;}
+div.pages .next {text-align: right;}
+div.pages .previous{text-align: left;}
+.pages a {
+    display: inline-block;
+    width: min(30rem, calc(50vw - 1.2rem));
+    padding: 1em 0 0 0;
+}
+
+.pages a span {
+position: relative;
+top: -14pt;
+}
 
 a.contact {
 text-decoration: none;
@@ -312,10 +328,7 @@ main .Image {
 .Image figure {
     margin: 5pt;
 }
-main .Image img {
-    width: 200pt;
-    height: 200pt;
-}
+
 
 /* Photos */
 .photos table.exif {
