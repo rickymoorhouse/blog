@@ -9,7 +9,7 @@ spec:
     accept: true
     license: L-HTFS-UAXYM3
     metric: MONTHLY_API_CALL
-    use: nonproduction
+    use: production
   apicGatewayServiceTLS:
     secretName: gateway-service
   imagePullSecrets:

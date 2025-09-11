@@ -24,7 +24,7 @@ Again follow the [steps for creating certificates](https://www.ibm.com/docs/en/a
 
 ## Deploy the Gateway Cluster
 
-Deploying the gateway cluster into Openshift is just a case of creating the GatewayCluster CR - you can start from [this template](gateway.template.yaml).
+Deploying the gateway cluster into Openshift is just a case of creating the GatewayCluster CR - you can start from [this template](gateway.template.yaml). NB. You will need to ensure that `spec.license.use` is set to `production` if you are using the RI provided image registry as we don't provide the nonproduction images. 
 
 - Create a pull-secret with access to download the datapower images and reference it under imagePullSecrets. You can download the image to mirror to your registry from the 'Download Gateway' button in the reserved instance Config Manager.
 - Create a secret containing the password for the datapower admin user and ensure it is referenced under `adminUser` - you can use the following command to create this:
