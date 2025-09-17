@@ -2,15 +2,15 @@
 outputs: [html]
 layout: blog
 title: Global Deployment with API Connect
-date: 2025-07-12
+date: 2025-09-17
 hideImages: true
-draft: true
+draft: false
 ---
 
 
-If you have customers around the world you might want to serve them from a global API Connect footprint such that they can call the API from a location closest to them. 
+If you have customers around the world you might want to serve them from a global APIp footprint such that they can call the API from a location closest to them reducing latency. 
 
-In this example I'm deploying my APIs to the 6 current regions of the API Connect Multi-tenant SaaS service on AWS. At the time of writing these are N. Virginia, Frankfurt, London, Sydney, Mumbai and Jakarta. I will use N. Virginia as the initial source location.
+In this example I'm deploying my APIs to the 6 current regions of the API Connect Multi-tenant SaaS service on AWS. At the time of writing these are N. Virginia, Frankfurt, London, Sydney, and Mumbai. I will use N. Virginia as the initial source location.
 
 ![API Connect Global Deployment](map.png)
 
@@ -81,3 +81,4 @@ For handling the API Keys for each region I have a file `~/.apikeys.cfg` in whic
 ## Possible next steps
 
 - Configure global load balancing to route customers to the closest location automatically. 
+- Configure each location to use local replicas of backend applications through catalog properties 
