@@ -1,10 +1,12 @@
 ---
 outputs: [html]
 layout: blog
+tags:
+ - apiconnect
+ - global
 title: Global Deployment with API Connect - Serving APIs Worldwide
-date: 2025-07-12
+date: 2025-09-17
 hideImages: true
-draft: false
 ---
 
 ## Why Global API Deployment Matters

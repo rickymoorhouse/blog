@@ -36,12 +36,43 @@ main p {
     max-width: 60rem;
 }
 
+/* Manual theme override styles */
+[data-theme="dark"] {
+    --primary: #009988;
+    --side-bar: var(--primary-dark);
+    --background: #222522;
+    --secondary: #da7;
+    --secondary-bright: #d80;
+    --link: #ccddff;
+    --callout-bg: #222;
+    --callout-fg: #ccc;
+    --pagefind-ui-text: #ccc;
+    --pagefind-ui-background: #222522;
+}
+
+[data-theme="dark"] body {
+    background-color: #222522;
+    color: #ccc;
+}
+
+[data-theme="light"] {
+    --primary: #009988;
+    --background: #fafefd;
+    --secondary: #dd8800;
+    --secondary-bright: #da7;
+    --link: #006699;
+    --callout-bg: rgba(255,255,255,0.8);
+    --callout-fg: #222;
+}
+
+[data-theme="light"] body {
+    background-color: #fafefd;
+    color: #333;
+}
+
+/* System preference fallbacks */
 @media (prefers-color-scheme: dark) {
-    html body {
-      background-color: #222522;
-      color: #ccc;
-    }
-    :root {
+    :root:not([data-theme]) {
         --primary: #009988;
         --side-bar: var(--primary-dark);
         --background: #222522;
@@ -51,12 +82,17 @@ main p {
         --callout-bg: #222;
         --callout-fg: #ccc;
         --pagefind-ui-text: #ccc;
-        --pagefind-ui-background: #222522;    
+        --pagefind-ui-background: #222522;
     }
 
+    :root:not([data-theme]) body {
+        background-color: #222522;
+        color: #ccc;
+    }
 }
+
 @media (prefers-color-scheme: light) {
-    :root {
+    :root:not([data-theme]) {
         --primary: #009988;
         --background: #fafefd;
         --secondary: #dd8800;
@@ -64,6 +100,11 @@ main p {
         --link: #006699;
         --callout-bg: rgba(255,255,255,0.8);
         --callout-fg: #222;
+    }
+
+    :root:not([data-theme]) body {
+        background-color: #fafefd;
+        color: #333;
     }
 }
 
@@ -76,7 +117,7 @@ a:hover, a:active {
 
 
 main {
-    padding: 1rem;
+    padding: 1rem 5vw;
     margin: 0;
 }
 svg#logo {
@@ -142,8 +183,6 @@ div.side nav {
 @media screen and (max-width: 1000px) {
     /* Smaller screen */
     div.side {
-        transform-origin: bottom left;
-        transform: rotate(0deg) translateX(0pt);
         background: linear-gradient(to top,hsl(from var(--side-bar) h s  calc(l - 10)) 0, var(--side-bar) 3pt, var(--side-bar) 100%);
     }
 }
@@ -439,8 +478,11 @@ aside.flight .plane {
     margin: 15pt 0 0 0;
     transition: transform 0.2s ease;
 }
+aside.flight .plane a {
+text-decoration: none;
+}
 aside.flight .plane:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 aside.flight .plane small {
     display: inline-block;
@@ -452,8 +494,6 @@ aside.flight .plane small {
 aside.flight .clear {
     clear: both;
     padding: 15pt 0 5pt 0;
-    border-top: 1pt solid var(--primary-bright);
-    margin-top: 15pt;
 }
 aside.flight h5 {
     margin: 0 0 15pt 0;
@@ -501,4 +541,26 @@ aside.flight h5 {
     aside.flight .plane {
         font-size: 20pt;
     }
+}
+
+/* Theme switcher styles */
+.theme-switcher {
+    margin: 10pt 0 0 0;
+    padding: 0;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 50px;
+    padding: 5pt;
+    display: inline-block;
+}
+/* Floating theme switcher - always visible */
+
+#theme-toggle {
+    cursor: pointer;
+    color: var(--side-bar-text);
 }

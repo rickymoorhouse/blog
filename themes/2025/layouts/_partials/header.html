@@ -60,6 +60,11 @@
                 {{ range sort .Site.Menus.main }}
                 <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                 {{ end }}
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                        <span class="theme-icon">&#9781;</span>
+                    </button>
+                </li>
             </ul>
             {{ end }}
         </nav>
@@ -74,3 +79,53 @@
             </script>-->
         </aside>
     </div>
+
+    <script>
+        // Theme switcher functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle.querySelector('.theme-icon');
+
+            // Check for saved theme preference or default to system preference
+            function getThemePreference() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    return savedTheme;
+                }
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            // Apply theme to document
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+
+                // Update button icon and aria-label
+                if (theme === 'dark') {
+                    themeIcon.innerHTML = "&#9681;"; // Unicode for sun
+                    themeToggle.setAttribute('aria-label', 'Switch to light mode');
+                } else {
+                    themeIcon.innerHTML = "&#9680;"; // Unicode for moon
+                    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+                }
+            }
+
+            // Initialize theme on page load
+            applyTheme(getThemePreference());
+
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || getThemePreference();
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(newTheme);
+            });
+
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                // Only update if user hasn't manually set a preference
+                if (!localStorage.getItem('theme')) {
+                    applyTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        });
+    </script>
