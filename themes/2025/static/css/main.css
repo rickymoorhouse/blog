@@ -281,6 +281,9 @@ p {
     font-size: 12pt;
     line-height: 20pt;
 } 
+div.highlight {
+    max-width: 100%;
+}
 div.highlight pre {
 padding: 1em;
 max-width: 100%;
