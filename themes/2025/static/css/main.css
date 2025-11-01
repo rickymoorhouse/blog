@@ -283,7 +283,7 @@ p {
 } 
 div.highlight pre {
 padding: 1em;
-max-width: 60rem;
+max-width: 100%;
 }
 blockquote {
     border-left: 3pt solid var(--primary);
