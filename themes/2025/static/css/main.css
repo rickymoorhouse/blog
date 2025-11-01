@@ -282,7 +282,11 @@ p {
     line-height: 20pt;
 } 
 div.highlight {
-    max-width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
 }
 div.highlight pre {
 padding: 1em;
