@@ -36,12 +36,43 @@ main p {
     max-width: 60rem;
 }
 
+/* Manual theme override styles */
+[data-theme="dark"] {
+    --primary: #009988;
+    --side-bar: var(--primary-dark);
+    --background: #222522;
+    --secondary: #da7;
+    --secondary-bright: #d80;
+    --link: #ccddff;
+    --callout-bg: #222;
+    --callout-fg: #ccc;
+    --pagefind-ui-text: #ccc;
+    --pagefind-ui-background: #222522;
+}
+
+[data-theme="dark"] body {
+    background-color: #222522;
+    color: #ccc;
+}
+
+[data-theme="light"] {
+    --primary: #009988;
+    --background: #fafefd;
+    --secondary: #dd8800;
+    --secondary-bright: #da7;
+    --link: #006699;
+    --callout-bg: rgba(255,255,255,0.8);
+    --callout-fg: #222;
+}
+
+[data-theme="light"] body {
+    background-color: #fafefd;
+    color: #333;
+}
+
+/* System preference fallbacks */
 @media (prefers-color-scheme: dark) {
-    html body {
-      background-color: #222522;
-      color: #ccc;
-    }
-    :root {
+    :root:not([data-theme]) {
         --primary: #009988;
         --side-bar: var(--primary-dark);
         --background: #222522;
@@ -51,12 +82,17 @@ main p {
         --callout-bg: #222;
         --callout-fg: #ccc;
         --pagefind-ui-text: #ccc;
-        --pagefind-ui-background: #222522;    
+        --pagefind-ui-background: #222522;
     }
 
+    :root:not([data-theme]) body {
+        background-color: #222522;
+        color: #ccc;
+    }
 }
+
 @media (prefers-color-scheme: light) {
-    :root {
+    :root:not([data-theme]) {
         --primary: #009988;
         --background: #fafefd;
         --secondary: #dd8800;
@@ -64,6 +100,11 @@ main p {
         --link: #006699;
         --callout-bg: rgba(255,255,255,0.8);
         --callout-fg: #222;
+    }
+
+    :root:not([data-theme]) body {
+        background-color: #fafefd;
+        color: #333;
     }
 }
 
@@ -76,7 +117,7 @@ a:hover, a:active {
 
 
 main {
-    padding: 1rem;
+    padding: 1rem 5vw;
     margin: 0;
 }
 svg#logo {
@@ -142,8 +183,6 @@ div.side nav {
 @media screen and (max-width: 1000px) {
     /* Smaller screen */
     div.side {
-        transform-origin: bottom left;
-        transform: rotate(0deg) translateX(0pt);
         background: linear-gradient(to top,hsl(from var(--side-bar) h s  calc(l - 10)) 0, var(--side-bar) 3pt, var(--side-bar) 100%);
     }
 }
@@ -409,13 +448,14 @@ clear: left;
 }
 aside.flight {
     padding: 20pt;
-    background-color: var(--callout-bg);
     color: var(--callout-fg);
     text-align: center;
     float: left;
     clear: both;
+    border-radius: 8pt;
+    margin: 10pt 0;
 }
-aside.flight p {
+aside.flight p, aside.flight h5 {
     text-align: left;
 }
 .flight div {
@@ -425,18 +465,107 @@ aside.flight p {
 aside.flight .airport strong {
     background-color: var(--primary-bright);
     color: var(--callout-bg);
-    padding: 0 5pt;
+    padding: 2pt 8pt;
     font-size: 26pt;
     line-height: 40pt;
+    border-radius: 4pt;
+    font-weight: 600;
+    letter-spacing: -1pt;
+    transition: all 0.2s ease;
+}
+aside.flight .airport strong:hover {
+    background-color: var(--primary);
+    transform: translateY(-1pt);
 }
 aside.flight .plane {
     font-size: 30pt;
     line-height: 30pt;
     margin: 15pt 0 0 0;
+    transition: transform 0.2s ease;
+}
+aside.flight .plane a {
+text-decoration: none;
+}
+aside.flight .plane:hover {
+    transform: scale(1.2);
 }
 aside.flight .plane small {
     display: inline-block;
     font-size: 12pt;
     line-height: 20pt;
-    margin-top: -2pt
+    margin-top: -2pt;
+    font-weight: 500;
+}
+aside.flight .clear {
+    clear: both;
+    padding: 15pt 0 5pt 0;
+}
+aside.flight h5 {
+    margin: 0 0 15pt 0;
+    font-size: 14pt;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Flight responsive design */
+@media screen and (max-width: 600px) {
+    aside.flight {
+        padding: 15pt;
+        margin: 8pt 0;
+    }
+    .flight div {
+        padding: 8pt 12pt;
+    }
+    aside.flight .airport strong {
+        font-size: 20pt;
+        line-height: 32pt;
+        padding: 2pt 6pt;
+    }
+    aside.flight .plane {
+        font-size: 24pt;
+        line-height: 24pt;
+        margin: 12pt 0 0 0;
+    }
+    aside.flight .plane small {
+        font-size: 11pt;
+        line-height: 18pt;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    aside.flight {
+        padding: 12pt;
+    }
+    .flight div {
+        padding: 6pt 8pt;
+    }
+    aside.flight .airport strong {
+        font-size: 18pt;
+        line-height: 28pt;
+    }
+    aside.flight .plane {
+        font-size: 20pt;
+    }
+}
+
+/* Theme switcher styles */
+.theme-switcher {
+    margin: 10pt 0 0 0;
+    padding: 0;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 50px;
+    padding: 5pt;
+    display: inline-block;
+}
+/* Floating theme switcher - always visible */
+
+#theme-toggle {
+    cursor: pointer;
+    color: var(--side-bar-text);
 }

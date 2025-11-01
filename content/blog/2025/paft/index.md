@@ -1,7 +1,7 @@
 ---
 title: Product Academy for Teams - San Jose
 slug: paft
-date: 2025-08-20
+date: 2025-08-14
 layout: blog
 tags:
  - apiconnect

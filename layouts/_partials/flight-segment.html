@@ -1,0 +1,65 @@
+{{/* Flight Segment Partial - Reusable component for flight segments */}}
+{{ $context := .context }}
+{{ $timeFormat := .timeFormat }}
+
+{{ if $context.airport }}
+    <!-- Airport Segment -->
+    <div class="flight-segment flight-segment--airport" itemscope itemtype="https://schema.org/Airport">
+        {{ with $context.label }}
+            <span class="flight-segment__label" itemprop="name">{{ . }}</span><br>
+        {{ end }}
+        <strong class="flight-segment__airport" itemprop="iataCode">{{ $context.airport }}</strong><br>
+
+        <div class="flight-segment__times">
+            {{ if $context.arrive }}
+                <time
+                    class="flight-segment__time flight-segment__time--arrival"
+                    datetime="{{ $context.arrive | dateFormat "2006-01-02T15:04:05Z07:00" }}"
+                    itemprop="arrivalTime"
+                >
+                    {{ $context.arrive | dateFormat $timeFormat }}
+                </time>
+            {{ end }}
+
+            {{ if and $context.arrive $context.depart }}<span class="flight-segment__time-separator"> - </span>{{ end }}
+
+            {{ if $context.depart }}
+                <time
+                    class="flight-segment__time flight-segment__time--departure"
+                    datetime="{{ $context.depart | dateFormat "2006-01-02T15:04:05Z07:00" }}"
+                    itemprop="departureTime"
+                >
+                    {{ $context.depart | dateFormat $timeFormat }}
+                </time>
+            {{ end }}
+        </div>
+    </div>
+
+{{ else if $context.flight }}
+    <!-- Flight Segment -->
+    <div class="flight-segment flight-segment--flight" itemscope itemtype="https://schema.org/Flight">
+        <div class="flight-segment__plane">
+            <a
+                href="#flight-{{ $context.flight }}"
+                class="flight-segment__plane-icon"
+                title="{{ i18n "flight.aircraft" .aircraft | default (printf "Aircraft: %s" .aircraft) }}"
+                aria-label="{{ printf "Flight %s on %s" .flight .airline }}"
+                itemprop="url"
+            >
+                <span aria-hidden="true">&#x2708;</span>
+            </a>
+        </div>
+
+        <div class="flight-segment__details">
+            <small class="flight-segment__info" itemprop="name">
+                <span itemprop="airline">{{ $context.airline }}</span>
+                <span itemprop="flightNumber">{{ $context.flight }}</span>
+            </small>
+            {{ if $context.aircraft }}
+                <small class="flight-segment__aircraft" itemprop="aircraft">
+                    {{ $context.aircraft }}
+                </small>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,126 @@
+{{/* Single Flight Partial - Handles single flight with optional via routing */}}
+{{ $context := .context }}
+{{ $timeFormat := .timeFormat }}
+
+<div class="single-flight" role="list" aria-label="{{ i18n "flight.single_flight" | default "Flight route" }}">
+    <!-- Departure Airport -->
+    <div class="single-flight__segment single-flight__segment--from" role="listitem" itemscope itemtype="https://schema.org/Airport">
+        <div class="single-flight__label">{{ i18n "flight.from" | default "from" }}</div>
+        <div class="single-flight__airport">
+            <strong itemprop="name">{{ $context.Params.from }}</strong>
+        </div>
+        {{ if $context.Params.depart }}
+            <div class="single-flight__time">
+                <time
+                    class="single-flight__departure"
+                    datetime="{{ $context.Params.depart | dateFormat "2006-01-02T15:04:05Z07:00" }}"
+                    itemprop="departureTime"
+                >
+                    {{ $context.Params.depart | dateFormat $timeFormat }}
+                </time>
+            </div>
+        {{ end }}
+    </div>
+
+    <!-- Flight Segment -->
+    <div class="single-flight__segment single-flight__segment--flight" role="listitem" itemscope itemtype="https://schema.org/Flight">
+        <div class="single-flight__plane">
+            <a
+                href="#flight-{{ $context.Params.flight }}"
+                class="single-flight__plane-icon"
+                title="{{ i18n "flight.aircraft" $context.Params.aircraft | default (printf "Aircraft: %s" $context.Params.aircraft) }}"
+                aria-label="{{ printf "Flight %s on %s" $context.Params.flight $context.Params.airline }}"
+                itemprop="url"
+            >
+                <span aria-hidden="true">&#x2708;</span>
+            </a>
+        </div>
+        <div class="single-flight__details">
+            <small class="single-flight__info" itemprop="name">
+                <span itemprop="airline">{{ $context.Params.airline }}</span>
+                <span itemprop="flightNumber">{{ $context.Params.flight }}</span>
+            </small>
+            {{ if $context.Params.aircraft }}
+                <small class="single-flight__aircraft" itemprop="aircraft">
+                    {{ $context.Params.aircraft }}
+                </small>
+            {{ end }}
+        </div>
+    </div>
+
+    <!-- Via Airport (if present) -->
+    {{ if $context.Params.via }}
+        <div class="single-flight__segment single-flight__segment--via" role="listitem" itemscope itemtype="https://schema.org/Airport">
+            <div class="single-flight__label">{{ i18n "flight.via" | default "via" }}</div>
+            <div class="single-flight__airport">
+                <strong itemprop="name">{{ $context.Params.via.airport }}</strong>
+            </div>
+            <div class="single-flight__times">
+                {{ if $context.Params.via.arrive }}
+                    <time
+                        class="single-flight__arrival"
+                        datetime="{{ $context.Params.via.arrive | dateFormat "2006-01-02T15:04:05Z07:00" }}"
+                        itemprop="arrivalTime"
+                    >
+                        {{ $context.Params.via.arrive | dateFormat $timeFormat }}
+                    </time>
+                {{ end }}
+                {{ if and $context.Params.via.arrive $context.Params.via.depart }}<span class="single-flight__time-separator"> - </span>{{ end }}
+                {{ if $context.Params.via.depart }}
+                    <time
+                        class="single-flight__departure"
+                        datetime="{{ $context.Params.via.depart | dateFormat "2006-01-02T15:04:05Z07:00" }}"
+                        itemprop="departureTime"
+                    >
+                        {{ $context.Params.via.depart | dateFormat $timeFormat }}
+                    </time>
+                {{ end }}
+            </div>
+        </div>
+
+        <!-- Second flight segment for via -->
+        <div class="single-flight__segment single-flight__segment--flight" role="listitem" itemscope itemtype="https://schema.org/Flight">
+            <div class="single-flight__plane">
+                <a
+                    href="#flight-{{ $context.Params.flight }}"
+                    class="single-flight__plane-icon"
+                    title="{{ i18n "flight.aircraft" $context.Params.aircraft | default (printf "Aircraft: %s" $context.Params.aircraft) }}"
+                    aria-label="{{ printf "Flight %s on %s" $context.Params.flight $context.Params.airline }}"
+                    itemprop="url"
+                >
+                    <span aria-hidden="true">&#x2708;</span>
+                </a>
+            </div>
+            <div class="single-flight__details">
+                <small class="single-flight__info" itemprop="name">
+                    <span itemprop="airline">{{ $context.Params.airline }}</span>
+                    <span itemprop="flightNumber">{{ $context.Params.flight }}</span>
+                </small>
+                {{ if $context.Params.aircraft }}
+                    <small class="single-flight__aircraft" itemprop="aircraft">
+                        {{ $context.Params.aircraft }}
+                    </small>
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+
+    <!-- Destination Airport -->
+    <div class="single-flight__segment single-flight__segment--to" role="listitem" itemscope itemtype="https://schema.org/Airport">
+        <div class="single-flight__label">{{ i18n "flight.to" | default "to" }}</div>
+        <div class="single-flight__airport">
+            <strong itemprop="name">{{ $context.Params.to }}</strong>
+        </div>
+        {{ if $context.Params.arrive }}
+            <div class="single-flight__time">
+                <time
+                    class="single-flight__arrival"
+                    datetime="{{ $context.Params.arrive | dateFormat "2006-01-02T15:04:05Z07:00" }}"
+                    itemprop="arrivalTime"
+                >
+                    {{ $context.Params.arrive | dateFormat $timeFormat }}
+                </time>
+            </div>
+        {{ end }}
+    </div>
+</div>

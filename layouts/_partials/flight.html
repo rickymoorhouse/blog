@@ -1,56 +1,147 @@
-<aside class="flight">
-<h5>
-    <time>
-        {{ .Params.date | dateFormat .Site.Params.dateFormat }}
-    </time>
-</h5>
+<!-- Flight Information Display -->
+{{ $timeFormat := "15:04" }}
+{{ $dateFormat := .Site.Params.dateFormat }}
 
-{{ if .Params.flights }}
-{{ range .Params.flights }}
-    {{ if .airport }}
-    <div class="airport">
-    {{ .label }}<br />
-    <strong>{{ .airport }}</strong><br />
-    {{ if .arrive }}{{ .arrive | dateFormat "15:04" }}{{ if .depart }} - {{ end }}{{ end }}
-    {{ if .depart }}{{ .depart | dateFormat "15:04" }}{{ end }}
-    </div>
-    {{ else if .flight}}
-<div class="plane">
-    <a title="{{ .aircraft }}">&#x2708;</a><br />
-    <small>{{ .airline }} {{ .flight}}</small>
-</div>    
+<aside class="flight" itemscope itemtype="https://schema.org/Flight">
+    <!-- Flight Date -->
+    <h5>
+        <time
+            datetime="{{ if .Params.date }}{{ .Params.date | dateFormat "2006-01-02" }}{{ end }}"
+            itemprop="departureTime"
+        >
+            {{ if .Params.date }}{{ .Params.date | dateFormat $dateFormat }}{{ end }}
+        </time>
+    </h5>
+
+    {{ if .Params.flights }}
+        <!-- Multiple flight segments -->
+        {{ range .Params.flights }}
+            <div class="airport" itemprop="departureAirport" itemscope itemtype="https://schema.org/Airport">
+                {{ if .label }}<div>{{ .label }}</div>{{ end }}
+                <strong itemprop="iataCode">{{ .airport }}</strong>
+                {{ if .arrive }}<br>
+                    <time itemprop="arrivalTime" datetime="{{ .arrive | dateFormat "2006-01-02T15:04:05Z07:00" }}">
+                        {{ .arrive | dateFormat $timeFormat }}
+                    </time>
+                {{ end }}
+                {{ if .depart }}<br>
+                    <time itemprop="departureTime" datetime="{{ .depart | dateFormat "2006-01-02T15:04:05Z07:00" }}">
+                        {{ .depart | dateFormat $timeFormat }}
+                    </time>
+                {{ end }}
+            </div>
+
+            {{ if .flight }}
+            <div class="plane" itemprop="flight" itemscope itemtype="https://schema.org/Flight">
+                <a
+                    href="#flight-{{ .flight }}"
+                    title="{{ .aircraft }}"
+                    aria-label="Flight {{ .flight }} on {{ .aircraft }}"
+                >
+                    <span aria-hidden="true">&#x2708;</span>
+                </a><br>
+                <small itemprop="name">
+                    <span itemprop="airline">{{ .airline }}</span>
+                    <span itemprop="flightNumber">{{ .flight }}</span>
+                </small>
+            </div>
+            {{ end }}
+        {{ end }}
+    {{ else }}
+        <!-- Single flight with optional via -->
+        {{ if and .Params.from .Params.to }}
+            <!-- From Airport -->
+            <div class="from airport" itemprop="departureAirport" itemscope itemtype="https://schema.org/Airport">
+                {{ i18n "flight.from" | default "from" }}<br>
+                <strong itemprop="iataCode">{{ .Params.from }}</strong><br>
+                {{ if .Params.depart }}
+                    <time
+                        itemprop="departureTime"
+                        datetime="{{ .Params.depart | dateFormat "2006-01-02T15:04:05Z07:00" }}"
+                    >
+                        {{ .Params.depart | dateFormat $timeFormat }}
+                    </time>
+                {{ end }}
+            </div>
+
+            <!-- Flight Info -->
+            <div class="plane" itemprop="flight" itemscope itemtype="https://schema.org/Flight">
+                <a
+                    href="#flight-{{ .Params.flight }}"
+                    title="{{ .Params.aircraft }}"
+                    aria-label="Flight {{ .Params.flight }} on {{ .Params.aircraft }}"
+                >
+                    <span aria-hidden="true">&#x2708;</span>
+                </a><br>
+                <small itemprop="name">
+                    <span itemprop="airline">{{ .Params.airline }}</span>
+                    <span itemprop="flightNumber">{{ .Params.flight }}</span>
+                </small>
+            </div>
+
+            <!-- Via Airport (if present) -->
+            {{ if .Params.via }}
+                <div class="via airport" itemprop="arrivalAirport" itemscope itemtype="https://schema.org/Airport">
+                    {{ i18n "flight.via" | default "via" }}<br>
+                    <strong itemprop="iataCode">{{ .Params.via.airport }}</strong><br>
+                    {{ if .Params.via.arrive }}
+                        <time
+                            itemprop="arrivalTime"
+                            datetime="{{ .Params.via.arrive | dateFormat "2006-01-02T15:04:05Z07:00" }}"
+                        >
+                            {{ .Params.via.arrive | dateFormat $timeFormat }}
+                        </time>
+                    {{ end }}
+                    {{ if .Params.via.depart }} -
+                        <time
+                            itemprop="departureTime"
+                            datetime="{{ .Params.via.depart | dateFormat "2006-01-02T15:04:05Z07:00" }}"
+                        >
+                            {{ .Params.via.depart | dateFormat $timeFormat }}
+                        </time>
+                    {{ end }}
+                </div>
+
+                <!-- Second flight for via -->
+                <div class="plane" itemprop="flight" itemscope itemtype="https://schema.org/Flight">
+                    <a
+                        href="#flight-{{ .Params.flight }}"
+                        title="{{ .Params.aircraft }}"
+                        aria-label="Flight {{ .Params.flight }} on {{ .Params.aircraft }}"
+                    >
+                        <span aria-hidden="true">&#x2708;</span>
+                    </a><br>
+                    <small itemprop="name">
+                        <span itemprop="airline">{{ .Params.airline }}</span>
+                        <span itemprop="flightNumber">{{ .Params.flight }}</span>
+                    </small>
+                </div>
+            {{ end }}
+
+            <!-- To Airport -->
+            <div class="to airport" itemprop="arrivalAirport" itemscope itemtype="https://schema.org/Airport">
+                {{ i18n "flight.to" | default "to" }}<br>
+                <strong itemprop="iataCode">{{ .Params.to }}</strong><br>
+                {{ if .Params.arrive }}
+                    <time
+                        itemprop="arrivalTime"
+                        datetime="{{ .Params.arrive | dateFormat "2006-01-02T15:04:05Z07:00" }}"
+                    >
+                        {{ .Params.arrive | dateFormat $timeFormat }}
+                    </time>
+                {{ end }}
+            </div>
+        {{ else }}
+            <!-- Error for missing flight data -->
+            <div class="airport" role="alert">
+                {{ i18n "flight.error.incomplete" | default "Flight information incomplete" }}
+            </div>
+        {{ end }}
     {{ end }}
-{{ end }}
-{{ else }}
-<div class="from airport">
-    from<br />
-    <strong>{{ .Params.from }}</strong><br />
-    {{ if .Params.depart }}{{ .Params.depart | dateFormat "15:04" }}{{ end}}
-</div>
-<div class="plane">
-    <a title="{{ .Params.aircraft }}">&#x2708;</a><br />
-    <small>{{.Params.airline }} {{ .Params.flight}}</small>
-</div>
-{{ if .Params.via }}
-<div class="via airport">
-    via<br />
-    <strong>{{ .Params.via.airport }}</strong><br />
-    {{ if .Params.via.arrive }} {{ .Params.via.arrive | dateFormat "15:04" }}{{ end }} - 
-    {{ if .Params.via.depart }} {{ .Params.via.depart | dateFormat "15:04" }}{{ end }}
-</div>
-<div class="plane">
-    <a title="{{ .Params.aircraft }}">&#x2708;</a><br />
-    <small>{{.Params.airline }} {{ .Params.flight}}</small>
-</div>
-{{ end }}
-<div class="to airport">
-    to<br />
-    <strong>{{ .Params.to }}</strong><br />
-    {{ if .Params.arrive }} {{ .Params.arrive | dateFormat "15:04" }}{{ end }}
-</div>
-<p class="clear">
-    <strong>{{ .Title }}</strong>
-    {{ .Summary }}
-</p>
-{{ end }}
+
+    <!-- Flight Summary -->
+    <p class="clear">
+        <strong itemprop="name">{{ .Title }}</strong>
+        {{ .Summary }}
+    </p>
 </aside>
