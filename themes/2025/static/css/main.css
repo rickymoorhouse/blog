@@ -576,3 +576,143 @@ aside.flight h5 {
     cursor: pointer;
     color: var(--side-bar-text);
 }
+
+/* Search toggle button */
+#search-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5pt;
+    display: inline-block;
+    color: var(--side-bar-text);
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#search-toggle:hover {
+    opacity: 0.8;
+}
+
+/* Search Modal */
+.search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10vh;
+}
+
+.search-modal.hidden {
+    display: none;
+}
+
+.search-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.search-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    background: var(--background);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    max-height: 70vh;
+    overflow-y: auto;
+    z-index: 10001;
+}
+
+.search-container #search {
+    margin: 0;
+}
+
+/* Pagefind UI overrides for modal - compact */
+.search-container .pagefind-ui__search-input {
+    font-size: 16px !important;
+    height: 48px !important;
+    padding-left: 44px !important;
+}
+
+.search-container .pagefind-ui__form:before {
+    top: 18px !important;
+    left: 16px !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.search-container .pagefind-ui__results {
+    margin-top: 8px !important;
+}
+
+.search-container .pagefind-ui__result {
+    padding: 10px 0 !important;
+    border-top: 1px solid var(--gray) !important;
+}
+
+.search-container .pagefind-ui__result:first-of-type {
+    border-top: none !important;
+}
+
+.search-container .pagefind-ui__result-title {
+    font-size: 15px !important;
+    margin-bottom: 4px !important;
+}
+
+.search-container .pagefind-ui__result-excerpt {
+    font-size: 13px !important;
+    margin-top: 4px !important;
+    min-width: unset !important;
+}
+
+.search-container .pagefind-ui__result-url {
+    font-size: 12px !important;
+    color: var(--gray) !important;
+    margin-top: 4px !important;
+}
+
+.search-container .pagefind-ui__message {
+    font-size: 14px !important;
+    padding: 12px 0 !important;
+    height: auto !important;
+}
+
+.search-container .pagefind-ui__drawer {
+    gap: 20px !important;
+}
+
+.search-container .pagefind-ui__results-area {
+    margin-top: 12px !important;
+}
+
+/* Dark mode adjustments for search modal */
+[data-theme="dark"] .search-container {
+    background: #222522;
+}
+
+[data-theme="light"] .search-container {
+    background: #fafefd;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .search-container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .search-modal {
+        padding-top: 5vh;
+    }
+}

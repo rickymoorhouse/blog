@@ -1,0 +1,104 @@
+{{ partial "header" . }}
+
+<main class="landing">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>{{ .Site.Title }}</h1>
+    <p class="bio">{{ .Site.Params.description }}</p>
+    
+    <!-- Social Links -->
+    <div class="social-links">
+      {{- if .Site.Menus.icon -}}
+        {{- range sort .Site.Menus.icon -}}
+          <a rel="me" href="{{ .URL }}" class="social-link" target="_blank" rel="noopener noreferrer">
+            {{ .Name }}
+          </a>
+        {{- end -}}
+      {{- end -}}
+    </div>
+    
+    <!-- Search hint -->
+    <p class="search-hint">Press <kbd>⌘</kbd> <kbd>K</kbd> to search</p>
+  </section>
+
+  <!-- Quick Navigation -->
+  <section class="quick-nav">
+    <h2>Explore</h2>
+    <div class="nav-cards">
+      <a href="/blog/" class="nav-card">
+        <span class="nav-icon">📝</span>
+        <span class="nav-label">Blog</span>
+      </a>
+      <a href="/photos/" class="nav-card">
+        <span class="nav-icon">📷</span>
+        <span class="nav-label">Photos</span>
+      </a>
+      <a href="/about/" class="nav-card">
+        <span class="nav-icon">👤</span>
+        <span class="nav-label">About</span>
+      </a>
+      <a href="/travel/" class="nav-card">
+        <span class="nav-icon">🗺️</span>
+        <span class="nav-label">Travel</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Posts -->
+  {{ $featured := where (where site.RegularPages "Type" "in" site.Params.mainSections) "Params.featured" "==" true }}
+  {{ if $featured }}
+  <section class="featured">
+    <h2>Featured</h2>
+    <div class="featured-grid">
+      {{ range $featured }}
+        <article class="featured-card">
+          <a href="{{ .Permalink }}">
+            {{ if .Resources.ByType "image" }}
+              {{ with .Resources.GetMatch .Params.featured | default (index (.Resources.ByType "image") 0) }}
+                {{ $image := .Resize "800x" }}
+                <img src="{{ $image.Permalink }}" alt="{{ $.Title }}" class="featured-image" />
+              {{ end }}
+            {{ end }}
+            <h3>{{ .Title }}</h3>
+            <p class="featured-date">{{ .Date.Format "2 January 2006" }}</p>
+            <p class="featured-summary">{{ .Description | truncate 100 }}</p>
+            <span class="read-more">Read more →</span>
+          </a>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Recent Posts -->
+  <section class="recent-posts">
+    <h2>Recent Posts</h2>
+    <ul class="post-list">
+      {{ range first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+        <li class="post-item type-{{ .Kind }}">
+          {{ if in .Params.tags "photos" }}
+            {{ if .Resources.ByType "image" }}
+              {{ with index (.Resources.ByType "image") 0 }}
+                {{ $image := .Resize "100x" }}
+                <span class="post-thumb"><img src="{{ $image.Permalink }}" alt="{{ $.Title }}" /></span>
+              {{ end }}
+            {{ end }}
+            <span class="post-title">{{ .Title }}</span>
+            <span class="post-date">{{ .Date.Format "2 January 2006" }}</span>
+          {{ else if eq .Params.layout "flight" }}
+            <span class="post-title">{{ .Params.From }} - {{ .Params.To }}</span>
+            <span class="post-date">{{ .Date.Format "2 January 2006" }}</span>
+          {{ else }}
+            <a href="{{ .Permalink }}">
+              <span class="post-title">{{ .Title }}</span>
+              <span class="post-date">{{ .Date.Format "2 January 2006" }}</span>
+            </a>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+    <a href="/blog/" class="view-all">View all posts →</a>
+  </section>
+</main>
+
+{{ partial "footer" . }}
