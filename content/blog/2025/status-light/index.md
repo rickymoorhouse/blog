@@ -9,7 +9,7 @@ tags:
 featured: robot-large.png
 ---
 
-Whilst working from home it's useful for the family to know when I am on a video call or just a voice call. I was first looking at [Busy bar](https://busy.bar/preview) which I came across via [Hiro Report](http://hiro.report),  but couldn't justify the cost of it and as I had a raspberry pi zero and a [Blink!](https://shop.pimoroni.com/products/blinkt?variant=22408658695) sitting around, I decided to build something simple myself. Maybe one day I  could make it more complex and build a version using the [Pico 2 W Unicorn Galactic](https://shop.pimoroni.com/products/space-unicorns?variant=40842033561683)?
+Whilst working from home it's useful for the family to know when I am on a video call or just a voice call. I was first looking at [Busy bar](https://busy.bar/preview) which I came across via [Hiro Report](https://hiro.report),  but couldn't justify the cost of it and as I had a raspberry pi zero and a [Blink!](https://shop.pimoroni.com/products/blinkt?variant=22408658695) sitting around, I decided to build something simple myself. Maybe one day I  could make it more complex and build a version using the [Pico 2 W Unicorn Galactic](https://shop.pimoroni.com/products/space-unicorns?variant=40842033561683)?
 
 <!--more-->
 ![Robot with Pi Zero](robot.png#floatright)
