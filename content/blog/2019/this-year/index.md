@@ -1,12 +1,12 @@
 ---
- title: "2019 - Photos of the year"
-slug: this-year
+title: "2019 - Photos of the year"
 date: 2019-12-31
 featured: DSC_0342.jpeg
 hideImages: true
 tags:
 - photos
-
+params:
+  slug: this-year
 ---
 
 

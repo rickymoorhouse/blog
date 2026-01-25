@@ -1,7 +1,6 @@
 ---
 title: "Birds on Galveston Island"
 date: 2019-03-26
-tags: []
 hideImages: true
 layout: post
 lat: 29.250
