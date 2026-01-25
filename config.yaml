@@ -29,8 +29,8 @@ menu:
   - url: "/"
     name: "Home"
     weight: 1
-  - url: "/apic/"
-    name: "API & Cloud"
+  - url: "/log/"
+    name: "Log"
     weight: 2
   - url: "/photos/"
     name: "Photos"
@@ -77,8 +77,8 @@ languages:
       - url: "/"
         name: "Inicio"
         weight: 1
-      - url: "/apic/"
-        name: "API & Cloud"
+      - url: "/log/"
+        name: "Registro"
         weight: 2
       - url: "/photos/"
         name: "Fotos"
