@@ -19,7 +19,7 @@ This walk came from the [In Their Footsteps](https://www.southdowns.gov.uk/get-a
 {{<fig "IMG_8264.jpeg">}}
 {{<fig "IMG_8267.jpeg">}}
 
-We headed for Selborne for an early start before the day got too hot and arrived at the car park in the village for 7:15am. The first part of the walk was a fairly steep route up through Selborne Common from the car park taking the zig-zag path that Gilbert White and his brother had cut into the hillside. At the top the route took us along the top edge of Selborne Hangar, a woodland of mostly beech trees. When there were gaps in the trees we could see through to Selborne and [Gilbert White's House](http://gilbertwhiteshouse.org.uk). Nova seemed to have a great time exploring and played in the leaves. 
+We headed for Selborne for an early start before the day got too hot and arrived at the car park in the village for 7:15am. The first part of the walk was a fairly steep route up through Selborne Common from the car park taking the zig-zag path that Gilbert White and his brother had cut into the hillside. At the top the route took us along the top edge of Selborne Hangar, a woodland of mostly beech trees. When there were gaps in the trees we could see through to Selborne and [Gilbert White's House](https://gilbertwhiteshouse.org.uk). Nova seemed to have a great time exploring and played in the leaves. 
 
 {{<fig "IMG_8268.jpeg">}}
 {{<fig "IMG_8277.jpeg">}}
