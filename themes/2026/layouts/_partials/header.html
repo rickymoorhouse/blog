@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta name="theme-color" content="{{ .Site.Params.header | default "#354F52" }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }}</title>
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link href="/css/pagefind-ui.css" rel="stylesheet">
+    {{ partial "css" . }}
+    {{ hugo.Generator }}
+    {{ if .Resources.ByType "image" }}
+        {{ if .Params.featured }}
+        {{ with .Resources.Match .Params.featured }}
+            {{ range first 1 . }}
+            {{ $image := .Fit "900x450" }}
+                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:image" content="{{ $image.Permalink }}" />
+                <meta property="og:image" content="{{ $image.Permalink }}" />
+                <meta property="og:image:width" content="{{ $image.Width }}" />
+                <meta property="og:image:height" content="{{ $image.Height }}" />
+            {{ end }}
+        {{ end }}
+        {{ else }}
+            {{ with .Resources.ByType "image" }}
+            {{ range first 1 . }}
+                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:image" content="{{ .RelPermalink }}" />
+                <meta property="og:image" content="{{ .Permalink }}" />
+                <meta property="og:image:width" content="{{ .Width }}" />
+                <meta property="og:image:height" content="{{ .Height }}" />
+            {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ else }}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" property="og:image" content="https://rickymoorhouse.uk/images/siteicon.png" />
+    <meta property="og:image:height" content="120" />
+    <meta property="og:image:width" content="120" />
+    {{ end }}
+    <meta name="twitter:description" property="og:description" content="{{ .Summary }}" />
+    <meta name="twitter:creator" content="@rickymoorhouse" />
+    <meta name="twitter:title" property="og:title" content="{{ .Title }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta name="twitter:site" content="@rickymoorhouse" />
+    <link rel="apple-touch-icon" href="https://rickymoorhouse.uk/images/siteicon.png" />
+    
+  </head>
+  <body class="{{ .Site.Params.build }}">
+      <div class="side">
+        <a href="/" class="logo">
+            <svg id="logo" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M2.847,3.045c-0.013,0.708 0.079,2.467 0.079,2.467l0.858,0.005c0,-0 -0.311,-3.08 0.615,-3.088c0.914,-0.007 0.719,3.094 0.719,3.094l0.897,-0.003c-0,-0 0.275,-4.119 -1.227,-4.162c-1.289,-0.037 -1.93,1.101 -1.941,1.687Z" style="fill-opacity:0.6;"/>
+                <path d="M2.842,3.056c-0.124,-0.375 -0.276,-0.639 -0.457,-0.634c-0.98,0.028 -0.71,3.131 -0.71,3.131l-0.857,0.001l-0.004,-4.167l0.756,-0.008l0.002,0.331c-0,-0 0.346,-0.334 0.977,-0.323c0.611,0.011 0.955,0.709 1.009,0.827l-0.716,0.842Z" />
+            </svg>
+        </a>
+        <div id="sitetitle"><a href="/">{{ .Site.Title }}</a></div>
+        <nav>
+            {{ if .Site.Menus.main }}
+            <ul class="nav navbar-nav navbar-left">
+                {{ range sort .Site.Menus.main }}
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                        <span class="theme-icon">&#9781;</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="search-toggle" aria-label="Search" title="Search (⌘K)">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+            {{ end }}
+        </nav>
+    </div>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal hidden">
+        <div class="search-backdrop"></div>
+        <div class="search-container">
+            <div id="search"></div>
+        </div>
+    </div>
+
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script>
+        // Theme switcher functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle.querySelector('.theme-icon');
+
+            // Check for saved theme preference or default to system preference
+            function getThemePreference() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    return savedTheme;
+                }
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            // Apply theme to document
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+
+                // Update button icon and aria-label
+                if (theme === 'dark') {
+                    themeIcon.innerHTML = "&#9681;"; // Unicode for sun
+                    themeToggle.setAttribute('aria-label', 'Switch to light mode');
+                } else {
+                    themeIcon.innerHTML = "&#9680;"; // Unicode for moon
+                    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+                }
+            }
+
+            // Initialize theme on page load
+            applyTheme(getThemePreference());
+
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || getThemePreference();
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(newTheme);
+            });
+
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                // Only update if user hasn't manually set a preference
+                if (!localStorage.getItem('theme')) {
+                    applyTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        });
+
+        // Search modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchToggle = document.getElementById('search-toggle');
+            const searchModal = document.getElementById('search-modal');
+            const searchContainer = searchModal.querySelector('.search-container');
+            const searchBackdrop = searchModal.querySelector('.search-backdrop');
+            let pagefindUI = null;
+
+            function openSearch() {
+                searchModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                
+                // Initialize Pagefind if not already done
+                if (!pagefindUI) {
+                    pagefindUI = new PagefindUI({ 
+                        element: "#search", 
+                        showSubResults: true,
+                        showImages: false
+                    });
+                }
+                
+                // Focus the search input
+                setTimeout(() => {
+                    const searchInput = searchModal.querySelector('.pagefind-ui__search-input');
+                    if (searchInput) {
+                        searchInput.focus();
+                    }
+                }, 100);
+            }
+
+            function closeSearch() {
+                searchModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+
+            searchToggle.addEventListener('click', openSearch);
+            searchBackdrop.addEventListener('click', closeSearch);
+            searchContainer.addEventListener('click', (e) => e.stopPropagation());
+
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                // Cmd+K or Ctrl+K to open search
+                if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                    e.preventDefault();
+                    openSearch();
+                }
+                // Escape to close search
+                if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
+                    closeSearch();
+                }
+            });
+        });
+    </script>

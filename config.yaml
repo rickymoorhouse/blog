@@ -1,15 +1,16 @@
 baseURL: "https://rickymoorhouse.uk/"
 languageCode: "en-gb"
 title: "Ricky Moorhouse"
-theme: "2025"
+theme: "2026"
 permalinks:
   blog: "/blog/:year/:slug/"
+  microblog: "/microblog/:slug/"
 params:
     author: "Ricky Moorhouse"
-    description: "I live in the south of England with my wife, two children and our dog Nova. I work at IBM as a Cloud Architect for API Connect cloud services. I enjoy running, walking, photography and spending time with my family."
+    description: "Welcome to my corner of the web - my goal for this space is to share things I find interesting from various areas. At IBM I build and maintain our API Management cloud services enabling our customers to focus on delivering value to their customers. At home I spend time with my family and enjoy exploring the world around us. I hope you find something here that is also interesting or useful to you!"
     githubUsername: "rickymoorhouse"
     build: "main"
-    mainSections: ["blog", "flights", "photos"]
+    mainSections: ["blog", "flights", "photos", "microblog"]
     accent: "#354F52"
     primary: "#009988"
     header: "#009988"

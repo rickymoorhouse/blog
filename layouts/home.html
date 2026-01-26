@@ -1,0 +1,108 @@
+{{ partial "header" . }}
+
+<main class="landing">
+  <!-- Hero Section -->
+  <section class="hero">
+    <p class="bio">{{ .Site.Params.description }}</p>
+    
+    <!-- Social Links -->
+    <div class="social-links">
+      {{- if .Site.Menus.icon -}}
+        {{- range sort .Site.Menus.icon -}}
+          <a rel="me" href="{{ .URL }}" class="social-link" target="_blank" rel="noopener noreferrer">
+            {{ .Name }}
+          </a>
+        {{- end -}}
+      {{- end -}}
+    </div>
+  </section>
+
+  <!-- Featured Posts -->
+  {{ $featured := where (where site.RegularPages "Type" "in" site.Params.mainSections) "Params.sticky" "==" true }}
+  {{ if $featured }}
+  <section class="featured">
+    <div class="featured-grid">
+      {{ range $featured }}
+        {{ $page := . }}
+        <article class="featured-card">
+          <a href="{{ .Permalink }}">
+            {{ if .Resources.ByType "image" }}
+              {{ with .Resources.GetMatch .Params.featured | default (index (.Resources.ByType "image") 0) }}
+                {{ $image := .Fill "400x250 Center" }}
+                <div class="featured-image-wrapper">
+                  <img src="{{ $image.Permalink }}" alt="{{ $page.Title }}" class="featured-image" />
+                  <div class="featured-overlay">
+                    <h3>{{ $page.Title }}</h3>
+                    <p class="featured-date">{{ $page.Date.Format "2 January 2006" }}</p>
+                  </div>
+                </div>
+              {{ end }}
+            {{ else }}
+              <div class="featured-image-wrapper">
+                <div class="featured-overlay">
+                  <h3>{{ $page.Title }}</h3>
+                  <p class="featured-date">{{ $page.Date.Format "2 January 2006" }}</p>
+                </div>
+              </div>
+            {{ end }}
+          </a>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Quick Navigation -->
+  <section class="quick-nav">
+    <div class="nav-cards">
+      <a href="/blog/" class="nav-card nav-card-blog">
+        <span class="nav-label">Blog</span>
+      </a>
+      <a href="/photos/" class="nav-card nav-card-photos">
+        <span class="nav-label">Photos</span>
+      </a>
+      <a href="/microblog/" class="nav-card nav-card-microblog">
+        <span class="nav-label">Microblog</span>
+      </a>
+      <a href="/about/" class="nav-card nav-card-about">
+        <span class="nav-label">About</span>
+      </a>
+      <a href="/travel/" class="nav-card nav-card-travel">
+        <span class="nav-label">Travel</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Recent Posts -->
+  <section class="recent-posts">
+    <h2>Recent Posts</h2>
+    <ul class="post-list">
+      {{ range first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+        {{ $category := "" }}
+        {{ if eq "photos" .Type }}{{ $category = "Visual" }}
+        {{ else if eq "blog" .Type }}{{ $category = "Technical" }}
+        {{ end }}
+        <li>
+          {{ if or (eq "microblog" .Type) (eq "flight" .Params.layout) }}
+            <span class="no-link">
+              {{ if eq "microblog" .Type }}
+                <span class="post-title microblog-title">{{ .Content }}</span>
+              {{ else if eq "flight" .Params.layout }}
+                <span class="post-title">{{ .Params.from }} → {{ .Params.to }} ({{ .Params.airline }} {{ .Params.flight }})</span>
+              {{ end }}
+              <span class="post-date">— {{ .Date.Format "2 January 2006" }}</span>
+            </span>
+          {{ else }}
+            <a href="{{ .Permalink }}">
+              <span class="post-title">{{ .Title }}</span>
+              <span class="post-date">— {{ $category }} — {{ .Date.Format "2 January 2006" }}</span>
+            </a>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+    <a href="/stream/" class="view-all">View all posts →</a>
+  </section>
+</main>
+
+{{ partial "footer" . }}

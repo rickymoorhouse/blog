@@ -6,6 +6,7 @@ layout: blog
 tags:
  - apiconnect
 hideImages: true
+sticky: true
 ---
 
 Last week I had the opportunity to attend the three-day Product Academy for Teams course at the IBM Silicon Valley Lab in San Jose. 
