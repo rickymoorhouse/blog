@@ -219,12 +219,11 @@ svg.icon {
   align-items: center;
   gap: var(--space-sm);
   list-style: none;
-  margin: 0 15pt 0 0;
   padding: 5pt;
 }
 .side nav button {
   width: 30pt;
-  margin: 0 0 0 15pt;
+  margin: 0;
   font-size: 15pt;
 }
 .side nav a {
@@ -282,7 +281,8 @@ footer {
 }
 
 footer p {
-  margin: 0;
+  clear: both;
+  margin: var(--space-sm) auto;
   font-size: var(--text-sm);
   color: var(--text-muted);
 }
@@ -598,6 +598,11 @@ code {
   color: var(--text-secondary);
   max-width: 700px;
   margin: 0 auto var(--space-xl);
+  padding-right: 80px;
+  background-image: url('/images/signature.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 100px auto;
 }
 
 .social-links {
@@ -627,6 +632,9 @@ code {
 /* -----------------------------------------------------------------------------
    Featured & Recent Posts
    -------------------------------------------------------------------------- */
+main.landing section {
+  padding: var(--space-md) 0;
+}
 .section-header {
   text-align: center;
   margin: var(--space-lg) 0 var(--space-md);
@@ -634,7 +642,7 @@ code {
 
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr ));
   gap: var(--space-lg);
   max-width: 1200px;
   margin: 0 auto;
@@ -736,6 +744,7 @@ code {
   .side nav ul {
     flex-direction: row;
     gap: var(--space-sm);
+    margin: 0;
   }
 
   .side nav a {
@@ -757,6 +766,8 @@ code {
 
   .hero .bio {
     font-size: var(--text-base);
+    padding-right: 0;
+    background-size: 60px auto;
   }
 
   .nav-cards {
