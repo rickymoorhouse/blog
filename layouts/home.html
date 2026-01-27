@@ -4,17 +4,6 @@
   <!-- Hero Section -->
   <section class="hero">
     <p class="bio">{{ .Site.Params.description }}</p>
-    
-    <!-- Social Links -->
-    <div class="social-links">
-      {{- if .Site.Menus.icon -}}
-        {{- range sort .Site.Menus.icon -}}
-          <a rel="me" href="{{ .URL }}" class="social-link" target="_blank" rel="noopener noreferrer">
-            {{ .Name }}
-          </a>
-        {{- end -}}
-      {{- end -}}
-    </div>
   </section>
 
   <!-- Featured Posts -->
@@ -95,7 +84,7 @@
           {{ else }}
             <a href="{{ .Permalink }}">
               <span class="post-title">{{ .Title }}</span>
-              <span class="post-date">— {{ $category }} — {{ .Date.Format "2 January 2006" }}</span>
+              <span class="post-date">— {{ .Date.Format "2 January 2006" }}</span>
             </a>
           {{ end }}
         </li>
@@ -105,4 +94,17 @@
   </section>
 </main>
 
-{{ partial "footer" . }}
+<footer>
+    <div class="social-links">
+      {{- if .Site.Menus.icon -}}
+        {{- range sort .Site.Menus.icon -}}
+          <a rel="me" href="{{ .URL }}" class="social-link" target="_blank" rel="noopener noreferrer">
+            {{ .Name }}
+          </a>
+        {{- end -}}
+      {{- end -}}
+    </div>
+    <p class="copyright">{{ .Site.Params.copyright | default "&copy; All rights reserved." | markdownify }} - <a href="https://github.com/rickymoorhouse" rel="me">github</a></p>
+</footer>
+</body>
+</html>
