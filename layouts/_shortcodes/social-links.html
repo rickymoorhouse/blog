@@ -1,0 +1,9 @@
+<div class="social-links">
+  {{- if .Site.Menus.icon -}}
+    {{- range sort .Site.Menus.icon -}}
+      <a rel="me" href="{{ .URL }}" class="social-link" target="_blank" rel="noopener noreferrer">
+        {{ .Name }}
+      </a>
+    {{- end -}}
+  {{- end -}}
+</div>
