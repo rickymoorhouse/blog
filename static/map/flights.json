@@ -491,6 +491,28 @@
         "type": "LineString",
         "coordinates": [
           [
+            -0.1903,
+            51.1481
+          ],
+          [
+            -84.2089,
+            9.9939
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LGW",
+        "to": "SJO",
+        "from_name": "London Gatwick",
+        "to_name": "San Jose Costa Rica"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
             2.5479,
             49.0097
           ],
@@ -1209,6 +1231,28 @@
         "to": "LHR",
         "from_name": "Calgary",
         "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -84.2089,
+            9.9939
+          ],
+          [
+            -0.1903,
+            51.1481
+          ]
+        ]
+      },
+      "properties": {
+        "from": "SJO",
+        "to": "LGW",
+        "from_name": "San Jose Costa Rica",
+        "to_name": "London Gatwick"
       }
     },
     {
