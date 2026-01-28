@@ -42,11 +42,13 @@
 
     {{ if .Params.hideImages }}{{ else }}
     {{ .Params.type }}
+    <div class="featuredPhotos">
         {{ with .Resources.ByType "image" }}
             {{ range . }}
                 {{ partial "photo.html" . }}
             {{ end }}
         {{ end }}
+    </div>
     {{ end }}
     <a href="https://rickymoorhouse.uk/" rel="author" class="p-author h-card"></a>
 </article>

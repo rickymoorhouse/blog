@@ -6,6 +6,7 @@ tags:
  - photography
  - TheCompoChallenge
 hideImages: true
+sticky: true
 ---
 
 For 5 weeks, [Hiro](https://www.hiro.report) ran a photography challenge series with the aim to focus on different techniques in photographic composition each week.  I joined in from the start and found it really insightful to try and use the particular techniques during the week as I took photos. Some of these were much harder to find opportunities for than others and it was interesting to see other peoples photos shared on social media during the challenge as well. 
