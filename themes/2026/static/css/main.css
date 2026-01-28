@@ -525,6 +525,25 @@ code {
   transform: scale(1.05);
 }
 
+/* Photo grid for multi-image items */
+.Image.multi {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+.Image.multi img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.Image.multi a {
+  display: block;
+}
+
 /* -----------------------------------------------------------------------------
    Tags
    -------------------------------------------------------------------------- */
