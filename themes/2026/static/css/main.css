@@ -544,6 +544,35 @@ code {
   display: block;
 }
 
+/* Grid for consecutive photo items in content */
+.text-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.Image {
+  flex: 1 1 200px;
+  max-width: 250px;
+  margin: 0 !important;
+}
+
+.Image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+/* Ensure figcaption text doesn't break grid */
+.Image figcaption {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+  text-align: center;
+}
+
 /* -----------------------------------------------------------------------------
    Tags
    -------------------------------------------------------------------------- */
