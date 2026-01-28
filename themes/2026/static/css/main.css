@@ -548,19 +548,19 @@ code {
 .featuredPhotos {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   align-items: flex-start;
 }
 
 .Image {
-  flex: 1 1 200px;
-  max-width: 250px;
+  flex: 1 1 280px;
+  max-width: 350px;
   margin: 0 !important;
 }
 
 .Image img {
   width: 100% !important;
-  height: 200px !important;
+  height: 250px !important;
   object-fit: cover;
   border-radius: var(--border-radius);
 }
