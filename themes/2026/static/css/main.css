@@ -221,6 +221,9 @@ svg.icon {
   list-style: none;
   padding: 5pt;
 }
+.side nav li {
+  width: 30pt
+}
 .side nav button {
   width: 30pt;
   margin: 0;
