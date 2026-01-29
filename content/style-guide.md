@@ -2,6 +2,7 @@
 title: Style Guide
 date: 2026-01-28
 description: A reference for the colors, typography, and design tokens used in this blog.
+url: /style-guide/
 ---
 
 <style>
