@@ -20,23 +20,8 @@
         padding: 0.5em;
         box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
         }
-        .map-controls {
-        position: fixed;
-        top: 80px;
-        left: 80px;
-        z-index: 999;
-        background: white;
-        padding: 10px;
-        border-radius: 4px;
-        box-shadow: 0 1px 3pt rgba(0,0,0,0.5);
-        }
-        .map-controls label {
-        display: block;
-        margin: 5px 0;
-        cursor: pointer;
-        }
         @media (prefers-color-scheme: dark) {
-          div.page-content, .map-controls {
+          div.page-content {
             background-color: #222;
             color: #ccc;
           }
@@ -56,19 +41,6 @@
       <div class="site-content" id="map">
         <span class="mapbox-maplogo"></span>
       </div>
-      
-      <!-- Map layer controls -->
-      <div class="map-controls">
-        <label>
-          <input type="checkbox" id="toggle-flights" checked>
-          Show Flights
-        </label>
-        <label>
-          <input type="checkbox" id="toggle-places" checked>
-          Show Places
-        </label>
-      </div>
-      
       <!-- site-content -->
         <div class="page-content">
         {{ .Content }}
@@ -92,14 +64,13 @@ var map = new mapboxgl.Map({
 });
 
 map.on('load', function() {
-  // Places layer
   map.addSource('points', {
     type: 'geojson', 
     data: '{{ .Params.geojson }}',
     cluster: false,
-    clusterMaxZoom: 14,
-    clusterRadius: 50
-  });
+    clusterMaxZoom: 14, // Max zoom to cluster points on
+    clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+    })
   map.addLayer({
     id: 'points',
     type: 'circle',
@@ -107,28 +78,6 @@ map.on('load', function() {
     paint: {
       'circle-color': ['get', 'marker-color'],
       'circle-radius': 5,
-    }
-  });
-
-  // Flights layer - line routes
-  map.addSource('flights', {
-    type: 'geojson',
-    data: '/map/flights.json'
-  });
-  
-  map.addLayer({
-    id: 'flight-routes',
-    type: 'line',
-    source: 'flights',
-    layout: {
-      'line-join': 'round',
-      'line-cap': 'round'
-    },
-    paint: {
-      'line-color': '#009988',
-      'line-width': 1.5,
-      'line-opacity': 0.7,
-      'line-dasharray': [2, 2]
     }
   });
 
@@ -153,6 +102,10 @@ map.on('load', function() {
       content = content + e.features[0].properties.title;
     }
 
+  
+    // Ensure that if the map is zoomed out such that
+    // multiple copies of the feature are visible, the
+    // popup appears over the copy being pointed to.
     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
     }
@@ -167,15 +120,39 @@ map.on('load', function() {
   });
 });
 
-// Toggle flight routes
-document.getElementById('toggle-flights').addEventListener('change', function(e) {
-  map.setLayoutProperty('flight-routes', 'visibility', e.target.checked ? 'visible' : 'none');
-});
+(function () {
+    'use strict';
 
-// Toggle places
-document.getElementById('toggle-places').addEventListener('change', function(e) {
-  map.setLayoutProperty('points', 'visibility', e.target.checked ? 'visible' : 'none');
-});
+    // Your additional js should go there
+
+}());
+
+function insertMap(geojson_url) {
+  var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/mapbox/light-v9', //'mapbox://styles/rickymoorhouse/cih6ouins00f3bnm500a1d3dl',
+      center: [-53, 20], // starting position
+      zoom: 1.5 // starting zoom
+  });
+  map.on('load', function() {
+    map.addSource("visited", {
+      type: 'geojson',
+      data: geojson_url
+    });
+    map.addLayer({
+       "id": "points",
+       "type": "symbol",
+       "source": "visited",
+       "layout": {
+           "icon-image": "star-11",
+           //"text-field": "{name}",
+           "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+           "text-offset": [0, 0.6],
+           "text-anchor": "top"
+       }
+     });
+  });
+}
 
 </script>
     </div>
