@@ -651,8 +651,8 @@ code {
   line-height: 1.7;
   color: var(--text-secondary);
   max-width: 700px;
-  margin: 0 auto var(--space-xl);
-  padding-right: 80px;
+  margin: 0 auto;
+  padding: 0 5pt 3em 0;
   background-image: url('/images/signature.svg');
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -820,8 +820,6 @@ main.landing section {
 
   .hero .bio {
     font-size: var(--text-base);
-    padding-right: 0;
-    background-size: 60px auto;
   }
 
   .nav-cards {
