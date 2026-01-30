@@ -1,0 +1,2404 @@
+{
+  "books": [
+    {
+      "title": "Call Me by Your Name",
+      "author": "Andre Aciman",
+      "isbn": "9780374299217",
+      "yearRead": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "isbn": "9780441172719",
+      "yearRead": [
+        "2025",
+        "2025"
+      ]
+    },
+    {
+      "title": "The Midnight Library",
+      "author": "Matt Haig",
+      "isbn": "9780525559474",
+      "yearRead": [
+        "2024",
+        "2024",
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "isbn": "9780439023481",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "His Dark Materials",
+      "author": "Philip Pullman",
+      "isbn": "9780440419518",
+      "yearRead": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "title": "The Lost Bookshop",
+      "author": "Evie Woods",
+      "isbn": "9780008609214",
+      "yearRead": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "title": "Divergent",
+      "author": "Veronica Roth",
+      "isbn": "9780062024039",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Throne of Glass",
+      "author": "Sarah J. Maas",
+      "isbn": "9781619630345",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Conclave",
+      "author": "Robert Harris",
+      "isbn": "9781101972908",
+      "yearRead": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "title": "Damascus Station",
+      "author": "David McCloskey",
+      "isbn": "9780393881042",
+      "yearRead": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "title": "The Spy Coast",
+      "author": "Tess Gerritsen",
+      "isbn": "9781662515125",
+      "yearRead": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "title": "Moscow X",
+      "author": "David McCloskey",
+      "isbn": "9780393882469",
+      "yearRead": [
+        "2025",
+        "2025"
+      ]
+    },
+    {
+      "title": "The Library of the Dead",
+      "author": "T L Huchu",
+      "isbn": "9781250262684",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "The Cuckoo's Calling",
+      "author": "Robert Galbraith",
+      "isbn": "9780316206845",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "The Silkworm",
+      "author": "Robert Galbraith",
+      "isbn": "9780316206937",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Career of Evil",
+      "author": "Robert Galbraith",
+      "isbn": "9780316207101",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Lethal White",
+      "author": "Robert Galbraith",
+      "isbn": "9780316449135",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Troubled Blood",
+      "author": "Robert Galbraith",
+      "isbn": "9780316428963",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "The Invisible Library",
+      "author": "Genevieve Cogman",
+      "isbn": "9781447242640",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "The Masked City",
+      "author": "Genevieve Cogman",
+      "isbn": "9781447242688",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The Burning Page",
+      "author": "Genevieve Cogman",
+      "isbn": "9781447242725",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "The Lost Plot",
+      "author": "Genevieve Cogman",
+      "isbn": "9781447242763",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "The Mortal Word",
+      "author": "Genevieve Cogman",
+      "isbn": "9781447242800",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "The Secret Chapter",
+      "author": "Genevieve Cogman",
+      "isbn": "9781447242848",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "The Dark Archive",
+      "author": "Genevieve Cogman",
+      "isbn": "9781447242886",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "Just One Damned Thing After Another",
+      "author": "Jodi Taylor",
+      "isbn": "9781472234483",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The Seven Dials Mystery",
+      "author": "Agatha Christie",
+      "isbn": "9780062693662",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "The ABC Murders",
+      "author": "Agatha Christie",
+      "isbn": "9780062693679",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "The Mysterious Affair at Styles",
+      "author": "Agatha Christie",
+      "isbn": "9780062693686",
+      "yearRead": [
+        "2018",
+        "2018"
+      ]
+    },
+    {
+      "title": "Murder on the Orient Express",
+      "author": "Agatha Christie",
+      "isbn": "9780062693716",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Death on the Nile",
+      "author": "Agatha Christie",
+      "isbn": "9780062693723",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Murder in Mesopotamia",
+      "author": "Agatha Christie",
+      "isbn": "9780062693730",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Cards on the Table",
+      "author": "Agatha Christie",
+      "isbn": "9780062693747",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Around the World in Eighty Days",
+      "author": "Jules Verne",
+      "isbn": "9780241468654",
+      "yearRead": [
+        "2022",
+        "2022"
+      ]
+    },
+    {
+      "title": "Wicked",
+      "author": "Gregory Maguire",
+      "isbn": "9780061350962",
+      "yearRead": [
+        "2018"
+      ]
+    },
+    {
+      "title": "The Future We Choose",
+      "author": "Christiana Figueres",
+      "isbn": "9780593080931",
+      "yearRead": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "title": "Codename Villanelle",
+      "author": "Luke Jennings",
+      "isbn": "9780316512527",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "Alexander Hamilton",
+      "author": "Ron Chernow",
+      "isbn": "9780143034759",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Mr Penumbra's 24-hour Bookstore",
+      "author": "Robin Sloan",
+      "isbn": "9781250037756",
+      "yearRead": [
+        "2015",
+        "2015"
+      ]
+    },
+    {
+      "title": "The Beekeeper's Apprentice",
+      "author": "Laurie R. King",
+      "isbn": "9781250055705",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The Watchmaker of Filigree Street",
+      "author": "Natasha Pulley",
+      "isbn": "9781620408346",
+      "yearRead": [
+        "2016",
+        "2016"
+      ]
+    },
+    {
+      "title": "The Chase",
+      "author": "Clive Cussler",
+      "isbn": "9780425197730",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "The Three Musketeers",
+      "author": "Alexandre Dumas",
+      "isbn": "9780141192459",
+      "yearRead": [
+        "2014",
+        "2014"
+      ]
+    },
+    {
+      "title": "Kings of the Yukon",
+      "author": "Adam Weymouth",
+      "isbn": "9780143130888",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "How Stella Saved the Farm",
+      "author": "Vijay Govindarajan",
+      "isbn": "9780133123899"
+    },
+    {
+      "title": "Raven Black",
+      "author": "Ann Cleeves",
+      "isbn": "9780312359676",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "The Heron's Cry",
+      "author": "Ann Cleeves",
+      "isbn": "9781509889679",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "The Raging Storm",
+      "author": "Ann Cleeves",
+      "isbn": "9781509889716",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "The Voice of the Violin",
+      "author": "Andrea Camilleri",
+      "isbn": "9780141032695",
+      "yearRead": [
+        "2023",
+        "2023"
+      ]
+    },
+    {
+      "title": "The Snack Thief",
+      "author": "Andrea Camilleri",
+      "isbn": "9780141032688",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "The Shape of Water",
+      "author": "Andrea Camilleri",
+      "isbn": "9780141032671",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "The Cleaner",
+      "author": "Mark Dawson",
+      "isbn": "9781492354253",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "The Killer Collective",
+      "author": "Barry Eisler",
+      "isbn": "9781542042338",
+      "yearRead": [
+        "2019",
+        "2019"
+      ]
+    },
+    {
+      "title": "Smoke and Summons",
+      "author": "Charlie N Holmberg",
+      "isbn": "9781944144313",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "A Murder of Crows",
+      "author": "Sarah Yarwood-Lovett",
+      "isbn": "9781913333216",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "A Generation of Vipers",
+      "author": "Sarah Yarwood-Lovett",
+      "isbn": "9781913333278",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "The Elias Network",
+      "author": "Simon Gervais",
+      "isbn": "9781639362482",
+      "yearRead": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "title": "Enemies of my Country",
+      "author": "Jason Kasper",
+      "isbn": "9798986632305",
+      "yearRead": [
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "title": "Matterhorn",
+      "author": "Christopher Reich",
+      "isbn": "9781662516542",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "The Love Code",
+      "author": "Susannah Nix",
+      "isbn": "9781647421232",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "The Family Experiment",
+      "author": "John Marrs",
+      "isbn": "9781035410194",
+      "yearRead": [
+        "2025",
+        "2025"
+      ]
+    },
+    {
+      "title": "The Murder Game",
+      "author": "Tom Hindle",
+      "isbn": "9780241652725",
+      "yearRead": [
+        "2025",
+        "2025"
+      ]
+    },
+    {
+      "title": "Murder on Lake Garda",
+      "author": "Tom Hindle",
+      "isbn": "9780241668320",
+      "yearRead": [
+        "2025",
+        "2025"
+      ]
+    },
+    {
+      "title": "The Marlow Murder Club",
+      "author": "Robert Thorogood",
+      "isbn": "9780008328535",
+      "yearRead": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "title": "Voyage of the Damned",
+      "author": "Frances White",
+      "isbn": "9780593652701",
+      "yearRead": [
+        "2025",
+        "2025"
+      ]
+    },
+    {
+      "title": "Vector",
+      "author": "Steve Konkoly",
+      "isbn": "9798614287375",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "Apex",
+      "author": "Steve Konkoly",
+      "isbn": "9798614287344",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "Hard Kill",
+      "author": "JB Turner",
+      "isbn": "9781543625134",
+      "yearRead": [
+        "2020",
+        "2022"
+      ]
+    },
+    {
+      "title": "Deep Sleep",
+      "author": "Steven Konkoly",
+      "isbn": "9781974497114",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "The Rescue",
+      "author": "Steven Konkoly",
+      "isbn": "9781530919438",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Hard Road",
+      "author": "JB Turner",
+      "isbn": "9781543625127",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Hard Vengeance",
+      "author": "JB Turner",
+      "isbn": "9781543625141",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "Fatal Intrusion",
+      "author": "Jeffery Deaver",
+      "isbn": "9781662518720",
+      "yearRead": [
+        "2024",
+        "2024",
+        "2024"
+      ]
+    },
+    {
+      "title": "Inked",
+      "author": "Rachel Rener",
+      "isbn": "9781957899004",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "Jinxed",
+      "author": "Rachel Rener",
+      "isbn": "9781957899011",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "Linked",
+      "author": "Rachel Rener",
+      "isbn": "9781957899028",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "Shadow Game",
+      "author": "Vin Strong",
+      "isbn": "9798988686107",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "Maze of Spies",
+      "author": "Vin Strong",
+      "isbn": "9798988686176",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "Deep Shadow",
+      "author": "Nick Sullivan",
+      "isbn": "9781644372562",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "Twisted Pretty Things",
+      "author": "Ariana Nash",
+      "isbn": "9798545138098",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "Tide of Tricks",
+      "author": "Ariana Nash",
+      "isbn": "9798988686190",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "Trial by Fire",
+      "author": "Ariana Nash",
+      "isbn": "9798988686206",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "Truth or Dare",
+      "author": "Ariana Nash",
+      "isbn": "9798988686213",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "Without a Trace",
+      "author": "Ariana Nash",
+      "isbn": "9798988686220",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "Double Agent",
+      "author": "Tom Bradby",
+      "isbn": "9781409158356",
+      "yearRead": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "title": "Secret Service",
+      "author": "Tom Bradby",
+      "isbn": "9781409158363",
+      "yearRead": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "title": "Triple Cross",
+      "author": "Tom Bradby",
+      "isbn": "9781409158349",
+      "yearRead": [
+        "2023",
+        "2023"
+      ]
+    },
+    {
+      "title": "Dark Sky",
+      "author": "CJ Box",
+      "isbn": "9780525538271",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "Rip Tide",
+      "author": "Stella Rimington",
+      "isbn": "9781785767845"
+    },
+    {
+      "title": "Present Danger",
+      "author": "Stella Rimington",
+      "isbn": "9781785767814"
+    },
+    {
+      "title": "At Risk",
+      "author": "Stella Rimington",
+      "isbn": "9781785767807",
+      "yearRead": [
+        "2023"
+      ]
+    },
+    {
+      "title": "Illegal Action",
+      "author": "Stella Rimington",
+      "isbn": "9781785767821",
+      "yearRead": [
+        "2023"
+      ]
+    },
+    {
+      "title": "Dead Line",
+      "author": "Stella Rimington",
+      "isbn": "9781785767791",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "Secret Asset",
+      "author": "Stella Rimington",
+      "isbn": "9781785767784",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "The Geneva Trap",
+      "author": "Stella Rimington",
+      "isbn": "9781785767838",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "Breaking Cover",
+      "author": "Stella Rimington",
+      "isbn": "9781785767852",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Close Call",
+      "author": "Stella Rimington",
+      "isbn": "9781785767869",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "The Moscow Sleepers",
+      "author": "Stella Rimington",
+      "isbn": "9781785767876",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Talon",
+      "author": "Julie Kagawa",
+      "isbn": "9780373212156",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Rogue",
+      "author": "Julie Kagawa",
+      "isbn": "9780373211463",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Soldier",
+      "author": "Julie Kagawa",
+      "isbn": "9780373212262",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Moth",
+      "author": "Daniel Arenson",
+      "isbn": "9781927601143",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The Braque Connection",
+      "author": "Estelle Ryan",
+      "isbn": "9781492241683",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "The Flinck Connection",
+      "author": "Estelle Ryan",
+      "isbn": "9781492329274",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "The Courbet Connection",
+      "author": "Estelle Ryan",
+      "isbn": "9781492310227",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "The Pucelle Connection",
+      "author": "Estelle Ryan",
+      "isbn": "9781492336982",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The L\u00e9ger Connection",
+      "author": "Estelle Ryan",
+      "isbn": "9781492329311",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "A Quest of Heroes",
+      "author": "Morgan Rice",
+      "isbn": "9780982481769",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "A March of Kings",
+      "author": "Morgan Rice",
+      "isbn": "9780982481783",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "A Fate of Dragons",
+      "author": "Morgan Rice",
+      "isbn": "9780982481806",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "A Cry of Honor",
+      "author": "Morgan Rice",
+      "isbn": "9780982481820",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "A Vow of Glory",
+      "author": "Morgan Rice",
+      "isbn": "9780982481844",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "A Charge of Valor",
+      "author": "Morgan Rice",
+      "isbn": "9780982481868",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "A Rite of Swords",
+      "author": "Morgan Rice",
+      "isbn": "9781625791573",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "A Sky of Spells",
+      "author": "Morgan Rice",
+      "isbn": "9781625791597",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Arena One: Slaverunners",
+      "author": "Morgan Rice",
+      "isbn": "9781939416469",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Arena Two",
+      "author": "Morgan Rice",
+      "isbn": "9781939416483",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Holy Island",
+      "author": "LJ Ross",
+      "isbn": "9781514642825",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Insurgent",
+      "author": "Veronica Roth",
+      "isbn": "9780062024046",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "The Geronimo Breach",
+      "author": "Russell Blake",
+      "isbn": "9781480277724",
+      "yearRead": [
+        "2016",
+        "2016"
+      ]
+    },
+    {
+      "title": "Night of the Assassin",
+      "author": "Russell Blake",
+      "isbn": "9781505623253",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Fatal Exchange",
+      "author": "Russell Blake",
+      "isbn": "9781502939298",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "JET",
+      "author": "Russell Blake",
+      "isbn": "9781500176109",
+      "yearRead": [
+        "2016",
+        "2016",
+        "2017",
+        "2017",
+        "2017",
+        "2017"
+      ]
+    },
+    {
+      "title": "The Chase",
+      "author": "Clive Cussler",
+      "isbn": "9780425224427",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "The Race",
+      "author": "Clive Cussler",
+      "isbn": "9780451230102",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The Thief",
+      "author": "Clive Cussler",
+      "isbn": "9780451463067",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Spartan Gold",
+      "author": "Clive Cussler",
+      "isbn": "9780451417982",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Lost Empire",
+      "author": "Clive Cussler",
+      "isbn": "9780451230089",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The Tombs",
+      "author": "Clive Cussler",
+      "isbn": "9780451417999",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The Mayan Secrets",
+      "author": "Clive Cussler",
+      "isbn": "9780451418002",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The Solomon Curse",
+      "author": "Clive Cussler",
+      "isbn": "9780451463074",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Thunder Point",
+      "author": "Jack Higgins",
+      "isbn": "9780515119987",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Island of Fog",
+      "author": "Keith Robinson",
+      "isbn": "9780984390601",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Labyrinth of Fire",
+      "author": "Keith Robinson",
+      "isbn": "9780984390618",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Mountain of Whispers",
+      "author": "Keith Robinson",
+      "isbn": "9780984390625",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Lake of Spirits",
+      "author": "Keith Robinson",
+      "isbn": "9780998867933",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Roads of Madness",
+      "author": "Keith Robinson",
+      "isbn": "9780998867940"
+    },
+    {
+      "title": "Chamber of Ghosts",
+      "author": "Keith Robinson",
+      "isbn": "9780998867957",
+      "yearRead": [
+        "2018"
+      ]
+    },
+    {
+      "title": "Valley of Monsters",
+      "author": "Keith Robinson",
+      "isbn": "9780998867964",
+      "yearRead": [
+        "2018"
+      ]
+    },
+    {
+      "title": "The Enigma Strain",
+      "author": "Nick Thacker",
+      "isbn": "9781508452836",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "The Paradise Key",
+      "author": "Nick Thacker",
+      "isbn": "9781944131467",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Mark for Blood",
+      "author": "Nick Thacker",
+      "isbn": "9781944131474",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "The Last Airship",
+      "author": "Christopher Cartwright",
+      "isbn": "9781517360917",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "The Mahogany Ship",
+      "author": "Christopher Cartwright",
+      "isbn": "9781519739805",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Atlantis Stolen",
+      "author": "Christopher Cartwright",
+      "isbn": "9781542040600"
+    },
+    {
+      "title": "Rogue Wave",
+      "author": "Christopher Cartwright",
+      "isbn": "9781542040624",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "The Nostradamus Equation",
+      "author": "Christopher Cartwright",
+      "isbn": "9781542040587",
+      "yearRead": [
+        "2018"
+      ]
+    },
+    {
+      "title": "The Third Temple",
+      "author": "Christopher Cartwright",
+      "isbn": "9781542040594",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Blue Fall",
+      "author": "B. B. Griffith",
+      "isbn": "9780982481745",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Grey Winter",
+      "author": "B. B. Griffith",
+      "isbn": "9780982481752"
+    },
+    {
+      "title": "Black Spring",
+      "author": "B. B. Griffith",
+      "isbn": "9780982481776"
+    },
+    {
+      "title": "A Warrior's Redemption",
+      "author": "Guy Stanton III",
+      "isbn": "9781494707309",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "A Warrior's Journey",
+      "author": "Guy Stanton III",
+      "isbn": "9781494787646",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "A Warrior's Legacy",
+      "author": "Guy Stanton III",
+      "isbn": "9781494787653",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "A Warrior's Return",
+      "author": "Guy Stanton III",
+      "isbn": "9781494927073",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "A Warrior's Revenge",
+      "author": "Guy Stanton III",
+      "isbn": "9781494927080",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "Catching Fire",
+      "author": "Suzanne Collins",
+      "isbn": "9780545586177",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Mockingjay",
+      "author": "Suzanne Collins",
+      "isbn": "9780545663267",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Northern Lights",
+      "author": "Philip Pullman",
+      "isbn": "9781407104058"
+    },
+    {
+      "title": "The Subtle Knife",
+      "author": "Philip Pullman",
+      "isbn": "9780440418337"
+    },
+    {
+      "title": "The Amber Spyglass",
+      "author": "Philip Pullman",
+      "isbn": "9780440238157",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "La Belle Sauvage",
+      "author": "Philip Pullman",
+      "isbn": "9780375815300",
+      "yearRead": [
+        "2020",
+        "2023"
+      ]
+    },
+    {
+      "title": "The Secret Commonwealth",
+      "author": "Philip Pullman",
+      "isbn": "9780553510669",
+      "yearRead": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "title": "No Tomorrow",
+      "author": "Luke Jennings",
+      "isbn": "9780316476744",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "The Love Code",
+      "author": "Susannah Nix",
+      "isbn": "9781647421232",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "Interference",
+      "author": "Brad Parks",
+      "isbn": "9780751551850",
+      "yearRead": [
+        "2020",
+        "2020",
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "title": "Doing Time",
+      "author": "Jodi Taylor",
+      "isbn": "9781472234490",
+      "yearRead": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "title": "A Symphony of Echoes",
+      "author": "Jodi Taylor",
+      "isbn": "9781472234506",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "A Second Chance",
+      "author": "Jodi Taylor",
+      "isbn": "9781472234513",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "A Trail Through Time",
+      "author": "Jodi Taylor",
+      "isbn": "9781472234520",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "No Time Like the Past",
+      "author": "Jodi Taylor",
+      "isbn": "9781472234537",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The Family Experiment",
+      "author": "John Marrs",
+      "isbn": "9781035410194",
+      "yearRead": [
+        "2025",
+        "2025"
+      ]
+    },
+    {
+      "title": "List of Secrets",
+      "author": "DF Hart",
+      "isbn": "9781732275714",
+      "yearRead": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "title": "The Marlow Murder Club",
+      "author": "Robert Thorogood",
+      "isbn": "9780008328535",
+      "yearRead": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "title": "Murder in the Caribbean",
+      "author": "Robert Thorogood",
+      "isbn": "9780008191663",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "A Meditation on Murder",
+      "author": "Robert Thorogood",
+      "isbn": "9780008328528",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Heat Wave",
+      "author": "Richard Castle",
+      "isbn": "9781451682476",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "The Eagle Tree",
+      "author": "Ned Hayes",
+      "isbn": "9780998627118",
+      "yearRead": [
+        "2016",
+        "2016"
+      ]
+    },
+    {
+      "title": "The Eagle Tree",
+      "author": "Ned Hayes",
+      "isbn": "9780998627118",
+      "yearRead": [
+        "2016",
+        "2016"
+      ]
+    },
+    {
+      "title": "The Cove",
+      "author": "LJ Ross",
+      "isbn": "9781785075471",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Way of the Sword",
+      "author": "Trevor Scott",
+      "isbn": "9781593077821",
+      "yearRead": [
+        "2014",
+        "2014"
+      ]
+    },
+    {
+      "title": "Fly by Night",
+      "author": "Ward Larsen",
+      "isbn": "9780765328021",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "The Amazon Code",
+      "author": "Nick Thacker",
+      "isbn": "9781944131450",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Fallen Out",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338039",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Fallen Palm",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338046",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Fallen Hunter",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338053",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Fallen Mangrove",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338060",
+      "yearRead": [
+        "2019",
+        "2022"
+      ]
+    },
+    {
+      "title": "Fallen Pride",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338077",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Fallen Tide",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338084",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Fallen Angel",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338091",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Fallen Hero",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338107",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Fallen Honor",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338114",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Rising Storm",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338121",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Rising Fury",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338138",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Rising Thunder",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338145",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Rising Charity",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338152",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Rising Water",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338169",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Rising Spirit",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338176",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Rising Force",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338183",
+      "yearRead": [
+        "2018"
+      ]
+    },
+    {
+      "title": "Rising Moon",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338190",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "Man Overboard",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338206",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Cast Off",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338213",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Steady As She Goes",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338220",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "All Ahead Full",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338237",
+      "yearRead": [
+        "2021",
+        "2024"
+      ]
+    },
+    {
+      "title": "Wayward Sons",
+      "author": "Wayne Stinnett",
+      "isbn": "9781649340267",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "Graceless",
+      "author": "Wayne Stinnett",
+      "isbn": "9781519299186",
+      "yearRead": [
+        "2023"
+      ]
+    },
+    {
+      "title": "Timeless",
+      "author": "Wayne Stinnett",
+      "isbn": "9781544754840",
+      "yearRead": [
+        "2023"
+      ]
+    },
+    {
+      "title": "Fallen Series",
+      "author": "Wayne Stinnett",
+      "isbn": "9781517338039",
+      "yearRead": [
+        "2017",
+        "2017"
+      ]
+    },
+    {
+      "title": "Lost Charity",
+      "author": "Wayne Stinnett",
+      "isbn": "9781539113492",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Ruthless Charity",
+      "author": "Wayne Stinnett",
+      "isbn": "9781539113508",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Reckless Charity",
+      "author": "Wayne Stinnett",
+      "isbn": "9781539113515",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Enduring Charity",
+      "author": "Wayne Stinnett",
+      "isbn": "9781539113522",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Vigilent Charity",
+      "author": "Wayne Stinnett",
+      "isbn": "9781539113539",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Liable Charity",
+      "author": "Wayne Stinnett",
+      "isbn": "9781539113546",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "Elusive Charity",
+      "author": "Wayne Stinnett",
+      "isbn": "9781539113553",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Friends of the Devil",
+      "author": "Wayne Stinnett",
+      "isbn": "9781641971433",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "Steady She Goes",
+      "author": "Wayne Stinnett",
+      "isbn": "9781641971457",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "Deep Blue",
+      "author": "Wayne Stinnett",
+      "isbn": "9781641972300",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Dam Keeper",
+      "author": "Andrew Turpin",
+      "isbn": "9781913333223",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "A Cast of Falcons",
+      "author": "Sarah Yarwood-Lovett",
+      "isbn": "9781913333247",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "A Mischief of Rats",
+      "author": "Sarah Yarwood-Lovett",
+      "isbn": "9781913333209",
+      "yearRead": [
+        "2023",
+        "2023"
+      ]
+    },
+    {
+      "title": "The Falcon",
+      "author": "Isabella Maldonado",
+      "isbn": "9781641971181",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "A Killer's Game",
+      "author": "Isabella Maldonado",
+      "isbn": "9781641971198",
+      "yearRead": [
+        "2023",
+        "2023"
+      ]
+    },
+    {
+      "title": "The Quantum Curators and the Faberg\u00e9 Egg",
+      "author": "Eva St John",
+      "isbn": "9781912374333",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "The Quantum Curators and the Enemy Within",
+      "author": "Eva St John",
+      "isbn": "9781912374340",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "The Quantum Curators and the Missing Codex",
+      "author": "Eva St John",
+      "isbn": "9781912374357",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "On the Run",
+      "author": "Kerry J Donovan",
+      "isbn": "9781912634086",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "On the Rocks",
+      "author": "Kerry J Donovan",
+      "isbn": "9781912634093",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "On the Defensive",
+      "author": "Kerry J Donovan",
+      "isbn": "9781912634109",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "On the Attack",
+      "author": "Kerry J Donovan",
+      "isbn": "9781912634116",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "On the Money",
+      "author": "Kerry J Donovan",
+      "isbn": "9781912634123",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "On the Edge",
+      "author": "Kerry J Donovan",
+      "isbn": "9781912634130",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "On the Wing",
+      "author": "Kerry J Donovan",
+      "isbn": "9781912634147",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "On the Hunt",
+      "author": "Kerry J Donovan",
+      "isbn": "9781912634154",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "On the Outside",
+      "author": "Kerry J Donovan",
+      "isbn": "9781912634161",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "Perfect Record",
+      "author": "Kerry J Donovan",
+      "isbn": "9781912634178",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "Habitat Zero",
+      "author": "Christopher Cartwright",
+      "isbn": "9781641970023",
+      "yearRead": [
+        "2021"
+      ]
+    },
+    {
+      "title": "Dark Tomorrow",
+      "author": "Reece Hirsch",
+      "isbn": "9781642100221",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "The Adversary",
+      "author": "Reece Hirsch",
+      "isbn": "9781642100238",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Intrusion",
+      "author": "Reece Hirsch",
+      "isbn": "9781642100245",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Surveillance",
+      "author": "Reece Hirsch",
+      "isbn": "9781642100252",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Black Nowhere",
+      "author": "Reece Hirsch",
+      "isbn": "9781642100214",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Hard Hit",
+      "author": "JB Turner",
+      "isbn": "9781543625158",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Hard Shot",
+      "author": "JB Turner",
+      "isbn": "9781543625165",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Hard Target",
+      "author": "JB Turner",
+      "isbn": "9781543625172",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Hard Wired",
+      "author": "JB Turner",
+      "isbn": "9781543625189",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Hard Way",
+      "author": "JB Turner",
+      "isbn": "9781543625196",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Hard Fall",
+      "author": "JB Turner",
+      "isbn": "9781543625202",
+      "yearRead": [
+        "2020"
+      ]
+    },
+    {
+      "title": "Coming Dawn",
+      "author": "Steven Konkoly",
+      "isbn": "9781974497121",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "The Raid",
+      "author": "Steven Konkoly",
+      "isbn": "9781530919445",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "The Mountain",
+      "author": "Steven Konkoly",
+      "isbn": "9781530919452",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "Skystorm",
+      "author": "Steven Konkoly",
+      "isbn": "9781530919469",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "A Clean Kill",
+      "author": "Steve Konkoly",
+      "isbn": "9781957899035",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "A Hired Kill",
+      "author": "Steven Konkoly",
+      "isbn": "9781957899042",
+      "yearRead": [
+        "2025"
+      ]
+    },
+    {
+      "title": "OMEGA",
+      "author": "Steven Konkoly",
+      "isbn": "9798614287351",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "Dead Man's Grave",
+      "author": "Neil Lancaster",
+      "isbn": "9780008254701",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "The Apollo Muders",
+      "author": "Chris Hadfield",
+      "isbn": "9780316552602",
+      "yearRead": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "title": "Inferno",
+      "author": "Julie Kagawa",
+      "isbn": "9780373212361",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Legion",
+      "author": "Julie Kagawa",
+      "isbn": "9780373212378",
+      "yearRead": [
+        "2018"
+      ]
+    },
+    {
+      "title": "Summer Crush",
+      "author": "B. B. Griffith",
+      "isbn": "9781946506140",
+      "yearRead": [
+        "2018"
+      ]
+    },
+    {
+      "title": "Unicorn Rescue",
+      "author": "Keith Robinson",
+      "isbn": "9780998867971",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Sinister Roots",
+      "author": "Keith Robinson",
+      "isbn": "9780998867988",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "The Island Murder",
+      "author": "Sinclair Macleod",
+      "isbn": "9781910914230",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "Agent in the Dark",
+      "author": "Guy Stanton III",
+      "isbn": "9781494930448",
+      "yearRead": [
+        "2014"
+      ]
+    },
+    {
+      "title": "The Armchair Detective",
+      "author": "Ian Shimwell",
+      "isbn": "9781912184704",
+      "yearRead": [
+        "2014",
+        "2014"
+      ]
+    },
+    {
+      "title": "Five Minutes Late",
+      "author": "Rich Amooi",
+      "isbn": "9781682305574",
+      "yearRead": [
+        "2015",
+        "2015"
+      ]
+    },
+    {
+      "title": "Hazardous Duty",
+      "author": "Christy Barritt",
+      "isbn": "9781625261047",
+      "yearRead": [
+        "2015",
+        "2015"
+      ]
+    },
+    {
+      "title": "The Mystery of the Clockwork Sparrow",
+      "author": "Katherine Woodfine",
+      "isbn": "9780399167048",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Tapas, Carrot Cake and a Corpse",
+      "author": "Sherri Bryan",
+      "isbn": "9781530534495",
+      "yearRead": [
+        "2015"
+      ]
+    },
+    {
+      "title": "Dying Declaration",
+      "author": "Randy Singer",
+      "isbn": "9781401685455",
+      "yearRead": [
+        "2016",
+        "2016"
+      ]
+    },
+    {
+      "title": "A Blind Eye",
+      "author": "Jane Gorman",
+      "isbn": "9781250025944",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Death By A HoneyBee",
+      "author": "Abigail Keam",
+      "isbn": "9780983843427",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "The Phantom of New York Volume I",
+      "author": "A.L. Janney",
+      "isbn": "9781943634068",
+      "yearRead": [
+        "2019",
+        "2019"
+      ]
+    },
+    {
+      "title": "The Phantom of New York Volume II",
+      "author": "A.L. Janney",
+      "isbn": "9781943634075",
+      "yearRead": [
+        "2020",
+        "2020"
+      ]
+    },
+    {
+      "title": "What Happens In Vegas",
+      "author": "Mike Faricy",
+      "isbn": "9781540646890",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "The Holly Lin Series",
+      "author": "Robert Swartwood",
+      "isbn": "9781940233324",
+      "yearRead": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "title": "August Origins",
+      "author": "Alan Lee",
+      "isbn": "9781947756017",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Exiles",
+      "author": "Ashley Saunders",
+      "isbn": "9781944120058",
+      "yearRead": [
+        "2022"
+      ]
+    },
+    {
+      "title": "The Law of the Heart",
+      "author": "Boris Starling",
+      "isbn": "9780755347455",
+      "yearRead": [
+        "2021",
+        "2021"
+      ]
+    },
+    {
+      "title": "A Thyme To Die",
+      "author": "Jamie Lee Scott",
+      "isbn": "9781944747003",
+      "yearRead": [
+        "2017",
+        "2017"
+      ]
+    },
+    {
+      "title": "The Devil's Code",
+      "author": "Jeffrey Deaver",
+      "isbn": "9780446608961",
+      "yearRead": [
+        "2024"
+      ]
+    },
+    {
+      "title": "The Burning Throne",
+      "author": "Amish Tripathi",
+      "isbn": "9789356291851",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "The Immortal Hindus",
+      "author": "Pushpak",
+      "isbn": "9788193388631",
+      "yearRead": [
+        "2019"
+      ]
+    },
+    {
+      "title": "Murder in Paradise",
+      "author": "Greg Wilson",
+      "isbn": "9781542041768",
+      "yearRead": [
+        "2016",
+        "2016"
+      ]
+    },
+    {
+      "title": "Priceless",
+      "author": "Deborah Brown",
+      "isbn": "9781947018163",
+      "yearRead": [
+        "2023"
+      ]
+    },
+    {
+      "title": "Torch Scene",
+      "author": "Renee Pawlish",
+      "isbn": "9781943522037",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "The Lady Who Sang High",
+      "author": "Renee Pawlish",
+      "isbn": "9781943522044",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Insatiable",
+      "author": "Emily Kimelman",
+      "isbn": "9780983806217",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Dog Gone",
+      "author": "Mike Faricy",
+      "isbn": "9781544626710",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Last Shot",
+      "author": "Mike Faricy",
+      "isbn": "9781544626697",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Mr Swirlee",
+      "author": "Mike Faricy",
+      "isbn": "9781544626703",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Bite Me",
+      "author": "Mike Faricy",
+      "isbn": "9781544626680",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Bulldog",
+      "author": "Mike Faricy",
+      "isbn": "9781544626727",
+      "yearRead": [
+        "2016"
+      ]
+    },
+    {
+      "title": "Yellow Ribbon",
+      "author": "Mike Faricy",
+      "isbn": "9781544626734",
+      "yearRead": [
+        "2017"
+      ]
+    },
+    {
+      "title": "Triple Trouble",
+      "author": "Russell Blake",
+      "isbn": "9781502853143",
+      "yearRead": [
+        "2017",
+        "2017"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1281 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.9289,
+            37.3639
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "SJC",
+        "to": "LHR",
+        "from_name": "San Jose CA",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.7781,
+            40.6413
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "JFK",
+        "to": "LHR",
+        "from_name": "New York JFK",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -78.7225,
+            35.8776
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "RDU",
+        "to": "LHR",
+        "from_name": "Raleigh Durham",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -121.9289,
+            37.3639
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "SJC",
+        "from_name": "London Heathrow",
+        "to_name": "San Jose CA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            16.5692,
+            48.1102
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "VIE",
+        "from_name": "London Heathrow",
+        "to_name": "Vienna"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -80.9411,
+            35.214
+          ],
+          [
+            -122.3789,
+            37.6213
+          ]
+        ]
+      },
+      "properties": {
+        "from": "CLT",
+        "to": "SFO",
+        "from_name": "Charlotte",
+        "to_name": "San Francisco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -78.7225,
+            35.8776
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "RDU",
+        "from_name": "London Heathrow",
+        "to_name": "Raleigh Durham"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -78.7225,
+            35.8776
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "RDU",
+        "to": "LHR",
+        "from_name": "Raleigh Durham",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -80.287,
+            25.7959
+          ],
+          [
+            -56.0308,
+            -34.8384
+          ]
+        ]
+      },
+      "properties": {
+        "from": "MIA",
+        "to": "MVD",
+        "from_name": "Miami",
+        "to_name": "Montevideo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -78.7225,
+            35.8776
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "RDU",
+        "from_name": "London Heathrow",
+        "to_name": "Raleigh Durham"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -78.7225,
+            35.8776
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "RDU",
+        "to": "LHR",
+        "from_name": "Raleigh Durham",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -122.3789,
+            37.6213
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "SFO",
+        "from_name": "London Heathrow",
+        "to_name": "San Francisco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -95.3414,
+            29.9902
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "IAH",
+        "from_name": "London Heathrow",
+        "to_name": "Houston Bush"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -95.3414,
+            29.9902
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "IAH",
+        "to": "LHR",
+        "from_name": "Houston Bush",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -73.7781,
+            40.6413
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "JFK",
+        "from_name": "London Heathrow",
+        "to_name": "New York JFK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.9237,
+            59.6519
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "ARN",
+        "to": "LHR",
+        "from_name": "Stockholm Arlanda",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -78.7225,
+            35.8776
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "RDU",
+        "from_name": "London Heathrow",
+        "to_name": "Raleigh Durham"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            7.2159,
+            43.6584
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "NCE",
+        "from_name": "London Heathrow",
+        "to_name": "Nice"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -78.7225,
+            35.8776
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "RDU",
+        "from_name": "London Heathrow",
+        "to_name": "Raleigh Durham"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            55.3644,
+            25.2532
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "DXB",
+        "from_name": "London Heathrow",
+        "to_name": "Dubai"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.1903,
+            51.1481
+          ],
+          [
+            12.2389,
+            45.5053
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LGW",
+        "to": "VCE",
+        "from_name": "London Gatwick",
+        "to_name": "Venice Marco Polo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            2.5479,
+            49.0097
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "CDG",
+        "from_name": "London Heathrow",
+        "to_name": "Paris CDG"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.1903,
+            51.1481
+          ],
+          [
+            -84.2089,
+            9.9939
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LGW",
+        "to": "SJO",
+        "from_name": "London Gatwick",
+        "to_name": "San Jose Costa Rica"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.5479,
+            49.0097
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "CDG",
+        "to": "LHR",
+        "from_name": "Paris CDG",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -78.7225,
+            35.8776
+          ],
+          [
+            -80.9411,
+            35.214
+          ]
+        ]
+      },
+      "properties": {
+        "from": "RDU",
+        "to": "CLT",
+        "from_name": "Raleigh Durham",
+        "to_name": "Charlotte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            76.3989,
+            10.1518
+          ],
+          [
+            80.1694,
+            12.9941
+          ]
+        ]
+      },
+      "properties": {
+        "from": "COK",
+        "to": "MAA",
+        "from_name": "Kochi",
+        "to_name": "Chennai"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -78.7225,
+            35.8776
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "RDU",
+        "to": "LHR",
+        "from_name": "Raleigh Durham",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            16.5692,
+            48.1102
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "VIE",
+        "to": "LHR",
+        "from_name": "Vienna",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -80.287,
+            25.7959
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "MIA",
+        "to": "LHR",
+        "from_name": "Miami",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            2.5479,
+            49.0097
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "CDG",
+        "from_name": "London Heathrow",
+        "to_name": "Paris CDG"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            7.2159,
+            43.6584
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "NCE",
+        "to": "LHR",
+        "from_name": "Nice",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.5479,
+            49.0097
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "CDG",
+        "to": "LHR",
+        "from_name": "Paris CDG",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            17.9237,
+            59.6519
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "ARN",
+        "from_name": "London Heathrow",
+        "to_name": "Stockholm Arlanda"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -84.4277,
+            33.6407
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "ATL",
+        "from_name": "London Heathrow",
+        "to_name": "Atlanta Hartsfield"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -56.0308,
+            -34.8384
+          ],
+          [
+            -80.287,
+            25.7959
+          ]
+        ]
+      },
+      "properties": {
+        "from": "MVD",
+        "to": "MIA",
+        "from_name": "Montevideo",
+        "to_name": "Miami"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            76.3989,
+            10.1518
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "COK",
+        "from_name": "London Heathrow",
+        "to_name": "Kochi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -78.7225,
+            35.8776
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "RDU",
+        "to": "LHR",
+        "from_name": "Raleigh Durham",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            11.1004,
+            60.1939
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "OSL",
+        "to": "LHR",
+        "from_name": "Oslo",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            16.5692,
+            48.1102
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "VIE",
+        "from_name": "London Heathrow",
+        "to_name": "Vienna"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            12.2389,
+            45.5053
+          ],
+          [
+            -0.1903,
+            51.1481
+          ]
+        ]
+      },
+      "properties": {
+        "from": "VCE",
+        "to": "LGW",
+        "from_name": "Venice Marco Polo",
+        "to_name": "London Gatwick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -115.1487,
+            36.084
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LAS",
+        "to": "LHR",
+        "from_name": "Las Vegas",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -78.7225,
+            35.8776
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "RDU",
+        "to": "LHR",
+        "from_name": "Raleigh Durham",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -78.7225,
+            35.8776
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "RDU",
+        "from_name": "London Heathrow",
+        "to_name": "Raleigh Durham"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -78.7225,
+            35.8776
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "RDU",
+        "from_name": "London Heathrow",
+        "to_name": "Raleigh Durham"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -115.1487,
+            36.084
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "LAS",
+        "from_name": "London Heathrow",
+        "to_name": "Las Vegas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            12.6561,
+            55.6186
+          ],
+          [
+            11.1004,
+            60.1939
+          ]
+        ]
+      },
+      "properties": {
+        "from": "CPH",
+        "to": "OSL",
+        "from_name": "Copenhagen",
+        "to_name": "Oslo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.3789,
+            37.6213
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "SFO",
+        "to": "LHR",
+        "from_name": "San Francisco",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -84.4277,
+            33.6407
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "ATL",
+        "to": "LHR",
+        "from_name": "Atlanta Hartsfield",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -123.1219,
+            49.1939
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "YVR",
+        "from_name": "London Heathrow",
+        "to_name": "Vancouver"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -78.7225,
+            35.8776
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "RDU",
+        "from_name": "London Heathrow",
+        "to_name": "Raleigh Durham"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            16.5692,
+            48.1102
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "VIE",
+        "to": "LHR",
+        "from_name": "Vienna",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            -80.287,
+            25.7959
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "MIA",
+        "from_name": "London Heathrow",
+        "to_name": "Miami"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            80.1694,
+            12.9941
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "MAA",
+        "to": "LHR",
+        "from_name": "Chennai",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            55.3644,
+            25.2532
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "DXB",
+        "to": "LHR",
+        "from_name": "Dubai",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.3789,
+            37.6213
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "SFO",
+        "to": "LHR",
+        "from_name": "San Francisco",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -114.0131,
+            51.1214
+          ],
+          [
+            -0.4543,
+            51.47
+          ]
+        ]
+      },
+      "properties": {
+        "from": "YYC",
+        "to": "LHR",
+        "from_name": "Calgary",
+        "to_name": "London Heathrow"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -84.2089,
+            9.9939
+          ],
+          [
+            -0.1903,
+            51.1481
+          ]
+        ]
+      },
+      "properties": {
+        "from": "SJO",
+        "to": "LGW",
+        "from_name": "San Jose Costa Rica",
+        "to_name": "London Gatwick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.4543,
+            51.47
+          ],
+          [
+            12.6561,
+            55.6186
+          ]
+        ]
+      },
+      "properties": {
+        "from": "LHR",
+        "to": "CPH",
+        "from_name": "London Heathrow",
+        "to_name": "Copenhagen"
+      }
+    }
+  ]
+}

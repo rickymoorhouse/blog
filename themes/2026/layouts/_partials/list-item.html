@@ -1,0 +1,65 @@
+{{ if eq "flight" .Params.layout }}
+  {{ partial "flight" . }} 
+{{ else if eq "microblog" .Type }}
+<article class="item microblog">
+  <div class="microblog-content">
+    {{ .Content }}
+  </div>
+  <div class="microblog-meta">
+    <a href="{{ .RelPermalink }}">{{ .Date.Format "15:04 • 2 Jan 2006" }}</a>
+  </div>
+</article>
+{{ else }}
+<article class="item {{ .Type }}">
+  {{ partial "item-header" . }} 
+  {{ if or (in .Params.tags "photos") (in .Params.tags "art")}}
+    {{ $.Scratch.Set "images" "False" }}
+    {{ $.Scratch.Set "link" .RelPermalink }}
+    {{ if eq 1 (.Resources.ByType "image" | len) }}
+    {{ $.Scratch.Set "number" "single" }}
+    {{ else }}
+    {{ $.Scratch.Set "number" "multi" }}
+    {{ end }}
+    <div class="Image {{ $.Scratch.Get "number" }}">
+      {{ if .Params.featured }}
+        {{ with .Resources.Match .Params.featured }}
+          {{ range first 1 . }}
+            {{ $.Scratch.Set "images" "True" }} 
+            {{ $image := .Fill "586x586" }}
+            <a class="glightbox" {{ if (isset .Exif.Tags "ImageDescription") }}data-title="{{ .Exif.Tags.ImageDescription }}"{{ end }} href="{{ .RelPermalink }}">
+              <img src="{{ $image.RelPermalink }}" alt=".">
+            </a>
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ with .Resources.ByType "image" }}
+          {{ range first 6 . }}
+            {{ $.Scratch.Set "images" "True" }} 
+            {{ $image := .Fill "586x586" }} 
+            {{ if (isset .Exif.Tags "ImageDescription") }}
+            <a class="glightbox" data-title="{{ .Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}">
+            </a>
+              <img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}">
+            {{ else }}
+            <a class="glightbox" href="{{ $image.RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end}}
+      {{ with .Resources.ByType "image" }}
+        {{ range (after 1  .) }}
+          {{ if (isset .Exif.Tags "ImageDescription") }}
+            <a class="glightbox" data-title="{{ .Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}"></a>
+          {{ else }}
+            <a class="glightbox" href="{{ .RelPermalink }}"></a>
+          {{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
+{{ else }}
+{{ end }}
+  <div class="text-left">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

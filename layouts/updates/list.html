@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<main>
+  <div>
+   <h1>{{ .Title }}</h1>
+        <ul>
+            {{ range where .Pages "Type" "in" (slice "blog" "photos" "flights") }}
+                {{ .Render "li"}}
+            {{ end }}
+        </ul>
+  </div>
+</main>
+{{ partial "footer.html" . }}

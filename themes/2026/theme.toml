@@ -1,0 +1,10 @@
+name = "Ricky 2026"
+license = "MIT"
+description = "Clean, modern personal blog theme powered by Hugo"
+tags = ["blog", "minimal", "personal", "responsive", "modern"]
+features = ["responsive", "dark-mode", "search"]
+min_version = "0.139"
+
+[author]
+  name = "Ricky Moorhouse"
+  homepage = "https://rickymoorhouse.uk/"

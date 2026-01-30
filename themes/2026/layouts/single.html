@@ -1,0 +1,56 @@
+{{ partial "header" . }}
+{{ $.Scratch.Set "template" "single"}}
+<main class="{{ .Type }} single">
+    <article class="h-entry">
+    {{ partial "item-header" . }}
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{{ if eq .Type "blog" }}TechArticle{{ else }}Article{{ end }}",
+      "headline": "{{ .Title }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.author }}",
+        "url": "{{ .Site.BaseURL }}"
+      },
+      "datePublished": "{{ .Date.Format "2006-01-02" }}",
+      {{ if .Lastmod }}"dateModified": "{{ .Lastmod.Format "2006-01-02" }}",{{ end }}
+      "description": "{{ .Description }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "IBM",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ .Site.BaseURL }}logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
+      }
+    }
+    </script>
+
+    {{ if .Params.zoom }}
+    {{ partial "map" . }}
+    {{ end }}
+    <div class="text-left e-content">{{ .Content }}</div>
+
+    <!-- related posts with the same tags -->
+    {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+
+    {{ if .Params.hideImages }}{{ else }}
+    {{ .Params.type }}
+    <div class="featuredPhotos">
+        {{ with .Resources.ByType "image" }}
+            {{ range . }}
+                {{ partial "photo.html" . }}
+            {{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
+    <a href="https://rickymoorhouse.uk/" rel="author" class="p-author h-card"></a>
+</article>
+</main>
+{{ partial "footer.html" . }}
