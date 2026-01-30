@@ -7,7 +7,7 @@ permalinks:
   microblog: "/microblog/:slug/"
 params:
     author: "Ricky Moorhouse"
-    description: "Welcome to my corner of the web where I share things I find interesting. I build and maintain cloud services at IBM, helping customers focus on what they do best. At home I'm usually enjoying time with family, playing with the dog, or snapping photos. Hope you find something useful here."
+    description: "I’m a Cloud Architect at IBM, designing and operating API Connect cloud services on AWS. I focus on making global API platforms reliable, observable, and easy for teams to deploy to. Outside of work, I enjoy spending time with family, playing with the dog, or being behind a camera. Welcome to my corner of the web - I hope you find something interesting or useful here."
     githubUsername: "rickymoorhouse"
     build: "main"
     mainSections: ["blog", "flights", "photos", "microblog"]
