@@ -844,6 +844,43 @@ main.landing section {
 }
 
 /* -----------------------------------------------------------------------------
+   Very Small Screens (Compact phones)
+   -------------------------------------------------------------------------- */
+@media (max-width: 400px) {
+  .side {
+    flex-direction: column;
+    padding: var(--space-sm);
+    gap: var(--space-xs);
+  }
+
+  .side #sitetitle {
+    margin: 0;
+    font-size: var(--text-xl);
+    text-align: center;
+    width: 100%;
+  }
+
+  .side nav {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .side nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #theme-toggle,
+  #search-toggle {
+    margin-left: var(--space-xs);
+  }
+
+  main {
+    padding-top: calc(160px + var(--space-lg)); /* Double header height */
+  }
+}
+
+/* -----------------------------------------------------------------------------
    Microblog Styles
    -------------------------------------------------------------------------- */
 article.microblog {
