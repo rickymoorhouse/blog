@@ -35,11 +35,11 @@
   --space-2xl: 3rem;
 
   /* Typography */
-  --font-sans: "Courier Prime Sans", "Courier Prime Sans Light", system-ui, -apple-system, sans-serif;
   --font-serif: "IBM Plex Serif", Georgia, serif;
   --font-mono: "IBM Plex Mono", monospace;
   --font-body: "IBM Plex Serif", Georgia, serif;
   --font-heading: "IBM Plex Sans", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
@@ -90,7 +90,7 @@
 }
 
 html {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
@@ -200,7 +200,7 @@ svg.icon {
   text-orientation: mixed;
   margin: var(--space-md) 0;
   font-size: var(--text-lg);
-  font-family: var(--font-sans);
+  font-family: var(--font-heading);
   white-space: nowrap;
 }
 
