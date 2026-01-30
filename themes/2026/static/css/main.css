@@ -200,6 +200,7 @@ svg.icon {
   text-orientation: mixed;
   margin: var(--space-md) 0;
   font-size: var(--text-lg);
+  font-family: var(--font-sans);
   white-space: nowrap;
 }
 
@@ -622,8 +623,12 @@ code {
 .search-modal.hidden {
   display: none;
 }
-
+.search-modal input {
+z-index: 2001;
+background: red;
+}
 .search-container {
+  opacity: 0.5;
   background: var(--bg-surface);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-lg);
@@ -846,18 +851,18 @@ main.landing section {
 /* -----------------------------------------------------------------------------
    Very Small Screens (Compact phones)
    -------------------------------------------------------------------------- */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .side {
-    flex-direction: column;
-    padding: var(--space-sm);
+
+/*    flex-direction: column;
+    padding: var(--space-xs);
     gap: var(--space-xs);
-  }
+ */ }
 
   .side #sitetitle {
     margin: 0;
     font-size: var(--text-xl);
     text-align: center;
-    width: 100%;
   }
 
   .side nav {
@@ -876,7 +881,7 @@ main.landing section {
   }
 
   main {
-    padding-top: calc(160px + var(--space-lg)); /* Double header height */
+    padding-top: calc(120px + var(--space-sm)); /* Double header height */
   }
 }
 
