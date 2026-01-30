@@ -5,7 +5,7 @@ menu:
     weight: 100
 ---
 
-I live in the south of England with my wife, two children and our dog Nova. I work at IBM as a Cloud Architect for API Connect cloud services. I enjoy running, walking, photography and spending time with my family.
+I live in the south of England with my wife, two kids and our dog Nova. By day I'm a Cloud Architect at IBM, working on API Connect. By other times you'll find me running, walking, taking photos, or exploring with family. Welcome to my corner of the web — hope you find something interesting here.
 
 {{<contact>}}
 
