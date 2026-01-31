@@ -4,7 +4,7 @@
     <h1>{{ .Title }}</h1>
     {{ .Content }} {{/* This renders any text you put in _index.md */}}
     {{/* Filter for both posts and micro content */}}
-    {{ $stream := where .Site.RegularPages "Section" "in" (slice "blog" "microblog") }}
+    {{ $stream := where .Site.RegularPages "Section" "in" (slice "blog" "photos" "microblog" "flights") }}
     
     {{ range $stream.ByDate.Reverse }}
       <article class="feed-item type-{{ .Type }}">

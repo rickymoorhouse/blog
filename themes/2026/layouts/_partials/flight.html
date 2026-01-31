@@ -1,7 +1,6 @@
 <!-- Flight Information Display -->
 {{ $timeFormat := "15:04" }}
 {{ $dateFormat := .Site.Params.dateFormat }}
-
 <aside class="flight" itemscope itemtype="https://schema.org/Flight">
     <!-- Flight Date -->
     <h5>
@@ -12,11 +11,12 @@
             {{ if .Params.date }}{{ .Params.date | dateFormat $dateFormat }}{{ end }}
         </time>
     </h5>
-
+    <div class="flight-summary">
     {{ if .Params.flights }}
         <!-- Multiple flight segments -->
         {{ range .Params.flights }}
-            <div class="airport" itemprop="departureAirport" itemscope itemtype="https://schema.org/Airport">
+            {{ if .airport}}
+            <div class="flight-airport" itemprop="departureAirport" itemscope itemtype="https://schema.org/Airport">
                 {{ if .label }}<div>{{ .label }}</div>{{ end }}
                 <strong itemprop="iataCode">{{ .airport }}</strong>
                 {{ if .arrive }}<br>
@@ -30,9 +30,9 @@
                     </time>
                 {{ end }}
             </div>
-
+            {{ end}}
             {{ if .flight }}
-            <div class="plane" itemprop="flight" itemscope itemtype="https://schema.org/Flight">
+            <div class="flight-plane" itemprop="flight" itemscope itemtype="https://schema.org/Flight">
                 <a
                     href="#flight-{{ .flight }}"
                     title="{{ .aircraft }}"
@@ -40,18 +40,19 @@
                 >
                     <span aria-hidden="true">&#x2708;</span>
                 </a><br>
-                <small itemprop="name">
+                <small class="flight-meta" itemprop="name">
                     <span itemprop="airline">{{ .airline }}</span>
                     <span itemprop="flightNumber">{{ .flight }}</span>
                 </small>
             </div>
             {{ end }}
         {{ end }}
+    </div>
     {{ else }}
         <!-- Single flight with optional via -->
         {{ if and .Params.from .Params.to }}
             <!-- From Airport -->
-            <div class="from airport" itemprop="departureAirport" itemscope itemtype="https://schema.org/Airport">
+            <div class="flight-airport" itemprop="departureAirport" itemscope itemtype="https://schema.org/Airport">
                 {{ i18n "flight.from" | default "from" }}<br>
                 <strong itemprop="iataCode">{{ .Params.from }}</strong><br>
                 {{ if .Params.depart }}
@@ -65,7 +66,7 @@
             </div>
 
             <!-- Flight Info -->
-            <div class="plane" itemprop="flight" itemscope itemtype="https://schema.org/Flight">
+            <div class="flight-plane" itemprop="flight" itemscope itemtype="https://schema.org/Flight">
                 <a
                     href="#flight-{{ .Params.flight }}"
                     title="{{ .Params.aircraft }}"
@@ -73,7 +74,7 @@
                 >
                     <span aria-hidden="true">&#x2708;</span>
                 </a><br>
-                <small itemprop="name">
+                <small class="flight-meta" itemprop="name">
                     <span itemprop="airline">{{ .Params.airline }}</span>
                     <span itemprop="flightNumber">{{ .Params.flight }}</span>
                 </small>
@@ -81,7 +82,7 @@
 
             <!-- Via Airport (if present) -->
             {{ if .Params.via }}
-                <div class="via airport" itemprop="arrivalAirport" itemscope itemtype="https://schema.org/Airport">
+                <div class="flight-airport" itemprop="arrivalAirport" itemscope itemtype="https://schema.org/Airport">
                     {{ i18n "flight.via" | default "via" }}<br>
                     <strong itemprop="iataCode">{{ .Params.via.airport }}</strong><br>
                     {{ if .Params.via.arrive }}
@@ -103,7 +104,7 @@
                 </div>
 
                 <!-- Second flight for via -->
-                <div class="plane" itemprop="flight" itemscope itemtype="https://schema.org/Flight">
+                <div class="flight-plane" itemprop="flight" itemscope itemtype="https://schema.org/Flight">
                     <a
                         href="#flight-{{ .Params.flight }}"
                         title="{{ .Params.aircraft }}"
@@ -111,7 +112,7 @@
                     >
                         <span aria-hidden="true">&#x2708;</span>
                     </a><br>
-                    <small itemprop="name">
+                    <small class="flight-meta" itemprop="name">
                         <span itemprop="airline">{{ .Params.airline }}</span>
                         <span itemprop="flightNumber">{{ .Params.flight }}</span>
                     </small>
@@ -119,7 +120,7 @@
             {{ end }}
 
             <!-- To Airport -->
-            <div class="to airport" itemprop="arrivalAirport" itemscope itemtype="https://schema.org/Airport">
+            <div class="flight-airport" itemprop="arrivalAirport" itemscope itemtype="https://schema.org/Airport">
                 {{ i18n "flight.to" | default "to" }}<br>
                 <strong itemprop="iataCode">{{ .Params.to }}</strong><br>
                 {{ if .Params.arrive }}

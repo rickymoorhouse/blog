@@ -1,5 +1,6 @@
 {{ partial "header" . }}
-
+	{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ if eq .Paginator.PageNumber 1 }}
 <main class="landing">
   <!-- Hero Section -->
   <section class="hero">
@@ -73,27 +74,34 @@
         {{ if eq "photos" .Type }}{{ $category = "Visual" }}
         {{ else if eq "blog" .Type }}{{ $category = "Technical" }}
         {{ end }}
-        <li>
-          {{ if or (eq "microblog" .Type) (eq "flight" .Params.layout) }}
-            <span class="no-link">
-              {{ if eq "microblog" .Type }}
-                <span class="post-title microblog-title">{{ .Content }}</span>
-              {{ else if eq "flight" .Params.layout }}
-                <span class="post-title">{{ .Params.from }} → {{ .Params.to }} ({{ .Params.airline }} {{ .Params.flight }})</span>
-              {{ end }}
-              <span class="post-date">— {{ .Date.Format "2 January 2006" }}</span>
-            </span>
-          {{ else }}
-            <a href="{{ .Permalink }}">
-              <span class="post-title">{{ .Title }}</span>
-              <span class="post-date">— {{ .Date.Format "2 January 2006" }}</span>
-            </a>
-          {{ end }}
+        {{ if or (eq "microblog" .Type) (eq "flight" .Params.layout) }}
+        <li class="no-link">
+          <span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span><br />
+            {{ if eq "microblog" .Type }}
+              {{ .Content }}
+            {{ else if eq "flight" .Params.layout }}
+              <span class="post-title flight-airport"><strong>{{ .Params.from }}</strong> - {{ .Params.airline }} {{ .Params.flight }} - <strong>{{ .Params.to }}</strong></span>
+            {{ end }}<br />
+        </li> 
+        {{ else }}
+        <li class="link">
+          <span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span><br />
+          <a href="{{ .Permalink }}">
+            <span class="post-title">{{ .Title }}</span>
+          </a><br />
         </li>
+        {{ end }}
       {{ end }}
     </ul>
     <a href="/stream/" class="view-all">View all posts →</a>
+    	{{ partial "paginator" . }}
   </section>
+  {{ else }}
+  <main>
+  	{{ partial "paginator" . }}
+      {{ range (.Paginator 10).Pages  }} {{ partial "list-item" . }} {{ end }}
+    {{ partial "paginator" . }}
+  {{ end }}
 </main>
 
 <footer>
