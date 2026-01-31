@@ -1,0 +1,40 @@
+        {{ $category := "" }}
+        {{ if eq "photos" .Type }}{{ $category = "Visual" }}
+        {{ else if eq "blog" .Type }}{{ $category = "Technical" }}
+        {{ end }}
+        {{ if or (eq "microblog" .Type) (eq "flight" .Params.layout) }}
+        <li class="no-link">
+          <span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span><br />
+            {{ if eq "microblog" .Type }}
+              {{ .Content }}
+            {{ else if eq "flight" .Params.layout }}
+              <span class="post-title flight-airport"><strong>{{ .Params.from }}</strong> - {{ .Params.airline }} {{ .Params.flight }} - <strong>{{ .Params.to }}</strong></span>
+            {{ end }}<br />
+        </li> 
+        {{ else }}
+        {{ if eq "photos" .Type }}
+        <li class="link">
+          <span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span><br />
+          <a href="{{ .Permalink }}">
+            {{ $page := . }}
+            {{ if .Resources.ByType "image" }}
+              {{ with .Resources.GetMatch .Params.featured | default (index (.Resources.ByType "image") 0) }}
+                {{ $image := .Fill "400x250 Center" }}
+                <div class="photo-image-wrapper">
+                  <img src="{{ $image.Permalink }}" class="featured-image" />
+                  <div class="photo-overlay">
+                    <p>{{ $page.Title }}</p>
+                  </div>
+                </div>
+              {{ end }}
+            {{ end }}</a>
+        </li>
+        {{ else }}
+        <li class="link">
+          <span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span><br />
+          <a href="{{ .Permalink }}">
+            <span class="post-title">{{ .Title }}</span>
+          </a><br />
+        </li>
+        {{ end }}
+        {{ end }}

@@ -407,7 +407,8 @@ footer p {
 
 .post-date {
   color: var(--text-muted);
-  float: right;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
   white-space: nowrap;
 }
 
@@ -420,11 +421,7 @@ footer p {
   font-size: var(--text-sm);
 }
 
-.post-date {
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  white-space: nowrap;
-}
+
 
 /* -----------------------------------------------------------------------------
    Blog Post Layout
@@ -705,9 +702,21 @@ background: red;
 /* -----------------------------------------------------------------------------
    Featured & Recent Posts
    -------------------------------------------------------------------------- */
-main.landing section {
-  padding: var(--space-md) 0;
+main.landing {
+  display: grid;
+  grid-gap: var(--space-md);
+  grid-template-columns: calc(60vw - 40pt) calc(30vw - var(--space-md));  
 }
+section.hero {
+  grid-column: 1 / span 1;
+}
+section.featured {
+  grid-column: 1;
+}
+section.recent-posts {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+} 
 .section-header {
   text-align: center;
   margin: var(--space-lg) 0 var(--space-md);
@@ -775,6 +784,34 @@ main.landing section {
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
+.photo-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.photo-overlay {
+  position: absolute;
+  background: rgba(0,0,0,0.5);  
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md);
+  color: white;
+  transition: opacity var(--transition-normal);
+}
+@media (pointer: fine) {
+  .photo-overlay {
+    opacity: 0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+a:hover .photo-overlay {
+  opacity: 1;
+}
+
 
 .view-all {
   display: block;
@@ -836,7 +873,14 @@ main.landing section {
     margin-left: 0;
     padding-top: calc(80px + var(--space-lg));
   }
-
+  main section.hero,
+  main section.featured,
+  main section.recent-posts {
+    grid-column: 1 / span 2;
+  }
+  main section.recent-posts {
+    grid-row: auto;
+  } 
   .hero .bio {
     font-size: var(--text-base);
   }

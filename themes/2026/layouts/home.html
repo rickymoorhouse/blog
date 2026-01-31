@@ -68,39 +68,22 @@
   <!-- Recent Posts -->
   <section class="recent-posts">
     <h2>Recent Posts</h2>
+  	{{ partial "paginator" . }}
     <ul class="post-list">
       {{ range first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-        {{ $category := "" }}
-        {{ if eq "photos" .Type }}{{ $category = "Visual" }}
-        {{ else if eq "blog" .Type }}{{ $category = "Technical" }}
-        {{ end }}
-        {{ if or (eq "microblog" .Type) (eq "flight" .Params.layout) }}
-        <li class="no-link">
-          <span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span><br />
-            {{ if eq "microblog" .Type }}
-              {{ .Content }}
-            {{ else if eq "flight" .Params.layout }}
-              <span class="post-title flight-airport"><strong>{{ .Params.from }}</strong> - {{ .Params.airline }} {{ .Params.flight }} - <strong>{{ .Params.to }}</strong></span>
-            {{ end }}<br />
-        </li> 
-        {{ else }}
-        <li class="link">
-          <span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span><br />
-          <a href="{{ .Permalink }}">
-            <span class="post-title">{{ .Title }}</span>
-          </a><br />
-        </li>
-        {{ end }}
+        {{ partial "short-list-item.html" . }}
       {{ end }}
     </ul>
+    {{ partial "paginator" . }}
     <a href="/stream/" class="view-all">View all posts →</a>
-    	{{ partial "paginator" . }}
   </section>
   {{ else }}
   <main>
+    <ul class="post-list">
   	{{ partial "paginator" . }}
-      {{ range (.Paginator 10).Pages  }} {{ partial "list-item" . }} {{ end }}
+      {{ range (.Paginator 10).Pages  }} {{ partial "short-list-item" . }} {{ end }}
     {{ partial "paginator" . }}
+    </ul>
   {{ end }}
 </main>
 

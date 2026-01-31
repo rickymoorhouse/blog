@@ -4,12 +4,12 @@
     <h1>{{ .Title }}</h1>
     {{ .Content }} {{/* This renders any text you put in _index.md */}}
     {{/* Filter for both posts and micro content */}}
-    {{ $stream := where .Site.RegularPages "Section" "in" (slice "blog" "photos" "microblog" "flights") }}
+    {{ $stream := where .Site.RegularPages "Section" "in" site.Params.MainSections }}
     
     {{ range $stream.ByDate.Reverse }}
-      <article class="feed-item type-{{ .Type }}">
-        {{ partial "list-item.html" . }}
-      </article>
+      <ul class="post-list">
+        {{ partial "short-list-item.html" . }}
+      </ul>
     {{ end }}
   </main>
 
