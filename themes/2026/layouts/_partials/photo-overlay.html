@@ -1,0 +1,19 @@
+{{ $title := .Title}}
+{{ $date := .Date.Format "2 Jan 2006"}}
+{{ with .Resources.Match .Params.featured }}
+  {{ range first 1 . }}
+    {{ $.Scratch.Set "images" "True" }} 
+    {{ $image := .Fill "586x586" }}
+    {{ if (isset .Exif.Tags "ImageDescription") }}
+    {{ $title := .Exif.Tags.ImageDescription}}
+    {{ end }}
+    <a class="glightbox" {{ if (isset .Exif.Tags "ImageDescription") }}data-title="{{ .Exif.Tags.ImageDescription }}"{{ end }} href="{{ .RelPermalink }}">
+        <div class="photo-image-wrapper">
+            <img src="{{ .RelPermalink }}" />
+            <div class="photo-overlay">
+            <p>{{ $title }} <br /><span class="post-date">{{ $date }}</span></p>
+            </div>
+        </div>
+    </a>
+  {{ end }}
+{{ end }}
