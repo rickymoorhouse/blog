@@ -150,11 +150,10 @@ p + h3 {
 }
 
 /* Pagination */
-div.pages { width: 100%;}
-div.pages .next, div.pages .previous { width: 45%; display: inline-block;}
+div.pages { width: 100%; display: flex;}
+div.pages .next { text-align: right;}
+div.pages .previous { flex-grow: 1;}
 div.pages svg {width: 1em; height: 1em; vertical-align: middle;}
-div.pages .next {text-align: right;}
-div.pages .previous{text-align: left;}
 
 svg.icon {
   width: 1em;
@@ -274,12 +273,10 @@ svg.icon {
 
 /* Main Content - offset for vertical sidebar */
 main {
-  padding-left: var(--space-lg);
+  padding-left: var(--space-md);
   max-width: 100%;
   margin-left: var(--sidebar-width);
   min-height: 100vh;
-}
-main.single {
   margin-top: var(--space-lg);
 }
 #map {
@@ -917,7 +914,7 @@ a:hover .photo-overlay {
   main {
     margin: var(--space-sm);
     padding-top: calc(40px + var(--space-lg));
-    padding-left: var(--space-sm);
+    padding-left: var(--space-xs);
   }
   main.landing {
     grid-template-columns: calc(50vw - var(--space-lg)) calc(50vw - var(--space-lg));
@@ -996,7 +993,7 @@ a:hover .photo-overlay {
   
   main {
     padding-top: calc(120px + var(--space-sm)); /* Double header height */
-    padding-left: var(--space-md);
+    padding-left: var(--space-xs);
   }
 }
 

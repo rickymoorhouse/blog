@@ -1,9 +1,9 @@
 {{ partial "header" . }}
 
 <main class="{{ .Type }}">
-    <section>
-    <h2>{{ .Title }}</h2>
-    {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
+    <section class="">
+    <h1>{{ .Title }}</h1>
+    {{ range (.Paginator 15).Pages }} {{ partial "list-item" . }} {{ end }}
 {{ partial "paginator" . }}
 </section>
 
