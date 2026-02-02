@@ -1,5 +1,4 @@
 ---
-title: "First microblog post"
 date: 2026-01-26T07:15:00Z
 draft: false
 ---
