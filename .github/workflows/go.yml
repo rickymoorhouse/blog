@@ -36,6 +36,7 @@ jobs:
         run: | 
           $HOME/hugo
           $HOME/pagefind
+          python3 scripts/generate_flights.py
 
       - name: Deploy to Bunny
         uses: R-J-dev/bunny-deploy@v2.0.6 # Select the version you wish to use
