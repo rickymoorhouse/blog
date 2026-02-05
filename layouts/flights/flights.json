@@ -1,0 +1,27 @@
+{{- /* layouts/flights/flights.json */ -}}
+{{- $section := where .Site.RegularPages "Section" "flights" -}}
+{{- $.Scratch.Add "features" slice -}}
+{{- range $section -}}
+{{- $from := index .Site.Data.airports .Params.from -}}
+{{- $to := index .Site.Data.airports .Params.to -}}
+{{- if and $from $to -}}
+{{- $.Scratch.Add "features" (dict
+  "type" "Feature"
+  "geometry" (dict
+    "type" "LineString"
+    "coordinates" (slice (slice $from.lng $from.lat) (slice $to.lng $to.lat))
+  )
+  "properties" (dict
+    "from" .Params.from
+    "to" .Params.to
+    "from_name" $from.name
+    "to_name" $to.name
+    "date" .Params.date
+    "year" (.Params.date | time.AsTime | dateFormat "2006")
+    "airline" .Params.airline
+    "flight" .Params.flight
+  )
+) -}}
+{{- end -}}
+{{- end -}}
+{{- dict "type" "FeatureCollection" "features" ($.Scratch.Get "features") | jsonify -}}

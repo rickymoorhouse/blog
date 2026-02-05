@@ -35,6 +35,20 @@
         margin: 5px 0;
         cursor: pointer;
         }
+        .year-filter {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+        }
+        .year-filter label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        }
+        .year-filter select {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 5px;
+        }
         @media (prefers-color-scheme: dark) {
           div.page-content, .map-controls {
             background-color: #222;
@@ -47,7 +61,10 @@
           .mapboxgl-popup-content {
             background: #222;
             color: #ccc;
-          }          
+          }
+          .year-filter {
+            border-top-color: #444;
+          }
         }
 
         footer { display: none;}
@@ -56,7 +73,7 @@
       <div class="site-content" id="map">
         <span class="mapbox-maplogo"></span>
       </div>
-      
+
       <!-- Map layer controls -->
       <div class="map-controls">
         <label>
@@ -67,8 +84,15 @@
           <input type="checkbox" id="toggle-places" checked>
           Show Places
         </label>
+        <div class="year-filter">
+          <label for="year-select">Filter by Year:</label>
+          <select id="year-select">
+            <option value="all">All Years</option>
+          </select>
+          <button id="clear-filters" style="display:none;">Clear Filters</button>
+        </div>
       </div>
-      
+
       <!-- site-content -->
         <div class="page-content">
         {{ .Content }}
@@ -91,10 +115,12 @@ var map = new mapboxgl.Map({
   zoom: 2 // starting zoom
 });
 
+var allFlightData = null;
+
 map.on('load', function() {
   // Places layer
   map.addSource('points', {
-    type: 'geojson', 
+    type: 'geojson',
     data: '{{ .Params.geojson }}',
     cluster: false,
     clusterMaxZoom: 14,
@@ -113,9 +139,9 @@ map.on('load', function() {
   // Flights layer - line routes
   map.addSource('flights', {
     type: 'geojson',
-    data: '/map/flights.json'
+    data: '/flights.json'
   });
-  
+
   map.addLayer({
     id: 'flight-routes',
     type: 'line',
@@ -131,6 +157,15 @@ map.on('load', function() {
       'line-dasharray': [2, 2]
     }
   });
+
+  // Load all flight data and populate year filter
+  fetch('/flights.json')
+    .then(response => response.json())
+    .then(data => {
+      allFlightData = data;
+      populateYearFilter(data);
+    })
+    .catch(error => console.error('Error loading flights:', error));
 
   var popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true});
 
@@ -156,7 +191,7 @@ map.on('load', function() {
     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
     }
-  
+
     popup.setLngLat(coordinates)
       .setHTML(content)
       .addTo(map);
@@ -165,6 +200,54 @@ map.on('load', function() {
       map.getCanvas().style.cursor = '';
       popup.remove();
   });
+});
+
+// Populate year dropdown
+function populateYearFilter(data) {
+  const years = new Set();
+  data.features.forEach(feature => {
+    if (feature.properties.year) {
+      years.add(feature.properties.year);
+    }
+  });
+
+  const select = document.getElementById('year-select');
+  Array.from(years).sort().reverse().forEach(year => {
+    const option = document.createElement('option');
+    option.value = year;
+    option.textContent = year;
+    select.appendChild(option);
+  });
+
+  select.addEventListener('change', filterFlights);
+}
+
+// Filter flights by year
+function filterFlights() {
+  const selectedYear = document.getElementById('year-select').value;
+
+  if (!allFlightData) return;
+
+  let filteredData;
+
+  if (selectedYear === 'all') {
+    filteredData = allFlightData;
+    document.getElementById('clear-filters').style.display = 'none';
+  } else {
+    filteredData = {
+      type: 'FeatureCollection',
+      features: allFlightData.features.filter(f => f.properties.year === selectedYear)
+    };
+    document.getElementById('clear-filters').style.display = 'inline';
+  }
+
+  map.getSource('flights').setData(filteredData);
+}
+
+// Clear filters
+document.getElementById('clear-filters').addEventListener('click', function() {
+  document.getElementById('year-select').value = 'all';
+  filterFlights();
 });
 
 // Toggle flight routes
