@@ -1,0 +1,12 @@
+
+{{ partial "header" . }}
+<main class="blog">
+    <section class="bloglist">
+    <h2>{{ .Title }}</h2>
+    {{ range (.Paginator 12).Pages }} {{ partial "list-item" . }} {{ end }}
+</section>
+<br style="clear: both">
+{{ partial "paginator" . }}
+</main>
+
+{{ partial "footer" . }}

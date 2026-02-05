@@ -78,7 +78,7 @@
     <a href="/stream/" class="view-all">View all posts →</a>
   </section>
   {{ else }}
-  <main>
+  <main class="unified-feed">
     <ul class="post-list">
   	{{ partial "paginator" . }}
       {{ range (.Paginator 10).Pages  }} {{ partial "short-list-item" . }} {{ end }}

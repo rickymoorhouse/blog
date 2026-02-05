@@ -10,7 +10,7 @@ params:
     description: "I’m a Cloud Architect at IBM, designing and operating API Connect cloud services. I focus on making global API platforms reliable, observable, and easy for teams to deploy to. Outside of work, I enjoy spending time with family, playing with the dog, or being behind a camera. Welcome to my corner of the web - I hope you find something interesting or useful here."
     githubUsername: "rickymoorhouse"
     build: "main"
-    mainSections: ["blog", "flights", "photos", "microblog"]
+    mainSections: ["blog", "flights", "projects", "photos", "microblog"]
     dateFormat: "2 Jan 2006"
     images: ["images/siteicon.png"]
     font: "IBM Plex Sans" # should match the name on Google Fonts!

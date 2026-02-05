@@ -6,11 +6,11 @@
     {{/* Filter for both posts and micro content */}}
     {{ $stream := where .Site.RegularPages "Section" "in" site.Params.MainSections }}
     
+    <ul class="post-list">
     {{ range $stream.ByDate.Reverse }}
-      <ul class="post-list">
-        {{ partial "short-list-item.html" . }}
-      </ul>
-    {{ end }}
+        {{ partial "short-list-item" . }}
+        {{ end }}
+    </ul>
   </main>
 
 {{ partial "footer" . }}

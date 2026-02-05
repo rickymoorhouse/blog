@@ -15,11 +15,13 @@
   --color-secondary-bright: #da7;
   --color-gray: #666;
   --color-gray-light: #999;
+  --color-tag: #ffffff;
 
   /* Background & Text */
   --bg-body: #fafefd;
   --bg-surface: #ffffff;
   --bg-code: #f5f5f5;
+  --bg-tag: #006666;
   --text-primary: #333333;
   --text-secondary: #666666;
   --text-muted: #999999;
@@ -140,7 +142,7 @@ h3 { font-size: var(--text-xl); }
 h4 { font-size: var(--text-lg); }
 
 p {
-  margin: 0 auto var(--space-md) auto;
+  margin: 0 var(--space-md);
   max-width: 65ch;
 }
 
@@ -150,15 +152,20 @@ p + h3 {
 }
 
 /* Pagination */
-div.pages { width: 100%; display: flex;}
-div.pages .next { text-align: right;}
-div.pages .previous { flex-grow: 1;}
+div.pages { width: 100%; display: grid; grid-template-columns: 50% 50%;}
+div.pages .next { grid-column: 2; text-align: right;}
+div.pages .previous { grid-column: 1}
 div.pages svg {width: 1em; height: 1em; vertical-align: middle;}
 
 svg.icon {
   width: 1em;
   height: 1em;
   vertical-align: middle;
+}
+svg.plane-icon {
+  width: 1.5em;
+  height: 2em;
+  vertical-align: text-bottom;
 }
 
 /* -----------------------------------------------------------------------------
@@ -213,14 +220,13 @@ svg.icon {
   margin-top: auto;
   margin-bottom: 0;
 }
-
 .side nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
   list-style: none;
-  padding: 5pt;
+  padding: 2pt;
 }
 
 @media (min-width: 769px) {
@@ -388,21 +394,20 @@ footer p {
   margin: 0;
   max-width: 65ch;
 }
+.post-list li {
+  display: grid;
+  grid-template-columns: 8em 1fr;
+}
 
 .post-list li {
   padding: var(--space-sm) 0;
   /* border-bottom: 1px solid var(--color-gray); */
-}
-.post-list li.link {
-  font-family: var(--font-sans);
 }
 .post-list li p {
   margin: 0;
 }
 
 .post-list a {
-  display: flex;
-  gap: var(--space-sm);
   color: var(--link-color);
   text-decoration: none;
 }
@@ -414,27 +419,15 @@ footer p {
   padding: var(--space-xs);
   font-size: var(--text-sm);
 }
-.post-list .no-link, .post-list .link {
-  display: flex;
-  gap: var(--space-sm);
-  color: var(--text-primary);
-  text-decoration: none;
+.post-list .post {
+  grid-column: 2;
 }
-
 .post-date {
   color: var(--text-muted);
   font-family: var(--font-sans);
   font-size: var(--text-sm);
   white-space: nowrap;
-}
-
-.post-title {
-  font-weight: 500;
-}
-
-.microblog-title {
-  font-weight: 400;
-  font-size: var(--text-sm);
+  grid-column: 1;
 }
 
 /* -----------------------------------------------------------------------------
@@ -448,8 +441,23 @@ main.photos section {
 /* -----------------------------------------------------------------------------
    Blog Post Layout
    -------------------------------------------------------------------------- */
+article.blog {
+  margin-top: var(--space-xl)
+}
 article h1 {
   margin-bottom: var(--space-xs);
+}
+article h5 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  max-width: 65em;
+}
+.dt-published {
+  padding: var(--space-xs) var(--space-sm);
+  grid-column: 1
+}
+.tags {
+  grid-column: 2;
 }
 
 .post-meta {
@@ -532,7 +540,17 @@ code {
   text-align: center;
   font-size: var(--text-3xl);
 }
-
+.flight-plane svg, .plane-icon {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: baseline;
+  border-top: 5pt solid transparent;
+  fill: var(--color-primary);
+  transition: fill var(--transition-normal);
+}
+.flight-plane:hover svg, .plane-icon:hover {
+  fill: var(--color-secondary);
+}
 .flight-meta {
   font-size: var(--text-sm);
   color: var(--text-secondary);
@@ -617,27 +635,28 @@ code {
 /* -----------------------------------------------------------------------------
    Tags
    -------------------------------------------------------------------------- */
-.tags {
+div.tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
-  margin: var(--space-md) 0;
+  margin: 0;
 }
 
-.tag {
+.item-tag {
   display: inline-block;
   padding: var(--space-xs) var(--space-sm);
-  background: var(--color-secondary-bright);
-  color: var(--bg-surface);
+  background: var(--bg-tag);
+  color: var(--color-muted);
   border-radius: var(--border-radius-sm);
   font-size: var(--text-sm);
   text-decoration: none;
 }
 
-.tag:hover {
+.item-tag:hover {
   background: var(--link-color);
   color: white;
 }
+
 
 /* -----------------------------------------------------------------------------
    Search Modal
@@ -828,7 +847,12 @@ section.recent-posts {
   right: var(--space-sm);
   font-size: 25pt;
 }
-
+.recent-posts img, .unified-feed img {
+  border-radius: var(--border-radius);
+}
+.recent-posts .photo-overlay, .unified-feed .photo-overlay {
+  bottom: 0;
+}
 .photo-overlay {
   position: absolute;
   background: rgba(0,0,0,0.5);  
@@ -840,6 +864,7 @@ section.recent-posts {
   transition: opacity var(--transition-normal);
   border-radius: 0 0 var(--border-radius) var(--border-radius);;
 }
+
 .photo-overlay p {
   margin: 0;
 }
@@ -866,6 +891,21 @@ a:hover .photo-overlay {
 .view-all:hover {
   text-decoration: underline;
 }
+
+/* -----------------------------------------------------------------------------
+   Categories
+   -------------------------------------------------------------------------- */
+.category {
+  background: var(--color-gray);
+  color: white;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-sm);
+  margin-right: var(--space-sm);
+  font-family: var(--font-sans);
+}
+.technical .category { background: #006699;}
+.personal .category { background: #5A3A6E;}
 
 /* -----------------------------------------------------------------------------
    Responsive Design - Mobile: Horizontal header
@@ -1039,4 +1079,28 @@ article.microblog:last-child {
 
 .microblog .post-meta {
   display: none;
+}
+
+/* Projects Layout Fixes */
+.projectlist img {
+  height: 96px;
+  width: auto;
+}
+.project {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: var(--space-sm);
+}
+.project img {
+  grid-column: 1;
+}
+
+.project-details {
+  grid-column: 2;
+  font-family: var(--font-sans);
+  font-size: .9em;
+
+}
+.projectlist {
+  margin-left: var(--space-xl);
 }

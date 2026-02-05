@@ -1,0 +1,34 @@
+
+{{ partial "header" . }}
+<main class="projects">
+  <h2>{{ .Title }}</h2>
+    <section class="projectlist">
+    {{ range (.Paginator 12).Pages }}
+    <article class="project">
+      <a href="{{ .Permalink }}">
+        <h3 class="post-title">{{ .Title }}</h3>
+      </a>
+      
+      {{ $.Scratch.Set "images" "False" }}
+      {{ $.Scratch.Set "link" .RelPermalink }}
+      {{ with .Resources.Match .Params.featured }}
+      {{ range first 1 . }}
+      {{ $big := .Resize "128x128 fill Center" }}
+      <img src="{{ $big.RelPermalink }}" alt="{{ .Title }}" >
+      {{ end}}
+      {{ end }}  
+      <div class="project-details">  
+        <p>  
+          {{ .Description }}
+        </p>
+        <p>Last Updated on {{ .Lastmod.Format "2 Jan 2006" }}</p>
+        <p><strong>Technology:</strong> {{ .Params.technology }}</p>
+      </div>
+      </article>
+      {{ end }}
+</section>
+<br style="clear: both">
+{{ partial "paginator" . }}
+</main>
+
+{{ partial "footer" . }}

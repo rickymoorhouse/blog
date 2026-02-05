@@ -1,40 +1,62 @@
         {{ $category := "" }}
         {{ if eq "photos" .Type }}{{ $category = "Visual" }}
-        {{ else if eq "blog" .Type }}{{ $category = "Technical" }}
+        {{ else if in .Params.tags "apiconnect"}}{{ $category = "Technical" }}
+        {{ else if in .Params.tags "walk"}}{{ $category = "Personal" }}
+        {{ else if in .Params.tags "coding"}}{{ $category = "Technical" }}
+        {{ else if in .Params.tags "travel"}}{{ $category = "Personal" }}
         {{ end }}
         {{ if or (eq "microblog" .Type) (eq "flight" .Params.layout) }}
-        <li class="no-link">
-          <span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span><br />
+        <li>
+          <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
+          <div class="post">
             {{ if eq "microblog" .Type }}
               {{ .Content }}
             {{ else if eq "flight" .Params.layout }}
-              <span class="post-title flight-airport"><strong>{{ .Params.from }}</strong> - {{ .Params.airline }} {{ .Params.flight }} - <strong>{{ .Params.to }}</strong></span>
-            {{ end }}<br />
+              <span class="post-title flight-airport"><strong>{{ .Params.from }}</strong>
+              <svg class="plane-icon" viewBox="0 0 43 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                <g transform="matrix(-14.4509,6.88885,-6.14735,-12.8954,102.815,35.4699)">
+                  <path d="M4.294,1.854C4.453,1.852 4.191,2.784 4.196,3.329C4.2,3.873 4.537,4.819 4.378,4.821C4.219,4.822 3.439,3.367 3.439,3.367C3.439,3.367 4.135,1.856 4.294,1.854Z" />
+                </g>
+                <g transform="matrix(-14.4509,6.88885,-5.31668,-11.1529,78.3788,40.7924)">
+                  <path d="M3.875,2.625C3.94,2.624 3.787,2.79 3.792,3.335C3.796,3.879 3.921,4.164 3.856,4.166C3.79,4.168 3.458,3.381 3.458,3.381C3.458,3.381 3.81,2.627 3.875,2.625Z" />
+                </g>
+                <g transform="matrix(-27.8297,13.2666,-1.49027,-3.12616,137.24,-19.887)">
+                  <path d="M4.421,2.652C4.421,2.652 4.633,2.633 4.644,3.281C4.653,3.778 4.386,4.308 4.386,4.308C4.386,4.308 3.264,5.82 3.265,3.683C3.265,1.546 4.421,2.652 4.421,2.652Z" />
+                </g>
+              </svg>
+                 {{ .Params.airline }} {{ .Params.flight }} <strong>{{ .Params.to }}</strong></span>
+            {{ end }}
+            </div>
         </li> 
         {{ else }}
         {{ if eq "photos" .Type }}
-        <li class="link">
-          <span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span><br />
-          <a href="{{ .Permalink }}">
-            {{ $page := . }}
-            {{ if .Resources.ByType "image" }}
-              {{ with .Resources.GetMatch .Params.featured | default (index (.Resources.ByType "image") 0) }}
-                {{ $image := .Fill "400x250 Center" }}
-                <div class="photo-image-wrapper">
-                  <img src="{{ $image.Permalink }}" class="featured-image" />
-                  <div class="photo-overlay">
-                    <p>{{ $page.Title }}</p>
+        <li>
+          <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
+          <div class="post">
+            <a href="{{ .Permalink }}">
+              {{ $page := . }}
+              {{ if .Resources.ByType "image" }}
+                {{ with .Resources.GetMatch .Params.featured | default (index (.Resources.ByType "image") 0) }}
+                  {{ $image := .Fill "400x250 Center" }}
+                  <div class="photo-image-wrapper">
+                    <img src="{{ $image.Permalink }}" class="featured-image" />
+                    <div class="photo-overlay">
+                      <p>{{ $page.Title }}</p>
+                    </div>
                   </div>
-                </div>
-              {{ end }}
-            {{ end }}</a>
+                {{ end }}
+              {{ end }}</a>
+          </div>
         </li>
         {{ else }}
-        <li class="link">
-          <span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span><br />
-          <a href="{{ .Permalink }}">
-            <span class="post-title">{{ .Title }}</span>
-          </a><br />
+        <li>
+          <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
+          <div class="post {{$category | lower}}">
+            <span class="category">{{ $category }}</span>
+            <a href="{{ .Permalink }}">
+              <span class="post-title">{{ .Title }}</span>
+            </a>
+          </div>
         </li>
         {{ end }}
         {{ end }}

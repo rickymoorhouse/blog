@@ -3,7 +3,9 @@
 <main class="{{ .Type }}">
     <section class="">
     <h1>{{ .Title }}</h1>
-    {{ range (.Paginator 15).Pages }} {{ partial "list-item" . }} {{ end }}
+    <ul class="post-list">
+        {{ range (.Paginator 15).Pages }} {{ partial "short-list-item" . }} {{ end }}
+    </ul>
 {{ partial "paginator" . }}
 </section>
 
