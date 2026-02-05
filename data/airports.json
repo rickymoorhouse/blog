@@ -663,5 +663,10 @@
     "name": "San Jose Costa Rica",
     "lng": -84.2089,
     "lat": 9.9939
+  },
+  "CMH": {
+    "name": "Columbus",
+    "lng": -82.8919,
+    "lat": 40.0144
   }
 }
