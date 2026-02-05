@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "![Github Action status](https://github.com/rickymoorhouse/blog/actions/workflows/go.yml/badge.svg?branch=master)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickymoorhouse/blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rickymoorhouse/blog/issues"
+  },
+  "homepage": "https://github.com/rickymoorhouse/blog#readme",
+  "dependencies": {
+    "pagefind": "^1.4.0"
+  }
+}
