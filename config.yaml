@@ -91,3 +91,10 @@ deployment:
     gzip: true 
 outputs:
   home: ["HTML", "RSS", "JSON"]
+  flights: ["HTML", "JSON"]
+
+outputFormats:
+  flightsjson:
+    mediaType: "application/json"
+    baseName: "flights"
+    isPlainText: true
