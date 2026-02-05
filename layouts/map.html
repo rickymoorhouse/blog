@@ -139,7 +139,7 @@ map.on('load', function() {
   // Flights layer - line routes
   map.addSource('flights', {
     type: 'geojson',
-    data: '/map/flights.json'
+    data: '/flights.json'
   });
 
   map.addLayer({
@@ -159,7 +159,7 @@ map.on('load', function() {
   });
 
   // Load all flight data and populate year filter
-  fetch('/map/flights.json')
+  fetch('/flights.json')
     .then(response => response.json())
     .then(data => {
       allFlightData = data;
