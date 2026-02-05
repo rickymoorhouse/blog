@@ -668,5 +668,30 @@
     "name": "Columbus",
     "lng": -82.8919,
     "lat": 40.0144
+  },
+  "AUS": {
+    "name": "Austin Bergstrom",
+    "lng": -97.6671,
+    "lat": 30.1944
+  },
+  "BRU": {
+    "name": "Brussels",
+    "lng": 4.7683,
+    "lat": 50.9014
+  },
+  "BSL": {
+    "name": "Basel Mulhouse",
+    "lng": 7.5291,
+    "lat": 47.5986
+  },
+  "SOU": {
+    "name": "Southampton",
+    "lng": -1.3568,
+    "lat": 50.9503
+  },
+  "VLC": {
+    "name": "Valencia",
+    "lng": -0.4817,
+    "lat": 39.4853
   }
 }
