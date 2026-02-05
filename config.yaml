@@ -90,8 +90,8 @@ deployment:
   - pattern: "^.+\\.(html|xml|json)$"
     gzip: true 
 outputs:
-  home: ["HTML", "RSS", "JSON"]
-  flights: ["HTML", "JSON"]
+  home: ["HTML", "RSS", "FLIGHTSJSON"]
+  flights: ["JSON"]
 
 outputFormats:
   flightsjson:
