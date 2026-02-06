@@ -321,9 +321,6 @@ document.getElementById('toggle-flights').addEventListener('change', function(e)
   map.setLayoutProperty('flight-routes', 'visibility', e.target.checked ? 'visible' : 'none');
 });
 
-    // Your additional js should go there
-
-}());
 
 function insertMap(geojson_url) {
   var map = new mapboxgl.Map({
