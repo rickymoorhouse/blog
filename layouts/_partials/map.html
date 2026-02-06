@@ -4,9 +4,52 @@
       </div>
 <script>
 var mapStyle = 'mapbox://styles/mapbox/light-v10';
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+var currentTheme = document.documentElement.getAttribute('data-theme') || 
+                  (window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light');
+if (currentTheme === 'dark') {
   mapStyle = 'mapbox://styles/mapbox/dark-v10'
 }
+
+// Function to update map style based on theme
+function updateMapTheme(theme) {
+  var newStyle = theme === 'dark' ? 'mapbox://styles/mapbox/dark-v10' : 'mapbox://styles/mapbox/light-v10';
+  if (map.getStyle() !== newStyle) {
+    map.setStyle(newStyle);
+    // Re-add layers after style reload
+    setTimeout(function() {
+      map.addSource('route', {
+        type: 'geojson', 
+        data: geojson,
+      });
+      map.addLayer({
+        'id': 'route',
+        'type': 'line',
+        'source': 'route',
+        'layout': {
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
+        'paint': {
+          'line-color': '{{ .Site.Params.tertiary }}',
+          'line-width': 2
+        }
+      });
+    }, 1000);
+  }
+}
+
+// Listen for theme changes
+var themeObserver = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.attributeName === 'data-theme') {
+      var theme = document.documentElement.getAttribute('data-theme');
+      if (theme) {
+        updateMapTheme(theme);
+      }
+    }
+  });
+});
+themeObserver.observe(document.documentElement, { attributes: true });
 
 document.getElementById('map').style.height="330px";
 /*document.getElementById('map').style.width="750px";*/
