@@ -103,9 +103,72 @@ document.getElementById('map').style.height=(window.innerHeight-57) + "px";
 mapboxgl.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
 
 var style = 'mapbox://styles/mapbox/light-v10';
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+var currentTheme = document.documentElement.getAttribute('data-theme') || 
+                  (window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light');
+if (currentTheme === 'dark') {
   style = 'mapbox://styles/mapbox/dark-v10'
 }
+
+// Function to update map style based on theme
+function updateMapTheme(theme) {
+  var newStyle = theme === 'dark' ? 'mapbox://styles/mapbox/dark-v10' : 'mapbox://styles/mapbox/light-v10';
+  if (map.getStyle() !== newStyle) {
+    map.setStyle(newStyle);
+    // Re-add layers after style reload
+    setTimeout(function() {
+      map.addSource('points', {
+        type: 'geojson',
+        data: '{{ .Params.geojson }}',
+        cluster: false,
+        clusterMaxZoom: 14,
+        clusterRadius: 50
+      });
+      map.addLayer({
+        id: 'points',
+        type: 'circle',
+        source: 'points',
+        paint: {
+          'circle-color': ['get', 'marker-color'],
+          'circle-radius': 5,
+        }
+      });
+      map.addSource('flights', {
+        type: 'geojson',
+        data: '/flights.json'
+      });
+      map.addLayer({
+        id: 'flight-routes',
+        type: 'line',
+        source: 'flights',
+        layout: {
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
+        paint: {
+          'line-color': '#009988',
+          'line-width': 1.5,
+          'line-opacity': 0.7,
+          'line-dasharray': [2, 2]
+        }
+      });
+      document.getElementById('toggle-flights').checked = true;
+      document.getElementById('toggle-places').checked = true;
+    }, 1000);
+  }
+}
+
+// Listen for theme changes
+var themeObserver = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.attributeName === 'data-theme') {
+      var theme = document.documentElement.getAttribute('data-theme');
+      if (theme) {
+        updateMapTheme(theme);
+      }
+    }
+  });
+});
+themeObserver.observe(document.documentElement, { attributes: true });
 
 var map = new mapboxgl.Map({
   container: 'map', // container id
