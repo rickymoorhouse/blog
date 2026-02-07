@@ -1,17 +1,19 @@
 ---
 title: Trawler
 date: 2020-06-02
-layout: project
+layout: blog
 description: Metric gathering for API Connect
 technology: Go, Kubernetes, Prometheus, Grafana
 tags:
 - trawler
-featured: trawler-grafana.png
+featured: trawler.png
 ---
 
 Trawler is a metric gathering tool for IBM API Connect deployments, built to monitor Kubernetes-based API Connect cloud deployments.
 
 It runs alongside API Connect in Kubernetes and identifies API Connect components, exposing metrics to Prometheus or other compatible monitoring tooling. The data feeds into dashboards such as Grafana for visualization.
+
+ - [GitHub Project](https://github.com/ibm/apiconnect-trawler)
 
 ## Metrics Collected
 

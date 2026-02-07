@@ -9,46 +9,6 @@
           width: 150pt;
           height: auto;
         }
-        div.page-content {
-        position:fixed;
-        bottom: 100px;
-        margin-top: 1em;
-        right: 1em;
-        z-index: 999;
-        background: white;
-        width: 20em;
-        padding: 0.5em;
-        box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
-        }
-        .map-controls {
-        position: fixed;
-        top: 80px;
-        left: 80px;
-        z-index: 999;
-        background: white;
-        padding: 10px;
-        border-radius: 4px;
-        box-shadow: 0 1px 3pt rgba(0,0,0,0.5);
-        }
-        .map-controls label {
-        display: block;
-        margin: 5px 0;
-        cursor: pointer;
-        }
-        .year-filter {
-        margin-top: 10px;
-        padding-top: 10px;
-        border-top: 1px solid #ddd;
-        }
-        .year-filter label {
-        font-weight: bold;
-        margin-bottom: 5px;
-        }
-        .year-filter select {
-        width: 100%;
-        padding: 5px;
-        margin-bottom: 5px;
-        }
         @media (prefers-color-scheme: dark) {
           div.page-content {
             background-color: #222;
@@ -74,40 +34,35 @@
         <span class="mapbox-maplogo"></span>
       </div>
 
-      <!-- Map layer controls -->
-      <div class="map-controls">
-        <label>
-          <input type="checkbox" id="toggle-flights" checked>
-          Show Flights
-        </label>
-        <label>
-          <input type="checkbox" id="toggle-places" checked>
-          Show Places
-        </label>
-        <div class="year-filter">
-          <label for="year-select">Filter by Year:</label>
-          <select id="year-select">
-            <option value="all">All Years</option>
-          </select>
-          <button id="clear-filters" style="display:none;">Clear Filters</button>
-        </div>
-      </div>
-
       <!-- site-content -->
-        <div class="page-content">
+        <div class="map-page-content">
         {{ .Content }}
+          <!-- Map layer controls -->
+          <div class="map-controls">
+            <label>
+              <input type="checkbox" id="toggle-flights" checked>
+              Show Flights
+            </label>
+            <label>
+              <input type="checkbox" id="toggle-places" checked>
+              Show Places
+            </label>
+            <div class="year-filter">
+              <label for="year-select">Filter flights by year:</label>
+              <select id="year-select">
+                <option value="all">All Years</option>
+              </select>
+              <button id="clear-filters" style="display:none;">Clear Filters</button>
+            </div>
+          </div>        
         </div>
 <script type="text/javascript">
 
 document.getElementById('map').style.height=(window.innerHeight-57) + "px";
 mapboxgl.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
 
-var style = 'mapbox://styles/mapbox/light-v10';
-var currentTheme = document.documentElement.getAttribute('data-theme') || 
-                  (window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light');
-if (currentTheme === 'dark') {
-  style = 'mapbox://styles/mapbox/dark-v10'
-}
+var theme = document.documentElement.getAttribute('data-theme') || localStorage.getItem('theme');
+var style = theme === 'dark' ? 'mapbox://styles/mapbox/dark-v10' : 'mapbox://styles/mapbox/light-v10';
 
 // Function to update map style based on theme
 function updateMapTheme(theme) {
@@ -193,8 +148,8 @@ map.on('load', function() {
     type: 'circle',
     source: 'points',
     paint: {
-      'circle-color': ['get', 'marker-color'],
-      'circle-radius': 5,
+      'circle-color': '#CC6633', //['get', 'marker-color'],
+      'circle-radius': 4,
     }
   });
 
@@ -319,6 +274,10 @@ document.getElementById('clear-filters').addEventListener('click', function() {
 // Toggle flight routes
 document.getElementById('toggle-flights').addEventListener('change', function(e) {
   map.setLayoutProperty('flight-routes', 'visibility', e.target.checked ? 'visible' : 'none');
+});
+// Toggle flight routes
+document.getElementById('toggle-places').addEventListener('change', function(e) {
+  map.setLayoutProperty('points', 'visibility', e.target.checked ? 'visible' : 'none');
 });
 
 

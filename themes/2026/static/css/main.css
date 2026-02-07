@@ -285,9 +285,54 @@ main {
   min-height: 100vh;
   margin-top: var(--space-lg);
 }
+/* --- Maps --*/
+
 #map {
   min-height: 100vh !important;
 }
+.map-page-content {
+position:fixed;
+bottom: var(--space-2xl);
+right: var(--space-2xl);
+margin-top: var(--space-lg);
+background: var(--bg-code);
+z-index: 999;
+color: var(--text-primary);
+width: 20em;
+padding: var(--space-md);
+box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
+}
+
+.map-controls {
+font-family: var(--font-sans);
+font-size: var(--text-base);
+margin-top: var(--space-md);
+border-top: 1px solid #ddd;
+}
+.map-controls label {
+display: inline-block;
+margin: 5px 0;
+cursor: pointer;
+}
+.year-filter {
+margin-top: 10px;
+padding-top: 10px;
+}
+.year-filter label {
+margin-bottom: var(--space-sm);
+;
+}
+.year-filter select {
+  margin-left: var(--space-md);
+}
+#map .mapboxgl-popup-content {
+  background: var(--bg-code);
+  color: var(--text-primary);
+}
+#map .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  border-top-color: var(--bg-code);  
+}
+
 /* Footer */
 footer {
   padding: var(--space-xl);
