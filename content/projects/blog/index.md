@@ -55,6 +55,7 @@ I'm not using all of this yet but wanted to include some additional elements for
 ## Recent Changes
 
 - Added `tagged-posts` shortcode to list blog entries with a given tag using `short-list-item` partial
+- Added Trawler project page documenting API Connect metric gathering tool
 - Added theme switching support to MapBox maps
 - Built flights.json generation system with Python script, integrated into GitHub Actions
 - Upgraded Mapbox GL JS to v3.18.0 and GLightbox to v3.3.1
