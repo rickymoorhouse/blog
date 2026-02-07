@@ -1,6 +1,6 @@
 {{ partial "header" . }}
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.18.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.18.0/mapbox-gl.css" rel="stylesheet" />
   <style>
         #map {
         height: 100%;
@@ -8,17 +8,6 @@
         img {
           width: 150pt;
           height: auto;
-        }
-        div.page-content {
-        position:fixed;
-        bottom: 100px;
-        margin-top: 1em;
-        right: 1em;
-        z-index: 999;
-        background: white;
-        width: 20em;
-        padding: 0.5em;
-        box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
         }
         @media (prefers-color-scheme: dark) {
           div.page-content {
@@ -32,7 +21,10 @@
           .mapboxgl-popup-content {
             background: #222;
             color: #ccc;
-          }          
+          }
+          .year-filter {
+            border-top-color: #444;
+          }
         }
 
         footer { display: none;}
@@ -41,19 +33,97 @@
       <div class="site-content" id="map">
         <span class="mapbox-maplogo"></span>
       </div>
+
       <!-- site-content -->
-        <div class="page-content">
+        <div class="map-page-content">
         {{ .Content }}
+          <!-- Map layer controls -->
+          <div class="map-controls">
+            <label>
+              <input type="checkbox" id="toggle-flights" checked>
+              Show Flights
+            </label>
+            <label>
+              <input type="checkbox" id="toggle-places" checked>
+              Show Places
+            </label>
+            <div class="year-filter">
+              <label for="year-select">Filter flights by year:</label>
+              <select id="year-select">
+                <option value="all">All Years</option>
+              </select>
+              <button id="clear-filters" style="display:none;">Clear Filters</button>
+            </div>
+          </div>        
         </div>
 <script type="text/javascript">
 
 document.getElementById('map').style.height=(window.innerHeight-57) + "px";
 mapboxgl.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
 
-var style = 'mapbox://styles/mapbox/light-v10';
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  style = 'mapbox://styles/mapbox/dark-v10'
+var theme = document.documentElement.getAttribute('data-theme') || localStorage.getItem('theme');
+var style = theme === 'dark' ? 'mapbox://styles/mapbox/dark-v10' : 'mapbox://styles/mapbox/light-v10';
+
+// Function to update map style based on theme
+function updateMapTheme(theme) {
+  var newStyle = theme === 'dark' ? 'mapbox://styles/mapbox/dark-v10' : 'mapbox://styles/mapbox/light-v10';
+  if (map.getStyle() !== newStyle) {
+    map.setStyle(newStyle);
+    // Re-add layers after style reload
+    setTimeout(function() {
+      map.addSource('points', {
+        type: 'geojson',
+        data: '{{ .Params.geojson }}',
+        cluster: false,
+        clusterMaxZoom: 14,
+        clusterRadius: 50
+      });
+      map.addLayer({
+        id: 'points',
+        type: 'circle',
+        source: 'points',
+        paint: {
+          'circle-color': ['get', 'marker-color'],
+          'circle-radius': 5,
+        }
+      });
+      map.addSource('flights', {
+        type: 'geojson',
+        data: '/flights.json'
+      });
+      map.addLayer({
+        id: 'flight-routes',
+        type: 'line',
+        source: 'flights',
+        layout: {
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
+        paint: {
+          'line-color': '#009988',
+          'line-width': 1.5,
+          'line-opacity': 0.7,
+          'line-dasharray': [2, 2]
+        }
+      });
+      document.getElementById('toggle-flights').checked = true;
+      document.getElementById('toggle-places').checked = true;
+    }, 1000);
+  }
 }
+
+// Listen for theme changes
+var themeObserver = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.attributeName === 'data-theme') {
+      var theme = document.documentElement.getAttribute('data-theme');
+      if (theme) {
+        updateMapTheme(theme);
+      }
+    }
+  });
+});
+themeObserver.observe(document.documentElement, { attributes: true });
 
 var map = new mapboxgl.Map({
   container: 'map', // container id
@@ -63,9 +133,11 @@ var map = new mapboxgl.Map({
   zoom: 2 // starting zoom
 });
 
+var allFlightData = null;
+
 map.on('load', function() {
   map.addSource('points', {
-    type: 'geojson', 
+    type: 'geojson',
     data: '{{ .Params.geojson }}',
     cluster: false,
     clusterMaxZoom: 14, // Max zoom to cluster points on
@@ -76,10 +148,41 @@ map.on('load', function() {
     type: 'circle',
     source: 'points',
     paint: {
-      'circle-color': ['get', 'marker-color'],
-      'circle-radius': 5,
+      'circle-color': '#CC6633', //['get', 'marker-color'],
+      'circle-radius': 4,
     }
   });
+
+  // Flights layer - line routes
+  map.addSource('flights', {
+    type: 'geojson',
+    data: '/flights.json'
+  });
+
+  map.addLayer({
+    id: 'flight-routes',
+    type: 'line',
+    source: 'flights',
+    layout: {
+      'line-join': 'round',
+      'line-cap': 'round'
+    },
+    paint: {
+      'line-color': '#009988',
+      'line-width': 1.5,
+      'line-opacity': 0.7,
+      'line-dasharray': [2, 2]
+    }
+  });
+
+  // Load all flight data and populate year filter
+  fetch('/flights.json')
+    .then(response => response.json())
+    .then(data => {
+      allFlightData = data;
+      populateYearFilter(data);
+    })
+    .catch(error => console.error('Error loading flights:', error));
 
   var popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true});
 
@@ -109,7 +212,7 @@ map.on('load', function() {
     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
     }
-  
+
     popup.setLngLat(coordinates)
       .setHTML(content)
       .addTo(map);
@@ -120,12 +223,63 @@ map.on('load', function() {
   });
 });
 
-(function () {
-    'use strict';
+// Populate year dropdown
+function populateYearFilter(data) {
+  const years = new Set();
+  data.features.forEach(feature => {
+    if (feature.properties.year) {
+      years.add(feature.properties.year);
+    }
+  });
 
-    // Your additional js should go there
+  const select = document.getElementById('year-select');
+  Array.from(years).sort().reverse().forEach(year => {
+    const option = document.createElement('option');
+    option.value = year;
+    option.textContent = year;
+    select.appendChild(option);
+  });
 
-}());
+  select.addEventListener('change', filterFlights);
+}
+
+// Filter flights by year
+function filterFlights() {
+  const selectedYear = document.getElementById('year-select').value;
+
+  if (!allFlightData) return;
+
+  let filteredData;
+
+  if (selectedYear === 'all') {
+    filteredData = allFlightData;
+    document.getElementById('clear-filters').style.display = 'none';
+  } else {
+    filteredData = {
+      type: 'FeatureCollection',
+      features: allFlightData.features.filter(f => f.properties.year === selectedYear)
+    };
+    document.getElementById('clear-filters').style.display = 'inline';
+  }
+
+  map.getSource('flights').setData(filteredData);
+}
+
+// Clear filters
+document.getElementById('clear-filters').addEventListener('click', function() {
+  document.getElementById('year-select').value = 'all';
+  filterFlights();
+});
+
+// Toggle flight routes
+document.getElementById('toggle-flights').addEventListener('change', function(e) {
+  map.setLayoutProperty('flight-routes', 'visibility', e.target.checked ? 'visible' : 'none');
+});
+// Toggle flight routes
+document.getElementById('toggle-places').addEventListener('change', function(e) {
+  map.setLayoutProperty('points', 'visibility', e.target.checked ? 'visible' : 'none');
+});
+
 
 function insertMap(geojson_url) {
   var map = new mapboxgl.Map({
