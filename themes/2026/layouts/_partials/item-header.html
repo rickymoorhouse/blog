@@ -25,7 +25,8 @@
             <h4 class="p-name"><a href="{{ .Scratch.Get "link" }}" class="u-url">{{ .Title }}</a></h4>
         {{ end }}
     {{ end }}
-    {{ if eq "1 January 0001" ($.Scratch.Get "subtitle") }}&nbsp;{{ else }}
+    {{ if ne .Type "page" }}
+    {{ if eq "1 Jan 0001" ($.Scratch.Get "subtitle") }}&nbsp;{{ else }}
     <h5>
         <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ $.Scratch.Get "subtitle" }}</time>
         {{- if compare.Gt .Lastmod .Date -}}
@@ -39,5 +40,5 @@
             {{ end }}
         </div>
     </h5>
-    {{ end }}
+    {{ end }}{{ end }}
 {{ end }}

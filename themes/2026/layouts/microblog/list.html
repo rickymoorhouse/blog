@@ -1,0 +1,20 @@
+{{ partial "header" . }}
+
+  <main class="unified-feed">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }} {{/* This renders any text you put in _index.md */}}
+    {{/* Filter for both posts and micro content */}}
+    {{ $pages := where .Site.RegularPages "Section" "in" site.Params.MainSections }}
+    {{ $paginator := .Paginate $pages 10 }}
+  	{{ partial "paginator" . }}
+
+    <ul class="post-list">
+    {{ range $paginator.Pages }}
+        {{ partial "short-list-item" . }}
+        {{ end }}
+    </ul>
+  	{{ partial "paginator" . }}
+
+  </main>
+
+{{ partial "footer" . }}

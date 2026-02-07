@@ -1,9 +1,0 @@
-{{ partial "header" . }}
-<main class="bloglist {{.Type }}">
-	<h1>{{ .Type }}</h1>
-	
-	{{ partial "paginator" . }}
-	{{ range (.Paginator 20).Pages }} {{ partial "list-item" . }} {{ end }}
-	{{ partial "paginator" . }}
-</main>	
-{{ partial "footer" . }}

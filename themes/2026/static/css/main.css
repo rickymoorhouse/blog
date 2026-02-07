@@ -88,9 +88,6 @@
 /* -----------------------------------------------------------------------------
    Base Reset
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
 html {
   font-family: var(--font-serif);
@@ -171,11 +168,6 @@ svg.plane-icon {
 /* -----------------------------------------------------------------------------
    Layout
    -------------------------------------------------------------------------- */
-.container {
-  padding: var(--space-lg) var(--container-padding);
-  max-width: var(--content-max-width);
-  margin: 0 auto;
-}
 
 /* Sidebar Navigation - Vertical bar on left for desktop */
 .side {
@@ -806,10 +798,6 @@ section.recent-posts {
   grid-column: 2;
   grid-row: 1 / span 2;
 } 
-.section-header {
-  text-align: center;
-  margin: var(--space-lg) 0 var(--space-md);
-}
 
 .featured-grid {
   display: grid;

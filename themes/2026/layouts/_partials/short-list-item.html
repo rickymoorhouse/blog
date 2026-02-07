@@ -1,9 +1,10 @@
-        {{ $category := "" }}
+        {{ $category := "Technical" }}
         {{ if eq "photos" .Type }}{{ $category = "Visual" }}
         {{ else if in .Params.tags "apiconnect"}}{{ $category = "Technical" }}
         {{ else if in .Params.tags "walk"}}{{ $category = "Personal" }}
         {{ else if in .Params.tags "coding"}}{{ $category = "Technical" }}
         {{ else if in .Params.tags "travel"}}{{ $category = "Personal" }}
+        {{ else if eq .Type "projects"}}{{ $category = "Technical" }}
         {{ end }}
         {{ if or (eq "microblog" .Type) (eq "flight" .Params.layout) }}
         <li>
