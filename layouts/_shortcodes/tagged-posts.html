@@ -1,0 +1,7 @@
+{{ $tag := .Get 0 }}
+{{ $pages := where site.RegularPages "Params.tags" "intersect" (slice $tag) }}
+<ul class="posts-list">
+{{ range $pages }}
+{{ partial "short-list-item.html" . }}
+{{ end }}
+</ul>
