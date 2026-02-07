@@ -50,4 +50,8 @@ description: >
 Year: 2022
 ```
 
-I'm not using all of this yet but wanted to include some additional elements for the future. This is then processed into GeoJSON in a [layout template](https://github.com/rickymoorhouse/blog/blob/main/layouts/geojson.json?short_path=b97ff09). The map itself is still powered by [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/guides/) using the [map display template](https://github.com/rickymoorhouse/blog/blob/main/layouts/map.html). 
+I'm not using all of this yet but wanted to include some additional elements for the future. This is then processed into GeoJSON in a [layout template](https://github.com/rickymoorhouse/blog/blob/main/layouts/geojson.json?short_path=b97ff09). The map itself is still powered by [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/guides/) using the [map display template](https://github.com/rickymoorhouse/blog/blob/main/layouts/map.html).
+
+## Recent Changes
+
+- Added `tagged-posts` shortcode to list blog entries with a given tag using `short-list-item` partial 
