@@ -239,7 +239,7 @@ function populateCombinedYearFilter(flightData, placesData) {
   });
   
   placesData.features.forEach(feature => {
-    if (feature.properties.year) {
+    if (feature.properties && feature.properties.year) {
       years.add(feature.properties.year);
     }
   });

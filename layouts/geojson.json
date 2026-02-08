@@ -1,4 +1,5 @@
-{
+{{ $list := $.Site.Data.travel }}
+{{ $len := len $list }}{
  "type":"FeatureCollection",
  "features": [{{ range $i, $e := $.Site.Data.travel }}{{ if .lat }}
  { 
@@ -16,8 +17,7 @@
    "marker-size":"small",
    "marker-color":"{{ $.Site.Params.tertiary | default "#869ba0" }}"
   }
- },
-{{ end }}{{ end }}
+ }{{ if eq (add $i 1) $len}},{{ end }}
+{{ end}}{{ end }}
  {}
- ]
-}
+ ]}
