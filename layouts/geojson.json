@@ -4,24 +4,24 @@
 {{- $last := sub (len .Site.Data.travel) 1 -}}
 {{- range $i, $e := .Site.Data.travel -}}
 {{- if .lat -}}
- {
-  "type":"Feature",
-  "geometry": {
-   "type":"Point",
-   "coordinates": [{{ .lng }},{{ .lat }}]
-  },
-  "properties": {
-   "title":"{{ .title }}",
-   {{ if .photo }}"image":"{{ .photo }}",{{ end }}
-   {{ if .link }}"url":"{{ .link }}",{{ end }}
-   "years": [{{ if .years }}{{ range $j, $year := .years }}"{{ $year }}",{{ end }}{{ else }}{{ $date := or .date .datePosted }}{{ $y := substr $date 0 4 }}{{ if and $date (not (eq $y "None")) (not (eq $y "Uni")) }}"{{ $y }}"{{ end }}{{ end }}],
-   "marker-symbol":"circle",
-   "marker-size":"small",
-   "marker-color":"{{ $.Site.Params.tertiary | default "#869ba0" }}"
-  }
- }{{ if ne $i $last }},{{ end }}
-{{- end -}}
-{{- end }}
- {}
- ]
+  {
+   "type":"Feature",
+   "geometry": {
+    "type":"Point",
+    "coordinates": [{{ .lng }},{{ .lat }}]
+   },
+   "properties": {
+    "title":"{{ .title }}",
+    {{ if .photo }}"image":"{{ .photo }}",{{ end }}
+    {{ if .link }}"url":"{{ .link }}",{{ end }}
+    "years": [{{ if .years }}{{ range $j, $year := .years }}{{ if $j }},{{ end }}"{{ $year }}"{{ end }}{{ else }}{{ $date := or .date .datePosted }}{{ $y := substr $date 0 4 }}{{ if and $date (not (eq $y "None")) (not (eq $y "Uni")) }}"{{ $y }}"{{ end }}{{ end }}],
+    "marker-symbol":"circle",
+    "marker-size":"small",
+    "marker-color":"{{ $.Site.Params.tertiary | default "#869ba0" }}"
+   }
+  }{{ if ne $i $last }},{{ end }}
+ {{- end -}}
+ {{- end }}
+  {}
+  ]
 }

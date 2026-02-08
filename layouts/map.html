@@ -43,6 +43,8 @@
           position: absolute;
           width: 100%;
           height: 4px;
+          top: -4px;
+          z-index: 99;
           background: transparent;
           pointer-events: none;
           -webkit-appearance: none;
@@ -71,9 +73,9 @@
 
         .timeline-track {
           position: absolute;
-          top: 6px;
+          top: -3px;
           width: 100%;
-          height: 4px;
+          height: 2px;
           background: var(--track-color);
           border-radius: 2px;
         }
@@ -82,6 +84,7 @@
           display: flex;
           justify-content: space-between;
           font-size: 12px;
+          line-height: 30px;
           margin-top: 8px;
           color: inherit;
         }
@@ -96,13 +99,14 @@
         {{ .Content }}
           <!-- Map layer controls -->
           <div class="map-controls">
+            Show: 
             <label>
               <input type="checkbox" id="toggle-flights" checked>
-              Show Flights
+              Flights
             </label>
             <label>
               <input type="checkbox" id="toggle-places" checked>
-              Show Places
+              Places
             </label>
             <div class="year-filter">
               <label for="year-range">Year range:</label>
@@ -116,7 +120,7 @@
                   <span id="year-end-label">2030</span>
                 </div>
               </div>
-              <button id="clear-filters">Clear Filters</button>
+              <button id="clear-filters">Reset</button>
             </div>
           </div>        
         </div>
@@ -243,9 +247,9 @@ map.on('load', function() {
 
   // Load all flight data and populate year filter
   Promise.all([
-    fetch('/flights.json').then(r => r.json()),
-    fetch('{{ .Params.geojson }}').then(r => r.json())
-  ])
+      fetch('/flights.json').then(r => r.json()),
+      fetch('{{ .Params.geojson }}').then(r => r.json())
+    ])
     .then(([flightData, placesData]) => {
       allFlightData = flightData;
       allPlacesData = placesData;
@@ -297,16 +301,30 @@ function initTimelineSlider(flightData, placesData) {
   const years = new Set();
   
   flightData.features.forEach(feature => {
-    if (feature.properties.year) {
-      years.add(parseInt(feature.properties.year));
+    const year = parseInt(feature.properties.year);
+    if (feature.properties.year && !isNaN(year) && year >= 1900 && year <= 2100) {
+        years.add(year);
     }
   });
-  
+
   placesData.features.forEach(feature => {
     if (feature.properties && feature.properties.years) {
-      feature.properties.years.forEach(y => years.add(parseInt(y)));
+      feature.properties.years.forEach(y => {
+        const year = parseInt(y);
+        if (y && !isNaN(year) && year >= 1900 && year <= 2100) {
+          years.add(year);
+        }
+      });
     }
   });
+
+  // Filter out any NaN values that might have crept in
+  years.delete(NaN);
+  
+  if (years.size === 0) {
+    console.warn('No valid years found in data');
+    return;
+  }
 
   const minYear = Math.min(...years);
   const maxYear = Math.max(...years);
@@ -343,6 +361,11 @@ function initTimelineSlider(flightData, placesData) {
 
   startInput.addEventListener('input', updateRange);
   endInput.addEventListener('input', updateRange);
+  
+  // Trigger initial filter with the slider values (which are now set to minYear/maxYear)
+  const initialStart = parseInt(startInput.value);
+  const initialEnd = parseInt(endInput.value);
+  filterByYearRange(initialStart, initialEnd);
 }
 
 // Filter both flights and places by year range
@@ -354,22 +377,27 @@ function filterByYearRange(startYear, endYear) {
     type: 'FeatureCollection',
     features: allFlightData.features.filter(f => {
       const year = parseInt(f.properties.year);
-      return year >= startYear && year <= endYear;
+      return !isNaN(year) && year >= startYear && year <= endYear;
     })
   };
   map.getSource('flights').setData(filteredFlights);
 
-  // Filter places (show if any visit year is in range)
+  // Filter places (show if any visit year is in range, or if no year data)
   const filteredPlaces = {
     type: 'FeatureCollection',
     features: allPlacesData.features.filter(f => {
-      const years = f.properties.years || [];
-      return years.some(y => {
-        const year = parseInt(y);
-        return year >= startYear && year <= endYear;
-      });
+      if (f.properties) {
+        const years = f.properties.years || [];
+        // Show if: empty years array (unknown date), OR at least one year in range
+        if (years.length === 0) return true;
+        return years.some(y => {
+          const year = parseInt(y);
+          return !isNaN(year) && year >= startYear && year <= endYear;
+        });
+      }
     })
   };
+  console.log(filteredPlaces);
   map.getSource('points').setData(filteredPlaces);
 }
 

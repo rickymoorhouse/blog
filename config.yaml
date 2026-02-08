@@ -90,11 +90,4 @@ deployment:
   - pattern: "^.+\\.(html|xml|json)$"
     gzip: true 
 outputs:
-  home: ["HTML", "RSS", "FLIGHTSJSON"]
-  flights: ["JSON"]
-
-outputFormats:
-  flightsjson:
-    mediaType: "application/json"
-    baseName: "flights"
-    isPlainText: true
+  home: ["HTML", "RSS"]
