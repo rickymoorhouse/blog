@@ -11,6 +11,7 @@
    "title":"{{ .title }}",
    {{ if .photo }}"image":"{{ .photo }}",{{ end }}
    {{ if .link }}"url":"{{ .link }}",{{ end }}
+   {{ if or .date .datePosted }}"year":"{{ substr (index (split (or .date .datePosted) "T") 0) 0 4 }}",{{ end }}
    "marker-symbol":"circle",
    "marker-size":"small",
    "marker-color":"{{ $.Site.Params.tertiary | default "#869ba0" }}"
