@@ -48,18 +48,11 @@
               Show Places
             </label>
             <div class="year-filter">
-              <label for="year-select">Filter flights by year:</label>
+              <label for="year-select">Filter by year:</label>
               <select id="year-select">
                 <option value="all">All Years</option>
               </select>
               <button id="clear-filters" style="display:none;">Clear Filters</button>
-            </div>
-            <div class="year-filter">
-              <label for="places-year-select">Filter places by year:</label>
-              <select id="places-year-select">
-                <option value="all">All Years</option>
-              </select>
-              <button id="clear-places-filters" style="display:none;">Clear Filters</button>
             </div>
           </div>        
         </div>
@@ -142,6 +135,7 @@ var map = new mapboxgl.Map({
 
 var allFlightData = null;
 var allPlacesData = null;
+var allYears = new Set();
 
 map.on('load', function() {
   map.addSource('points', {
@@ -184,22 +178,16 @@ map.on('load', function() {
   });
 
   // Load all flight data and populate year filter
-  fetch('/flights.json')
-    .then(response => response.json())
-    .then(data => {
-      allFlightData = data;
-      populateYearFilter(data);
+  Promise.all([
+    fetch('/flights.json').then(r => r.json()),
+    fetch('{{ .Params.geojson }}').then(r => r.json())
+  ])
+    .then(([flightData, placesData]) => {
+      allFlightData = flightData;
+      allPlacesData = placesData;
+      populateCombinedYearFilter(flightData, placesData);
     })
-    .catch(error => console.error('Error loading flights:', error));
-
-  // Load places data and populate year filter
-  fetch('{{ .Params.geojson }}')
-    .then(response => response.json())
-    .then(data => {
-      allPlacesData = data;
-      populatePlacesYearFilter(data);
-    })
-    .catch(error => console.error('Error loading places:', error));
+    .catch(error => console.error('Error loading map data:', error));
 
   var popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true});
 
@@ -240,10 +228,17 @@ map.on('load', function() {
   });
 });
 
-// Populate year dropdown for flights
-function populateYearFilter(data) {
+// Populate combined year dropdown from flights and places
+function populateCombinedYearFilter(flightData, placesData) {
   const years = new Set();
-  data.features.forEach(feature => {
+  
+  flightData.features.forEach(feature => {
+    if (feature.properties.year) {
+      years.add(feature.properties.year);
+    }
+  });
+  
+  placesData.features.forEach(feature => {
     if (feature.properties.year) {
       years.add(feature.properties.year);
     }
@@ -257,83 +252,46 @@ function populateYearFilter(data) {
     select.appendChild(option);
   });
 
-  select.addEventListener('change', filterFlights);
+  select.addEventListener('change', filterByYear);
 }
 
-// Populate year dropdown for places
-function populatePlacesYearFilter(data) {
-  const years = new Set();
-  data.features.forEach(feature => {
-    if (feature.properties.year) {
-      years.add(feature.properties.year);
-    }
-  });
-
-  const select = document.getElementById('places-year-select');
-  Array.from(years).sort().reverse().forEach(year => {
-    const option = document.createElement('option');
-    option.value = year;
-    option.textContent = year;
-    select.appendChild(option);
-  });
-
-  select.addEventListener('change', filterPlaces);
-}
-
-// Filter flights by year
-function filterFlights() {
+// Filter both flights and places by year
+function filterByYear() {
   const selectedYear = document.getElementById('year-select').value;
 
-  if (!allFlightData) return;
+  if (!allFlightData || !allPlacesData) return;
 
-  let filteredData;
-
+  // Filter flights
+  let filteredFlights;
   if (selectedYear === 'all') {
-    filteredData = allFlightData;
+    filteredFlights = allFlightData;
     document.getElementById('clear-filters').style.display = 'none';
   } else {
-    filteredData = {
+    filteredFlights = {
       type: 'FeatureCollection',
       features: allFlightData.features.filter(f => f.properties.year === selectedYear)
     };
     document.getElementById('clear-filters').style.display = 'inline';
   }
+  map.getSource('flights').setData(filteredFlights);
 
-  map.getSource('flights').setData(filteredData);
+  // Filter places
+  let filteredPlaces;
+  if (selectedYear === 'all') {
+    filteredPlaces = allPlacesData;
+  } else {
+    filteredPlaces = {
+      type: 'FeatureCollection',
+      features: allPlacesData.features.filter(f => f.properties.year === selectedYear)
+    };
+  }
+  map.getSource('points').setData(filteredPlaces);
 }
 
 // Clear filters
 document.getElementById('clear-filters').addEventListener('click', function() {
   document.getElementById('year-select').value = 'all';
-  filterFlights();
-});
-
-// Filter places by year
-function filterPlaces() {
-  const selectedYear = document.getElementById('places-year-select').value;
-
-  if (!allPlacesData) return;
-
-  let filteredData;
-
-  if (selectedYear === 'all') {
-    filteredData = allPlacesData;
-    document.getElementById('clear-places-filters').style.display = 'none';
-  } else {
-    filteredData = {
-      type: 'FeatureCollection',
-      features: allPlacesData.features.filter(f => f.properties.year === selectedYear)
-    };
-    document.getElementById('clear-places-filters').style.display = 'inline';
-  }
-
-  map.getSource('points').setData(filteredData);
-}
-
-// Clear places filters
-document.getElementById('clear-places-filters').addEventListener('click', function() {
-  document.getElementById('places-year-select').value = 'all';
-  filterPlaces();
+  filterByYear();
 });
 
 // Toggle flight routes
