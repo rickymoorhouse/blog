@@ -1,23 +1,27 @@
-{{ $list := $.Site.Data.travel }}
-{{ $len := len $list }}{
+{
  "type":"FeatureCollection",
- "features": [{{ range $i, $e := $.Site.Data.travel }}{{ if .lat }}
- { 
-  "type":"Feature", 
-  "geometry": { 
-   "type":"Point", 
+ "features": [
+{{- $last := sub (len .Site.Data.travel) 1 -}}
+{{- range $i, $e := .Site.Data.travel -}}
+{{- if .lat -}}
+ {
+  "type":"Feature",
+  "geometry": {
+   "type":"Point",
    "coordinates": [{{ .lng }},{{ .lat }}]
   },
   "properties": {
    "title":"{{ .title }}",
    {{ if .photo }}"image":"{{ .photo }}",{{ end }}
    {{ if .link }}"url":"{{ .link }}",{{ end }}
-   {{ $date := or .date .datePosted }}{{ $year := substr $date 0 4 }}{{ if and $date (not (eq $year "None")) (not (eq $year "Uni")) }}"year":"{{ $year }}",{{ end }}
+   "years": [{{ if .years }}{{ range $j, $year := .years }}"{{ $year }}",{{ end }}{{ else }}{{ $date := or .date .datePosted }}{{ $y := substr $date 0 4 }}{{ if and $date (not (eq $y "None")) (not (eq $y "Uni")) }}"{{ $y }}"{{ end }}{{ end }}],
    "marker-symbol":"circle",
    "marker-size":"small",
    "marker-color":"{{ $.Site.Params.tertiary | default "#869ba0" }}"
   }
- }{{ if eq (add $i 1) $len}},{{ end }}
-{{ end}}{{ end }}
+ }{{ if ne $i $last }},{{ end }}
+{{- end -}}
+{{- end }}
  {}
- ]}
+ ]
+}
