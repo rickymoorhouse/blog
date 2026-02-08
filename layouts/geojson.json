@@ -11,7 +11,7 @@
    "title":"{{ .title }}",
    {{ if .photo }}"image":"{{ .photo }}",{{ end }}
    {{ if .link }}"url":"{{ .link }}",{{ end }}
-   {{ if or .date .datePosted }}"year":"{{ substr (index (split (or .date .datePosted) "T") 0) 0 4 }}",{{ end }}
+   {{ $date := or .date .datePosted }}{{ $year := substr $date 0 4 }}{{ if and $date (not (eq $year "None")) (not (eq $year "Uni")) }}"year":"{{ $year }}",{{ end }}
    "marker-symbol":"circle",
    "marker-size":"small",
    "marker-color":"{{ $.Site.Params.tertiary | default "#869ba0" }}"
