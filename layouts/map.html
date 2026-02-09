@@ -25,9 +25,69 @@
           .year-filter {
             border-top-color: #444;
           }
+          .timeline-slider {
+            --track-color: #444;
+          }
         }
 
         footer { display: none;}
+
+        .timeline-slider {
+          position: relative;
+          width: 200px;
+          height: 30px;
+          --track-color: #ccc;
+        }
+
+        .timeline-slider input[type="range"] {
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          top: -4px;
+          z-index: 99;
+          background: transparent;
+          pointer-events: none;
+          -webkit-appearance: none;
+        }
+
+        .timeline-slider input[type="range"]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #009988;
+          cursor: pointer;
+          pointer-events: auto;
+          margin-top: -6px;
+        }
+
+        .timeline-slider input[type="range"]::-moz-range-thumb {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #009988;
+          cursor: pointer;
+          pointer-events: auto;
+          border: none;
+        }
+
+        .timeline-track {
+          position: absolute;
+          top: -3px;
+          width: 100%;
+          height: 2px;
+          background: var(--track-color);
+          border-radius: 2px;
+        }
+
+        .timeline-labels {
+          display: flex;
+          justify-content: space-between;
+          font-size: 12px;
+          line-height: 30px;
+          margin-top: 8px;
+          color: inherit;
+        }
   </style>
     <div class="site">
       <div class="site-content" id="map">
@@ -39,20 +99,28 @@
         {{ .Content }}
           <!-- Map layer controls -->
           <div class="map-controls">
+            Show: 
             <label>
               <input type="checkbox" id="toggle-flights" checked>
-              Show Flights
+              Flights
             </label>
             <label>
               <input type="checkbox" id="toggle-places" checked>
-              Show Places
+              Places
             </label>
             <div class="year-filter">
-              <label for="year-select">Filter flights by year:</label>
-              <select id="year-select">
-                <option value="all">All Years</option>
-              </select>
-              <button id="clear-filters" style="display:none;">Clear Filters</button>
+              <label for="year-range">Year range:</label>
+              <div class="timeline-slider">
+                <input type="range" id="year-start" min="1990" max="2030" value="1990">
+                <input type="range" id="year-end" min="1990" max="2030" value="2030">
+                <div class="timeline-track"></div>
+                <div class="timeline-labels">
+                  <span id="year-start-label">1990</span>
+                  <span>-</span>
+                  <span id="year-end-label">2030</span>
+                </div>
+              </div>
+              <button id="clear-filters">Reset</button>
             </div>
           </div>        
         </div>
@@ -134,6 +202,8 @@ var map = new mapboxgl.Map({
 });
 
 var allFlightData = null;
+var allPlacesData = null;
+var allYears = new Set();
 
 map.on('load', function() {
   map.addSource('points', {
@@ -176,13 +246,16 @@ map.on('load', function() {
   });
 
   // Load all flight data and populate year filter
-  fetch('/flights.json')
-    .then(response => response.json())
-    .then(data => {
-      allFlightData = data;
-      populateYearFilter(data);
+  Promise.all([
+      fetch('/flights.json').then(r => r.json()),
+      fetch('{{ .Params.geojson }}').then(r => r.json())
+    ])
+    .then(([flightData, placesData]) => {
+      allFlightData = flightData;
+      allPlacesData = placesData;
+      initTimelineSlider(flightData, placesData);
     })
-    .catch(error => console.error('Error loading flights:', error));
+    .catch(error => console.error('Error loading map data:', error));
 
   var popup = new mapboxgl.Popup({closeButton: true, closeOnClick: true});
 
@@ -223,52 +296,120 @@ map.on('load', function() {
   });
 });
 
-// Populate year dropdown
-function populateYearFilter(data) {
+// Initialize timeline slider
+function initTimelineSlider(flightData, placesData) {
   const years = new Set();
-  data.features.forEach(feature => {
-    if (feature.properties.year) {
-      years.add(feature.properties.year);
+  
+  flightData.features.forEach(feature => {
+    const year = parseInt(feature.properties.year);
+    if (feature.properties.year && !isNaN(year) && year >= 1900 && year <= 2100) {
+        years.add(year);
     }
   });
 
-  const select = document.getElementById('year-select');
-  Array.from(years).sort().reverse().forEach(year => {
-    const option = document.createElement('option');
-    option.value = year;
-    option.textContent = year;
-    select.appendChild(option);
+  placesData.features.forEach(feature => {
+    if (feature.properties && feature.properties.years) {
+      feature.properties.years.forEach(y => {
+        const year = parseInt(y);
+        if (y && !isNaN(year) && year >= 1900 && year <= 2100) {
+          years.add(year);
+        }
+      });
+    }
   });
 
-  select.addEventListener('change', filterFlights);
-}
-
-// Filter flights by year
-function filterFlights() {
-  const selectedYear = document.getElementById('year-select').value;
-
-  if (!allFlightData) return;
-
-  let filteredData;
-
-  if (selectedYear === 'all') {
-    filteredData = allFlightData;
-    document.getElementById('clear-filters').style.display = 'none';
-  } else {
-    filteredData = {
-      type: 'FeatureCollection',
-      features: allFlightData.features.filter(f => f.properties.year === selectedYear)
-    };
-    document.getElementById('clear-filters').style.display = 'inline';
+  // Filter out any NaN values that might have crept in
+  years.delete(NaN);
+  
+  if (years.size === 0) {
+    console.warn('No valid years found in data');
+    return;
   }
 
-  map.getSource('flights').setData(filteredData);
+  const minYear = Math.min(...years);
+  const maxYear = Math.max(...years);
+
+  const startInput = document.getElementById('year-start');
+  const endInput = document.getElementById('year-end');
+  
+  startInput.min = minYear;
+  startInput.max = maxYear;
+  endInput.min = minYear;
+  endInput.max = maxYear;
+  
+  startInput.value = minYear;
+  endInput.value = maxYear;
+  
+  document.getElementById('year-start-label').textContent = minYear;
+  document.getElementById('year-end-label').textContent = maxYear;
+
+  // Handle range input interaction
+  function updateRange() {
+    let start = parseInt(startInput.value);
+    let end = parseInt(endInput.value);
+    
+    if (start > end) {
+      startInput.value = end;
+      start = end;
+    }
+    
+    document.getElementById('year-start-label').textContent = start;
+    document.getElementById('year-end-label').textContent = end;
+    
+    filterByYearRange(start, end);
+  }
+
+  startInput.addEventListener('input', updateRange);
+  endInput.addEventListener('input', updateRange);
+  
+  // Trigger initial filter with the slider values (which are now set to minYear/maxYear)
+  const initialStart = parseInt(startInput.value);
+  const initialEnd = parseInt(endInput.value);
+  filterByYearRange(initialStart, initialEnd);
+}
+
+// Filter both flights and places by year range
+function filterByYearRange(startYear, endYear) {
+  if (!allFlightData || !allPlacesData) return;
+
+  // Filter flights (only show if flight year is in range)
+  const filteredFlights = {
+    type: 'FeatureCollection',
+    features: allFlightData.features.filter(f => {
+      const year = parseInt(f.properties.year);
+      return !isNaN(year) && year >= startYear && year <= endYear;
+    })
+  };
+  map.getSource('flights').setData(filteredFlights);
+
+  // Filter places (show if any visit year is in range, or if no year data)
+  const filteredPlaces = {
+    type: 'FeatureCollection',
+    features: allPlacesData.features.filter(f => {
+      if (f.properties) {
+        const years = f.properties.years || [];
+        // Show if: empty years array (unknown date), OR at least one year in range
+        if (years.length === 0) return true;
+        return years.some(y => {
+          const year = parseInt(y);
+          return !isNaN(year) && year >= startYear && year <= endYear;
+        });
+      }
+    })
+  };
+  console.log(filteredPlaces);
+  map.getSource('points').setData(filteredPlaces);
 }
 
 // Clear filters
 document.getElementById('clear-filters').addEventListener('click', function() {
-  document.getElementById('year-select').value = 'all';
-  filterFlights();
+  const startInput = document.getElementById('year-start');
+  const endInput = document.getElementById('year-end');
+  startInput.value = startInput.min;
+  endInput.value = endInput.max;
+  document.getElementById('year-start-label').textContent = startInput.min;
+  document.getElementById('year-end-label').textContent = endInput.max;
+  filterByYearRange(parseInt(startInput.min), parseInt(endInput.max));
 });
 
 // Toggle flight routes
