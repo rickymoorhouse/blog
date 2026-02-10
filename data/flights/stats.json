@@ -1,0 +1,91 @@
+{
+  "total_flights": 77,
+  "total_distance": 201645,
+  "total_time_days": 12,
+  "total_time_hours": 21,
+  "total_time_minutes": 2,
+  "top_airports": [
+    {
+      "code": "LHR",
+      "count": 52
+    },
+    {
+      "code": "RDU",
+      "count": 14
+    },
+    {
+      "code": "LGW",
+      "count": 6
+    },
+    {
+      "code": "SOU",
+      "count": 4
+    },
+    {
+      "code": "VIE",
+      "count": 4
+    },
+    {
+      "code": "SFO",
+      "count": 4
+    },
+    {
+      "code": "ATL",
+      "count": 4
+    },
+    {
+      "code": "MIA",
+      "count": 4
+    },
+    {
+      "code": "CDG",
+      "count": 4
+    },
+    {
+      "code": "MAA",
+      "count": 3
+    }
+  ],
+  "top_airlines": [
+    {
+      "code": "BA",
+      "count": 35
+    },
+    {
+      "code": "AA",
+      "count": 11
+    },
+    {
+      "code": "VIR",
+      "count": 6
+    },
+    {
+      "code": "SK",
+      "count": 5
+    },
+    {
+      "code": "KL",
+      "count": 4
+    },
+    {
+      "code": "BEE",
+      "count": 2
+    },
+    {
+      "code": "VS",
+      "count": 2
+    },
+    {
+      "code": "UAL",
+      "count": 2
+    },
+    {
+      "code": "AFR",
+      "count": 2
+    },
+    {
+      "code": "6E",
+      "count": 2
+    }
+  ]
+}

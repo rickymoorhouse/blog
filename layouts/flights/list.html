@@ -1,0 +1,64 @@
+{{ partial "header" . }}
+
+<main class="flights">
+    <section class="flight-summary">
+    <h1>{{ .Title }}</h1>
+    
+    {{ $stats := index .Site.Data.flights "stats" }}
+    
+    <!-- Flight Statistics Summary -->
+    <div class="flight-stats">
+        <div class="stat-card">
+            <span class="stat-number">{{ $stats.total_flights }}</span>
+            <span class="stat-label">Total Flights</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">{{ $stats.total_distance }}</span>
+            <span class="stat-label">Total Miles</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">{{ $stats.total_time_days }} days</span>
+            <span class="stat-label">Time in Air</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">{{ with index $stats.top_airports 0 }}{{ .code }} ({{ .count }}){{ end }}</span>
+            <span class="stat-label">Top Airport</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">{{ with index $stats.top_airlines 0 }}{{ .code }} ({{ .count }}){{ end }}</span>
+            <span class="stat-label">Top Airline</span>
+        </div>
+    </div>
+    
+    <!-- Top 5 Airports -->
+    <div class="stats-breakdown">
+        <h3>Top 5 Airports</h3>
+        <ol class="stats-list">
+            {{ range $i, $airport := $stats.top_airports }}{{ if lt $i 5 }}
+            <li><strong>{{ $airport.code }}</strong> ({{ $airport.count }})</li>
+            {{ end }}{{ end }}
+        </ol>
+    </div>
+    
+    <!-- Top Airlines -->
+    <div class="stats-breakdown">
+        <h3>Top Airlines</h3>
+        <ol class="stats-list">
+            {{ range $i, $airline := $stats.top_airlines }}{{ if lt $i 5 }}
+            <li><strong>{{ $airline.code }}</strong> ({{ $airline.count }})</li>
+            {{ end }}{{ end }}
+        </ol>
+    </div>
+    </section>
+    
+    <section class="flight-list">
+    <ul class="post-list">
+        {{ range (.Paginator 15).Pages }}
+            {{ partial "short-list-item" . }}
+        {{ end }}
+    </ul>
+    {{ partial "paginator" . }}
+    </section>
+</main>
+
+{{ partial "footer" . }}

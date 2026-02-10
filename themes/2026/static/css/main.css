@@ -1137,3 +1137,68 @@ article.microblog:last-child {
 .projectlist {
   margin-left: var(--space-xl);
 }
+
+/* -----------------------------------------------------------------------------
+   Flight Summary Styles
+   -------------------------------------------------------------------------- */
+.flight-summary {
+  margin-bottom: var(--space-xl);
+}
+
+.flight-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.stat-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--color-gray-light);
+  border-radius: 8px;
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: var(--text-2xl);
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.stat-label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.stats-breakdown {
+  margin-bottom: var(--space-lg);
+}
+
+.stats-breakdown h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.stats-list {
+  padding-left: var(--space-lg);
+  margin: 0;
+}
+
+.stats-list li {
+  margin-bottom: var(--space-xs);
+  color: var(--text-secondary);
+}
+
+.stats-list strong {
+  color: var(--text-primary);
+}
+
+.flight-list {
+  margin-top: var(--space-xl);
+  border-top: 1px solid var(--color-gray-light);
+  padding-top: var(--space-lg);
+}
