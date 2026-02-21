@@ -3,6 +3,7 @@
 <main class="projects">
   <h2>{{ .Title }}</h2>
     <section class="projectlist">
+    {{ range (.Paginator 12).Pages }} 
     <article class="project">
       <a href="{{ .Permalink }}">
         <h3 class="post-title">{{ .Title }}</h3>
@@ -24,6 +25,7 @@
         <p><strong>Technology:</strong> {{ .Params.technology }}</p>
       </div>
       </article>
+      {{ end }}
 
 </section>
 <br style="clear: both">
