@@ -20,12 +20,11 @@ So rather than just using someone elses platform I embarked on building somethin
 
 ## Why Go?
 
-Python would have been the obvious choice. It's the lingua franca of AI, with libraries for everything, but I wanted to start with API calls rather than libraries anyway and Go offered something different:
+Python would have been the obvious choice. It's the default language of AI, with libraries for everything, but I wanted to start with API calls rather than libraries and Go offered something different:
 
 - **Single binary deployment** - no virtual environments, no dependency hell
 - **Straightforward concurrency** - agents need to do multiple things at once
 - **Static typing** - catching mistakes at compile time matters when your agent is taking real actions
-- **Simple tool integration** - calling external programs is trivial
 
 
 ## The Architecture
@@ -84,6 +83,11 @@ Right now the agent is genuinely useful for my workflow. It writes drafts, fetch
 The thing I'm most proud of isn't any single feature. It's that it exists, that I built something that actually works, and that it reflects how I think about AI: not as magic, but as a tool. 
 I'll probably share more findings as I experiment more - for now this is working for me as a collaborator on code development (including it's own code base) and a research assistant.
 
----
 
 _The code lives in a private repo for now as this is intended as a personal agent not a framework, but the concepts here are universal. If you're thinking about building an agent, start small, choose your tools carefully, and remember: the goal is to build something that helps you._
+
+## References I found helpful
+
+ - [How to build an agent](https://ampcode.com/notes/how-to-build-an-agent) from Amp Code - I used this one as a starter to see the basic principles. 
+ - [Anthropic API guide](https://platform.claude.com/docs/en/api/messages/create) and [Ollama anthropic compatibility](https://docs.ollama.com/api/anthropic-compatibility) helped me go beyond the SDK use from the first example
+ - [Telegram Bot Go Framework](https://github.com/go-telegram/bot) let me go beyond CLI based chat to talk to my agent from anywhere
