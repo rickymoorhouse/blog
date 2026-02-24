@@ -142,7 +142,9 @@ p {
   margin: 0 var(--space-md);
   max-width: 65ch;
 }
-
+li {
+  max-width: 60ch;
+}
 p + h2,
 p + h3 {
   margin-top: var(--space-xl);
