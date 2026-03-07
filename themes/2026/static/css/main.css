@@ -483,6 +483,9 @@ main.photos section {
 article.blog {
   margin-top: var(--space-xl)
 }
+article.h-entry p {
+  margin-bottom: 1em;
+}
 article h1 {
   margin-bottom: var(--space-xs);
 }
