@@ -483,6 +483,9 @@ main.photos section {
 article.blog {
   margin-top: var(--space-xl)
 }
+article.h-entry p {
+  margin-bottom: 1em;
+}
 article h1 {
   margin-bottom: var(--space-xs);
 }
@@ -679,13 +682,14 @@ div.tags {
   flex-wrap: wrap;
   gap: var(--space-xs);
   margin: 0;
+  height: 1em;
 }
 
 .item-tag {
   display: inline-block;
   padding: var(--space-xs) var(--space-sm);
   background: var(--bg-tag);
-  color: var(--color-muted);
+  color: var(--color-tag);
   border-radius: var(--border-radius-sm);
   font-size: var(--text-sm);
   text-decoration: none;
