@@ -688,7 +688,7 @@ div.tags {
   display: inline-block;
   padding: var(--space-xs) var(--space-sm);
   background: var(--bg-tag);
-  color: var(--color-muted);
+  color: var(--color-tag);
   border-radius: var(--border-radius-sm);
   font-size: var(--text-sm);
   text-decoration: none;
