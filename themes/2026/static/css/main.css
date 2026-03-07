@@ -682,6 +682,7 @@ div.tags {
   flex-wrap: wrap;
   gap: var(--space-xs);
   margin: 0;
+  height: 1em;
 }
 
 .item-tag {

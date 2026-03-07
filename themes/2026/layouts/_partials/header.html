@@ -14,7 +14,7 @@
         {{ if .Params.featured }}
         {{ with .Resources.Match .Params.featured }}
             {{ range first 1 . }}
-            {{ $image := .Fit "900x450" }}
+            {{ $image := .Fit "1200x630" }}
                 <meta name="twitter:card" content="summary_large_image">
                 <meta name="twitter:image" content="{{ $image.Permalink }}" />
                 <meta property="og:image" content="{{ $image.Permalink }}" />
@@ -35,14 +35,17 @@
         {{ end }}
     {{ else }}
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:image" property="og:image" content="https://rickymoorhouse.uk/images/siteicon.png" />
-    <meta property="og:image:height" content="120" />
-    <meta property="og:image:width" content="120" />
+    <meta name="twitter:image" property="og:image" content="https://rickymoorhouse.uk/images/social-share.png" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="1200" />
     {{ end }}
-    <meta name="twitter:description" property="og:description" content="{{ .Summary }}" />
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+    <meta name="twitter:description" property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
     <meta name="twitter:creator" content="@rickymoorhouse" />
     <meta name="twitter:title" property="og:title" content="{{ .Title }}" />
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
+    <link rel="canonical" href="{{ .Permalink }}" />
     <meta name="twitter:site" content="@rickymoorhouse" />
     <link rel="apple-touch-icon" href="https://rickymoorhouse.uk/images/siteicon.png" />
     

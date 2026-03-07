@@ -2,12 +2,17 @@
 title: The SRE Mindset in API Architecture
 date: 2026-03-07
 layout: blog
+hideImages: true
+summary: How my SRE experience with sizing, observability and SLOs shapes the way I approach API architecture - planning for reality, not hopes.
 tags: 
  - architecture
  - sre
 ---
 
+![image](sre-mindset.png)
+
 I spent a good chunk of my career working in SRE and then when the opportunity came up I took the decision to move over into an Architecture role - in some ways a change and in many ways a wider remit to continue with the types of things I'd been doing and working on in the SRE team.  
+
 
 ## How SRE reliability principles shape architecture
 

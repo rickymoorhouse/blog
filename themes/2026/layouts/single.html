@@ -16,7 +16,7 @@
       },
       "datePublished": "{{ .Date.Format "2006-01-02" }}",
       {{ if .Lastmod }}"dateModified": "{{ .Lastmod.Format "2006-01-02" }}",{{ end }}
-      "description": "{{ .Description }}",
+      "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}",
       "publisher": {
         "@type": "Organization",
         "name": "IBM",
