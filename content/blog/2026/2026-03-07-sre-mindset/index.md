@@ -3,6 +3,7 @@ title: The SRE Mindset in API Architecture
 date: 2026-03-07
 layout: blog
 hideImages: true
+featured: sre-mindset.png
 summary: How my SRE experience with sizing, observability and SLOs shapes the way I approach API architecture - planning for reality, not hopes.
 tags: 
  - architecture
@@ -40,6 +41,6 @@ I read a comment somewhere that diagnosing problems in a microservices architect
 
 Metrics will give you an easy snapshot of if there is a problem, Traces will show you which service is causing the problem and the logs will tell you why.  These will also have a significant impact on the costing of your solution - metrics being the cheapest and logs being the most expensive as they will scale up rapidly as your volumes increase - 1 transaction could result in 10-100 log lines depending on the complexity and how verbose your logging is.  This is also why it is key to be able to dynamically adjust log levels - you can keep the general volume down and increase it as necessary. 
 
-As with sizing we mustn't get carried away with the trillions of transactions we're hoping to see on day 1 with 100% uptime - we need to set some expectations (Service Level Objectives) as to what real use of the system needs to look like and what our customers would accept.  NB. This is not what the SLA is or what the ideal requirement is (that would be super fast and always available) but the acceptable level of availability and responsiveness day to day. In some scenarios waiting for 5 seconds for data is fine, and others it is needed within milliseconds and each delay costs money. Just like some scenarios can cope with a retry and others can't. 
+As with sizing we mustn't get carried away with the trillions of transactions we're hoping to see on day 1 with 100% uptime - we need to set some expectations (Service Level Objectives) as to what real use of the system needs to look like and what our customers would accept.  This is not what the SLA is or what the ideal requirement is (that would be super fast and always available) but the acceptable level of availability and responsiveness day to day. In some scenarios waiting for 5 seconds for data is fine, and others it is needed within milliseconds and each delay costs money. Just like some scenarios can cope with a retry and others can't. 
 
 Sizing the system, ensuring we can answer the crucial questions about what is happening in it and appropriately meet our users' expectations are some of the ways my SRE experience has directly fed into my architecture work.  One of the next topics I plan to explore here is failure modes building from what I've covered here. 
