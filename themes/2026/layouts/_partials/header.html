@@ -48,7 +48,7 @@
     <link rel="canonical" href="{{ .Permalink }}" />
     <meta name="twitter:site" content="@rickymoorhouse" />
     <link rel="apple-touch-icon" href="https://rickymoorhouse.uk/images/siteicon.png" />
-    
+    <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
   </head>
   <body class="{{ .Site.Params.build }}">
       <div class="side">
@@ -91,7 +91,7 @@
         </div>
     </div>
 
-    <script src="/pagefind/pagefind-ui.js"></script>
+    <script src="/pagefind/pagefind-ui.js" defer></script>
     <script>
         // Theme switcher functionality
         document.addEventListener('DOMContentLoaded', function() {
