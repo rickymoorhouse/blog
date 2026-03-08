@@ -7,7 +7,7 @@
     <title>{{ .Title }}</title>
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="micropub" href="http://rickys-mac-mini.local:8080/micropub">
-    <link href="/css/pagefind-ui.css" rel="stylesheet">
+    <link href="/css/pagefind-ui.css" rel="stylesheet" media="print" onload="this.media='all'">
     {{ partial "css" . }}
     {{ hugo.Generator }}
     {{ if .Resources.ByType "image" }}
