@@ -25,7 +25,7 @@ For improved latency across regions - is this required primarily around read API
 
 If you're looking for resilience, will your requirements be satisfied with a primary region that normally will handle everything and a secondary location that can pick things up if the primary is down or do you need them both to be able to handle traffic in parallel?  How long can you cope with a failover between regions taking - seconds or hours? These are the factors that will drive how you go about implementing a multi-region solution. 
 
-## An API is only as good as its data so where is that?
+## An API is only as good as its data 
 
 Whilst it is relatively easy to replicate API Gateways and application servers between regions - this only gets you so far, as at the end of the day the API depends on a data source.  Where does the data for your API reside - what requirements for data storage need to be factored into the overall architecture?
 
