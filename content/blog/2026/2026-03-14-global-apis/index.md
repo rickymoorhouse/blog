@@ -11,6 +11,10 @@ tags:
   - api
 ---
 ![image](branch-with-birds.jpg)
+
+The requirement to be multi-region usually comes suddenly, an immediate business demand, a compliance deadline, or the aftermath of an incident. When designing API Connect SaaS, the decision was to build each region completely independently. Within a region it's highly available across availability zones, but the regions themselves don't replicate. The reasoning is straightforward: as a shared API management platform serving customers with fundamentally different requirements - data residency, cross-region resilience, or both - independent regions let each customer build the topology that fits their constraints, rather than the platform prescribing one.
+
+
 ## What is your requirement anyway?
 
 The first thing to consider when designing a multi-region API deployment is to make sure you are clear on what the fundamental business requirement is that is driving you towards a multi-region  strategy.  There are a number of routes that lead towards multi-region planning and they will all drive different variations to the design. 
@@ -18,8 +22,6 @@ The first thing to consider when designing a multi-region API deployment is to m
 - **Latency** - ensuring your APIs respond quickly from the regions you have consumers calling them 
 - **Resilience** - providing a failover for if there are issues in one region.
 - **Compliance** - ensuring data and/or traffic to remain in a particular region
-
-For our API Connect SaaS service the requirement was to offer the service in multiple regions, to give customers the option of geographical location to suit their needs, so rather than replication I opted for each region to be totally independent.  This gives customers that require data residency the option to keep everything in region, but for those looking for redundancy or reduced latency they can use this to build a [cross-region strategy](/blog/2025/global-deployment-with-api-connect-serving-apis-worldwide/).
 
 For improved latency across regions - is this required primarily around read APIs or do you need to handle write operations as well?  If it is primarily reads, then you may be able to reduce your latency with the use of a CDN with edge caching without the complexity and cost of a full multi-region deployment. 
 
@@ -42,7 +44,7 @@ Are there additional dependencies that come into play here? Do you need to depen
 
 If you can validate JWTs locally without needing to call out to a central service then in most cases you are good, but what happens if you need to revoke a token - do you have a robust system for sharing a revocation list?
 
-How are you handling rate-limiting - is this maintained within the region or do you have a way to track usage across the regions? Within DataPower API Gateway the rate-limiting is maintained across the peering group, but this requires a low-latency connection to keep current. For the DataPower Nano Gateway this uses an external Valkey or Redis to track rate-limits which could potentially be deployed with a cross-region replication. 
+How are you handling rate-limiting - is this maintained within the region or do you have a way to track usage across the regions? Within DataPower API Gateway the rate-limiting is maintained through the peering group, requiring a low-latency connection to keep them in-sync. For the DataPower Nano Gateway this can be externalised to your own Valkey or Redis deployment which you could deploy using cross-region replication. Whatever solution your rate limiting is based around, ensure that the period over which the rate is set aligns with the latency in your replication - for example if the replication may sometimes take more than a second you can't use per second rate limiting and would be better to calculate the equivalent over a larger period. 
 
 ## Routing and traffic management
 
@@ -58,7 +60,7 @@ If there is an issue with one of the regions, how do you detect it and what happ
 
 How do you test the failover? Any failover plan is only any use if it works so it is crucial that you have a way to test this.  Ideally you would identify a way simulate a failure and trigger the failover - then you can ensure your observability covers this to show what is happening during a failover. Also worth considering when you look at observability for a multi-region solution is whether you define Service Level Objectives by region or across the solution and how you track these, along with the resilience of your monitoring tooling as well.  
 
-Actual failures aren't always as cut and dried as the test however - you may find that a region is only partially impacted or continues to run just without any network connectivity. These are key factors to consider when determining the trigger for failover but also for clarifying the state of the system during the failover and what actions will be needed to move back to normal operation after the failover.  It may be that you need to treat a region as completely down even when it isn't so as not to end up with split-brain across the regions data - then restore a backup there in order to return to normal afterwards.
+Actual failures aren't always as cut and dried as the test however - you may find that a region is only partially impacted or continues to run just without any network connectivity. These are key factors to consider when determining the trigger for failover but also for clarifying the state of the system during the failover and what actions will be needed to move back to normal operation after the failover.  It may be that you need to treat a region as completely down even when it isn't so as not to end up with split-brain across the regions data - then restore a backup there in order to return to normal afterwards. This was a fundamental part of how we used to deal with replication in Informix - where if there was a network partition we would find multiple nodes continuing to run as primary and we would need to select which node to reset.  This was usually the one with a secondary server still attached, but occasionally there would be workload continuing on the standalone primary and nothing happening in the clustered one. The same principle applies here at a higher level: sometimes the safest recovery path is to treat a degraded region as completely lost and restore cleanly rather than trying to reconcile state. 
 
 Are there parts of your system that need to be disabled during a regional failure and run in a degraded mode as they add more risk or aren't as crucial to maintain availability on?
 
