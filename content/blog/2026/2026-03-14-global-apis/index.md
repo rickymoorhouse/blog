@@ -44,7 +44,7 @@ If you have an API that is read-heavy and the data is not time critical you may 
 
 If you have a write heavy API - how will you handle conflicts between writes across regions - will you need to add application or data level locking or would you enforce some form of queuing?
 
-To improve performance across regions the other approach could be to have regional caching to reduce the need to retrieve data from the master source, but this will require careful management of time-to-live values for cached data so that it remains within an acceptable freshness threshold which will differ between data types. 
+To improve performance across regions the other approach could be to have regional caching to reduce the need to retrieve data from the master source, but this will require careful management of time to live values for cached data so that it remains within an acceptable freshness threshold which will differ between data types. 
 
 
 ## Auth dependencies are the hidden failure mode
