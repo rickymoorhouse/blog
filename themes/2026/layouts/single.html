@@ -7,27 +7,25 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "{{ if eq .Type "blog" }}TechArticle{{ else }}Article{{ end }}",
-      "headline": "{{ .Title }}",
+      "@type": {{ if eq .Type "blog" }}"TechArticle"{{ else }}"Article"{{ end }},
+      "headline": {{ .Title | jsonify }},
+      "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end }},
+      "url": {{ .Permalink | jsonify }},
+      "datePublished": {{ .Date.Format "2006-01-02T15:04:05-07:00" | jsonify }},
+      {{ if .Lastmod }}"dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | jsonify }},{{ end }}
+      {{ if .Resources.ByType "image" }}{{ if .Params.featured }}{{ with .Resources.Match .Params.featured }}{{ range first 1 . }}"image": {{ .Permalink | jsonify }},{{ end }}{{ end }}{{ else }}{{ with .Resources.ByType "image" }}{{ range first 1 . }}"image": {{ .Permalink | jsonify }},{{ end }}{{ end }}{{ end }}{{ end }}
       "author": {
         "@type": "Person",
-        "name": "{{ .Site.Params.author }}",
-        "url": "{{ .Site.BaseURL }}"
+        "name": {{ .Site.Params.author | jsonify }},
+        "url": {{ .Site.BaseURL | jsonify }}
       },
-      "datePublished": "{{ .Date.Format "2006-01-02" }}",
-      {{ if .Lastmod }}"dateModified": "{{ .Lastmod.Format "2006-01-02" }}",{{ end }}
-      "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}",
       "publisher": {
-        "@type": "Organization",
-        "name": "IBM",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ .Site.BaseURL }}logo.png"
-        }
+        "@type": "Person",
+        "name": {{ .Site.Params.author | jsonify }}
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ .Permalink }}"
+        "@id": {{ .Permalink | jsonify }}
       }
     }
     </script>

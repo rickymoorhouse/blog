@@ -48,29 +48,6 @@
     <meta name="keywords" content="{{ delimit .Params.keywords ", " }}" />
     {{ end }}
     <link rel="canonical" href="{{ .Permalink }}" />
-    {{ if .IsPage }}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": {{ .Title | jsonify }},
-      "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end }},
-      "url": {{ .Permalink | jsonify }},
-      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-      {{ if .Resources.ByType "image" }}{{ if .Params.featured }}{{ with .Resources.Match .Params.featured }}{{ range first 1 . }}"image": {{ .Permalink | jsonify }},{{ end }}{{ end }}{{ else }}{{ with .Resources.ByType "image" }}{{ range first 1 . }}"image": {{ .Permalink | jsonify }},{{ end }}{{ end }}{{ end }}{{ end }}
-      "author": {
-        "@type": "Person",
-        "name": {{ .Site.Params.author | jsonify }},
-        "url": {{ .Site.BaseURL | jsonify }}
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": {{ .Site.Params.author | jsonify }}
-      }
-    }
-    </script>
-    {{ end }}
     <link rel="apple-touch-icon" href="https://rickymoorhouse.uk/images/siteicon.png" />
     <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
       <script defer src="https://cloud.umami.is/script.js" data-website-id="82e79ef7-d0f5-4488-83a8-c357ace64f06"></script>

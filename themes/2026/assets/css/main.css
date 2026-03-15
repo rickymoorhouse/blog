@@ -117,9 +117,12 @@ a {
   color: var(--link-color);
   transition: color var(--transition-fast);
 }
-
+h1 a {
+  text-decoration: none;
+}
 a:hover {
   color: var(--link-hover);
+  text-decoration: underline;
 }
 
 /* -----------------------------------------------------------------------------
