@@ -4,8 +4,16 @@ date: 2026-03-14T00:00:00.000Z
 layout: blog
 hideImages: true
 featured: branch-with-birds.jpg
-summary: When deploying APIs across multiple regions, the real challenges aren't geographical - they're about data, identity, routing and failure.
+summary: A practical guide to designing multi-region API deployments - covering data consistency, auth dependencies, traffic routing, and failure modes, with real-world lessons from IBM API Connect SaaS.
 sticky: true
+keywords: 
+  - multi-region API
+  - API gateway
+  - API architecture
+  - API management
+  - IBM API Connect
+  - resilience
+  - data residency
 tags:
   - architecture
   - api
