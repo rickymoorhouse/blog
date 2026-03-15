@@ -10,10 +10,11 @@ tags:
   - architecture
   - api
 ---
-![image](branch-with-birds.jpg)
+
 
 The requirement to be multi-region usually comes suddenly, an immediate business demand, a compliance deadline, or the aftermath of an incident. When designing API Connect SaaS, the decision was to build each region completely independently. Within a region it's highly available across availability zones, but the regions themselves don't replicate. The reasoning is straightforward: as a shared API management platform serving customers with fundamentally different requirements - data residency, cross-region resilience, or both - independent regions let each customer build the topology that fits their constraints, rather than the platform prescribing one.
 
+![image](branch-with-birds.jpg)
 
 ## What is your requirement anyway?
 
@@ -38,9 +39,9 @@ If you have a write heavy API - how will you handle conflicts between writes acr
 To improve performance across regions the other approach could be to have regional caching to reduce the need to retrieve data from the master source, but this will require careful management of time-to-live values for cached data so that it remains within an acceptable freshness threshold which will differ between data types. 
 
 
-## How are you handling Authentication and Authorization
+## Auth dependencies are the hidden failure mode
 
-Are there additional dependencies that come into play here? Do you need to depend on a central system for authentication and authorization or is the failover for that handled separately.  If your identity provider or authorization service is centralised then a regional API failure may be the least of your worries if auth itself is unavailable.
+If your identity provider or authorization service is centralised then a regional API failure may be the least of your worries if auth itself is unavailable. API Connect SaaS uses IBMID for it's management plane identity provider, highly available in it's own right, but not part of our regional deployment. Importantly though it's not involved in runtime authentication for customer APIs or their developer portals so any failure doesn't cascade to impact live traffic.
 
 If you can validate JWTs locally without needing to call out to a central service then in most cases you are good, but what happens if you need to revoke a token - do you have a robust system for sharing a revocation list?
 
