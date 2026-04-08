@@ -8,10 +8,10 @@
           {{ range first 1 . }}
             {{ $.Scratch.Set "images" "True" }} 
             {{ $image := .Fill "586x586" }} 
-            {{ if (isset .Exif.Tags "ImageDescription") }}
+            {{ if (.Meta.Exif.Tags.ImageDescription) }}
             <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
             </a>
-              <img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}">
+              <img src="{{ $image.RelPermalink }}" alt="{{ .Meta.Exif.Tags.ImageDescription }}">
             {{ else }}
             <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
             {{ end }}
@@ -22,10 +22,10 @@
           {{ range first 1 . }}
             {{ $.Scratch.Set "images" "True" }} 
             {{ $image := .Fill "586x586" }} 
-            {{ if (isset .Exif.Tags "ImageDescription") }}
+            {{ if (isset .Meta.Exif.Tags "ImageDescription") }}
             <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
             </a>
-              <img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}">
+              <img src="{{ $image.RelPermalink }}" alt="{{ .Meta.Exif.Tags.ImageDescription }}">
             {{ else }}
             <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
             {{ end }}

@@ -1,8 +1,8 @@
 {
  "type":"FeatureCollection",
  "features": [
-{{- $last := sub (len .Site.Data.travel) 1 -}}
-{{- range $i, $e := .Site.Data.travel -}}
+{{- $last := sub (len hugo.Data.travel) 1 -}}
+{{- range $i, $e := hugo.Data.travel -}}
 {{- if .lat -}}
   {
    "type":"Feature",

@@ -1,14 +1,19 @@
 {{ with $.Page.Resources.GetMatch (.Get 0)}}
+{{ $title := "" }}
+{{ if reflect.IsImageResourceWithMeta . }}
+  {{ with .Meta }}    
+    {{ with .Exif }}
+    {{ $title := .Tags.ImageDescription }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 <div class="Image"><figure class="full">
     <a class="image-popup-vertical-fit" href="{{ .RelPermalink }}">
-            <img src="{{ .RelPermalink }}" 
-                {{ with .Exif }}alt="{{ .Tags.ImageDescription }}"{{ end }}>
+            <img src="{{ .RelPermalink }}" alt="{{ $title }}">
     </a>
-    {{ with .Exif }}
     <figcaption>
-    {{ .Tags.ImageDescription }}
+    {{ $title }}
     </figcaption>
-    {{ end }}
  </figure>
 </div>
 {{ end }}

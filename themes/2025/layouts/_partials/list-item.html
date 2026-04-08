@@ -17,7 +17,7 @@
           {{ range first 1 . }}
             {{ $.Scratch.Set "images" "True" }} 
             {{ $image := .Fill "586x586" }}
-            <a class="glightbox" {{ if (isset .Exif.Tags "ImageDescription") }}data-title="{{ .Exif.Tags.ImageDescription }}"{{ end }} href="{{ .RelPermalink }}">
+            <a class="glightbox" {{ if (isset .Meta.Exif.Tags "ImageDescription") }}data-title="{{ .Meta.Exif.Tags.ImageDescription }}"{{ end }} href="{{ .RelPermalink }}">
               <img src="{{ $image.RelPermalink }}" alt=".">
             </a>
           {{ end }}
@@ -27,10 +27,10 @@
           {{ range first 6 . }}
             {{ $.Scratch.Set "images" "True" }} 
             {{ $image := .Fill "586x586" }} 
-            {{ if (isset .Exif.Tags "ImageDescription") }}
-            <a class="glightbox" data-title="{{ .Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}">
+            {{ if (isset .Meta.Exif.Tags "ImageDescription") }}
+            <a class="glightbox" data-title="{{ .Meta.Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}">
             </a>
-              <img src="{{ $image.RelPermalink }}" alt="{{ .Exif.Tags.ImageDescription }}">
+              <img src="{{ $image.RelPermalink }}" alt="{{ .Meta.Exif.Tags.ImageDescription }}">
             {{ else }}
             <a class="glightbox" href="{{ $image.RelPermalink }}"><img src="{{ $image.RelPermalink }}" alt="."></a>
             {{ end }}
@@ -39,8 +39,8 @@
       {{ end}}
       {{ with .Resources.ByType "image" }}
         {{ range (after 1  .) }}
-          {{ if (isset .Exif.Tags "ImageDescription") }}
-            <a class="glightbox" data-title="{{ .Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}"></a>
+          {{ if (isset .Meta.Exif.Tags "ImageDescription") }}
+            <a class="glightbox" data-title="{{ .Meta.Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}"></a>
           {{ else }}
             <a class="glightbox" href="{{ .RelPermalink }}"></a>
           {{ end }}

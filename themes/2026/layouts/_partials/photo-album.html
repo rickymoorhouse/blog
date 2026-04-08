@@ -5,8 +5,17 @@
   {{ range first 1 . }}
     {{ $.Scratch.Set "images" "True" }} 
     {{ $image := .Fill "586x586" }}
-    {{ if (isset .Exif.Tags "ImageDescription") }}
-      {{ $title := .Exif.Tags.ImageDescription}}
+    {{ if reflect.IsImageResourceWithMeta . }}
+      {{ with .Meta }}
+        {{ with .Exif }}
+        {{ if (.Tags.ImageDescription) }}
+          {{ $title = .Tags.ImageDescription}}
+        {{ end }}
+        {{ if (.Tags.DateTimeOriginal) }}
+          {{ $date = .DateTimeOriginal.Format "2 Jan 2006" }}
+        {{ end }}
+      {{ end }} 
+     {{ end }}
     {{ end }}
     <a href="{{ $link }}">
         <div class="photo-album-wrapper">
@@ -20,10 +29,15 @@
 {{ end }}
     {{ with .Resources.ByType "image" }}
       {{ range (after 1  .) }}
-        {{ if (isset .Exif.Tags "ImageDescription") }}
-          <a class="glightbox" data-title="{{ .Exif.Tags.ImageDescription }}" href="{{ .RelPermalink }}"></a>
-        {{ else }}
-          <a class="glightbox" href="{{ .RelPermalink }}"></a>
-        {{ end }}
-        {{ end }}
+        {{ if reflect.IsImageResourceWithMeta . }}
+          {{ with .Meta }}
+            {{ with .Exif }}
+            {{ if (.Tags.ImageDescription) }}
+            {{ $title = .Tags.ImageDescription}}
+            {{ end }}
+          {{ end }}
+          {{ end }}
+        {{ end}}  
+        <a class="glightbox" data-title="{{ $title }}" href="{{ .RelPermalink }}"></a>
+      {{ end }}
     {{ end }}

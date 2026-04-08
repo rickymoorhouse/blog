@@ -906,7 +906,9 @@ section.recent-posts {
   transition: opacity var(--transition-normal);
   border-radius: 0 0 var(--border-radius) var(--border-radius);;
 }
-
+.photo-overlay .post-date {
+  color: #fff;
+}
 .photo-overlay p {
   margin: 0;
 }
@@ -1145,4 +1147,13 @@ article.microblog:last-child {
 }
 .projectlist {
   margin-left: var(--space-xl);
+}
+.photos .exif {
+  width:40%;
+  float: left;
+  font: 10pt var(--font-sans);
+}
+.photos .photo {
+  width: 60%;
+  float:left;
 }

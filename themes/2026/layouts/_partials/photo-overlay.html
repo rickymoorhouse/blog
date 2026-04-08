@@ -4,10 +4,14 @@
   {{ range first 1 . }}
     {{ $.Scratch.Set "images" "True" }} 
     {{ $image := .Fill "586x586" }}
-    {{ if (isset .Exif.Tags "ImageDescription") }}
-    {{ $title := .Exif.Tags.ImageDescription}}
-    {{ end }}
-    <a class="glightbox" {{ if (isset .Exif.Tags "ImageDescription") }}data-title="{{ .Exif.Tags.ImageDescription }}"{{ end }} href="{{ .RelPermalink }}">
+    {{ if reflect.IsImageResourceWithMeta . }}
+      {{ with .Meta }}
+        {{ with .Exif }}
+          {{ $title := .Tags.ImageDescription}}
+        {{ end }}
+      {{ end}}
+    {{ end}}
+    <a class="glightbox" data-title="{{ $title }}" href="{{ .RelPermalink }}">
         <div class="photo-image-wrapper">
             <img src="{{ .RelPermalink }}" />
             <div class="photo-overlay">
