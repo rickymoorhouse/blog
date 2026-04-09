@@ -17,7 +17,7 @@ jobs:
 
       - name: Get hugo and pagefind
         env:
-          HUGO_VERSION: "0.155.2"
+          HUGO_VERSION: "0.160.0"
           PAGEFIND_VERSION: "1.4.0"
         run: |
           HUGO_DOWNLOAD=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
