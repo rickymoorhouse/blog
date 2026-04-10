@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Title }}</title>
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link href="/css/pagefind-ui.css" rel="stylesheet">
     {{ partial "css" . }}
     {{ hugo.Generator }}
     {{ if .Resources.ByType "image" }}
@@ -87,7 +86,6 @@
         </div>
     </div>
 
-    <script src="/pagefind/pagefind-ui.js"></script>
     <script>
         // Theme switcher functionality
         document.addEventListener('DOMContentLoaded', function() {
