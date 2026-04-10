@@ -1,4 +1,14 @@
 <section id="sidebar">
-    <h1><a href="https://rickymoorhouse.uk/" class="h-card" rel="me">Ricky Moorhouse</a></h1>
-    <p class="p-note">{{ markdownify .Site.Params.Description }}</p>
+    
+    
+    
+    {{ with site.RegularPages.Related . | first 5 }}
+    <p>Related posts:</p>
+    <ul>
+        {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
 </section>

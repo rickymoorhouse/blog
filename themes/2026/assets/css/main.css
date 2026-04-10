@@ -68,8 +68,17 @@
   --container-padding: 5vw;
 
   /* Pagefind UI */
-  --pagefind-scale: 1;
-  --pagefind-primary: var(--color-primary);
+  --pf-border: #006646 !important;
+  --pf-border-focus: #006646 !important;
+  --pf-background: #006646 !important;
+  --pf-text: #ffffff !important;
+  --pf-text-muted: #ffffff !important;
+  --pf-text-secondary: rgba(255,255,255,0.9) !important;
+  --pf-mark: #99ccff !important;
+  --pf-hover: rgba(255,255,255,0.1) !important;
+  --pf-outline-focus: #99ccff !important;
+  --pf-font: var(--font-sans) !important;
+
 }
 
 /* -----------------------------------------------------------------------------
@@ -225,7 +234,30 @@ svg.plane-icon {
   list-style: none;
   padding: 2pt;
 }
-
+div.e-content {
+  margin: 0 6%;
+}
+/*
+main.blog.single {
+  display: flex;
+}
+main.blog.single section#sidebar {
+  width: 30%;
+  margin: var(--space-md);
+}
+main.blog.single article {
+  width: 70%;
+}
+main.blog div.left-text {
+  margin: 0 auto;
+}
+main.blog.single article.featured-card {
+  width: 100%;
+  margin-top: var(--space-md);
+}
+main.blog.single .feeatured-image img{
+  height: auto;
+}*/
 @media (min-width: 769px) {
   .side nav li {
     width: 30pt;
@@ -344,22 +376,11 @@ footer p {
   font-size: var(--text-sm);
   color: var(--text-muted);
 }
-/* Search Results */
-#search {
-  font-family: var(--font-sans);
-  font-size: var(--text-sm);
-}
-#search li {
-  margin: var(--space-sm) 0;
-}
-#search p.pagefind-ui__message {
-  margin: var(--space-md) 0;
-}
-#search .pagefind-ui__search-clear {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2002;
+
+pagefind-modal-trigger {
+position: absolute;
+top: 1em;
+right: 1em;
 }
 /* -----------------------------------------------------------------------------
    Navigation Cards (Homepage)
@@ -495,7 +516,7 @@ article h1 {
 article h5 {
   display: grid;
   grid-template-columns: 1fr auto;
-  max-width: 65em;
+  max-width: 50em;
 }
 .dt-published {
   padding: var(--space-xs) var(--space-sm);
@@ -841,7 +862,7 @@ section.recent-posts {
   overflow: hidden;
 }
 
-.featured-image {
+.landing .featured-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
