@@ -308,7 +308,7 @@ main.blog.single .feeatured-image img{
 
 /* Main Content - offset for vertical sidebar */
 main {
-  padding-left: var(--space-md);
+  padding: 0 var(--space-md);
   max-width: 100%;
   margin-left: var(--sidebar-width);
   min-height: 100vh;
