@@ -10,7 +10,6 @@
     {{ if .Params.end }}
     - <time>{{.Params.end | dateFormat (.Site.Params.dateFormat | default "January 2, 2006") }}</time>
     {{ end}}
-
 </h5>
 
 {{ else }}
@@ -28,7 +27,13 @@
     {{ if ne .Type "page" }}
     {{ if eq "1 Jan 0001" ($.Scratch.Get "subtitle") }}&nbsp;{{ else }}
     <h5>
+        <span>
         <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ $.Scratch.Get "subtitle" }}</time>
+        {{ if .Params.distance }}
+            <strong>Distance:</strong> {{ .Params.distance }}
+        {{ end }}
+        </span>
+
         {{- if compare.Gt .Lastmod .Date -}}
         <h4 class="subtitle ml-2">
             Last updated <time datetime="{{ .Lastmod }}">{{ .Lastmod | time.Format ":date_medium" }}</time>

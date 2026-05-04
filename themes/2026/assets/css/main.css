@@ -316,9 +316,6 @@ main {
 }
 /* --- Maps --*/
 
-#map {
-  min-height: 100vh !important;
-}
 .map-page-content {
 position:fixed;
 bottom: var(--space-2xl);
@@ -518,6 +515,8 @@ article h5 {
   grid-template-columns: 1fr auto;
   max-width: 50em;
 }
+article strong {font-weight: 600;}
+
 .dt-published {
   padding: var(--space-xs) var(--space-sm);
   grid-column: 1

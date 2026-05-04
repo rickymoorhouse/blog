@@ -52,6 +52,8 @@ var themeObserver = new MutationObserver(function(mutations) {
 themeObserver.observe(document.documentElement, { attributes: true });
 
 document.getElementById('map').style.height="330px";
+document.getElementById('map').style.width="500px";
+document.getElementById('map').style.float="right";
 /*document.getElementById('map').style.width="750px";*/
 mapboxgl.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
 var  geojson = {
@@ -84,7 +86,7 @@ map.on('load', () => {
       'line-cap': 'round'
     },
     'paint': {
-      'line-color': '{{ .Site.Params.tertiary }}',
+      'line-color': '#cc9966',
       'line-width': 2
     }
   });
