@@ -17,7 +17,7 @@ params:
     copyright: "&copy; Ricky Moorhouse"
     highlight: true
     highlightLanguages: ["python", "javascript", "yaml"]
-
+    mapboxAccessToken: "pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY21vcmN6cWJ0MXBtbzJzczR2cHNhN2lpZiJ9.UgJJKGt2mZMkN-LcW-1tug"
 menu:
   icon:
   - url: "https://github.com/rickymoorhouse/"

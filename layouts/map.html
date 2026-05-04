@@ -128,7 +128,7 @@
 <script type="text/javascript">
 
 document.getElementById('map').style.height=(window.innerHeight-57) + "px";
-mapboxgl.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
+mapboxgl.accessToken = '{{ .Site.Params.mapboxAccessToken }}';
 
 var theme = document.documentElement.getAttribute('data-theme') || localStorage.getItem('theme');
 var style = theme === 'dark' ? 'mapbox://styles/mapbox/dark-v10' : 'mapbox://styles/mapbox/light-v10';

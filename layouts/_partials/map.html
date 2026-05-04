@@ -55,7 +55,7 @@ document.getElementById('map').style.height="330px";
 document.getElementById('map').style.width="500px";
 document.getElementById('map').style.float="right";
 /*document.getElementById('map').style.width="750px";*/
-mapboxgl.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
+mapboxgl.accessToken = '{{ .Site.Params.mapboxAccessToken }}';
 var  geojson = {
       'type': 'Feature',
       'geometry': {
