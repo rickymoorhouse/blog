@@ -90,4 +90,5 @@ deployment:
   - pattern: "^.+\\.(html|xml|json)$"
     gzip: true 
 outputs:
-  home: ["HTML", "RSS"]
+  home: ["HTML", "RSS", "MARKDOWN"]
+  page: ["HTML", "MARKDOWN"]

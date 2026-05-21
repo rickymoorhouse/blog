@@ -10,6 +10,9 @@
     <link rel="authorization_endpoint" href="https://aerie.tawny-monitor.ts.net/auth">
     <link rel="token_endpoint"         href="https://aerie.tawny-monitor.ts.net/token">
     <link href="/css/pagefind-ui.css" rel="stylesheet" media="print" onload="this.media='all'">
+    {{ range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{- end -}}
     {{ partial "css" . }}
     {{- hugo.Generator -}}
     {{- if .Resources.ByType "image" -}}
