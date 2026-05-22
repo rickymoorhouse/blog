@@ -70,6 +70,8 @@ languages:
         weight: 3        
 
 markup:
+  highlight:
+    noClasses: false
   goldmark:
     renderer:
       unsafe: true
