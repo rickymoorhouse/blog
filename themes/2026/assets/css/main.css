@@ -48,7 +48,7 @@
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
   --text-2xl: 1.5rem;
-  --text-3xl: 2rem;
+  --text-3xl: 1.7rem;
 
   /* Borders & Shadows */
   --border-radius: 8px;
@@ -505,8 +505,12 @@ main.photos section {
 article.blog {
   margin-top: var(--space-xl)
 }
+
 article.h-entry p {
   margin-bottom: 1em;
+}
+article.h-entry {
+  width: 70ch;
 }
 article h1 {
   margin-bottom: var(--space-xs);
@@ -514,12 +518,18 @@ article h1 {
 article h5 {
   display: grid;
   grid-template-columns: 1fr auto;
+  margin: var(--space-md) var(--space-sm);
   max-width: 50em;
 }
 article strong {font-weight: 600;}
 
+.dt-published , .item-tag{
+  padding: var(--space-2xs) var(--space-sm);
+  border-radius: var(--border-radius-sm);
+  line-height: 1.1;
+  margin-top: 0;
+}
 .dt-published {
-  padding: var(--space-xs) var(--space-sm);
   grid-column: 1
 }
 .tags {
@@ -711,7 +721,6 @@ div.tags {
 
 .item-tag {
   display: inline-block;
-  padding: var(--space-xs) var(--space-sm);
   background: var(--bg-tag);
   color: var(--color-tag);
   border-radius: var(--border-radius-sm);
