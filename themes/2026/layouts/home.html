@@ -70,7 +70,7 @@
     <h2>Recent Posts</h2>
   	{{ partial "paginator" . }}
     <ul class="post-list">
-      {{ range first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+      {{ range first 8 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
         {{ partial "short-list-item.html" . }}
       {{ end }}
     </ul>

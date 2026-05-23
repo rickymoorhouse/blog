@@ -3,7 +3,7 @@
     
     
     {{ with site.RegularPages.Related . | first 5 }}
-    <p>Related posts:</p>
+    <h3>Related posts:</h3>
     <ul>
         {{ range . }}
         <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>

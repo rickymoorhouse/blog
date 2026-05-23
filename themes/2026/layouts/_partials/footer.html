@@ -11,7 +11,7 @@
     }
 });
 </script>        <footer>
-            <p class="copyright">{{ .Site.Params.copyright | default "&copy; All rights reserved." | markdownify }}</p>
+            <p class="copyright">&copy; {{ now.Format "2006" }} {{ .Site.Title }} ·  Built with <a href="https://gohugo.io/">Hugo</a> · <a href="#top">Back to Top</a></p>
         </footer>
     </body>
 </html>
