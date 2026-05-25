@@ -26,12 +26,12 @@ menu:
   - url: "https://bsky.app/profile/rickymoorhouse.uk"
     name: "bluesky"
     weight: 3
+  - url: "https://sifa.id/p/rickymoorhouse.uk?connect=1"
+    name: "sifa"
+    weight: 3
   - url: "https://www.threads.com/@rickymoorhouse"
     name: "threads"
     weight: 3    
-  - url: "https://hachyderm.io/@ricky"
-    name: "mastodon"
-    weight: 3
   - url: "https://www.linkedin.com/in/rickymoorhouse/"
     name: "linkedin"
     weight: 4
