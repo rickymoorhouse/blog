@@ -6,7 +6,14 @@ menu:
     weight: 100
 ---
 
-![Me](/photos/mount-tam/IMG_8828_hu_8295ea9df23950d9.jpeg) I live in the south of England with my wife, two kids and our dog Nova. By day I'm a Cloud Architect at IBM, working on API Connect. By other times you'll find me running, walking, taking photos, or exploring with family. Welcome to my corner of the web — hope you find something interesting here.
+![Me](/photos/mount-tam/IMG_8828_hu_8295ea9df23950d9.jpeg) 
+
+
+I’m Architect for IBM API Connect SaaS at IBM, where I’ve spent the best part of twenty years in integration, starting out doing what would now be called SRE before the term really existed, and moving into architecture from there. That background still shapes how I approach things and am always keen to avoid repetitive manual steps. On the technical side, the areas  I find most interesting sit at the intersection of how systems are designed, how they interact and how they actually behave under pressure.
+
+This is where I write about that, alongside travel, photography, and walking the dog in the Hampshire countryside. It’s a personal site rather than a focused blog, so expect a bit of everything.
+
+I’m based in the south of England — you can find me on LinkedIn and Bluesky, or use the contact link below.
 
 &nbsp;
 
