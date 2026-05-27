@@ -17,7 +17,7 @@ params:
     copyright: "&copy; Ricky Moorhouse"
     highlight: true
     highlightLanguages: ["python", "javascript", "yaml"]
-
+    mapboxAccessToken: "pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY21vcmN6cWJ0MXBtbzJzczR2cHNhN2lpZiJ9.UgJJKGt2mZMkN-LcW-1tug"
 menu:
   icon:
   - url: "https://github.com/rickymoorhouse/"
@@ -26,12 +26,12 @@ menu:
   - url: "https://bsky.app/profile/rickymoorhouse.uk"
     name: "bluesky"
     weight: 3
+  - url: "https://sifa.id/p/rickymoorhouse.uk?connect=1"
+    name: "sifa"
+    weight: 3
   - url: "https://www.threads.com/@rickymoorhouse"
     name: "threads"
     weight: 3    
-  - url: "https://hachyderm.io/@ricky"
-    name: "mastodon"
-    weight: 3
   - url: "https://www.linkedin.com/in/rickymoorhouse/"
     name: "linkedin"
     weight: 4
@@ -70,6 +70,8 @@ languages:
         weight: 3        
 
 markup:
+  highlight:
+    noClasses: false
   goldmark:
     renderer:
       unsafe: true
@@ -90,4 +92,5 @@ deployment:
   - pattern: "^.+\\.(html|xml|json)$"
     gzip: true 
 outputs:
-  home: ["HTML", "RSS"]
+  home: ["HTML", "RSS", "MARKDOWN"]
+  page: ["HTML", "MARKDOWN"]
