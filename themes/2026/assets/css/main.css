@@ -43,6 +43,7 @@
   --font-body: "IBM Plex Serif", Georgia, serif;
   --font-heading: "IBM Plex Sans", system-ui, sans-serif;
   --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
@@ -180,7 +181,7 @@ svg.icon {
 svg.plane-icon {
   width: 1.5em;
   height: 2em;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
 
 /* -----------------------------------------------------------------------------
@@ -482,6 +483,7 @@ right: 1em;
 }
 .post-list .post {
   grid-column: 2;
+  align-content: center;
 }
 .post-date {
   color: var(--text-muted);
@@ -489,6 +491,7 @@ right: 1em;
   font-size: var(--text-sm);
   white-space: nowrap;
   grid-column: 1;
+  align-content: center;
 }
 
 /* -----------------------------------------------------------------------------
@@ -653,10 +656,6 @@ code {
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-normal);
-}
-
-.photo-item:hover img {
-  transform: scale(1.05);
 }
 
 /* Photo grid for multi-image items */
@@ -943,7 +942,7 @@ section.recent-posts {
     -webkit-backdrop-filter: blur(8px);
   }
 }
-a:hover .photo-overlay {
+a .photo-overlay {
   opacity: 1;
 }
 
@@ -976,6 +975,9 @@ max-width: 67ch;
 }
 .technical .category { background: #006646;}
 .personal .category { background: #5A3A6E;}
+.tag {font-family: var(--font-sans);}
+.technical .tag { color: #006646; background: var(--color-secondary-bright);}
+.personal .tag { color: #5A3A6E; background: var(--color-secondary-bright);}
 
 /* -----------------------------------------------------------------------------
    Responsive Design - Mobile: Horizontal header
