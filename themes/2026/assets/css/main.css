@@ -513,7 +513,7 @@ article.h-entry p {
   margin-bottom: 1em;
 }
 article.h-entry {
-  width: 70ch;
+  max-width: 70ch;
 }
 article h1 {
   margin-bottom: var(--space-xs);
@@ -1118,11 +1118,14 @@ article.microblog {
   padding: var(--space-md) 0;
   margin-bottom: 0;
 }
-
 article.microblog:last-child {
   border-bottom: none;
 }
-
+.landing .microblog-image {
+  width: calc(50% - 2 * var(--space-xs));
+  float: left;
+  margin: var(--space-xs);
+}
 .microblog-content {
   font-size: var(--text-base);
   line-height: 1.6;
