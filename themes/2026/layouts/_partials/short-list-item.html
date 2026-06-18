@@ -9,10 +9,20 @@
         {{ if or (eq "microblog" .Type) (eq "flight" .Params.layout) }}
         <li>
           <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
-          <div class="post">
-            {{ if eq "microblog" .Type }}
-              {{ .Content }}
+          {{ if eq "microblog" .Type }}
+            <div class="microblog">
+            {{ .Content }}
+              {{ with .Resources.ByType "image" }}
+                {{ range first 2 . }}
+                  {{ $image := .Fill "300x300 Center" }}
+                  <a href="{{ .Permalink }}" class="glightbox">
+                    <img src="{{ $image.Permalink }}" class="microblog-image" />
+                  </a>
+                {{ end }}
+              {{ end }}            
             {{ else if eq "flight" .Params.layout }}
+            <div class="flight">
+
               <span class="post-title flight-airport"><strong>{{ .Params.from }}</strong>
               <svg class="plane-icon" viewBox="0 0 43 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                 <g transform="matrix(-14.4509,6.88885,-6.14735,-12.8954,102.815,35.4699)">
@@ -34,11 +44,11 @@
         <li>
           <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
           <div class="post">
-            <a href="{{ .Permalink }}">
-              {{ $page := . }}
-              {{ if .Resources.ByType "image" }}
-                {{ with .Resources.GetMatch .Params.featured | default (index (.Resources.ByType "image") 0) }}
-                  {{ $image := .Fill "400x250 Center" }}
+            {{ $page := . }}
+            {{ if .Resources.ByType "image" }}
+            {{ with .Resources.GetMatch .Params.featured | default (index (.Resources.ByType "image") 0) }}
+            <a class="glightbox" href="{{ .Permalink }}">
+            {{ $image := .Fill "400x250 Center" }}
                   <div class="photo-image-wrapper">
                     <img src="{{ $image.Permalink }}" class="featured-image" />
                     <div class="photo-overlay">
@@ -46,7 +56,8 @@
                     </div>
                   </div>
                 {{ end }}
-              {{ end }}</a>
+              {{ end }}
+            </a>
           </div>
         </li>
         {{ else }}
@@ -57,6 +68,7 @@
             <a href="{{ .Permalink }}">
               <span class="post-title">{{ .Title }}</span>
             </a>
+            {{ range .Params.tags }}<span class="item-tag">{{ . }} </span>&nbsp;{{ end }}
           </div>
         </li>
         {{ end }}
