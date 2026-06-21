@@ -1,5 +1,5 @@
 baseURL: "https://rickymoorhouse.uk/"
-languageCode: "en-gb"
+locale: "en-gb"
 title: "Ricky Moorhouse"
 theme: "2026"
 permalinks:
