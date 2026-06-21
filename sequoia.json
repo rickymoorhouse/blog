@@ -1,0 +1,23 @@
+{
+  "$schema": "https://tangled.org/stevedylan.dev/sequoia/raw/main/sequoia.schema.json",
+  "siteUrl": "https://rickymoorhouse.uk",
+  "contentDir": "./content/blog/2026",
+  "publicDir": "./static",
+  "outputDir": "./public",
+  "pathPrefix": "/blog/2026",
+  "imagesDir": "./content/blog/2026",
+  "publicationUri": "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.publication/3mos5q3a7jf2w",
+  "frontmatter": {
+    "publishDate": "date",
+    "coverImage": "featured"
+  },
+  "publishContent": true,
+  "bluesky": {
+    "enabled": true,
+    "maxAgeDays": 2
+  },
+  "ui": {
+    "components": "themes/2026/static/js/"
+  }
+
+}
