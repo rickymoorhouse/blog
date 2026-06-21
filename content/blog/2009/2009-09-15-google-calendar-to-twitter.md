@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2009/09/15/google-calendar-to-twitter/
 slug: google-calendar-to-twitter
 title: Google Calendar to Twitter
 wordpress_id: 1419
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweizyfr2r"
 ---
 
 ![](http://samespirit.net/ricky/images/2009/gcal2twitter.png)

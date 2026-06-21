@@ -9,6 +9,7 @@ link: https://rickymoorhouse.uk/2010/09/15/mysql-locking/
 slug: mysql-locking
 title: MySQL Locking
 wordpress_id: 5992
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswebxvzu2o"
 ---
 
 After experimenting a bit with MySQL locking today, I thought I'd make a note of what I'd discovered:

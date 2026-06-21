@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2011/06/21/from-around-the-web/
 slug: from-around-the-web
 title: From around the web...
 wordpress_id: 7228
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweh5vea2e"
 ---
 
 Here's a few articles I've read recently that are helpful and challenging:

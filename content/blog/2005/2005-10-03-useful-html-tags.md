@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/10/03/useful-html-tags/
 slug: useful-html-tags
 title: Useful HTML tags
 wordpress_id: 1572
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswevqymq2e"
 ---
 
 Just a quick note about some useful HTML tags that have been around for a long time, but I've found particularly useful recently:

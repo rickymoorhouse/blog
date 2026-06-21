@@ -7,6 +7,7 @@ slug: new-york
 draft: false
 tags:
 - travel
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweqkind2h"
 ---
 
 {{<fig "IMG_0512.jpeg">}}

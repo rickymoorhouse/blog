@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/10/06/what-a-hope-we-have/
 slug: what-a-hope-we-have
 title: What a hope we have!
 wordpress_id: 1600
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf3pzza2s"
 ---
 
 We had a really good bible study last night on 1 Thessalonians 4:13-18:

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/09/23/kinky-boots/
 slug: kinky-boots
 title: Kinky Boots
 wordpress_id: 1573
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswevtwia2s"
 ---
 
 Last week on the vue mailing list, Laura got an invitation for free tickets to the preview of "Kinky Boots", so on Wednesday we both went to see it:

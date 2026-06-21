@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2007/07/07/adventures-with-abi/
 slug: adventures-with-abi
 title: Adventures with Abi
 wordpress_id: 1494
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswelqqla2e"
 ---
 
 Abi seems to doing so much more everyday at the moment, it's been wonderful watching her developments and seeing her different adventures. The other morning she cleaned her teeth with me after having her face washed. She's so sweet with her little toothbrush - not that there's any teeth there to clean yet. Yesterday and today she's taken to reaching up to the edge of the desk or the table on tip toes and almost hanging off it with her little fingers. Yet another set of things that need to be moved out of reach!

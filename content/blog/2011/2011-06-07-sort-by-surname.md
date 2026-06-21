@@ -10,6 +10,7 @@ post_format:
 slug: sort-by-surname
 title: Sort by Surname
 wordpress_id: 7224
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswehh5ay2e"
 ---
 
 `ORDER BY SUBSTRING_INDEX(full_name, ' ', -1)`

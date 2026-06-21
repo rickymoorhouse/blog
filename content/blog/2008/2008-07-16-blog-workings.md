@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2008/07/16/blog-workings/
 slug: blog-workings
 title: Blog workings
 wordpress_id: 1449
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweexek22h"
 ---
 
 This blog has been through various different iterations mostly based on custom written code- I tried Wordpress for a while, but didn't get on with it - it was too complicated for what I wanted, and I got too much comment spam (mostly filtered out, but still a lot to check it wasn't filtering valid comments).

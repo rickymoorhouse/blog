@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2009/11/18/700-chocolate-bars/
 slug: 700-chocolate-bars
 title: 700 chocolate bars
 wordpress_id: 1403
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweinprl2h"
 ---
 
 [![](http://rickymoorhouse.files.wordpress.com/2009/11/green_and_black1.png?w=300)](http://rickymoorhouse.files.wordpress.com/2009/11/green_and_black1.png)

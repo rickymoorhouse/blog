@@ -4,6 +4,7 @@ date: 2021-07-20
 slug: debugging-jobs-in-k8s
 tags: 
  - kubernetes
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe6kexa2e"
 ---
 
 As jobs are often short running and finish before you can check anything within the pod, often it's helpful to make the pod run for longer to be able to inspect the environment and re-run the job manually. 

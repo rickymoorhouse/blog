@@ -6,6 +6,7 @@ tags:
 hideImages: true
 fetured: GPTempDownload.jpeg
 date: 2022-04-17
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweqzupq2c"
 ---
 
 We started with an early breakfast at 7 with seats right by the front of the restaurant overlooking the volcano watching birds over the water and then headed over to the reception to be picked up at 8:15 for Sky trek. 

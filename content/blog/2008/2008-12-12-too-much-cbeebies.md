@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2008/12/12/too-much-cbeebies/
 slug: too-much-cbeebies
 title: Too much CBeebies?
 wordpress_id: 1440
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweeaqwa2c"
 ---
 
 Today when I was in town with Abi, we saw a man sitting on a bench â€“ she pointed at him and said,

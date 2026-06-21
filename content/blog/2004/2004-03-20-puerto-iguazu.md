@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/03/20/puerto-iguazu/
 slug: puerto-iguazu
 title: Puerto Iguazu
 wordpress_id: 1636
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfdqpxr2r"
 ---
 
 ![Laura at Argentinian post](/resize.asp?width=200&path=/ricky/blogfiles/3f-AR.jpg)

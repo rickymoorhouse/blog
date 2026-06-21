@@ -7,6 +7,7 @@ date: "2014-10-18T06:11:17Z"
 slug: disabling-sslv3
 title: Disabling SSLv3
 wordpress_id: 8205
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe7xax52p"
 ---
 
 With [POODLE](http://googleonlinesecurity.blogspot.co.uk/2014/10/this-poodle-bites-exploiting-ssl-30.html) the time has come to disable SSLv3 everywhere. There will be clients that break and need fixing but it needs doing. You can [read more details and background](https://www.imperialviolet.org/2014/10/14/poodle.html) on the [vulnerability](https://www.openssl.org/~bodo/ssl-poodle.pdf).

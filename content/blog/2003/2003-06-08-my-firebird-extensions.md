@@ -5,6 +5,7 @@ date: "2003-06-08T00:00:00Z"
 slug: my-firebird-extensions
 title: My Firebird Extensions
 wordpress_id: 1731
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfaunmu2h"
 ---
 
 All-in-one gestures  

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2008/07/26/what-a-fun-day/
 slug: what-a-fun-day
 title: What a fun day!
 wordpress_id: 1447
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweer4ds2h"
 ---
 
 We've had a fantastic day today - done loads and now I'm exhausted!

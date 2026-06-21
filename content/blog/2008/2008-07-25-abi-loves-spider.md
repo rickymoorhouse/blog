@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2008/07/25/abi-loves-spider/
 slug: abi-loves-spider
 title: Abi Loves Spider
 wordpress_id: 1448
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweeuc3j2r"
 ---
 
 This morning Laura spotted a spider in the bath and asked me to remove it. I picked up the spider and showed it to Abi. I then took the spider outside. Abi slammed the door behind me and screamed in protest.

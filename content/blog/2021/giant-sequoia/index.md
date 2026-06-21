@@ -9,6 +9,7 @@ lat: 51.7853
 lng: -3.0203
 featured: me-and-sequoia.jpeg
 hideImages: true
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswernsey2e"
 ---
 
 This weekend, to mark our 40th birthdays we planted Giant Sequoias with [One Life One Tree](https://onelifeonetree.com) at their planting site near Abergavenny. Sequoias are the world's largest growing tree species and capture up to 10x more carbon per hectare than a traditional woodland, so should capture the equivalent of a person's lifetime carbon footprint. 

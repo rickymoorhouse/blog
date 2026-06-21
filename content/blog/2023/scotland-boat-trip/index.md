@@ -5,6 +5,7 @@ format: post
 hideImages: true   
 tags: 
 - scotland
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswepjzez2p"
 ---
 
 We headed up to Tobermory early on Tuesday morning for the [StaffaTours](https://www.staffatours.com/) Staffa & Treshnish Isles wildlife tour which is only available during the summer until the Puffins leave Treshnish. We were fortunate to catch them as the guide told us it would likely only be a few more days before the pufflings fledged.

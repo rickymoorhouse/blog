@@ -4,6 +4,7 @@ tags: ["apiconnect"]
 date: "2015-12-12T08:40:57Z"
 slug: automatically-publish-your-api-when-you-push-to-github
 title: Automatically publish your API when you push to github
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe7ntqy23"
 ---
 
 *Updated 11th October 2016 for API Connect*

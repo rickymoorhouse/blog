@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/01/05/use-multimap-for-get-map-links/
 slug: use-multimap-for-get-map-links
 title: Use Multimap for Get Map links
 wordpress_id: 1593
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf2qi3k2k"
 ---
 
 I can't remember where I found it, so I thought I'd put this here so I don't loose it!   

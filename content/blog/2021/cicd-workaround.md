@@ -4,6 +4,7 @@ date: 2021-03-09
 slug: cicd-workaround
 tags: 
  - apiconnect
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe7awq22q"
 ---
 
 Currently the v10 Reserved Instance of API Connect doesn't yet have a simple approach for headless use of the CLI toolkit.  The following details how to use an IBM Cloud IAM bearer token with the API Connect CLI and REST API in a headless environment such as a CI/CD pipeline.

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2009/02/16/strictly-come-dancing-live-tour/
 slug: strictly-come-dancing-live-tour
 title: Strictly Come Dancing Live Tour
 wordpress_id: 1438
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswekax7z2p"
 ---
 
 Last weekend we went up to the O2 arena for the Strictly Come Dancing Tour and we had a fantastic day. Getting up there went really smoothly - the roads were clear and the views of the snow on the surrounding countryside was amazing. We got up there at about 11 o'clock and thought that we'd beat the rush and head straight to Nando's for

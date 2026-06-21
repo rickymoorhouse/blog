@@ -9,6 +9,7 @@ hideImages: true
 lat: 10.5623131
 lng: -83.5132126
 featuredImage: IMG_4102.jpeg
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswerh3kk2h"
 ---
 
 After an overnight stay in San José, the next part of our travels began with a coach to the docks at La Pavona, followed by a boat from there to Laguna Lodge, as Tortuguero can only be accessed by boat or plane. 

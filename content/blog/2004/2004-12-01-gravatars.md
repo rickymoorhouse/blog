@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/12/01/gravatars/
 slug: gravatars
 title: Gravatars
 wordpress_id: 1595
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf2wpfa2c"
 ---
 
 I've now implemented [Gravatars](http://www.gravatars.com) for the comments on this site.  

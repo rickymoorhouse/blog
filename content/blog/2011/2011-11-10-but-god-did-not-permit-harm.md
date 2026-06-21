@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2011/11/10/but-god-did-not-permit-harm/
 slug: but-god-did-not-permit-harm
 title: But God did not permit Laban harm
 wordpress_id: 7342
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswegdxuu2m"
 ---
 
 <blockquote>You know that I have served your father with all my strength,

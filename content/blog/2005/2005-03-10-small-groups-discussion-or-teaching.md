@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/03/10/small-groups-discussion-or-teaching/
 slug: small-groups-discussion-or-teaching
 title: Small Groups - Discussion or Teaching
 wordpress_id: 1587
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf26zij2p"
 ---
 
 Mark at [wordandspirit](http://www.wordandspirit.co.uk/) started a [discussion](http://www.wordandspirit.co.uk/blog/index.php?/archives/65-Discussion-or-teaching-Discuss.html) on the nature of small groups, as to whether they are more appropriate for teaching or discussion. 

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2006/09/18/free-bible-software-for-windows/
 slug: free-bible-software-for-windows
 title: Free Bible Software for Windows
 wordpress_id: 1557
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswenqqyh22"
 ---
 
 After talking about different bible software with some people at life group on Sunday, I thought I'd do a bit more investigation into some of the free bible software available. The main software I've looked at so far is: [In the beginning was the Word](http://theword.gr/en/), [The SWORD Project](http://www.crosswire.org/sword/) (for Windows). I also tried [MyBible](http://www.chip.de/downloads/c_downloads_11431704.html) - but didn't get past the installation, as it failed to download the texts.

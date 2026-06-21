@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2007/04/14/300th-post-prizes-to-be-won/
 slug: 300th-post-prizes-to-be-won
 title: 300th post! Prizes to be won!
 wordpress_id: 1514
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswemb6ku2m"
 ---
 
 I just noticed that this would be my 300th blog post so I decided to do something a bit different. Firstly, I'd get my wife to write this post. Secondly anyone who comments on this post within the next week will win a prize - the better the comment, the better the prize ;)

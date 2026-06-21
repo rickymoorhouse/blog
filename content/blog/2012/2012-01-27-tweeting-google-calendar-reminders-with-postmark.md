@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2012/01/27/tweeting-google-calendar-reminders-wi
 slug: tweeting-google-calendar-reminders-with-postmark
 title: Tweeting Google Calendar reminders with Postmark
 wordpress_id: 7374
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweb5s3u2o"
 ---
 
 A while back I wrote my [original script](http://samespirit.net/ricky/2009/09/15/google-calendar-to-twitter/) to tweet event reminders from Google Calendar and it's been through a couple of iterations since and been broken for a while. Well finally I got round to update it to use OAuth to connect to twitter using the [twitteroauth library](https://github.com/abraham/twitteroauth) and switched to using [Postmark Inbound](http://blog.postmarkapp.com/post/15687406657/introducing-postmark-inbound-easily-parse-replies-other) for handling the incoming e-mail.

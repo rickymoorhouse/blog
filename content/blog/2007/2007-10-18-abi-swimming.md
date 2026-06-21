@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2007/10/19/abi-swimming/
 slug: abi-swimming
 title: Abi Swimming
 wordpress_id: 1472
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswekqyxs2h"
 ---
 
 <!--[Get the Flash Player](http://www.macromedia.com/go/getflashplayer) to see a video of Abi swimming.-->

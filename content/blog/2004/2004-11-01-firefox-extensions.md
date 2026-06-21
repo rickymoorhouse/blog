@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/11/01/firefox-extensions/
 slug: firefox-extensions
 title: Firefox Extensions
 wordpress_id: 1599
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf3ihss2q"
 ---
 
 I've been thinking of putting a list of the firefox extensions I use on my blog for a while, and then [Dean](http://www.healyourchurchwebsite.com) [listed](http://www.healyourchurchwebsite.com/archives/001388.shtml) the extensions he finds useful and asked what anyone else was using - so I decided I should post it! So here is my list of firefox extensions:

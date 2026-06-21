@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2009/11/27/my-graze-snacks-arrived/
 slug: my-graze-snacks-arrived
 title: My graze snacks arrived!
 wordpress_id: 1401
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweijwky2c"
 ---
 
 My [graze](http://www.graze.com/p/Q99HLF8) box arrived just before lunch and looked fantastic.Â  I've had the pineapple and that was delicious and very juicy - looking forward to eating the rest of the box later!

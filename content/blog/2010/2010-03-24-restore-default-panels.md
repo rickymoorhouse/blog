@@ -9,6 +9,7 @@ link: https://rickymoorhouse.uk/2010/03/24/restore-default-panels/
 slug: restore-default-panels
 title: Restore Default Panels
 wordpress_id: 1855
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswednsne2o"
 ---
 
 Been using these commands quite a bit recently as I experiment with moving the panels about.

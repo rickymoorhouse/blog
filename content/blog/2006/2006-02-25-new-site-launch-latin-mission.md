@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2006/02/25/new-site-launch-latin-mission/
 slug: new-site-launch-latin-mission
 title: 'New Site Launch: Latin Mission'
 wordpress_id: 1567
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweokfqq2c"
 ---
 
 ![](http://latinmission.com/error-logo.png)

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2010/09/23/surprised-by-grace-gods-relentless-pu
 slug: surprised-by-grace-gods-relentless-pursuit-of-rebels
 title: 'Review: Surprised by Grace'
 wordpress_id: 6246
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswebuu3f2p"
 ---
 
 [![Surprised by Grace: God's Relentless Pursuit of Rebels](http://photo.goodreads.com/books/1275863068m/6945363.jpg)](http://www.goodreads.com/book/show/6945363-surprised-by-grace)[Surprised by Grace: God's Relentless Pursuit of Rebels](http://www.goodreads.com/book/show/6945363-surprised-by-grace) by [Tullian Tchividjian](http://www.goodreads.com/author/show/788130.Tullian_Tchividjian)

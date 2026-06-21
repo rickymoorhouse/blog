@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2009/03/03/sharing-a-printer-from-xp-to-vista/
 slug: sharing-a-printer-from-xp-to-vista
 title: Sharing a printer from XP to Vista
 wordpress_id: 1437
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswek5tc42m"
 ---
 
 After quite a while of not being able to print from our laptop to the shared printer on our XP desktop, I finally got it working last night thanks to my Dad. 

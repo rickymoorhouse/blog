@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/04/06/youth-group-trip-to-the-zoo/
 slug: youth-group-trip-to-the-zoo
 title: Youth group trip to the Zoo
 wordpress_id: 1628
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfd2g3z2r"
 ---
 
 We went to the local Zoo with the youth group today, as they're on holiday from school. It was nice, but quite a contrast to seeing the animals up at Iguazu. They all seemed to be in really small cages, apart from the deer, �andu and goats. The peacocks all had had their feathers cut off - possibly for selling for carnival costumes. The kids all seemed to enjoy the trip and have lots of fun, and we finished off with a ride on the spinning swings (don't know what to call it!), which was interesting as it appeared to be powered by little propellers, one on each side!

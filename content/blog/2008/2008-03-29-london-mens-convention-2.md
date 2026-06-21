@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2008/03/29/london-mens-convention-2/
 slug: london-mens-convention-2
 title: London mens convention 2008
 wordpress_id: 8176
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswefnvrx22"
 ---
 
 Just had the first session entitled 'What is the gospel?' looking at Romans 1:1-6. Go Paul's introduction to the letter there is a nice summary.

@@ -9,6 +9,7 @@ hideImages: true
 lat: 10.5623131
 lng: -83.5132126
 featuredImage: DSC_0049.jpeg
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswerdzuy2e"
 ---
 
 We started the day with an early wake up (not too hard as we weren't adapted to the timezone yet) at 5am for coffee before an early morning boat tour leaving at 5:30 and taking us around the riverbanks and into the park spotting wildlife.  The tour started with the local banks just up from the hotel where we started off with an Iguana lounging on a branch of a tree, just a little way up from a Tiger Heron (_Tigrisoma fasciatum_).  José pointed out the different stages of coconuts growing along the side of the river as they go from green with mostly milk to brown with mostly flesh, we then saw a solitary howler monkey or 'mono congo' (_Alouatta palliata_). 

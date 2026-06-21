@@ -10,6 +10,7 @@ tags:
 - sharing
 title: Useful Ubuntu Stuff
 wordpress_id: 1918
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswedbb7t2h"
 ---
 
 This post is a dumping ground for useful Ubuntu bits and pieces that aren't worth a full post on their own.

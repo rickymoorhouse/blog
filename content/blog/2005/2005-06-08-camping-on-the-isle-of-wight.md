@@ -9,6 +9,7 @@ location:
   title: Tennyson Down
 slug: camping-on-the-isle-of-wight
 title: Camping on the Isle of Wight
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswewr7t22k"
 ---
 
 Had a really nice relaxing weekend last weekend camping over on the Isle of Wight. It was nice weather most of the time, but we had a lot of rain on the Friday afternoon, which was unfortunatly when we were at the far point of our walk (down to Alum Bay). We stayed at [Stoats Farm Campsite](http://www.stoats-farm.co.uk/) in Totland, which was really convenient for walking, but a bit too far from the bus stop when it's raining! We managed to do both of the geocaches that we'd planned to do ([Vectis W](http://www.geocaching.com/seek/cache_details.aspx?guid=3aeb5e65-4001-4e72-ba9f-5469f0bec9a3) and [The Lord Palmerston](http://www.geocaching.com/seek/cache_details.aspx?guid=397cf99c-fb10-4a2b-b818-278c08b69c11)) which was brilliant. The walks were really nice and the views were incredible - particularly from up on top of the Tennyson Downs. It was good to be able to check out our camping gear ready for the Summer, but unfortunatly our camping stove couldn't cope with the wind. Although it did have a good side too - in that we went to the pub nextdoor to the campsite - 

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/06/30/heading-back-home/
 slug: heading-back-home
 title: Heading back home
 wordpress_id: 1607
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfbexxk2h"
 ---
 
 Well we fly back home today leaving Montevideo at 5.50pm, everything is pretty much packed and Jonathan is going to give us a lift upto the airport. Just a few more goodbyes to say and check our mail before we go. It still feels strange that we´ve finished here and are heading back, but it will be nice to see our families, as we´ve definitely missed them. But it´s going to be strange adapting back to life in England after our time here.

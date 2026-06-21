@@ -9,6 +9,7 @@ lng: 10.312516
 lat: -84.8131851
 featured: DSC_0738.jpeg
 hideImages: true
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweqnpzs2h"
 ---
 
 

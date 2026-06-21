@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2006/08/28/finally-got-my-wireless-wpa-to-work-i
 slug: finally-got-my-wireless-wpa-to-work-in-ubuntu
 title: Finally got my wireless (WPA) to work in Ubuntu
 wordpress_id: 1561
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswenznjs2k"
 ---
 
 Last weekend I finally got my laptop to talk to my wireless network in Ubuntu, I'd tried following some instructions before when I had Ubuntu 5.10 (Breezy) on the laptop, but never got anywhere with it. I know I could have changed my network to use WEP instead, but I didn't want to have to change too much just to get my laptop to work occasionaly when I booted into Linux.

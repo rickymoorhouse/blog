@@ -9,6 +9,7 @@ link: https://rickymoorhouse.uk/2009/04/27/linux-what-is-using-up-disk-space/
 slug: linux-what-is-using-up-disk-space
 title: 'Linux: What is using up disk space?'
 wordpress_id: 1435
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswejxbvf2f"
 ---
 
 `du -m | sort -nr | head`

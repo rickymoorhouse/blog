@@ -8,6 +8,7 @@ tags:
  - trawler
 hideImages: true
 featured: trawler-grafana.png
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswerxene2m"
 ---
 
 As part of our work in running and monitoring our API Connect cloud deployments we've built some of our own tooling to assist with monitoring what is going on within the deployments.  Trawler is one of these items which is used to gather metrics from a Kubernetes based deployment of API Connect. 

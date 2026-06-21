@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2009/08/13/abi-wants-a-boat/
 slug: abi-wants-a-boat
 title: Abi wants a boat
 wordpress_id: 1426
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswejdqns2k"
 ---
 
 Abi has recently decided that she wants a boat

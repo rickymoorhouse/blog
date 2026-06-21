@@ -7,6 +7,7 @@ tags:
 - photos
 params:
   slug: this-year
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswes5o5b2p"
 ---
 
 

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/07/29/travelling-to-sandnes-norway/
 slug: travelling-to-sandnes-norway
 title: Travelling to Sandnes, Norway
 wordpress_id: 1578
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswewe6hp22"
 ---
 
 We left Shepton Mallett early in the morning as we had to get up to Heathrow 2 hours before our flight at 10. We had quite a good drive up and there wasn't too much traffic. We dropped the car off at the airport parking and were taken by minibus to the airport. Check in was amazingly quick and easy with the e-tickets and we could do it all ourselves on the machine (apart from it failed to print the baggage label for some reason - but it was still quicker than queuing). As we were waiting we heard some other people talking about a Wedding, but didn't realise until we got to Stavanger just how many there were on the same flight going to the same wedding!

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/01/24/new-image-toys/
 slug: new-image-toys
 title: New Image Toys!
 wordpress_id: 1589
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf2f7wm2h"
 ---
 
 [![](http://www.samespirit.net/ricky/resize.asp?width=250&path=/ricky/images/collage-web.jpg)](http://www.samespirit.net/ricky/gallery/photo.asp?section=../images&file=collage-web.jpg)  

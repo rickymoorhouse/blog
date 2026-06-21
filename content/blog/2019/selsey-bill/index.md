@@ -8,6 +8,7 @@ layout: walk
 tags:
 - walk
 - coast
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweuuasc2q"
 ---
 This Saturday we had a lovely walk along the coast at Selsey Bill with my parents. We started off heading North up towards Pagham Harbour but made it about half way there and then headed back down to the Lifeboat Inn for lunch.  After lunch we headed South round the Bill. It was striking particularly on the way back how different the sea was from the calm sheltered side to the end of the point.
 

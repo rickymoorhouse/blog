@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/08/31/google-grouping-search-results/
 slug: google-grouping-search-results
 title: Google grouping search results
 wordpress_id: 1576
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswew5ue42m"
 ---
 
 I just searched for [H&B](http://www.google.com/search?lr=&ie=UTF-8&oe=UTF-8&q=H%26B) on google and it gave me this result which appears to have the results in three groups, firstly results for H&B, then for B&H and then at the bottom some others. Is this new?  

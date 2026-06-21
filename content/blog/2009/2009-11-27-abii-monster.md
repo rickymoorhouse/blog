@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2009/11/27/abii-monster/
 slug: abii-monster
 title: Abii monster
 wordpress_id: 1400
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweigwuq23"
 ---
 
 ![A-b-i-i](http://samespirit.net/ricky/images/2009/abii-monster.png)

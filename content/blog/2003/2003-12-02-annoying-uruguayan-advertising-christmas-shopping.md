@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2003/12/02/annoying-uruguayan-advertising-christ
 slug: annoying-uruguayan-advertising-christmas-shopping
 title: Annoying Uruguayan Advertising &Christmas shopping!
 wordpress_id: 1686
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf4b2h42m"
 ---
 
 There's an unusual form of advertising here in Uruguay - the little trucks and bikes that drive round and round the same block every few minutes all day long! They play the same advert through a speaker on top of the vehicle as loud as they can manage - or it seems that way! So we can here it right from our flat on the 6thfloor. Today we were treated to the Pink Panther theme, with random Spanish voices that we couldn't make out as it was so distorted! I wonder what it will be next time, or if we've got that for the next month! But I still managed to get my Christmas shopping done today (earliest ever I guess!) which is cool!

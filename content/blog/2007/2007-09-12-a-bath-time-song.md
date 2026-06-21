@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2007/09/13/a-bath-time-song/
 slug: a-bath-time-song
 title: A bath-time song
 wordpress_id: 1481
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswel5r5q2e"
 ---
 
 Can you go splish splish splish like a little fish?

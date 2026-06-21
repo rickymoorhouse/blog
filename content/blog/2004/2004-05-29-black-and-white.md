@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/05/29/black-and-white/
 slug: black-and-white
 title: Black and White
 wordpress_id: 1616
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfc2bjs2k"
 ---
 
 ![](http://www.samespirit.net/ricky/resize.asp?width=300&path=/ricky/images/snudge.jpg)  

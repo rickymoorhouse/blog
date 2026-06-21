@@ -9,6 +9,7 @@ link: https://rickymoorhouse.uk/2010/09/06/recover-from-failed-to-open-the-relay
 slug: recover-from-failed-to-open-the-relay-log
 title: Recover from "Failed to open the relay log"
 wordpress_id: 5531
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswec627s2q"
 ---
 
 If you find that after rebooting your MySQL slave it stops replicating with the master and you see the "Failed to open the relay log" error in the logs it is probably caused by MySQL putting it's relay logs in /var/run by default, which gets cleared out on boot.

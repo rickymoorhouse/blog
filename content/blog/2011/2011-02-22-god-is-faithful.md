@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2011/02/22/god-is-faithful/
 slug: god-is-faithful
 title: God is Faithful - Deu 7:9
 wordpress_id: 6977
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswei24uf2f"
 ---
 
 <blockquote>Know therefore that the Lord your God is God, the faithful God who keeps covenant and steadfast love with those who love him and keep his commandments, to a thousand generations.

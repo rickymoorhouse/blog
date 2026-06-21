@@ -10,6 +10,7 @@ link: https://rickymoorhouse.uk/2011/12/02/get-your-advent-calendars-here/
 slug: get-your-advent-calendars-here
 title: Get your advent calendars here
 wordpress_id: 7354
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweg5rif2p"
 ---
 
 Yes I know it's now the 2nd December so this is a day late, but here's a list of the online advent calendars I've seen so far (and I'll probably keep adding to it!)

@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2011/09/08/abimilech/
 slug: abimilech
 title: But God came to Abimilech in a dream
 wordpress_id: 7350
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswegnqvl2h"
 ---
 
 Abraham told Abimelech Sarah was his sister, so he'd taken her to be his wife. Before he does anything, God comes to him in a dream to warn him.

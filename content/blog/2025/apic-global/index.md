@@ -8,6 +8,7 @@ title: Global Deployment with API Connect - Serving APIs Worldwide
 date: 2025-09-17
 hideImages: true
 sticky: true
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosw63jnxt2h"
 ---
 
 ## Why Global API Deployment Matters

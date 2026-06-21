@@ -7,6 +7,7 @@ slug: ibm-cloud-functions
 tags:
  - apiconnect
  - serverless
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweqaxsq2e"
 ---
 
 [Cloud functions](https://cloud.ibm.com/functions/learn/concepts) offer an easy way to build functionality and only pay for the time they are actually running  without having to worry about how it will be hosted - you just right the code, save it and it is ready to be invoked. The function can be invoked through an event trigger or as a REST API - in this case I'm going to show how you can trigger a function as part of your API Connect assembly flow - providing an easy way to manage and socialise the functionality you have built.

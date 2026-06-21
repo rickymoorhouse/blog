@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2010/10/20/recreating-twitter-for-iphones-swipe-
 slug: recreating-twitter-for-iphones-swipe-to-reveal
 title: Recreating swipe to reveal in HTML, CSS and JS
 wordpress_id: 6388
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswebo2is2q"
 ---
 
 One of the things I really like about the interface in Tweetie / Twitter for iPhone is being able to swipe a tweet to reveal actions beneath it.  This is my attempt to recreate it using HTML, CSS3 and Javascript.  The main swiping action seems to work nicely, but to complete it, I'd like to add a bit more bounciness, a sound effect on swipe (using ?) and have better handling of non-swipe actions.

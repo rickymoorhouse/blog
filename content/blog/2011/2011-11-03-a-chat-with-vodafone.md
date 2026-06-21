@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2011/11/03/a-chat-with-vodafone/
 slug: a-chat-with-vodafone
 title: A chat with Vodafone...
 wordpress_id: 7331
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswegh6bf2p"
 ---
 
 The vodafone website doesn't seem to have any record of my data usage and is confused about how much I'm allowed (see screenshot below), so when I received a text from them saying I was near my limit (with no detail as to how close, just the price for going over) I decided to get in touch with them about it. 

@@ -6,6 +6,7 @@ slug: recovering-encrypted-filesystems
 title: Recovering encrypted filesystems
 tags:
 - tech
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweaaqaq23"
 ---
 
 1. Boot from Live CD / USB

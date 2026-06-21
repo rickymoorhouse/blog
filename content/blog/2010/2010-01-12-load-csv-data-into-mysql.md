@@ -9,6 +9,7 @@ link: https://rickymoorhouse.uk/2010/01/12/load-csv-data-into-mysql/
 slug: load-csv-data-into-mysql
 title: Load CSV data into MySQL
 wordpress_id: 1396
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswee5r522k"
 ---
 
 <code>

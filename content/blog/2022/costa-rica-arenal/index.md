@@ -8,6 +8,7 @@ lat: 10.5007697
 lng: -84.6824846
 hideImages: true
 featured: DSC_0366.jpeg
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswer5un22h"
 ---
 
 

@@ -4,6 +4,7 @@ layout: post
 slug: reducing-plastic
 title: Reducing our plastic use
 tags: ["environment"]
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe7hcwm2o"
 ---
 
 Over the last few months we've started to try and reduce our use of plastics - especially single use plastics. Here are some of the areas where we've made changes.

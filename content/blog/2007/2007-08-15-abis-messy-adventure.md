@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2007/08/16/abis-messy-adventure/
 slug: abis-messy-adventure
 title: Abi’s messy adventure
 wordpress_id: 1486
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweldski23"
 ---
 
 ![Peri Peri Ketchup](http://samespirit.net/ricky/images/periperi.png)This morning just as I was getting ready to leave for work I came back through into the dining room to see Laura and Abi, but Laura was in there on her own. - Abi had gone off for an explore as she's been doing more and more recently. When I got through to the living room, I saw Abi had got some thing in her mouth, and unusually it looked quiet big, so I went round to investigate further and discovered she had the lid to our Nandos' peri-peri ketchup in her mouth covered in ketchup and the bottle was laying on the floor next to her.

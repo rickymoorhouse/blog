@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/06/09/beef-and-ginger-stirfry/
 slug: beef-and-ginger-stirfry
 title: Beef and Ginger Stirfry
 wordpress_id: 1612
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfbnr7k2h"
 ---
 
 ![Stir fry](http://www.samespirit.net/ricky/resize.asp?path=/ricky/images/stirfry.jpg&width=200)

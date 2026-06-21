@@ -12,6 +12,7 @@ tags:
 - simple
 title: 5 Minute Mug Brownie
 wordpress_id: 6982
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweiawfk2k"
 ---
 
 A while back I saw that [Pete](http://twitter.com/#!/petegillam/) had posted this [on twitter](http://twitter.com/#!/petegillam/status/22275239102648320), and we decided it was worth a try - since then I can't remember how many times we've made them as it's so simple and tastes good!  Just posting it on my blog so it's easier to find in the future!

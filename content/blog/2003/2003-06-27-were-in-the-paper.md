@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2003/06/27/were-in-the-paper/
 slug: were-in-the-paper
 title: We're in the paper!
 wordpress_id: 1724
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfa5wk42m"
 ---
 
 After all those days we bought the paper to see if we were in there - the day we almost didn't get a copy was the one!! You can see the article [here](http://www.samespirit.net/uruguay/news).

@@ -93,6 +93,7 @@ geojson:
           <img src="/blog/2024/chenonceau/IMG_5991.jpeg" />
 
 
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosw6p6eul2p"
 ---
 
 ### France 2024

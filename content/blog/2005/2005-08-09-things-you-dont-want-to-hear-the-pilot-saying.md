@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/08/09/things-you-dont-want-to-hear-the-pilo
 slug: things-you-dont-want-to-hear-the-pilot-saying
 title: Things you don't want to hear the pilot saying...
 wordpress_id: 1577
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswewb2aj2p"
 ---
 
 <blockquote>Once we take off, we'll be heading in a North Easterly direction .. No .. a North Westerly direction - I just got distracted by a plane taking off as you do.</blockquote>

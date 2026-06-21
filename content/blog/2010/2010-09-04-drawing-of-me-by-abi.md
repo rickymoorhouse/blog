@@ -9,6 +9,7 @@ date: "2010-09-04T07:20:17Z"
 slug: drawing-of-me
 title: Drawing of me
 wordpress_id: 7548
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswecb2tq23"
 ---
 
 Abi drew this for me. She says I'm not a monster, I just have my teeth out!

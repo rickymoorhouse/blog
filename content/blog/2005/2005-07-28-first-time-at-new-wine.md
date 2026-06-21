@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/07/28/first-time-at-new-wine/
 slug: first-time-at-new-wine
 title: First time at New Wine
 wordpress_id: 1579
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswewh6if2p"
 ---
 
 This year we went to New Wine for the first time as we were

@@ -13,6 +13,7 @@ tags:
 - recipe
 title: Banana & Chocolate chip muffins
 wordpress_id: 6988
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswei5shm2m"
 ---
 
 Had a lovely afternoon making these Banana & Chocolate chip muffins with Abi and Jessica:[![](http://rickymoorhouse.files.wordpress.com/2011/02/20110213-154812.jpg?w=300&h=223)](http://rickymoorhouse.files.wordpress.com/2011/02/20110213-154812.jpg)

@@ -10,6 +10,7 @@ post_format:
 slug: merry-christmas
 title: Merry Christmas
 wordpress_id: 7368
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweg26av2p"
 ---
 
 [My 2011 Christmas Card](http://rickymoorhouse.co.uk/christmas2011)

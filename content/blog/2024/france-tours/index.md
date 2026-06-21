@@ -8,5 +8,6 @@ tags:
 lat: 47.3898
 lng: 0.6892
 zoom: 12
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosw6pciqr2p"
 ---
 

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/01/05/thunderbird-extensions/
 slug: thunderbird-extensions
 title: Thunderbird Extensions
 wordpress_id: 1592
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf2nggk2k"
 ---
 
 Following on from my list of [firefox extensions](http://www.samespirit.net/ricky/news/140), here's my list of Thunderbird extensions:

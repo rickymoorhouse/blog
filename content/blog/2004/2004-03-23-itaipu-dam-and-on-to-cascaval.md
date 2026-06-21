@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/03/23/itaipu-dam-and-on-to-cascaval/
 slug: itaipu-dam-and-on-to-cascaval
 title: Itaipu Dam and on to Cascaval
 wordpress_id: 1633
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfdgvcy2e"
 ---
 
 ![](/resize.asp?width=150&path=/ricky/blogfiles/dam.jpg)We planned to go to the [Itaipu Dam], but spent too long thinking about it and getting ready before realising that they had set times for the tours - 8, 9, 10, 2 and 3.

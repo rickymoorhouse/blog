@@ -6,6 +6,7 @@ tags:
  - apiconnect
  - gateway
 hideImages: true
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosw64clut2o"
 ---
 
 This post should guide you through the steps on how to deploy a datapower gateway to use as a remote gateway with API Connect Reserved instance, optionally configuring the inbound management traffic through IBM Cloud Satellite Connector.

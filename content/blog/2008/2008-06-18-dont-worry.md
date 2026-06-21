@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2008/06/18/dont-worry/
 slug: dont-worry
 title: Don’t worry
 wordpress_id: 1451
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswef5sls2h"
 ---
 
 After we read the story of Cain and Abel with Abi this morning:

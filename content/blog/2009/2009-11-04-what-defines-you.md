@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2009/11/04/what-defines-you/
 slug: what-defines-you
 title: What defines you?
 wordpress_id: 1407
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweiqocj2p"
 ---
 
 <blockquote>

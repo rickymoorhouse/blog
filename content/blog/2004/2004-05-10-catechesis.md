@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/05/10/catechesis/
 slug: catechesis
 title: Catechesis
 wordpress_id: 1620
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfce3yc2k"
 ---
 
 Today I took the Catechesis for the first time on my own, which was quite nerve-racking, but once I started it was quite enjoyable. I started off by looking a bit at Communion - what it is, why we celebrate it, what it meant to each of them and why they want to take communion. It was interesting to hear their opinions and ideas. One of the reasons for taking communion I was given was "so I can go to youth group". After a brief discussion on these things, we went on to have a look what the Paul had written regarding the Lord's supper in [1 Corinthians 11:17-29](http://bible.gospelcom.net/bible?passage=1+cor+11%3A17-29&version=NIV&language=english), which was useful to get the point across to them that it was something serious. 

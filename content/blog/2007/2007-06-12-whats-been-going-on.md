@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2007/06/12/whats-been-going-on/
 slug: whats-been-going-on
 title: What's been going on...
 wordpress_id: 1500
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweltzo42m"
 ---
 
 #### Abi

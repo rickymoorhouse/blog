@@ -4,6 +4,7 @@ slug: 20th-anniversary
 date: 2022-09-08
 hideImages: true
 featured: 20Years.jpg
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweqe5l42o"
 ---
 
 {{<fig "2002-Wedding.jpg">}}

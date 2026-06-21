@@ -7,6 +7,7 @@ comments: false
 date: "2014-10-25T14:49:30Z"
 slug: great-south-run-2014
 title: Great South Run 2014
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswevatin2p"
 ---
 
 Great South Run weekend is here! Today we had the 5k run which Laura, Anne and Des took part in and all did very well, and Abi's 1.5k Mini Run - even Jessica was enjoying running on the race track they had there and is keen to do the mini run next time round.

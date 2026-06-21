@@ -1,6 +1,7 @@
 ---
 title: "Avebury"
 date: 2023-06-24
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswepu3vm2o"
 ---
 
 We met my parents at [Avebury](https://www.english-heritage.org.uk/visit/places/avebury/) and spent the day exploring the ancient landscape around the area. 

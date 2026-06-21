@@ -4,6 +4,7 @@ layout: post
 slug: view-api-error-detail
 title: View API Error detail
 tags: ["apiconnect"]
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe7u42l2h"
 ---
 
 To view the details of the steps in an API in Analytics to assist in debugging you can do the following:

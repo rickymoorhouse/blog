@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/11/12/promising-meeting/
 slug: promising-meeting
 title: Promising meeting
 wordpress_id: 1597
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf35vz52f"
 ---
 
 Yesterday I had my first meeting with the Archdeacon since becoming one of the church reps for St Luke's. It was a very

@@ -2,6 +2,7 @@
 title: "Introducing hem"
 date: 2018-04-25
 tags: ["monitoring"]
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe7qyas2k"
 ---
 
 <abbr title="HTTP Endpoint Monitor">hem</abbr> is a [synthetic monitoring](https://en.wikipedia.org/wiki/Synthetic_monitoring) tool which monitors HTTP resources on a regular schedule, storing details of the time taken and the reponse code returned.

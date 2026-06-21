@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2011/05/05/would-you-record-a-psalm-for-me/
 slug: would-you-record-a-psalm-for-me
 title: Would you record a Psalm for me?
 wordpress_id: 7195
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswehnrem2o"
 ---
 
 For a while, I've been wondering about putting together a different kind of audio bible, one with a different person reading each chapter, but I didn't get very far with it - so I've decided to test this out and collect recordings of the first 30 psalms for my 30th birthday. 

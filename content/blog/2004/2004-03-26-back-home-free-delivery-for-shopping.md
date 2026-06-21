@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/03/26/back-home-free-delivery-for-shopping/
 slug: back-home-free-delivery-for-shopping
 title: Back home & Free delivery for shopping
 wordpress_id: 1630
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfd5vbi23"
 ---
 
 We arrived back in Concordia on time, even though there had been some problems with the bus causing us to have to change buses at midnight. As the bus doesn't enter Concordia on the way back and just stops at a road junction outside of town we had been worried about how we would get in, but fortunately there was a remisse there, and we could get a lift in to the bus station (10 pesos) after dropping off one of the others sharing it on the way. At the bus station we were just in time for the bus to Salto, just got our tickets and could get straight on the bus.  

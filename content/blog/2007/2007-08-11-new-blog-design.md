@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2007/08/12/new-blog-design/
 slug: new-blog-design
 title: New Blog Design
 wordpress_id: 1488
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweli5n52p"
 ---
 
 Over the past few weeks I've been reading a selection of articles on design and design theory, so I decided to make some tweaks to my blog design to try out some of these ideas.  

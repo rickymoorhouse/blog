@@ -6,6 +6,7 @@ title: Pi Zero as a desklight
 tags:
 - raspberrypi
 
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe7keiq2s"
 ---
 
 When we set up our office earlier in the year I decided on a standing desk which

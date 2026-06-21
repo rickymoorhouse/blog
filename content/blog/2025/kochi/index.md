@@ -8,6 +8,7 @@ tags:
  - team
  - travel
 hideImages: true
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosw644ehe2e"
 ---
 
 I was fortunate to finally get a chance to visit my team in Kochi and had a fantastic few days with them, it was so great to be able to spend some time face to face after working together remotely for several years. I travelled to Kochi via Chennai with British Airways. In Chennai this meant I arrived through the international terminal and then had to clear immigration and head over to the domestic terminal next door.  Immigration all went smoothly but then at the domestic terminal they didn't recognise my boarding pass for the Indigo codeshare that British Airways had given me, so I had to get help at the check in desks. Once this was all resolved I had to pass through security again and all went smoothly, efficient boarding and a short flight later I arrived in Kochi around 9 in the morning and was met by Akhil and Midhun at the airport to take me to the office. 

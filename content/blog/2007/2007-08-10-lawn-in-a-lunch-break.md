@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2007/08/10/lawn-in-a-lunch-break/
 slug: lawn-in-a-lunch-break
 title: Lawn in a lunch break
 wordpress_id: 1489
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswelnntv2p"
 ---
 
 After a lot of annoyances with the rubber mulch that we'd decided on [ previously](http://samespirit.net/ricky/news/302) for our garden:

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/04/22/brrrrrrrr/
 slug: brrrrrrrr
 title: Brrrrrrrr!
 wordpress_id: 1622
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfcko742o"
 ---
 
 It's suddenly got cold here in Salto! I've gone from walking around in shorts and t-shirt to wearing a fleece and jeans. We've had to put the 2 blankets on the bed rather than just sheets as we'd got used to, and last night we decided that we could do with a hot water bottle. So we used Sprite bottles filled with hot water - which actually did the job quite well!!  

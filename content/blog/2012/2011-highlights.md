@@ -5,6 +5,7 @@ tags:
 type: post
 date: 2012-01-01
 slug: 2011-highlights
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswebe3yk2k"
 ---
 
  - Greg and Poppy's wedding in February with the girls as bridesmaids.

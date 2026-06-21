@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2006/10/08/hope-its-not-much-longer/
 slug: hope-its-not-much-longer
 title: hope it's not much longer!
 wordpress_id: 1554
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswenh6ra2e"
 ---
 
 Yesterday things were quite variable after the initial burst of activity. 

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2006/10/09/introducing/
 slug: introducing
 title: Introducing...
 wordpress_id: 1552
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswenawjc2k"
 ---
 
 Announcing the birth of...

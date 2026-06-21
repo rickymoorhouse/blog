@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2010/08/23/self-portrait/
 slug: self-portrait
 title: Self portrait
 wordpress_id: 3561
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswece6gy2c"
 ---
 
 ![](http://rickymoorhouse.files.wordpress.com/2010/08/me2.png)

@@ -7,6 +7,7 @@ tags:
 - family
 - me
 title: I'm 30 today!
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswebheqe2o"
 ---
 
 So to celebrate my 30th, with thanks to my mum, here's [30 photos of me](http://samespirit.net/ricky/0-30/), one for each year:

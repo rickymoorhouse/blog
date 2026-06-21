@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2007/08/31/watching-log-files-for-something/
 slug: watching-log-files-for-something
 title: Watching log files for something
 wordpress_id: 1483
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswelaprv2p"
 ---
 
 Found from: [techblog](http://blog.nominet.org.uk/tech/2005/05/26/tail-f-with-highlighting/):

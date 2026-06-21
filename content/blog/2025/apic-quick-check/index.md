@@ -4,6 +4,7 @@ date: 2025-07-05
 layout: blog
 tags:
  - apiconnect
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosw63ptc32o"
 ---
 
 This script originated as part of a much wider framework of tests that we put together when I was in the API Connect SRE team. However I’ve found this set of functions to be something useful to be able to validate quickly from time to time in different contexts to give a high level answer to ‘Is it working?’

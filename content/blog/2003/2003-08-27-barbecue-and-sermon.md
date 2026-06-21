@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2003/08/27/barbecue-and-sermon/
 slug: barbecue-and-sermon
 title: Barbecue and sermon
 wordpress_id: 1716
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf7kid52p"
 ---
 
 At last! - I finished my sermon this morning - before leaving for the morning service. I've had a very hectic week - all cumulating in this one day! Katrina's fundraising barbecue for us was brilliant - It was fun, and managed to raise 311.36 through it! It was really nice that my parents were able to come along too.

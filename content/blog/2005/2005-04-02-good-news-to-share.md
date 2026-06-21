@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/04/02/good-news-to-share/
 slug: good-news-to-share
 title: Good news to share!
 wordpress_id: 1586
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswex5qca2c"
 ---
 
 We have good news to share! The good news that Jesus has died for sin so that we can be free to come to God and know him. The barrier is gone!

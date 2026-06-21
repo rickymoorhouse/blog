@@ -5,6 +5,7 @@ date: "2003-06-14T11:07:00Z"
 slug: missing-laura-and-party
 title: missing Laura...and party
 wordpress_id: 1729
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfanz252p"
 ---
 
 Laura's gone back home to spend the week looking after her sister - so it feels empty around the house. Tonight I'm going to my Uncles 60th birthday - which should be good, just have to remember how to get there again!! I really should have brought my camera to work so I'd have it with me for the party, anyway I'm sure we'll go over there again before we go away!

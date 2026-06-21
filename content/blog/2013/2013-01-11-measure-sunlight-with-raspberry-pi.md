@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2013/01/11/measure-sunlight-with-raspberry-pi/
 slug: measure-sunlight-with-raspberry-pi
 title: Measure sunlight with Raspberry Pi
 wordpress_id: 7517
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweajtof2p"
 ---
 
 For Christmas the girls gave me a Raspberry Pi, and for my first project I decided to try recording how bright the sunlight at our window is using an old Webcam.

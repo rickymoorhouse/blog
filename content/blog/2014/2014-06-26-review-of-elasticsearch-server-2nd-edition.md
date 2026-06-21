@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2014/06/26/review-of-elasticsearch-server-2nd-ed
 slug: review-of-elasticsearch-server-2nd-edition
 title: Review of Elasticsearch Server 2nd Edition
 wordpress_id: 8161
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswea5py52p"
 ---
 
 [Elasticsearch Server Second Edition](http://www.amazon.co.uk/gp/product/B00JXLF7AK/ref=as_li_ss_il?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00JXLF7AK&linkCode=as2&tag=samespirit-21) is a good book to read if you're getting started with Elasticsearch or considering using it. It goes through all the main areas of getting your data indexed and then searching and analysing it.

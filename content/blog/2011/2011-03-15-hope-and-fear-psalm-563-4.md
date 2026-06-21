@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2011/03/15/hope-and-fear-psalm-563-4/
 slug: hope-and-fear-psalm-563-4
 title: Hope and Fear - Psalm 56:3-4
 wordpress_id: 7078
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswehwy4c2h"
 ---
 
 <blockquote>When I am afraid,

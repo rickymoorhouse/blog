@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/01/16/back-in-salto/
 slug: back-in-salto
 title: Back in Salto
 wordpress_id: 1660
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfgtyy62p"
 ---
 
 Arrived back in Salto today at 7.00 - In some ways, it's nice to be back - but it's been a great trip and would be nice to just keep travelling!!

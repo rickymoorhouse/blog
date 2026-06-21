@@ -10,6 +10,7 @@ tags:
 - family
 title: Treasure Island
 wordpress_id: 6906
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswebkyrq2c"
 ---
 
 This afternoon we took the girls to the New Theatre Royal to watch Treasure Island, thanks to winning tickets in their twitter competition.

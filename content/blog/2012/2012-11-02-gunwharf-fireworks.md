@@ -10,6 +10,7 @@ post_format:
 slug: gunwharf-fireworks
 title: Gunwharf Fireworks
 wordpress_id: 7504
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweant422k"
 ---
 
 [![20121102-225824.jpg](http://rickymoorhouse.files.wordpress.com/2012/11/20121102-225824.jpg)](http://rickymoorhouse.files.wordpress.com/2012/11/20121102-225824.jpg)

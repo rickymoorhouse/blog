@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2009/04/30/linux-extend-filesystem/
 slug: linux-extend-filesystem
 title: 'Linux: Extend Filesystem'
 wordpress_id: 1434
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweju23v2p"
 ---
 
 `lvextend -L +2G /dev/basevg/var_lib_mysql`

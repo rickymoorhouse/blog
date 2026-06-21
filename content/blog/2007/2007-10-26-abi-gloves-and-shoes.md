@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2007/10/26/abi-gloves-and-shoes/
 slug: abi-gloves-and-shoes
 title: Abi, gloves and shoes
 wordpress_id: 1471
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweknvc22k"
 ---
 
 Today we took Abi to get her first real shoes - we'd originally tried to go yesterday, but were too close to the closing time for Clarks so they could just measure her, but there wasn't time to sell us any shoes (huh?). Today we managed to get there in plenty of time, had her measured again and then had to choose the shoes - we ended up with these lovely ones (which Abi really likes):

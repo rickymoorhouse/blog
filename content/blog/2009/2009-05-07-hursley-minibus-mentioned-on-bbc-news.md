@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2009/05/07/hursley-minibus-mentioned-on-bbc-news
 slug: hursley-minibus-mentioned-on-bbc-news
 title: Hursley minibus mentioned on BBC News
 wordpress_id: 1433
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswejqyic2k"
 ---
 
 ![](/ricky/images/2009/hursleyminibus-news.png)

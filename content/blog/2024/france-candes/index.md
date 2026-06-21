@@ -8,6 +8,7 @@ tags:
 - france
 lat: 47.2021046
 lng: 0.0539977
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosw6poxgf2f"
 ---
 
 Candes-Saint-Martin is close to the confluence of the Loire and the Vienne rivers.  We went on a [lovely circular walk](http://cdt37.media.tourinsoft.eu/upload/Hiking-Candes-st-Martin.pdf) from the town up through the nearby vineyards to the view point. 

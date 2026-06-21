@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2011/01/26/getting-more-from-your-meetings/
 slug: getting-more-from-your-meetings
 title: Getting more from your meetings
 wordpress_id: 6959
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweidx5y2c"
 ---
 
 <blockquote>

@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2009/05/24/currently-reading/
 slug: currently-reading
 title: Currently reading…
 wordpress_id: 1431
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswejjuzq2c"
 ---
 
 I seem to have started more books than I can read at the moment, currently I've got the following on the go:

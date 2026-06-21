@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2004/11/03/wbw-3-australian-shiraz/
 slug: wbw-3-australian-shiraz
 title: WBW 3 - Australian Shiraz
 wordpress_id: 1598
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf3bxpi2e"
 ---
 
 ![](/ricky/images/shiraz.jpg)We had this over a week ago, and it's took me a long time to get round to posting it, so I'm too late for the round up anyway! We've not had Shiraz before, and weren't that keen on it.   

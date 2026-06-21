@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2007/09/15/first-little-dippers-session/
 slug: first-little-dippers-session
 title: First Little Dippers Session
 wordpress_id: 1480
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswel2fqa2e"
 ---
 
 After problems with the weekend workshop that we'd originally booked on we finally got round to Abi's first swimming lesson today. 

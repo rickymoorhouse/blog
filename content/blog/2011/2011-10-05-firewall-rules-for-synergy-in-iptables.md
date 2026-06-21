@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2011/10/05/firewall-rules-for-synergy-in-iptable
 slug: firewall-rules-for-synergy-in-iptables
 title: Firewall rules for Synergy in iptables
 wordpress_id: 7318
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswegkaii23"
 ---
 
 For a while I've been turning off iptables to let my secondary machine connect as [synergy](http://synergy2.sourceforge.net) client to let me use one keyboard and mouse across both machines.  Finally today I decided to set up the rules properly to do it, so here's how:

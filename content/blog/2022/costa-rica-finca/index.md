@@ -8,6 +8,7 @@ tags:
 hideImages: true
 lat: 10.312516
 lng: -84.8131851
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweqwtvv2p"
 ---
 
 Finca Madre Tierra was the first carbon-neutral farm in Costa Rica and we were really excited to visit and learn more about it. We met at reception at 2pm to travel with Oscar, one of the people who run the farm, to travel to the farm, which was about 25 minutes away from the hotel.  When we arrived, we were greeted by the farm dogs and the sounds of the animals who after washing our hands we went inside the barn to meet.  

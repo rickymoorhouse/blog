@@ -69,6 +69,7 @@ geojson:
             <a href="/blog/2022/tirimbina-costa-rica/">Tirimbina</a>
             </li></ul>
 
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswerkc6q2s"
 ---
 
 ### Costa Rica 2022

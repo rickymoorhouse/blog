@@ -4,6 +4,7 @@ tags: ["chicks"]
 date: "2016-02-24T07:52:12Z"
 slug: hatching-chicks-at-school
 title: Hatching chicks at school
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswev5rtn2p"
 ---
 
 At Jessica's [school](http://manorinfantschool.co.uk/year-groups/chick-cam), where I am a governor and Laura works, they've got an incubator of eggs from [Living Eggs](http://www.livingeggs.co.uk/hatch-a-chick/), so that the school can watch as they hatch into chicks.

@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2011/07/26/mysql-from-multi-master-to-circular-r
 slug: mysql-from-multi-master-to-circular-replication
 title: 'MySQL: From multi-master to circular replication'
 wordpress_id: 7280
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswegwtan2p"
 ---
 
 * Disable anything that will write to the database

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2006/06/29/this-site-as-a-graph/
 slug: this-site-as-a-graph
 title: This site as a graph
 wordpress_id: 1563
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweoauar2r"
 ---
 
 ![visualisation of this site](http://www.samespirit.net/ricky/resize.asp?width=400&path=/ricky/images/siteasgraph-ricky.png)  

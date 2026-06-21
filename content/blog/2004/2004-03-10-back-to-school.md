@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2004/03/10/back-to-school/
 slug: back-to-school
 title: Back to school
 wordpress_id: 1641
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfe5xse2o"
 ---
 
 <!--![Back to school](/ricky/resize.asp?width=150&path=/ricky/blogfiles/school.jpg)-->

@@ -9,6 +9,7 @@ featured: IMG_1704.jpeg
 tags:
 - travel
 summary: IBM Tech 2023 was a celebration event in Dubai
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweq2kwm2o"
 ---
 
 Just back from a fantastic time at #ibmtech2023 in Dubai, where it was great to meet with so many colleagues from across IBM, celebrate our achievements and learn together.

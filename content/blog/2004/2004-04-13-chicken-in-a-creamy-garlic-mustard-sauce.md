@@ -9,6 +9,7 @@ wordpress_id: 1626
 tags:
 - chicken
 - recipe
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfcu7mc2k"
 ---
 
 Just a recipe I cooked for tea tonight!

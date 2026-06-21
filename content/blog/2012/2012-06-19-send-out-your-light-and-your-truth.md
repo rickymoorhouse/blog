@@ -10,6 +10,7 @@ post_format:
 slug: send-out-your-light-and-your-truth
 title: Send out your light and your truth
 wordpress_id: 7442
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweb24q22h"
 ---
 
 <blockquote>Send out your light and your truth; let them lead me; let them bring me to your holy hill and to your dwelling!</blockquote>

@@ -10,6 +10,7 @@ link: https://rickymoorhouse.uk/2006/09/24/butternut-squash-risotto/
 slug: butternut-squash-risotto
 title: Butternut squash risotto
 wordpress_id: 1556
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswennqcp22"
 ---
 
 After seeing that one of the contestents on Masterchef this week had cooked butternut squash risotto, it made us fancy it ourselves. I had a look for a recipe in some of the usual places, and then decided to make one myself (with a little help from the example risotto on the back of the rice packet).

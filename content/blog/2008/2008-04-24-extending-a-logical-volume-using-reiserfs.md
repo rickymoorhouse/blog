@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2008/04/24/extending-a-logical-volume-using-reis
 slug: extending-a-logical-volume-using-reiserfs
 title: Extending a logical volume using reiserfs
 wordpress_id: 1460
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswefkd5n2f"
 ---
 
 Just recording this so I can find it again!

@@ -12,6 +12,7 @@ tags:
 - ui
 title: Systems Bar
 wordpress_id: 7100
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswehqtqr2p"
 ---
 
 [![Systems Bar Screenshot](http://samespirit.net/ricky/files/2011/04/systems-bar3-500x184.png)](http://rickymoorhouse.files.wordpress.com/2011/04/systems-bar3.png)

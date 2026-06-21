@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2004/04/10/kites-in-the-park/
 slug: kites-in-the-park
 title: Kites in the park
 wordpress_id: 1627
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswfcxcfc2q"
 ---
 
 ![](/ricky/resize.asp?path=/ricky/blogfiles/kites.jpg&width=200)

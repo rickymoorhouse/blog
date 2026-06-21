@@ -9,6 +9,7 @@ tags:
  - apiconnect
  - serverless
  - aws
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswepxe6y2e"
 ---
 
 This blog post will provide you an overview of our Lambda integration in API Connect on AWS, what you could use it for and a simple worked example of setting this up.  If you’d prefer you can [watch me demonstrate this in our video on YouTube](https://youtu.be/NDKfzBSCvVA).  

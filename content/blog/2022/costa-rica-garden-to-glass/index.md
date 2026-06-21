@@ -9,6 +9,7 @@ lat: 10.312516
 lng: -84.8131851
 hideImages: true
 featured: IMG_1031.jpeg
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweqqrrc2q"
 ---
 
 In the afternoon Laura and I did a 'garden to glass' experience at the Hotel, just the two of us, where Diego took us first around the gardens of the hotel to see their sustainability at work and the different plants they grow and how they can be used.  We took a basket around with us and gathered lots of sprigs of herbs, flowers and even wild blackberries. 

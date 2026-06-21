@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/04/18/we-have-a-new-minister/
 slug: we-have-a-new-minister
 title: We have a new minister!
 wordpress_id: 1585
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswex2fzb2r"
 ---
 
 Over the past few months I've been involved in the process of finding a new minister for my church, [St. Luke's Church] - which has involved going to meetings with lots of different people from within the diocese. It's been quite an interesting process (and at times frustrating) and I'll probably write a bit more about some of my experiences along the way later. Throughout the past year and a quarter that we've been without a minister God has been providing for St Luke's in lots of different ways and has been preparing us to receive a new minister. In the past month particularly it has been really amazing to see how God has been working to lead us to the point we're at now. On Wednesday, the PCC unanimously approved the Archdeacon's proposal to appoint Andy Bridgen as our new minister, and on Sunday I had the priviledge to introduce him to the congregation.   

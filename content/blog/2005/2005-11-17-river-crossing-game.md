@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/11/17/river-crossing-game/
 slug: river-crossing-game
 title: River crossing game
 wordpress_id: 1571
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswevnuae2o"
 ---
 
 Ka Ho sent me this [game](http://freeweb.siol.net/danej/riverIQGame.swf) today - it can get frustrating but it feels quite an achievement when you finally manage! The instructions are as follows:

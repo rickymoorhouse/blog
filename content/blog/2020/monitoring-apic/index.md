@@ -9,6 +9,7 @@ tags:
  - trawler
 hideImages: true
 featured: trawler-grafana.png
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweru4kc2h"
 ---
 
 Even though a lot has changed within the API Connect product and the types and numbers of stacks we're running since I first posted an overview of [monitoring API Connect](/apic/monitoring/) , the main areas we  monitor haven't.  

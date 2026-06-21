@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2007/04/17/garden-renovations/
 slug: garden-renovations
 title: Garden Renovations
 wordpress_id: 1512
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswem2n4t2h"
 ---
 
 Over Easter, we put the finishing touches to our Garden changes so we can at last use the garden again! We'd decided that we wanted to find a replacement for the paving that we'd feel happy with Abi playing on, and inevitably falling over on. We considered a few options, but the one we liked best and decided on in the end was [rubber mulch](http://t-leisure.com/acatalog/Rubbscape.html).

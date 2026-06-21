@@ -8,6 +8,7 @@ link: https://rickymoorhouse.uk/2010/05/10/nas-hacking/
 slug: nas-hacking
 title: NAS Hacking
 wordpress_id: 7092
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswededvf2f"
 ---
 
 A while back, we close to filling up the partition on our desktop machine with photos, so I decided to get a second hard drive.  In the end, instead of a hard drive, I decided to by the [WD My Book World Edition](http://www.wdc.com/en/products/products.asp?driveid=586) which is a basic Linux server with a 1TB hard drive.

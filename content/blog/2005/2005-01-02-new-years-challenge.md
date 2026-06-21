@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/01/02/new-years-challenge/
 slug: new-years-challenge
 title: New Year's Challenge
 wordpress_id: 1594
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf2tjsa2e"
 ---
 
 Well yesterday we went out for a meal to celebrate Anne's birthday which is on Tuesday, and we decided to have a New Year's challenge. We had a few different ideas for challenges, (including my suggestion of collecting an object to represent each month throughout the coming year) but the challenge we're doing is a good idea, and that is:   

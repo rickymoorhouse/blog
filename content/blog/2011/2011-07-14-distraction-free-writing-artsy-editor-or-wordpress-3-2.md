@@ -9,6 +9,7 @@ link: https://rickymoorhouse.uk/2011/07/14/distraction-free-writing-artsy-editor
 slug: distraction-free-writing-artsy-editor-or-wordpress-3-2
 title: Distraction free writing - Artsy Editor or Wordpress 3.2
 wordpress_id: 7254
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswegztnv2f"
 ---
 
 [![](http://rickymoorhouse.files.wordpress.com/2011/07/artsy-popup.png)](http://rickymoorhouse.files.wordpress.com/2011/07/artsy-popup.png)For a while I've been following the updates on a new plugin for Wordpress - [Artsy Editor](http://artsyeditor.com/) which gives you a completely clean page in which to write your post with easy access to the formatting options through a popup which appears _intelligently_ when you select text, as seen in the image above. You can also drag an image into the editor to upload and insert it where you are typing. All in all it works really smoothly.

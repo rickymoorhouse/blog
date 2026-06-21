@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2006/12/10/css-and-xhtml-workshop/
 slug: css-and-xhtml-workshop
 title: CSS and XHTML Workshop
 wordpress_id: 1540
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswemzwwq2e"
 ---
 
 This week I spent the first night away from Laura and Abi, since Abi was born. I went up to London for the [Carson Workshops](http://carsonworkshops.com) [In Depth CSS XHTML Techniques](http://carsonworkshops.com/design-dev/meyer/7-8DEC2006.html) by [Eric Meyer](http://meyerweb.com). I was quite nervous beforehand - as well as being away, the first day of the course was also when Abi had her first set of immunisations. 

@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2006/06/22/weve-moved/
 slug: weve-moved
 title: We've moved!
 wordpress_id: 1564
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweodyt52f"
 ---
 
 It's now almost a month since we moved house, but I've been meaning to blog about our hectic week as we moved for a while! We completed fairly late on the Friday, and booked the removals for the Wednesday in order to give us time to get the bits and pieces done that we wanted to sort out before we moved in. 

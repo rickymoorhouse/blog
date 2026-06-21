@@ -5,6 +5,7 @@ slug: weather-station
 tags:
  - raspberrypi
  - weather
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswev2lcf2p"
 ---
 
 For a while I've been meaning to write up the details of the Raspberry Pi weather station that I have built with my eldest daughter.  This project builds on a number of examples I've seen across the internet, particularly [sensing the weather](https://www.raspberrypi.org/learning/sensing-the-weather/). This details how our system is put together.

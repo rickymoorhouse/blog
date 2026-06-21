@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2003/08/09/photo-gallery/
 slug: photo-gallery
 title: Photo Gallery
 wordpress_id: 1721
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswf7xfxy23"
 ---
 
 I've added a *photos* section to my website portfolio now -which I'm quite pleased with. It will grow gradually as I take more photos - I'm trying to take one for each letter of the alphabet. Laura suggested the fish shape - which I thought was cool so I then had the challenge of creating it!

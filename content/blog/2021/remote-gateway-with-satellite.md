@@ -5,6 +5,7 @@ slug: remote-gateway-via-satellite
 tags: 
  - apiconnect
  - satellite
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe75v3i2s"
 ---
 
 API Connect Reserved instance provides the ability to add remote API gateways so that you can co-locate the gateway service with your back-end systems for improved performance.  With the new announcement of [IBM Cloud Satellite](https://cloud.ibm.com/satellite/overview), you can make use of this to securely expand your API Connect footprint across cloud providers and into the on-premise datacenter close to where your applications are running.

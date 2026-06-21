@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2005/07/19/moving-house-chapter-one/
 slug: moving-house-chapter-one
 title: Moving House - Chapter One
 wordpress_id: 1580
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswewkedf2f"
 ---
 
 Firstly we started to look at possible property to buy just to see what we could get and where - mainly on rightmove, but we also arranged a viewing. After the viewing, we both liked the house so decided we should start looking at things more seriously.

@@ -13,6 +13,7 @@ coordinates: [[-1.200592,51.082397,57],[-1.200773,51.082177,58],[-1.201048,51.08
 layout: walk
 featured: /blog/2019/allankingway-part2/part2-089.jpg
 
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswetpxrb2r"
 ---
 
 - 3.8 miles

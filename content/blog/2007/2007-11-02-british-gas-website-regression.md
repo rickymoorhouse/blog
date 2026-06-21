@@ -6,6 +6,7 @@ link: https://rickymoorhouse.uk/2007/11/02/british-gas-website-regression/
 slug: british-gas-website-regression
 title: British Gas Website Regression
 wordpress_id: 1470
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswekkrtc2q"
 ---
 
 I had an e-mail from British Gas today telling me that my bill is now ready to view online on their website. We use their paperless billing to reduce the junk that comes through the front door, but last time I went to their website (probably about 3 months ago when I got the previous bill) they'd move to a new 'improved' site:

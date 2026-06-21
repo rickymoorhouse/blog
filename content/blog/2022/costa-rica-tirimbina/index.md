@@ -6,6 +6,7 @@ tags:
 hideImages: true
 lat: 10.415602
 lng: -84.120568
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweraxby23"
 ---
 
 Originally our plan had been to fly from Tortuguero to La Fortuna but, due to maintenance issues with the plane, the flight was cancelled and there were no others available. Instead, we travelled by land - initially leaving Laguna Lodge on the boat and travelling by coach to Guapilles and then being picked up by Juan Carlos to take us the rest of the way.  This meant that we were able to stop off at [Tirimbina](https://www.tirimbina.org) on the way where we had a guide, Luis, to take us around the reserve. 
