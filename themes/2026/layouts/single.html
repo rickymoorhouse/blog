@@ -53,9 +53,6 @@
      {{ if .Params.bsky }}
      <bsky-conversation uri="https://bsky.app/profile/did:plc:r53zv4vpzeihop3aliwyejlu/post/{{ .Params.bsky }}"></bsky-conversation>    
      {{ end }}
-     {{ if .Params.atUri }}
-     <sequoia-comments hide="auto"></sequoia-comments>
-     {{ end }}
 </article>
 {{ partial "sidebar.html" . }}
 </main>
