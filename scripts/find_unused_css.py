@@ -284,7 +284,7 @@ def selector_matches_used(selector, used_selectors):
 
 def main():
     # Paths
-    css_path = Path('themes/2026/static/css/main.css')
+    css_path = Path('themes/2026/assets/css/main.css')
     public_path = Path('public')
     
     # Read CSS file

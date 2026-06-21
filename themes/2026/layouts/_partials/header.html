@@ -149,56 +149,5 @@
             });
         });
 
-        // Search modal functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchToggle = document.getElementById('search-toggle');
-            const searchModal = document.getElementById('search-modal');
-            const searchContainer = searchModal.querySelector('.search-container');
-            const searchBackdrop = searchModal.querySelector('.search-backdrop');
-            let pagefindUI = null;
 
-            function openSearch() {
-                searchModal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-                
-                // Initialize Pagefind if not already done
-                if (!pagefindUI) {
-                    pagefindUI = new PagefindUI({ 
-                        element: "#search", 
-                        showSubResults: true,
-                        showImages: false
-                    });
-                }
-                
-                // Focus the search input
-                setTimeout(() => {
-                    const searchInput = searchModal.querySelector('.pagefind-ui__search-input');
-                    if (searchInput) {
-                        searchInput.focus();
-                    }
-                }, 100);
-            }
-
-            function closeSearch() {
-                searchModal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-
-            searchToggle.addEventListener('click', openSearch);
-            searchBackdrop.addEventListener('click', closeSearch);
-            searchContainer.addEventListener('click', (e) => e.stopPropagation());
-
-            // Keyboard shortcuts
-            document.addEventListener('keydown', function(e) {
-                // Cmd+K or Ctrl+K to open search
-                if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-                    e.preventDefault();
-                    openSearch();
-                }
-                // Escape to close search
-                if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
-                    closeSearch();
-                }
-            });
-        });
     </script>
