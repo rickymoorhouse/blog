@@ -12,7 +12,7 @@ atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos64yogpf
 
 Agents are only as good as the access they have to accurate data and business functions. LLMs have a cut off point as to what they know - they're trained on a set of data and anything beyond that is unknown to them - therefore to build useful agents you need to provide a way for them to access data beyond that corpus.  This could be more your own business data or just more recent information. To enable this Anthropic [introduced Model Context Protocol][anthropic-blog] (MCP) as an open standard to build these connections to data-sources and tooling.  Since then, MCP has exploded into the most common way of providing tools to AI Agents.
 
-![Bridge over Canal, Lancaster](../IMG_1518.jpeg)
+![Bridge over Canal, Lancaster](IMG_1518.jpeg)
 
 There are 2 main types of MCP Server - **local** which you download and run on your machine (just like a CLI tool) and **remote** that you connect to through a URL (just like an API).  They can both be configured and they both have their risks - so we need to consider how we safely manage these in our environment, building on how we control and manage APIs and software and APIs.
 
