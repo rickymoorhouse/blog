@@ -8,6 +8,7 @@ tags:
  - golang
  - agent
  - architecture
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos652u2pt2m"
 ---
 
 I've been fascinated by the idea of AI agents for a while now - programs that can not just chat, but actually _do_ things. A few weeks back I came across Clawdbot - now called [OpenClaw](https://openclaw.ai) and it clicked something in my brain. This had a great potential for proactive workflows with a regular trigger to identify things that needed doing and the ability to extend itself with additional code and updates to it's own configuration.  Very powerful, but also very risky if not controlled. I set this up intially as it's own user account and then fairly soon moved it into an isolated VM. 

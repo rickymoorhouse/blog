@@ -10,6 +10,10 @@
     <link rel="authorization_endpoint" href="https://aerie.tawny-monitor.ts.net/auth">
     <link rel="token_endpoint"         href="https://aerie.tawny-monitor.ts.net/token">
     <link rel="me" href="https://sifa.id/p/rickymoorhouse.uk">
+    <link rel="site.standard.publication" href="at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.publication/3mos5q3a7jf2w">
+    {{ if .Params.atUri }}
+    <link rel="site.standard.document" href="{{ .Params.atUri }}">
+    {{ end }}
     <link href="/css/pagefind-ui.css" rel="stylesheet" media="print" onload="this.media='all'">
     {{ range .AlternativeOutputFormats -}}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
@@ -56,7 +60,8 @@
     <link rel="canonical" href="{{ .Permalink }}" />
     <link rel="apple-touch-icon" href="https://rickymoorhouse.uk/images/siteicon.png" />
     <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
-      <script defer src="https://cloud.umami.is/script.js" data-website-id="82e79ef7-d0f5-4488-83a8-c357ace64f06"></script>
+    <script type="module" src="/js/bskycomments.js"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="82e79ef7-d0f5-4488-83a8-c357ace64f06"></script>
   </head>
   <body class="{{ .Site.Params.build }}">
       <div class="side">

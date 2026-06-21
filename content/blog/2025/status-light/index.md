@@ -3,6 +3,7 @@ title: Status Light
 date: 2025-05-11
 layout: blog
 hideImages: true
+bsky: 3loyn7n46uu2c
 tags: 
 - raspberrypi
 - coding

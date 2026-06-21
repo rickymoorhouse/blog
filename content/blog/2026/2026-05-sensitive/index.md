@@ -3,9 +3,11 @@ title: Securing Sensitive Payload Logging in API Connect
 date: 2026-05-22
 layout: blog
 hideImages: true
+bsky: 3mmllf5p5jc2h
 tags:
  - apiconnect
  - security
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos64z2ty22s"
 ---
 
 Unintentionally logging sensitive customer data (PII, financial info) is a major compliance risk. When deploying APIs, ensuring that this data is kept out of your logs requires robust, layered controls. Whilst developing APIs that will deal with this sensitive content you will often need to see what is being passed to ensure that everything is being handled as expected. Very often in a development or test environment you will be using a dummy payload to ensure the API is working as expected so it is key to ensure it is reflected at the different stages of processing as part of your test suites.

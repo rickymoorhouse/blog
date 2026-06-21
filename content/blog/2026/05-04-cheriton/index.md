@@ -11,6 +11,7 @@ coordinates: [[-1.1687587714839935,51.053170305815115],[-1.1684244077050039,51.0
 layout: walk
 distance: 5km
 hideImages: true
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos64zhmnr2v"
 ---
 
 Lovely way to spend the bank holiday on a circular walk around Cheriton. The route picks up a section of the [Itchen Way](https://www.britishpilgrimage.org/portfolio/river-itchen-way) around Cheriton, joining it into a circular walk with paths around the surrounding fields with gorgeous views across the landscape.

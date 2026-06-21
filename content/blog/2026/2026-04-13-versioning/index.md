@@ -8,6 +8,7 @@ tags:
   - API
   - versioning
   - architecture
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos64zttht2m"
 ---
 
 Teams spend a lot of energy arguing about whether to put the version in the URL, a header, or a query parameter. That debate usually misses the point. The real question is: what is your change management discipline, and how do you protect consumers from breaking changes?

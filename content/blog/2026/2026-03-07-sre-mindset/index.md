@@ -4,10 +4,12 @@ date: 2026-03-07
 layout: blog
 hideImages: true
 featured: sre-mindset.png
+bsky: 3mgksbi6f2223
 summary: How my SRE experience with sizing, observability and SLOs shapes the way I approach API architecture - planning for reality, not hopes.
 tags: 
  - architecture
  - sre
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos652qx4d22"
 ---
 
 ![image](sre-mindset.png)

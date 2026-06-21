@@ -8,6 +8,7 @@ summary: Observability is a design decision, not an afterthought. From the platf
 tags:
   - architecture
   - api
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos652atid2m"
 ---
 
 ## What can you actually see in your API platform?

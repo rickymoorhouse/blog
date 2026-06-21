@@ -4,6 +4,7 @@ date: 2026-03-14T00:00:00.000Z
 layout: blog
 hideImages: true
 featured: branch-with-birds.jpg
+bsky: 3mh4ndeivvc2y
 summary: A practical guide to designing multi-region API deployments - covering data consistency, auth dependencies, traffic routing, and failure modes, with real-world lessons from IBM API Connect SaaS.
 sticky: true
 keywords: 
@@ -17,6 +18,7 @@ keywords:
 tags:
   - architecture
   - api
+atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos652nvow2x"
 ---
 
 
