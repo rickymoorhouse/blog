@@ -104,19 +104,30 @@ def social_text(post_text):
 @click.command()
 @click.option('--post', help='md file for post.')
 @click.option('--bluesky', is_flag=True, help='Post to Bluesky.')
-def main(post, bluesky):
+@click.option('--use_commit', is_flag=True, help='Use previous commit.')
+def main(post, bluesky, use_commit):
     """ Main function to post to atmosphere and optionally to Bluesky. """
 
     if not post:
+        if use_commit:
+            command = ['git','show','--name-only','--pretty=format:','HEAD']
+        else:
+            command = ['git', 'diff', '--cached', '--name-only']
+
         # No post specified - check the staged files in git and find the first .md file
-        staged_files = subprocess.run(
-            ['git', 'diff', '--cached', '--name-only'],
+        files = subprocess.run(
+            command,
             capture_output=True, text=True, check=True
         ).stdout.splitlines()
-        for filepath in staged_files:
+
+        for filepath in files:
             if filepath.endswith('.md'):
                 post = filepath
                 break
+        # If there's no file found then exit
+        if not filepath:
+            exit("No file specified or identified")
+
     agent = Client()
 
     # load credential from env variables
@@ -136,11 +147,18 @@ def main(post, bluesky):
         click.echo(click.style('Suggested bluesky post:', fg='blue'))
         click.echo(click.style("\t" + social + " " + post_url, fg='green'))
 
+    date = post_data['frontmatter'].get('date')
+    if not isinstance(date, datetime.datetime):
+        if date is None:
+            date = datetime.datetime.now()
+        elif isinstance(date, datetime.date):
+            date = datetime.datetime.combine(date, datetime.time.min)    
     document_record = {
         '$type': 'site.standard.document',
         'site': BLOG_DID,
+        'path': post_url.replace("https://rickymoorhouse.uk",""),
         'title': post_data['frontmatter'].get('title', 'Untitled'),
-        'publishedAt': post_data['frontmatter'].get('date'),
+        'publishedAt': date.isoformat(),
         'textContent': text_content,
         'canonicalUrl': post_url,
         'contributor': {   
@@ -161,6 +179,11 @@ def main(post, bluesky):
         blob_ref = upload_featured_image(agent, post_path, featured_image)
         document_record['cover'] = blob_ref
 
+    if 'summary' in post_data['frontmatter']:
+        document_record['description'] = post_data['frontmatter']['summary']
+
+    if 'tags' in post_data['frontmatter']:
+        document_record['tags'] = post_data['frontmatter']['tags']
     # if there is already an atUri in the frontmatter, we can update
     if 'atUri' in post_data['frontmatter']:
         at_uri = post_data['frontmatter']['atUri']

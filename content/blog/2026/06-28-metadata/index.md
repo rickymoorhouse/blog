@@ -1,10 +1,11 @@
 ---
 atUri: at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mpdm5lzbzl2f
-date: 2026-06-28
+date: 2026-06-28T10:31:11
 slug: machine-readability
 title: Machine-readable?
 hideImages: true
 featured: pdsls.png
+summary: Applying metadata standards and formats to improve the readability of my blog for machines of different types. 
 ---
 I've always been interested in ensuring my blog was readable to humans and machines - so over the years I've added and experimented with different ways to do this as what it means to be machine readable has changed. I currently have a range of these supported from embedded metadata to alternate versions that can be used with an LLM. Currently on this blog I am using the following:
 
@@ -55,6 +56,7 @@ if 'featured' in post_data['frontmatter']:
 ```
 
 If I have an atUri already in the front-matter, the existing document is updated, otherwise a new one is published and adds the atUri to the front-matter. At the moment my workflow is to write the post, stage the commit and then run the script before updating the commit and pushing to GitHub where my actions will then publish the blog post, but eventually I plan to move the script to be run from the actions as part of the publishing. I'm also experimenting with using an LLM to generate a post for social media to link to the article.
+
 
 ## Markdown versions of posts
 
