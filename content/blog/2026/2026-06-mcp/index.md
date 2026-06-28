@@ -1,15 +1,14 @@
 ---
-title: "MCP Ponderings"
-date: 2026-06-21
-hideImages: true
-featured: IMG_1518.jpeg
+atUri: at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mpb6acc4xz2h
 bsky: 3mosbctbyec2p
+date: 2026-06-21
+featured: IMG_1518.jpeg
+hideImages: true
 tags:
- - ai
- - mcp
-atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos64yogpf2w"
+- ai
+- mcp
+title: MCP Ponderings
 ---
-
 Agents are only as good as the access they have to accurate data and business functions. LLMs have a cut off point as to what they know - they're trained on a set of data and anything beyond that is unknown to them - therefore to build useful agents you need to provide a way for them to access data beyond that corpus.  This could be more your own business data or just more recent information. To enable this Anthropic [introduced Model Context Protocol][anthropic-blog] (MCP) as an open standard to build these connections to data-sources and tooling.  Since then, MCP has exploded into the most common way of providing tools to AI Agents.
 
 ![Bridge over Canal, Lancaster](IMG_1518.jpeg)

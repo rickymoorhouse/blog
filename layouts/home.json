@@ -20,7 +20,6 @@
       {{ else if eq .Type "photos" }}
       "content_html": "{{ with .Resources.ByType "image" }}{{ range first 1 . }}<img src=\"{{ .Permalink }}\" />{{ end }}{{ end }}",
         {{ else }}
-      "type": {{ .Type | jsonify }},
       "content_text": {{ .Summary | jsonify }},
       {{ end }}
 {{ with .Resources.ByType "image" }}{{ range first 1 . }}      "image":"{{ .Permalink }}",{{ end }}{{ end }}
@@ -29,7 +28,7 @@
       {{ else }}
       "url": "{{ .Permalink }}",
       {{ end }}
-      "date_published": "{{ replace .Date "-0700 -0700" "-0700"}}"
+      "date_published": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
     }
     {{ end }}
   ]
