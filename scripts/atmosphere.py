@@ -8,6 +8,9 @@ import click
 import yaml
 import requests
 
+# Publication record
+BLOG_DID = 'at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.publication/3mos5q3a7jf2w'
+
 def parse_post(post_file):
     """ Parse the post file and return a dict with frontmatter and body. """
     with open(post_file, 'r', encoding='utf-8') as f:
@@ -115,52 +118,48 @@ def main(post, bluesky):
                 post = filepath
                 break
     agent = Client()
-    # load credential from env variable 
+
+    # load credential from env variables
     password = os.environ.get('ATPROTO_APP_PASSWORD')
     handle = os.environ.get('ATPROTO_APP_HANDLE')
     agent.login(handle, password)
 
     post_data = parse_post(post)
-    content = post_data['body']
+
     # text content should be the same as content, but without any markdown formatting
     text_content = strip_markdown(post_data['body'])
-
-    social = social_text(text_content)
-    # print(social)
-
-    # If there is a featured image, upload as blob to atmospher and get the blob reference
-    if 'featured' in post_data['frontmatter']:
-        featured_image = post_data['frontmatter']['featured']
-        # get relative path to the post file, removing the file name
-        post_path = post.rsplit('/', 1)[0]
-        print('Featured image:', featured_image)
-        # Upload to atmosphere and get the blob reference
-        blob_ref = upload_featured_image(agent, post_path, featured_image)
-
     post_url = build_url(post_data['frontmatter'])
+
     # TODO: If posting to bluesky, do this and get the did for the post
     if bluesky:
+        social = social_text(text_content)
         click.echo(click.style('Suggested bluesky post:', fg='blue'))
         click.echo(click.style("\t" + social + " " + post_url, fg='green'))
-    
-    # Publication record
-    blog_did = 'at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.publication/3mos5q3a7jf2w'
 
     document_record = {
         '$type': 'site.standard.document',
-        'site': blog_did,
+        'site': BLOG_DID,
         'title': post_data['frontmatter'].get('title', 'Untitled'),
-        'publishedAt': post_data['frontmatter'].get('date', '1981-05-05T12:00:00Z'),
-        'cover': blob_ref if 'featured' in post_data['frontmatter'] else None,
-        'content': content,
+        'publishedAt': post_data['frontmatter'].get('date'),
         'textContent': text_content,
         'canonicalUrl': post_url,
         'contributor': {   
             'did': agent.me.did,
             'role': 'author',
-            'displayName': agent.me.handle,
+            'displayName': "Ricky Moorhouse",
         }
     }
+    # If there is a featured image, upload as blob and get the reference
+    if 'featured' in post_data['frontmatter']:
+        featured_image = post_data['frontmatter']['featured']
+
+        # get relative path to the post file, removing the file name
+        post_path = post.rsplit('/', 1)[0]
+        print('Featured image:', featured_image)
+
+        # Upload to atmosphere and get the blob reference
+        blob_ref = upload_featured_image(agent, post_path, featured_image)
+        document_record['cover'] = blob_ref
 
     # if there is already an atUri in the frontmatter, we can update
     if 'atUri' in post_data['frontmatter']:
@@ -175,7 +174,7 @@ def main(post, bluesky):
                 'record': document_record,
             })
             click.echo(click.style('Document record updated!', fg='green'))
-            # click.echo(click.style(f'Response: {response}', fg='green'))
+
         except Exception as error:
             print('Failed to update document:', error)
     else:
@@ -187,9 +186,11 @@ def main(post, bluesky):
             })
             click.echo(click.style('Document record created!', fg='green'))
             click.echo(click.style(f'Your AT-URI is: {response.uri}', fg='green'))
+
             # inject the new atUri into the frontmatter of the post file
             with open(post, 'r', encoding='utf-8') as f:
                 content = f.read()
+
             # replace the frontmatter with the new frontmatter that includes the atUri
             new_frontmatter = post_data['frontmatter']
             new_frontmatter['atUri'] = response.uri
