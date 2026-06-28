@@ -4,6 +4,7 @@ date: 2026-06-28
 slug: machine-readability
 title: Machine-readable?
 hideImages: true
+featured: pdsls.png
 ---
 I've always been interested in ensuring my blog was readable to humans and machines - so over the years I've added and experimented with different ways to do this as what it means to be machine readable has changed. I currently have a range of these supported from embedded metadata to alternate versions that can be used with an LLM. Currently on this blog I am using the following:
 
