@@ -55,7 +55,7 @@
   --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 ;
   --font-body: var(--font-transitional);
-  --font-heading: system-ui, var(--font-humanist);
+  --font-heading: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;system-ui, var(--font-humanist);
   --font-sans: system-ui, sans-serif;
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -562,7 +562,7 @@ article h5 {
 article strong {font-weight: 600;}
 
 .dt-published , .item-tag{
-  padding: var(--space-2xs) var(--space-xs);
+  padding: var(--space-2xs) var(--space-sm);
   border-radius: var(--border-radius-sm);
   line-height: 1.1;
   margin-top: 0;
