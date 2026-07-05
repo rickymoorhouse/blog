@@ -11,6 +11,7 @@ coordinates: [[-1.1687587714839935,51.053170305815115],[-1.1684244077050039,51.0
 layout: walk
 distance: 5km
 hideImages: true
+summary: Short circular walk around Cheriton with beautiful views around the area. 
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos64zhmnr2v"
 ---
 

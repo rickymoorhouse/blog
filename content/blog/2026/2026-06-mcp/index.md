@@ -4,6 +4,7 @@ bsky: 3mosbctbyec2p
 date: 2026-06-21
 featured: IMG_1518.jpeg
 hideImages: true
+summary: Some of my thoughts around MCP and how we can use it safely.
 tags:
 - ai
 - mcp
