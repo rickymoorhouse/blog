@@ -48,14 +48,18 @@
   --space-baseline: 28px;
 
   /* Typography */
-  --font-serif: "IBM Plex Serif", Georgia, serif;
-  --font-mono: "IBM Plex Mono", monospace;
-  --font-body: "IBM Plex Serif", Georgia, serif;
-  --font-heading: "IBM Plex Sans", system-ui, sans-serif;
-  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-old-style: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+  --font-transitional: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  --font-humanist: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  --font-classical-humanist: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif; 
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+;
+  --font-body: var(--font-transitional);
+  --font-heading: system-ui, var(--font-humanist);
+  --font-sans: system-ui, sans-serif;
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
-  --text-base: 1rem;
+  --text-base: 1.15rem;
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
   --text-2xl: 1.5rem;
@@ -119,14 +123,15 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-  font-size: 16px;
+  font-size: var(--text-base);
+  line-height: var(--space-baseline);  
+
 }
 
 body {
   margin: 0;
   background: var(--bg-body);
   color: var(--text-primary);
-  line-height: var(--space-baseline);
   min-height: 100vh;
   font-family: var(--font-body);
 }
@@ -361,7 +366,7 @@ box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
 
 .map-controls {
 font-family: var(--font-sans);
-font-size: var(--text-base);
+font-size: var(--text-xs);
 margin-top: var(--space-md);
 border-top: 1px solid #ddd;
 }
@@ -486,7 +491,7 @@ right: 1em;
 }
 .post-list li {
   display: grid;
-  grid-template-columns: 8em 1fr;
+  grid-template-columns: 7em 1fr;
 }
 
 .post-list li {
@@ -516,7 +521,7 @@ right: 1em;
 .post-date {
   color: var(--text-muted);
   font-family: var(--font-sans);
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   white-space: nowrap;
   grid-column: 1;
   align-content: center;
@@ -557,7 +562,7 @@ article h5 {
 article strong {font-weight: 600;}
 
 .dt-published , .item-tag{
-  padding: var(--space-2xs) var(--space-sm);
+  padding: var(--space-2xs) var(--space-xs);
   border-radius: var(--border-radius-sm);
   line-height: 1.1;
   margin-top: 0;
@@ -609,12 +614,17 @@ pre {
   padding: var(--space-md);
   border-radius: var(--border-radius);
   overflow-x: auto;
+  font-family: var(--font-mono);
   margin: var(--space-lg) 0;
+}
+pre:hover {
+  width: 100vw;
 }
 
 code {
   font-family: var(--font-mono);
-  font-size: 0.9em;
+  font-weight: 500;
+  font-size: var(--text-sm);
   color: var(--color-code);
   background: var(--bg-code);
 
@@ -758,7 +768,7 @@ div.tags {
   background: var(--bg-tag);
   color: var(--color-tag);
   border-radius: var(--border-radius-sm);
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   text-decoration: none;
 }
 
@@ -816,6 +826,7 @@ background: red;
 .hero .bio {
   font-family: var(--font-serif);
   font-size: var(--text-lg);
+  font-style: oblique;
   line-height: 1.7;
   color: var(--text-secondary);
   max-width: 700px;
@@ -918,7 +929,8 @@ section.recent-posts {
 }
 
 .featured-date {
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
+  font-family: var(--font-sans);
   color: var(--text-muted); 
   margin: 0;
 }
@@ -997,6 +1009,7 @@ max-width: 67ch;
    Categories
    -------------------------------------------------------------------------- */
 .category {
+  display:none;
   background: var(--color-gray);
   color: white;
   padding: var(--space-xs) var(--space-sm);
