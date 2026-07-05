@@ -524,7 +524,7 @@ right: 1em;
   font-size: var(--text-xs);
   white-space: nowrap;
   grid-column: 1;
-  align-content: center;
+  align-content: top;
 }
 
 /* -----------------------------------------------------------------------------
@@ -541,13 +541,23 @@ main.photos section {
 article.blog {
   margin-top: var(--space-xl)
 }
-
+.post-title, a .post-title {
+  font-family: var(--font-heading);
+  text-decoration: none;
+}
 article.h-entry p, article.h-entry ul, article.h-entry ol, article.h-entry blockquote {
   margin-bottom: var(--space-baseline);
   margin-top: 0;
 }
 article.h-entry {
   max-width: 70ch;
+}
+.post-summary {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: 18px;
+  color: var(--text-muted);
+  margin: var(--space-sm) 0;
 }
 article h1 {
   margin-bottom: 0;
@@ -962,6 +972,10 @@ section.recent-posts {
 .recent-posts .photo-overlay, .unified-feed .photo-overlay {
   bottom: 0;
 }
+.recent-posts .photo-overlay {
+  font-size: var(--text-sm);
+  padding: var(--space-xs) var(--space-sm);
+}
 .photo-overlay {
   position: absolute;
   background: rgba(0,0,0,0.5);  
@@ -1020,6 +1034,7 @@ max-width: 67ch;
 }
 .technical .category { background: #006646;}
 .personal .category { background: #5A3A6E;}
+.post.personal.walk a { color: #009966; text-decoration: none;}
 .technical .tag { color: #006646; background: var(--color-secondary-bright);}
 .personal .tag { color: #5A3A6E; background: var(--color-secondary-bright);}
 
@@ -1170,9 +1185,9 @@ article.microblog:last-child {
   float: left;
   margin: var(--space-xs);
 }
-.microblog-content {
-  font-size: var(--text-base);
-  line-height: 1.6;
+.microblog {
+  font-size: var(--text-sm);
+  font-style: oblique;
 }
 
 .microblog-content p {

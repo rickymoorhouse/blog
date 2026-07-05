@@ -63,12 +63,15 @@
         {{ else }}
         <li>
           <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
-          <div class="post {{$category | lower}}">
+          <div class="post {{$category | lower}} {{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ end  }}">
             <span class="category">{{ $category }}</span>
             <a href="{{ .Permalink }}">
               <span class="post-title">{{ .Title }}</span>
             </a>
             {{ range .Params.tags }}<span class="item-tag">{{ . }} </span>&nbsp;{{ end }}
+            {{ if .Params.summary }}
+              <p class="post-summary">{{ .Summary }}</p>
+            {{ end }}
           </div>
         </li>
         {{ end }}
