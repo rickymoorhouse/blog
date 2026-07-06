@@ -5,7 +5,7 @@ summary: We're building tools to save time, yet we often find ourselves with les
   time to think about why we're building them. A reflection on reclaiming the "messy"
   human part of the development process in the age of AI.
 featured: IMG_1682.jpg
-hide images: true
+hideImages: true
 tags:
 - ai
 title: Why Human Thinking Still Matters
