@@ -8,34 +8,38 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Color Palette */
-  --color-primary: #006646;
-  --color-primary-bright: #009966;
-  --color-primary-dark: hsl(from var(--color-primary) h calc(s - 10) calc(l - 10));
-  --bg-selection: hsl(from var(--color-primary) h calc(s + 15) calc(l + 20));
-  --color-secondary: #dd8800;
-  --color-secondary-bright: #da7;
-  --color-gray: #666;
-  --color-gray-light: #999;
-  --color-tag: #ffffff;
-  --color-code: #0550ae;
+  --colour-primary: #006646;
+  --colour-primary-bright: #009966;
+  --colour-primary-dark: hsl(from var(--colour-primary) h calc(s - 10) calc(l - 10));
+  --colour-primary-light: hsl(from var(--colour-primary) h calc(s - 60) calc(l + 50));
+  --bg-selection: hsl(from var(--colour-primary) h calc(s + 15) calc(l + 20));
+  --colour-sage: #8FA998;
+  --colour-seafoam: #7FC5B4;
+  --colour-slate: #5A7D8C;
+  --colour-secondary: #dd8800;
+  --colour-secondary-bright: #da7;
+  --colour-gray: #666;
+  --colour-gray-light: #999;
+  --colour-tag: #ffffff;
+  --colour-code: #0550ae;
 
   /* Background & Text */
   --bg-body: #fafefd;
   --bg-surface: #ffffff;
   --bg-code: #f5f5f5;
-  --bg-tag: hsl(from var(--color-primary) h calc(s - 10) calc(l + 10));
+  --bg-tag: hsl(from var(--colour-primary) h calc(s - 10) calc(l + 10));
   --text-primary: #333333;
   --text-secondary: #666666;
   --text-muted: #405B5E;
   --link-color: #006699;
-  --link-hover: var(--color-secondary);
+  --link-hover: var(--colour-secondary);
 
   --bsky-muted-color: var(--text-muted);
   --bsky-link-color: var(--link-color);
-  --bsky-link-hover: var(--color-secondary);
+  --bsky-link-hover: var(--colour-secondary);
   --bsky-link-underline: rgba(59, 130, 246, 0.3);
   --bsky-link-underline-hover: rgba(59, 130, 246, 0.3);
-  --bsky-border-color: var(--color-secondary-bright);
+  --bsky-border-color: var(--colour-secondary-bright);
 
   /* Spacing */
   --space-2xs: 0.1rem;
@@ -105,9 +109,9 @@
   --bg-body: #1a1d1a;
   --bg-surface: #222522;
   --bg-code: #2a2d2a;
-  --color-code: #55aaff;
-  --color-primary: #009966;
-  --color-primary-bright: #00bb88;  
+  --colour-code: #55aaff;
+  --colour-primary: #009966;
+  --colour-primary-bright: #00bb88;  
   --text-primary: #e0e0e0;
   --text-secondary: #b0b0b0;
   --text-muted: #A8A8A8;
@@ -161,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 var(--space-baseline) var(--space-md);
   font-weight: 300;
   line-height: calc( 2 * var(--space-baseline));
-  color: var(--color-primary-bright);
+  color: var(--colour-primary-bright);
   font-family: var(--font-heading);
 }
 
@@ -171,7 +175,7 @@ h3 { font-size: var(--text-xl); }
 h4 { font-size: var(--text-lg); }
 ::selection {
   background: var(--bg-selection);
-  color: var(--color-text-primary);
+  color: var(--colour-text-primary);
 }
 p, ul {
   margin: 0 var(--space-md);
@@ -185,7 +189,7 @@ ul li {
   list-style-position: outside;
 }
 ul li::marker {
-  color: var(--color-primary);
+  color: var(--colour-primary);
 }
 p + h2,
 p + h3 {
@@ -216,7 +220,7 @@ svg.plane-icon {
 
 /* Sidebar Navigation - Vertical bar on left for desktop */
 .side {
-  background: var(--color-primary);
+  background: var(--colour-primary);
   width: var(--sidebar-width);
   height: 100vh;
   display: flex;
@@ -361,7 +365,7 @@ z-index: 999;
 color: var(--text-primary);
 width: 20em;
 padding: var(--space-md);
-box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
+box-shadow: var(--shadow-sm);
 }
 
 .map-controls {
@@ -415,72 +419,6 @@ top: 1em;
 right: 1em;
 }
 /* -----------------------------------------------------------------------------
-   Navigation Cards (Homepage)
-   -------------------------------------------------------------------------- */
-.nav-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 180px));
-  gap: var(--space-sm);
-  margin: var(--space-lg) 0;
-  justify-content: center;
-}
-
-.nav-card {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: var(--space-md);
-  height: 100px;
-  text-decoration: none;
-  color: white;
-  background-size: cover;
-  background-position: center;
-  transition: all var(--transition-normal);
-  position: relative;
-}
-
-.nav-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%);
-}
-
-.nav-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.nav-card .nav-label {
-  position: relative;
-  z-index: 1;
-  font-weight: 500;
-  font-size: var(--text-lg);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-/* Background images for each card */
-.nav-card-blog {
-  background-image: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-}
-
-.nav-card-photos {
-  background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-}
-
-.nav-card-microblog {
-  background-image: linear-gradient(135deg, #232526 0%, #414345 100%);
-}
-
-.nav-card-about {
-  background-image: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
-}
-
-.nav-card-travel {
-  background-image: linear-gradient(135deg, #2c3e50 0%, #4a6741 100%);
-}
-
-/* -----------------------------------------------------------------------------
    Post Lists
    -------------------------------------------------------------------------- */
 .post-list {
@@ -496,7 +434,7 @@ right: 1em;
 
 .post-list li {
   padding: 0 0 var(--space-baseline) 0;
-  /* border-bottom: 1px solid var(--color-gray); */
+  /* border-bottom: 1px solid var(--colour-gray); */
 }
 .post-list li p {
   margin: 0;
@@ -508,7 +446,7 @@ right: 1em;
 }
 
 .post-list a:hover {
-  color: var(--color-primary);
+  color: var(--colour-primary);
 }
 .post-list .flight-airport strong{
   padding: var(--space-xs);
@@ -522,7 +460,7 @@ right: 1em;
   color: var(--text-muted);
   font-family: var(--font-sans);
   font-size: var(--text-xs);
-  white-space: nowrap;
+  /* white-space: nowrap; */
   grid-column: 1;
   align-content: top;
 }
@@ -609,7 +547,7 @@ article img.floatright {
 }
 
 blockquote {
-  border-left: 4px solid var(--color-primary);
+  border-left: 4px solid var(--colour-primary);
   padding-left: var(--space-lg);
   margin: var(--space-xl) 0;
   font-style: italic;
@@ -635,7 +573,7 @@ code {
   font-family: var(--font-mono);
   font-weight: 500;
   font-size: var(--text-sm);
-  color: var(--color-code);
+  color: var(--colour-code);
   background: var(--bg-code);
 
 }
@@ -660,7 +598,7 @@ code {
 .flight-airport strong {
   font-family: var(--font-sans);
   display: inline-block;
-  background: var(--color-primary);
+  background: var(--colour-primary);
   color: white;
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--border-radius-sm);
@@ -677,11 +615,11 @@ code {
   height: 1.5em;
   vertical-align: baseline;
   border-top: 5pt solid transparent;
-  fill: var(--color-primary);
+  fill: var(--colour-primary);
   transition: fill var(--transition-normal);
 }
 .flight-plane:hover svg, .plane-icon:hover {
-  fill: var(--color-secondary);
+  fill: var(--colour-secondary);
 }
 .flight-meta {
   font-size: var(--text-sm);
@@ -776,7 +714,7 @@ div.tags {
   margin-left: var(--space-xs);
   font-family: var(--font-sans);
   background: var(--bg-tag);
-  color: var(--color-tag);
+  color: var(--colour-tag);
   border-radius: var(--border-radius-sm);
   font-size: var(--text-xs);
   text-decoration: none;
@@ -840,11 +778,12 @@ background: red;
   line-height: 1.7;
   color: var(--text-secondary);
   max-width: 700px;
+  height: 100pt;
   margin: 0 auto;
   padding: 0 5pt calc(var(--space-baseline) * 2) 0;
   background-image: url('/images/signature.svg');
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: calc(100% + 10pt) right;
   background-size: 100px auto;
 }
 
@@ -859,16 +798,16 @@ background: red;
   display: inline-block;
   padding: var(--space-sm) var(--space-md);
   background: var(--bg-surface);
-  border: 1px solid var(--color-primary-bright);
+  border: 1px solid var(--colour-primary-bright);
   border-radius: var(--border-radius-sm);
-  color: var(--color-primary-bright);
+  color: var(--colour-primary-bright);
   text-decoration: none;
   font-size: var(--text-sm);
   transition: all var(--transition-fast);
 }
 
 .social-link:hover {
-  background: var(--color-primary);
+  background: var(--colour-primary);
   color: white;
 }
 
@@ -881,6 +820,7 @@ main.landing {
   grid-column-gap: var(--space-lg);
   row-gap: var(--space-baseline);
   grid-template-columns: calc(60vw - 40pt) calc(30vw - var(--space-md));  
+  grid-template-rows: 30vh auto;
 }
 section.hero {
   grid-column: 1 / span 1;
@@ -902,7 +842,7 @@ section.recent-posts {
 }
 
 .featured-card {
-  /* border: 1px solid var(--color-gray); */
+  /* border: 1px solid var(--colour-gray); */
   /* border-radius: var(--border-radius-lg); */
   overflow: hidden;
   transition: all var(--transition-normal);
@@ -934,7 +874,7 @@ section.recent-posts {
 .featured-overlay h3 {
   font-size: var(--text-xl);
   line-height: var(--space-baseline);
-  color: var(--color-primary) ;
+  color: var(--colour-primary) ;
   margin: 0 0 var(--space-xs);
 }
 
@@ -1011,7 +951,7 @@ max-width: 67ch;
   display: block;
   text-align: center;
   margin-top: var(--space-lg);
-  color: var(--color-primary-bright);
+  color: var(--colour-primary-bright);
   text-decoration: none;
 }
 
@@ -1022,21 +962,9 @@ max-width: 67ch;
 /* -----------------------------------------------------------------------------
    Categories
    -------------------------------------------------------------------------- */
-.category {
-  display:none;
-  background: var(--color-gray);
-  color: white;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--border-radius-sm);
-  font-size: var(--text-sm);
-  margin-right: var(--space-sm);
-  font-family: var(--font-sans);
-}
-.technical .category { background: #006646;}
-.personal .category { background: #5A3A6E;}
 .post.personal.walk a { color: #009966; text-decoration: none;}
-.technical .tag { color: #006646; background: var(--color-secondary-bright);}
-.personal .tag { color: #5A3A6E; background: var(--color-secondary-bright);}
+.technical .item-tag { color: var(--colour-tag); background: var(--colour-sage);}
+.personal .item-tag { color: var(--colour-tag); background: var(--colour-seafoam);}
 
 /* -----------------------------------------------------------------------------
    Responsive Design - Mobile: Horizontal header
@@ -1059,9 +987,7 @@ max-width: 67ch;
   }
 
   .side nav {
-    margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 var(--space-sm) 0 auto;
   }
 
   .side nav ul {
@@ -1173,7 +1099,7 @@ max-width: 67ch;
    Microblog Styles
    -------------------------------------------------------------------------- */
 article.microblog {
-  border-bottom: 1px solid var(--color-gray);
+  border-bottom: 1px solid var(--colour-gray);
   padding: var(--space-md) 0;
   margin-bottom: 0;
 }
@@ -1209,7 +1135,7 @@ article.microblog:last-child {
 }
 
 .microblog-meta a:hover {
-  color: var(--color-primary);
+  color: var(--colour-primary);
 }
 
 .microblog .post-meta {
