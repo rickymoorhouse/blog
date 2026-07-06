@@ -4,11 +4,15 @@ date: 2026-07-06 17:06:00+00:00
 summary: We're building tools to save time, yet we often find ourselves with less
   time to think about why we're building them. A reflection on reclaiming the "messy"
   human part of the development process in the age of AI.
+featured: IMG_1682.jpg
+hide images: true
 tags:
 - ai
 title: Why Human Thinking Still Matters
 ---
 Have you ever reached the end of the week and felt like you haven't had any time to actually complete anything you set out to do? We're building tools to save time but the resulting pressure to produce more and faster often leaves us with less time to think about why we are building anything. At the end of the day, computers are there to help us as humans.  With APIs we build them for computer interactions, but with a clear aim of shared value to produce something useful for us; they're not an end in itself. The same should be the case with AI.
+
+![Windows](IMG_1682.jpg)
 
 When the goal becomes AI integration itself however we risk shifting our focus from the human outcome (time-saving productivity) to the technological output. When this happens it feels like it doesn't matter how it's being used or where, but rather the usage itself is the goal. Wide claims of productivity gains from AI are leading to new expectations of how much can be achieved in a given time period resulting in more and more things being built without the time for thinking.
 
