@@ -264,36 +264,9 @@ svg.plane-icon {
 .side nav ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: var(--space-sm);
   list-style: none;
-  padding: 2pt;
-}
-/*
-main.blog.single {
-  display: flex;
-}
-main.blog.single section#sidebar {
-  width: 30%;
-  margin: var(--space-md);
-}
-main.blog.single article {
-  width: 70%;
-}
-main.blog div.left-text {
-  margin: 0 auto;
-}
-main.blog.single article.featured-card {
-  width: 100%;
-  margin-top: var(--space-md);
-}
-main.blog.single .feeatured-image img{
-  height: auto;
-}*/
-@media (min-width: 769px) {
-  .side nav li {
-    width: 30pt;
-  }
+  padding: 2pt 2pt 20pt 2pt;
 }
 .side nav button {
   width: 30pt;
@@ -413,8 +386,8 @@ footer p {
   color: var(--text-muted);
 }
 
-pagefind-modal-trigger {
-position: absolute;
+.side pagefind-modal-trigger {
+height: 28px;
 top: 1em;
 right: 1em;
 }
@@ -819,7 +792,7 @@ main.landing {
   display: grid;
   grid-column-gap: var(--space-lg);
   row-gap: var(--space-baseline);
-  grid-template-columns: calc(60vw - 40pt) calc(30vw - var(--space-md));  
+  grid-template-columns: calc(60vw - var(--sidebar-width)) calc(40vw - (4 * var(--space-md)));  
   grid-template-rows: 30vh auto;
 }
 section.hero {
@@ -969,21 +942,24 @@ max-width: 67ch;
 /* -----------------------------------------------------------------------------
    Responsive Design - Mobile: Horizontal header
    -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .side {
     width: 100%;
-    height: auto;
+    height: var(--sidebar-width);
     flex-direction: row;
     flex-wrap: wrap;
-    padding: var(--space-sm) var(--space-md);
+    padding: 0 var(--space-md);
     gap: var(--space-sm);
   }
-
+  .side .logo {
+    padding-bottom: 10px;
+  }
   .side #sitetitle {
     writing-mode: horizontal-tb;
     transform: none;
     margin: 0 0 0 var(--space-md);
     font-size: var(--text-lg);
+    padding-bottom: 20px;
   }
 
   .side nav {
@@ -994,6 +970,7 @@ max-width: 67ch;
     flex-direction: row;
     gap: var(--space-sm);
     margin: 0;
+    align-items: center;
   }
 
   .side nav a {
@@ -1068,7 +1045,6 @@ max-width: 67ch;
     column-gap: var(--space-md);
   }
   .side #sitetitle {
-    margin: 0;
     font-size: var(--text-xl);
     text-align: center;
   }
@@ -1081,6 +1057,7 @@ max-width: 67ch;
   .side nav ul {
     justify-content: center;
     flex-wrap: wrap;
+    padding: 2pt 20pt 2pt 2pt;    
   }
   
   #theme-toggle,
