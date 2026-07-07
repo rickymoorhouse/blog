@@ -1054,16 +1054,17 @@ max-width: 67ch;
     column-gap: var(--space-md);
   }
   .side {
-    height: 90pt;
+    height: 80px;
   }
   .side #sitetitle {
+    display: none;
     font-size: var(--text-sm);
     margin-left: var(--space-xs);
   }
   
   .side nav {
     margin-left: 0;
-    width: 50vw;
+    width: calc(100vw - 40px);
   }
   
   .side nav ul {
@@ -1071,16 +1072,31 @@ max-width: 67ch;
     flex-wrap: wrap;
     padding: 2pt 20pt 2pt 2pt;    
   }
-  
+  .side nav a {
+    font-size: var(--text-xs);
+    padding: var(--space-xs) var(--space-sm);
+  }
   #theme-toggle,
   #search-toggle {
     margin-left: var(--space-xs);
   }
   
   main {
-    padding-top: calc(120px + var(--space-sm)); /* Double header height */
+    padding-top: calc(80px + var(--space-sm)); /* Double header height */
     padding-left: var(--space-xs);
     padding-right: var(--space-xs);
+  }
+ main.landing {
+    grid-template-columns: 98vw;
+    grid-template-rows: auto auto auto;
+    gap: 1vw;
+  }
+  section.hero, section.hero .bio {
+    height: fit-content;
+  }
+  main section.hero, main section.featured, main section.recent-posts {
+    grid-column: 1/span 1;
+    height: fit-content;
   }
 }
 
