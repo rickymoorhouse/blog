@@ -736,7 +736,8 @@ background: red;
    -------------------------------------------------------------------------- */
 .hero {
   text-align: center;
-    padding: var(--space-xl)var(--space-lg) 0;
+  height: fit-content;
+  padding: var(--space-xl) var(--space-lg) 0;
 }
 
 .hero h1 {
@@ -751,12 +752,11 @@ background: red;
   line-height: 1.7;
   color: var(--text-secondary);
   max-width: 700px;
-  height: 100pt;
-  margin: 0 auto;
-  padding: 0 5pt calc(var(--space-baseline) * 2) 0;
+  padding: 0 5pt 60px 0;
+  margin-bottom: -40px;
   background-image: url('/images/signature.svg');
   background-repeat: no-repeat;
-  background-position: calc(100% + 10pt) right;
+  background-position: bottom right;
   background-size: 100px auto;
 }
 
@@ -790,10 +790,9 @@ background: red;
 
 main.landing {
   display: grid;
-  grid-column-gap: var(--space-lg);
-  row-gap: var(--space-baseline);
-  grid-template-columns: calc(60vw - var(--sidebar-width)) calc(40vw - (4 * var(--space-md)));  
-  grid-template-rows: 30vh auto;
+  gap: var(--space-lg);
+  grid-template-columns: 55vw auto;  
+  grid-template-rows: auto;
 }
 section.hero {
   grid-column: 1 / span 1;
@@ -803,7 +802,7 @@ section.featured {
 }
 section.recent-posts {
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
 } 
 
 .featured-grid {
