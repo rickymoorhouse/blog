@@ -3,6 +3,7 @@ title: "Canal Holiday Day 4 - Stoke Bruerne to Cosgrove"
 date: 2019-04-09
 tags: 
  - canal
+category: travel
 lat: 52.11
 lon: -0.88
 hideImages: true

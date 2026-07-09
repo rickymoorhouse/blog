@@ -5,6 +5,7 @@ date: 2022-04-19
 tags: 
 - costa-rica
 - monteverde
+category: travel
 hideImages: true
 lat: 10.312516
 lng: -84.8131851

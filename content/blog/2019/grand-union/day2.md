@@ -1,6 +1,7 @@
 ---
 title: "Canal Holiday Day 2 - Braunston to Weedon"
 date: 2019-04-07
+category: travel
 lat: 52.260
 lon: -1.168
 hideImages: true

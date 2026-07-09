@@ -2,6 +2,7 @@
 outputs: [html]
 layout: custom-map
 title: France 2024
+category: travel
 slug: france
 date: 2024-08-24
 featured: IMG_6075.jpeg

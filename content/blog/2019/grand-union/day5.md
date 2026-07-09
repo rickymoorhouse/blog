@@ -3,6 +3,7 @@ title: "Canal Holiday Day 5 - Cosgrove to Blisworth"
 date: 2019-04-10
 tags: 
  - canal
+category: travel
 lat: 52.11
 lon: -0.88
 hideImages: true

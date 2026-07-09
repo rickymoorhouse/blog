@@ -6,6 +6,7 @@ summary: We're building tools to save time, yet we often find ourselves with les
   human part of the development process in the age of AI.
 featured: IMG_1682.jpg
 hideImages: true
+category: personal
 tags:
 - ai
 title: Why Human Thinking Still Matters

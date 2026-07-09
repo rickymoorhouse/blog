@@ -1,6 +1,7 @@
 ---
 title: "Avebury"
 date: 2023-06-24
+category: personal
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswepu3vm2o"
 ---
 

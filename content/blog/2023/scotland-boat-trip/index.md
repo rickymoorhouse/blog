@@ -5,6 +5,7 @@ format: post
 hideImages: true   
 tags: 
 - scotland
+- travel
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswepjzez2p"
 ---
 

@@ -6,6 +6,7 @@ format: post
 hideImages: true
 tags: 
 - france
+- travel
 lat: 47.2021046
 lng: 0.0539977
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosw6poxgf2f"

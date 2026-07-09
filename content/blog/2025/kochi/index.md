@@ -3,6 +3,7 @@ title: Time with the team in Kochi
 slug: Kochi
 date: 2025-03-12
 layout: blog
+category: work
 tags:
  - apiconnect
  - team

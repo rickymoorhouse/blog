@@ -5,6 +5,7 @@ format: post
 hideImages: true
 tags: 
 - scotland
+- travel
 lat: 56.34
 lng: -6.39
 zoom: 12

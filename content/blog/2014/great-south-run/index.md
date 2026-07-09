@@ -4,6 +4,7 @@ tags:
 - running
 - family
 comments: false
+category: personal
 date: "2014-10-25T14:49:30Z"
 slug: great-south-run-2014
 title: Great South Run 2014

@@ -5,6 +5,7 @@ date: 2022-04-13
 tags: 
  - costa-rica
  - tortuguero
+category: travel
 hideImages: true
 lat: 10.5623131
 lng: -83.5132126

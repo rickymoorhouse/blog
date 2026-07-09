@@ -1,6 +1,7 @@
 ---
 title: "Canal Holiday Day 3 - Weedon to Stoke Bruerne"
 date: 2019-04-08
+category: travel
 tags: 
  - canal
 lat: 52.19

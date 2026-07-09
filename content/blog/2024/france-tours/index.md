@@ -5,6 +5,7 @@ format: post
 hideImages: false
 tags: 
 - france
+- travel
 lat: 47.3898
 lng: 0.6892
 zoom: 12

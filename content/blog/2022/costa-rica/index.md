@@ -3,6 +3,7 @@ outputs: [html]
 layout: custom-map
 title: Costa Rica 2022
 slug: costa-rica
+category: travel
 date: 2022-04-12
 featured: DSC_0366.jpeg
 lat: 10.2

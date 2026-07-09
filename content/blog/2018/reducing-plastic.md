@@ -1,6 +1,7 @@
 ---
 date: 2018-04-21 14:30:00+00:00
 layout: post
+category: personal
 slug: reducing-plastic
 title: Reducing our plastic use
 tags: ["environment"]

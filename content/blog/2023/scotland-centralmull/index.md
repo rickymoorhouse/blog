@@ -3,7 +3,8 @@ outputs: [html]
 title: Central Mull
 date: 2023-07-30
 tags:
- - scotland
+- scotland
+- travel
 lat: 56.5
 lng: -6
 zoom: 9

@@ -3,6 +3,7 @@ title: "Bee visitors"
 date: 2018-06-09
 slug: bee-visitors
 layout: post
+category: personal
 tags:
  - garden
  - wildlife

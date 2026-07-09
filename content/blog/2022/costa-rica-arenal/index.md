@@ -4,6 +4,7 @@ date: 2022-04-16
 tags: 
  - costa-rica
  - arenal
+category: travel
 lat: 10.5007697
 lng: -84.6824846
 hideImages: true

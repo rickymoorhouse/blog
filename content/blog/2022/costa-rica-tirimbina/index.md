@@ -3,6 +3,7 @@ title: "Tirimbina - a bonus"
 date: 2022-04-15
 tags: 
 - costa-rica
+category: travel
 hideImages: true
 lat: 10.415602
 lng: -84.120568

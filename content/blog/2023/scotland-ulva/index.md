@@ -4,6 +4,7 @@ date: 2023-08-02
 format: post    
 tags: 
 - scotland
+- travel
 lat: 56.475
 lng: -6.16
 zoom: 12

@@ -5,6 +5,7 @@ slug: giant-sequoias
 tags:
  - family
  - photos
+category: personal
 lat: 51.7853
 lng: -3.0203
 featured: me-and-sequoia.jpeg

@@ -2,6 +2,7 @@
 title: "Eiger Ink Sketch"
 date: 2020-02-09
 type: blog
+category: personal
 tags: 
  - sketch
  - art

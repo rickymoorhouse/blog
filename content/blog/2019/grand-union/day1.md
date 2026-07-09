@@ -1,6 +1,7 @@
 ---
 title: "Canal Holiday Day 1 - Picking up Wild Burdock"
 date: 2019-04-06
+category: travel
 tags: 
  - canal
 lat: 52.273

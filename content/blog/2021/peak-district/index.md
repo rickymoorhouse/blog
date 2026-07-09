@@ -2,6 +2,7 @@
 title: "Peak District Holiday"
 date: 2021-08-13
 slug: peak-district
+category: travel
 tags:
  - family
  - photos
