@@ -5,6 +5,7 @@ layout: blog
 hideImages: true
 featured: lighthouse.jpg
 summary: Observability is a design decision, not an afterthought. From the platform team to API consumers to AI agents, knowing what is happening across your API — and building that in from the start — is what gives you confidence when things go wrong in production.
+category: technical
 tags:
   - architecture
   - api

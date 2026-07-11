@@ -3,6 +3,7 @@ atUri: at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mpb6acc4xz2
 bsky: 3mosbctbyec2p
 date: 2026-06-21
 featured: IMG_1518.jpeg
+category: technical
 hideImages: true
 summary: Some of my thoughts around MCP and how we can use it safely.
 tags:

@@ -4,6 +4,7 @@ date: 2026-06-28T10:31:11
 slug: machine-readability
 title: Machine-readable?
 hideImages: true
+category: technical
 featured: pdsls.png
 summary: Applying metadata standards and formats to improve the readability of my blog for machines of different types. 
 ---

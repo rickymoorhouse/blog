@@ -4,6 +4,7 @@ date: 2026-04-13
 layout: blog
 hideImages: true
 featured: windswept.jpeg
+category: technical
 tags:
   - API
   - versioning

@@ -2,6 +2,7 @@
 title: Securing Sensitive Payload Logging in API Connect
 date: 2026-05-22
 layout: blog
+category: technical
 hideImages: true
 bsky: 3mmllf5p5jc2h
 summary: Overview of ways to handle sensitive data payloads within API Connect and controlling where that data ends up.

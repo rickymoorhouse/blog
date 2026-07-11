@@ -7,6 +7,7 @@ featured: branch-with-birds.jpg
 bsky: 3mh4ndeivvc2y
 summary: A practical guide to designing multi-region API deployments - covering data consistency, auth dependencies, traffic routing, and failure modes, with real-world lessons from IBM API Connect SaaS.
 sticky: true
+category: technical
 keywords: 
   - multi-region API
   - API gateway

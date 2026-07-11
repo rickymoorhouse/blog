@@ -2,6 +2,7 @@
 title: The SRE Mindset in API Architecture
 date: 2026-03-07
 layout: blog
+category: technical
 hideImages: true
 featured: sre-mindset.png
 bsky: 3mgksbi6f2223
