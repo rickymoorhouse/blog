@@ -2,6 +2,7 @@
 title: "Trawler - Metric gathering for API Connect"
 date: 2020-06-02
 type: blog
+category: technical
 tags: 
  - apiconnect
  - monitoring

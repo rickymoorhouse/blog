@@ -3,6 +3,7 @@ title: "Château de L'Islette"
 slug: islette
 date: 2024-08-16
 format: post    
+category: travel
 hideImages: false
 tags: 
 - france

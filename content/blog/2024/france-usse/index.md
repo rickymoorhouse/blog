@@ -3,6 +3,7 @@ title: "Château d'Ussé"
 slug: usse
 date: 2024-08-16
 format: post    
+category: travel
 hideImages: false
 tags: 
 - france

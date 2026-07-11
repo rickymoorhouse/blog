@@ -3,6 +3,7 @@ title: "Monitoring API Connect - 2020 update"
 date: 2020-11-09
 slug: monitoring-apic
 type: blog
+category: technical
 tags: 
  - apiconnect
  - monitoring

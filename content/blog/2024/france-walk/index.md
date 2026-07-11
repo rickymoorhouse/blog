@@ -3,6 +3,7 @@ title: "La Membrolle sur Choisille"
 slug: membrolle-sur-choisille
 date: 2024-08-14
 format: post    
+category: travel
 hideImages: false
 tags: 
 - france

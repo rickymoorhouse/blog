@@ -2,6 +2,7 @@
 link: https://www.apidays.global/london/
 title: "Workshop: Testing APIs to prevent the most common security vulnerabilities"
 date: 2022-10-26
+category: technical
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe6avbi2c"
 ---
 

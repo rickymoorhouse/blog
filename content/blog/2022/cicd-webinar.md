@@ -2,6 +2,7 @@
 link: https://www.crowdcast.io/e/api-design-master-class
 title: "Webinar: Automating API Development through DevOps"
 date: 2022-09-27
+category: technical
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe6e5tc2q"
 ---
 

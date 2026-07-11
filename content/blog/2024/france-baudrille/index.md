@@ -3,6 +3,7 @@ title: "Le Baud'rillé"
 slug: baud-rille
 date: 2024-08-19
 format: post    
+category: travel
 hideImages: false
 tags: 
 - france

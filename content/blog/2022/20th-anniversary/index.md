@@ -2,6 +2,7 @@
 title: "20 years of fun and adventure"
 slug: 20th-anniversary
 date: 2022-09-08
+category: personal
 hideImages: true
 featured: 20Years.jpg
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweqe5l42o"

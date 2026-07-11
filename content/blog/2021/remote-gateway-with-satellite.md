@@ -2,6 +2,7 @@
 title: "API Connect Remote Gateway with IBM Cloud Satellite"
 date: 2021-03-09T11:15:39Z
 slug: remote-gateway-via-satellite
+category: technical
 tags: 
  - apiconnect
  - satellite

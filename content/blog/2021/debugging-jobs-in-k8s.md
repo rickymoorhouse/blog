@@ -2,6 +2,7 @@
 title: Debugging jobs in kubernetes
 date: 2021-07-20
 slug: debugging-jobs-in-k8s
+category: technical
 tags: 
  - kubernetes
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe6kexa2e"

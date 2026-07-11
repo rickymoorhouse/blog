@@ -2,6 +2,7 @@
 title: "API Connect v10 Reserved - authentication for CI/CD"
 date: 2021-03-09
 slug: cicd-workaround
+category: technical
 tags: 
  - apiconnect
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswe7awq22q"

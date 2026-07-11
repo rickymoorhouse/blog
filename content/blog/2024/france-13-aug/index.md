@@ -2,6 +2,7 @@
 title: "Utah Beach and journey"
 date: 2024-08-13
 format: post    
+category: travel
 hideImages: true
 tags: 
 - france

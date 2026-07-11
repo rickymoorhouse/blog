@@ -3,6 +3,7 @@ title: "Château de Chenonceau"
 slug: chenonceau
 date: 2024-08-15
 format: post    
+category: travel
 hideImages: false
 tags: 
 - france

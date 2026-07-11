@@ -2,6 +2,7 @@
 title: "Cherbourg"
 date: 2024-08-21
 format: post    
+category: travel
 hideImages: false
 tags: 
 - france

@@ -3,6 +3,7 @@ title: "Candes-Saint-Martin"
 slug: candes
 date: 2024-08-18
 format: post    
+category: travel
 hideImages: true
 tags: 
 - france
