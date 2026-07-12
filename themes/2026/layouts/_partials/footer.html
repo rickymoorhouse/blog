@@ -10,7 +10,20 @@
     }
 });
 </script>        <footer>
-            <p class="copyright">&copy; {{ now.Format "2006" }} {{ .Site.Title }} ·  Built with <a href="https://gohugo.io/">Hugo</a> · <a href="#top">Back to Top</a></p>
+            <p class="copyright">
+                &copy; {{ now.Format "2006" }} {{ .Site.Title }}
+                 · <a href="https://letterbird.co/rickymoorhouse">Contact</a>
+                 · <a href="/colophon/">Colophon</a>
+                 · <a href="/feed/" rel="alternate" type="application/rss+xml">RSS Feed</a>
+                 · <a href="#top">Scroll to Top</a> 
+                <br />Elsewhere: 
+                {{- if .Site.Menus.icon -}}
+                {{- range sort .Site.Menus.icon }}
+                 · <a rel="me" class="social" href="{{ .URL }}" target="_blank" rel="noopener noreferrer">{{ .Name }}</a>
+                {{- end -}}
+                {{- end -}}
+            </p>
+
         </footer>
     </body>
 </html>

@@ -11,7 +11,7 @@
   {{- if $featured -}}
   <section class="featured">
     <div class="featured-grid">
-      {{- range $featured -}}
+      {{- range first 4 $featured -}}
         {{- $page := . -}}
         <article class="featured-card">
           <a href="{{ .Permalink }}">
@@ -85,19 +85,6 @@
     </ul>
   {{ end }}
 </main>
-
-<footer>
-    <div class="social-links">
-      {{- if .Site.Menus.icon -}}
-        {{- range sort .Site.Menus.icon -}}
-          <a rel="me" href="{{ .URL }}" class="social-link" target="_blank" rel="noopener noreferrer">
-            {{ .Name }}
-          </a>
-        {{- end -}}
-      {{- end -}}
-    </div>
-    <p class="copyright">{{ .Site.Params.copyright | default "&copy; All rights reserved." | markdownify }}</p>
-</footer>
 <script src="{{ "js/glightbox.min.js" | relURL }}"></script>
 <script type="text/javascript">
   const lightbox = GLightbox({
@@ -110,5 +97,4 @@
     }
 });
 </script>
-</body>
-</html>
+{{ partial "footer" . }}
