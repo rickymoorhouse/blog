@@ -4,7 +4,9 @@
 <main class="landing">
   <!-- Hero Section -->
   <section class="hero">
-    <p class="bio p-note">{{ .Site.Params.description }}</p>
+    <p class="bio p-note" property="author" typeof="Person">
+      <span property="description">{{ .Site.Params.description }}</span>
+    </p>
   </section>
   <!-- Featured Posts -->
   {{- $featured := where (where site.RegularPages "Type" "in" site.Params.mainSections) "Params.sticky" "==" true -}}
@@ -68,7 +70,7 @@
   <section class="recent-posts">
     <h2>Recent Posts</h2>
   	{{ partial "paginator" . }}
-    <ul class="post-list">
+    <ul class="post-list h-feed" property="itemListElement" typeof="Blog">
       {{ range first 8 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
         {{ partial "short-list-item.html" . }}
       {{ end }}

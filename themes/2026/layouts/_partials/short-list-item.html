@@ -12,7 +12,7 @@
           {{- end -}}
         {{- end -}}
         {{ if or (eq "microblog" .Type) (eq "flight" .Params.layout) }}
-        <li>
+        <li class="h-entry">
           <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
           {{ if eq "microblog" .Type }}
             <div class="microblog">
@@ -46,7 +46,7 @@
         </li> 
         {{ else }}
         {{ if eq "photos" .Type }}
-        <li>
+        <li class="h-entry">
           <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
           <div class="post">
             {{ $page := . }}
@@ -66,17 +66,16 @@
           </div>
         </li>
         {{ else }}
-        <li class="{{$category | lower}}">
-          <div class="post-date">{{ .Date.Format "2 Jan 2006" }}<br/> 
-            <!--{{ range .Params.tags }}<span class="item-tag">{{ . }}</span> {{ end }}-->
+        <li class="h-entry {{$category | lower}}" property="blogPost" typeof="BlogPosting">
+          <div class="post-date" property="datePublished" content="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}<br/>
             <span class="item-tag category">{{ $category | lower}}</span>
           </div>
           <div class="post">
-            <a href="{{ .Permalink }}">
-              <span class="post-title">{{ .Title }}</span>
+            <a class="u-url" property="url" href="{{ .Permalink }}">
+              <span class="post-title" property="headline">{{ .Title }}</span>
             </a>
             {{ if .Params.summary }}
-              <p class="post-summary">{{ .Summary }}</p>
+              <p class="post-summary" property="description">{{ .Summary }}</p>
             {{ end }}
           </div>
         </li>
