@@ -1,11 +1,16 @@
 {{ partial "header" . }}
 	{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
   {{ if eq .Paginator.PageNumber 1 }}
-<main class="landing">
+<main class="landing" vocab="https://schema.org/" typeof="WebSite">
+  <meta property="name" content="{{ .Site.Title }}">
+  <meta property="abstract" content="Ricky's personal website - where you'll find photos, writing about technology and life.">
+
   <!-- Hero Section -->
   <section class="hero">
     <p class="bio p-note" property="author" typeof="Person">
-      <span property="description">{{ .Site.Params.description }}</span>
+      <meta property="name" content="Ricky Moorhouse">
+      <span property="description">I’m an Architect at IBM working on API Connect SaaS with a background in integration and SRE. Outside of work, I enjoy spending time with family, walking with the dog and being behind a camera.</span>
+      Welcome to my corner of the web - I hope you find something interesting or useful here.</span>
     </p>
   </section>
   <!-- Featured Posts -->
@@ -70,7 +75,7 @@
   <section class="recent-posts">
     <h2>Recent Posts</h2>
   	{{ partial "paginator" . }}
-    <ul class="post-list h-feed" property="itemListElement" typeof="Blog">
+    <ul class="post-list h-feed" typeof="Blog">
       {{ range first 8 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
         {{ partial "short-list-item.html" . }}
       {{ end }}
