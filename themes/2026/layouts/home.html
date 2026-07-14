@@ -4,7 +4,7 @@
 <main class="landing">
   <!-- Hero Section -->
   <section class="hero">
-    <p class="bio">{{ .Site.Params.description }}</p>
+    <p class="bio p-note">{{ .Site.Params.description }}</p>
   </section>
   <!-- Featured Posts -->
   {{- $featured := where (where site.RegularPages "Type" "in" site.Params.mainSections) "Params.sticky" "==" true -}}
