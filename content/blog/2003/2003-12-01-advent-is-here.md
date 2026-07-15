@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-01T18:53:00Z"
-link: https://rickymoorhouse.uk/2003/12/01/advent-is-here/
 slug: advent-is-here
 title: Advent is here!
 wordpress_id: 1687

@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-03-26T01:28:22Z"
-link: https://rickymoorhouse.uk/2004/03/26/back-home-free-delivery-for-shopping/
 slug: back-home-free-delivery-for-shopping
 title: Back home & Free delivery for shopping
 wordpress_id: 1630

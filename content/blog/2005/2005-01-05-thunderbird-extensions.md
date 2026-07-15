@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-01-05T16:09:46Z"
-link: https://rickymoorhouse.uk/2005/01/05/thunderbird-extensions/
 slug: thunderbird-extensions
 title: Thunderbird Extensions
 wordpress_id: 1592

@@ -3,6 +3,19 @@
 {{ with .Params.link }} {{ $.Scratch.Set "link" . }} {{ end }}
 {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" }}
 {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
+{{- $category := .Params.category -}}
+{{- if .Params.category -}}
+{{ else }}
+{{- if eq "photos" .Type -}}{{- $category = "Visual" -}}
+{{- else if in .Params.tags "apiconnect" -}}{{- $category = "Technical" -}}
+{{- else if in .Params.tags "walk" -}}{{- $category = "Personal" -}}
+{{- else if in .Params.tags "work" -}}{{- $category = "Work" -}}
+{{- else if in .Params.tags "photography" -}}{{- $category = "Personal" -}}        
+{{- else if in .Params.tags "coding" -}}{{- $category = "Technical" -}}
+{{- else if in .Params.tags "travel" -}}{{- $category = "Travel" -}}
+{{- else if eq .Type "projects" -}}{{- $category = "Technical" -}}
+{{- end -}}
+{{- end -}}
 {{ if eq "event" .Params.layout }}
 <h4 class="p-name">{{ .Title }}</h4>
 <h5>
@@ -39,9 +52,9 @@
             Last updated <time datetime="{{ .Lastmod }}">{{ .Lastmod | time.Format ":date_medium" }}</time>
         </h4>
         {{- end -}}    
-        <div class="tags">
+        <div class="tags {{$category | lower}}">
             {{ range .Params.tags }}
-            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag p-category tag-{{ . }}">{{ . }}</a>
+            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag p-category tag-{{ . | lower }}">{{ . | lower}}</a>
             {{ end }}
         </div>
     </h5>

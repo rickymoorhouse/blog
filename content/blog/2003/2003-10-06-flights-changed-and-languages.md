@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-10-06T16:02:00Z"
-link: https://rickymoorhouse.uk/2003/10/06/flights-changed-and-languages/
 slug: flights-changed-and-languages
 title: Flights changed and languages!
 wordpress_id: 1697

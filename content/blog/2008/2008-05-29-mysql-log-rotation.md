@@ -4,7 +4,6 @@ tags:
 - MySQL
 comments: true
 date: "2008-05-29T15:08:27Z"
-link: https://rickymoorhouse.uk/2008/05/29/mysql-log-rotation/
 slug: mysql-log-rotation
 title: MySQL Log Rotation
 wordpress_id: 1456

@@ -4,7 +4,6 @@ categories:
 - Design
 comments: true
 date: "2010-05-07T16:29:28Z"
-link: https://rickymoorhouse.uk/2010/05/07/okehampton-extended-services-website/
 post_format:
 - Image
 slug: okehampton-extended-services-website

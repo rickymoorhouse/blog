@@ -4,7 +4,6 @@ categories:
 - Random
 comments: true
 date: "2011-11-03T12:54:22Z"
-link: https://rickymoorhouse.uk/2011/11/03/a-chat-with-vodafone/
 slug: a-chat-with-vodafone
 title: A chat with Vodafone...
 wordpress_id: 7331

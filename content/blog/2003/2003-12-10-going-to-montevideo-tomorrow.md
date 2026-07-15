@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-10T22:20:00Z"
-link: https://rickymoorhouse.uk/2003/12/10/going-to-montevideo-tomorrow/
 slug: going-to-montevideo-tomorrow
 title: Going to Montevideo tomorrow
 wordpress_id: 1679

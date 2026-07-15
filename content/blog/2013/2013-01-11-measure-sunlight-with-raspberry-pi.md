@@ -4,7 +4,6 @@ categories:
 - Raspberry Pi
 comments: false
 date: "2013-01-11T20:54:54Z"
-link: https://rickymoorhouse.uk/2013/01/11/measure-sunlight-with-raspberry-pi/
 slug: measure-sunlight-with-raspberry-pi
 title: Measure sunlight with Raspberry Pi
 wordpress_id: 7517

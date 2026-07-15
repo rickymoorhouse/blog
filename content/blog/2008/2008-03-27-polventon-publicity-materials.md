@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2008-03-27T11:46:10Z"
-link: https://rickymoorhouse.uk/2008/03/27/polventon-publicity-materials/
 slug: polventon-publicity-materials
 tags:
 - portfolio

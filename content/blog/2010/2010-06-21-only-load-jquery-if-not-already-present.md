@@ -4,7 +4,6 @@ tags:
 - Javascript
 comments: true
 date: "2010-06-21T14:01:59Z"
-link: https://rickymoorhouse.uk/2010/06/21/only-load-jquery-if-not-already-present/
 slug: only-load-jquery-if-not-already-present
 title: Only load jQuery if not already present
 wordpress_id: 2262

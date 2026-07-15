@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-12-27T09:28:00Z"
-link: https://rickymoorhouse.uk/2003/12/27/christmas-in-uruguay/
 slug: christmas-in-uruguay
 title: Christmas in Uruguay
 wordpress_id: 1675

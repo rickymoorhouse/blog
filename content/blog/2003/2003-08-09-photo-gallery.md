@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2003-08-09T16:17:00Z"
-link: https://rickymoorhouse.uk/2003/08/09/photo-gallery/
 slug: photo-gallery
 title: Photo Gallery
 wordpress_id: 1721

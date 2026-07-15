@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-12-23T00:00:00Z"
-link: https://rickymoorhouse.uk/2005/12/23/early-christmas-journey/
 slug: early-christmas-journey
 title: Early Christmas journey.
 wordpress_id: 1570

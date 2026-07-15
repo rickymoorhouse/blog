@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-04-18T00:00:00Z"
-link: https://rickymoorhouse.uk/2005/04/18/we-have-a-new-minister/
 slug: we-have-a-new-minister
 title: We have a new minister!
 wordpress_id: 1585

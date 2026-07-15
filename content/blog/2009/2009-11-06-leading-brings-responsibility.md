@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2009-11-06T15:42:20Z"
-link: https://rickymoorhouse.uk/?p=1405
 draft: true
 slug: leading-brings-responsibility
 title: Leading brings responsibility

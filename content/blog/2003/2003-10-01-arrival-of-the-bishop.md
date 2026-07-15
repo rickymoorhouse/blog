@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-10-01T15:08:00Z"
-link: https://rickymoorhouse.uk/2003/10/01/arrival-of-the-bishop/
 slug: arrival-of-the-bishop
 title: Arrival of the Bishop
 wordpress_id: 1701

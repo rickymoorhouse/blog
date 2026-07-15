@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2003-12-29T21:51:00Z"
-link: https://rickymoorhouse.uk/2003/12/29/chile-is-getting-sorted-at-last/
 slug: chile-is-getting-sorted-at-last
 title: Chile is getting sorted...at last!
 wordpress_id: 1673

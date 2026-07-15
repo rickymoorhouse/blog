@@ -4,7 +4,6 @@ tags:
 - Javascript
 comments: true
 date: "2010-10-20T12:19:35Z"
-link: https://rickymoorhouse.uk/2010/10/20/recreating-twitter-for-iphones-swipe-to-reveal/
 slug: recreating-twitter-for-iphones-swipe-to-reveal
 title: Recreating swipe to reveal in HTML, CSS and JS
 wordpress_id: 6388

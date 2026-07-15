@@ -3,6 +3,8 @@ title: Colophon
 slug: colophon
 ---
 
+This site is primarily written for myself with notes on things that interest me or I want to remember.  
+
 ## Technology
 
 This site is built using [Hugo](https://gohugo.io) and custom scripts through Github Actions.  It is hosted on [BunnyCDN](https://bunny.net/). [More details on how the blog is built](/projects/blog).  For analytics I use [Umami](https://umami.is).

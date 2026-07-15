@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2006-10-08T08:35:32Z"
-link: https://rickymoorhouse.uk/2006/10/08/hope-its-not-much-longer/
 slug: hope-its-not-much-longer
 title: hope it's not much longer!
 wordpress_id: 1554

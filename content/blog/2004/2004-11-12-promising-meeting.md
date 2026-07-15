@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-11-12T00:00:00Z"
-link: https://rickymoorhouse.uk/2004/11/12/promising-meeting/
 slug: promising-meeting
 title: Promising meeting
 wordpress_id: 1597

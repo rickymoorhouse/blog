@@ -4,7 +4,6 @@ categories:
 - Random
 comments: true
 date: "2011-06-16T16:34:11Z"
-link: https://rickymoorhouse.uk/2011/06/16/reminders-are-more-effective-than-rebukes/
 post_format:
 - Quote
 slug: reminders-are-more-effective-than-rebukes

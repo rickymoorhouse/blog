@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-01-14T17:35:13Z"
-link: https://rickymoorhouse.uk/2005/01/14/puncture-on-the-motorway/
 slug: puncture-on-the-motorway
 title: Puncture on the motorway
 wordpress_id: 1590

@@ -5,7 +5,6 @@ tags:
 - tech
 comments: true
 date: "2010-09-15T15:17:56Z"
-link: https://rickymoorhouse.uk/2010/09/15/mysql-locking/
 slug: mysql-locking
 title: MySQL Locking
 wordpress_id: 5992

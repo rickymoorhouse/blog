@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-04-02T00:00:00Z"
-link: https://rickymoorhouse.uk/2005/04/02/good-news-to-share/
 slug: good-news-to-share
 title: Good news to share!
 wordpress_id: 1586

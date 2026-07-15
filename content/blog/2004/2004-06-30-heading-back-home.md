@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-06-30T15:03:22Z"
-link: https://rickymoorhouse.uk/2004/06/30/heading-back-home/
 slug: heading-back-home
 title: Heading back home
 wordpress_id: 1607

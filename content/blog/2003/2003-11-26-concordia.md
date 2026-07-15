@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-11-26T22:54:00Z"
-link: https://rickymoorhouse.uk/2003/11/26/concordia/
 slug: concordia
 title: Concordia
 wordpress_id: 1689

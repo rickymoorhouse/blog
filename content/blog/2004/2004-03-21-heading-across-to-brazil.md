@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-03-21T21:43:18Z"
-link: https://rickymoorhouse.uk/2004/03/21/heading-across-to-brazil/
 slug: heading-across-to-brazil
 title: Heading across to Brazil
 wordpress_id: 1635

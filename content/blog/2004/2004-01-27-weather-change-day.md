@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-27T07:47:57Z"
-link: https://rickymoorhouse.uk/2004/01/27/weather-change-day/
 slug: weather-change-day
 title: Weather change day!
 wordpress_id: 1653

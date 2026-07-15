@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-05-05T20:14:57Z"
-link: https://rickymoorhouse.uk/2004/05/05/its-my-birthday/
 slug: its-my-birthday
 title: It's my birthday!
 wordpress_id: 1621

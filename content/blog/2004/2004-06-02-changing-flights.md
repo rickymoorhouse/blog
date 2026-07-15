@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-06-02T11:49:56Z"
-link: https://rickymoorhouse.uk/2004/06/02/changing-flights/
 slug: changing-flights
 title: Changing Flights
 wordpress_id: 1614

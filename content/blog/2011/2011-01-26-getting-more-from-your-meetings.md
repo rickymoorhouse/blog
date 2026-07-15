@@ -4,7 +4,6 @@ categories:
 - Asides
 comments: true
 date: "2011-01-26T19:47:47Z"
-link: https://rickymoorhouse.uk/2011/01/26/getting-more-from-your-meetings/
 slug: getting-more-from-your-meetings
 title: Getting more from your meetings
 wordpress_id: 6959

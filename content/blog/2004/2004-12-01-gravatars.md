@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-12-01T21:04:19Z"
-link: https://rickymoorhouse.uk/2004/12/01/gravatars/
 slug: gravatars
 title: Gravatars
 wordpress_id: 1595

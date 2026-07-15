@@ -13,7 +13,7 @@ atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosweqwtvv
 ---
 
 Finca Madre Tierra was the first carbon-neutral farm in Costa Rica and we were really excited to visit and learn more about it. We met at reception at 2pm to travel with Oscar, one of the people who run the farm, to travel to the farm, which was about 25 minutes away from the hotel.  When we arrived, we were greeted by the farm dogs and the sounds of the animals who after washing our hands we went inside the barn to meet.  
-First we got to feed the donkeys and then Laura and Abi had a go at milking the cow. Some of the milk was then put into bottles for the young animals and Abi and Jessica fed it to the calves and lambs. The milk from the cows is also used in making cheese for the hotel.
+First we got to feed the donkeys and then Laura and Kai had a go at milking the cow. Some of the milk was then put into bottles for the young animals and Kai and Jessica fed it to the calves and lambs. The milk from the cows is also used in making cheese for the hotel.
 
 {{<fig "IMG_4231.jpeg">}}
 {{<fig "IMG_4232.jpeg">}}

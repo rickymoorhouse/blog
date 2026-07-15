@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-09-08T00:00:00Z"
-link: https://rickymoorhouse.uk/2005/09/08/3-year-anniversary/
 slug: 3-year-anniversary
 title: 3 Year Anniversary
 wordpress_id: 1575

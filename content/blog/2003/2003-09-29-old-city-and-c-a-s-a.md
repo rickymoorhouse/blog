@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-09-29T16:07:00Z"
-link: https://rickymoorhouse.uk/2003/09/29/old-city-and-c-a-s-a/
 slug: old-city-and-c-a-s-a
 title: Old city and C.A.S.A
 wordpress_id: 1703

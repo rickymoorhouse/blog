@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-01-02T11:24:09Z"
-link: https://rickymoorhouse.uk/2005/01/02/new-years-challenge/
 slug: new-years-challenge
 title: New Year's Challenge
 wordpress_id: 1594

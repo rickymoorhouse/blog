@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2008-07-25T09:30:14Z"
-link: https://rickymoorhouse.uk/2008/07/25/abi-loves-spider/
 slug: abi-loves-spider
 title: Abi Loves Spider
 wordpress_id: 1448

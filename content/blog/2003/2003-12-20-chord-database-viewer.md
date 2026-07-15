@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2003-12-20T00:00:00Z"
-link: https://rickymoorhouse.uk/2003/12/20/chord-database-viewer/
 slug: chord-database-viewer
 title: Chord database /viewer
 wordpress_id: 1676

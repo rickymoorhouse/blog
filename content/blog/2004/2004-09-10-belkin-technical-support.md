@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-09-10T15:54:17Z"
-link: https://rickymoorhouse.uk/2004/09/10/belkin-technical-support/
 slug: belkin-technical-support
 title: Belkin Technical Support
 wordpress_id: 1603

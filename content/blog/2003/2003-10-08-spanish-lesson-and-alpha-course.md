@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-10-08T16:01:00Z"
-link: https://rickymoorhouse.uk/2003/10/08/spanish-lesson-and-alpha-course/
 slug: spanish-lesson-and-alpha-course
 title: Spanish lesson and alpha course
 wordpress_id: 1695

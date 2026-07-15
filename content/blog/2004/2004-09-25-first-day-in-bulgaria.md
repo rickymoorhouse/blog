@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-09-25T08:13:27Z"
-link: https://rickymoorhouse.uk/2004/09/25/first-day-in-bulgaria/
 slug: first-day-in-bulgaria
 title: First day in Bulgaria
 wordpress_id: 1601

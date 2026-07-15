@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2004-04-10T20:17:01Z"
-link: https://rickymoorhouse.uk/2004/04/10/kites-in-the-park/
 slug: kites-in-the-park
 title: Kites in the park
 wordpress_id: 1627

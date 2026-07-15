@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2004-03-11T10:58:24Z"
-link: https://rickymoorhouse.uk/2004/03/11/politics-and-religion/
 slug: politics-and-religion
 title: Politics and Religion
 wordpress_id: 1640

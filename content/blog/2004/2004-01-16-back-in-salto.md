@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-16T23:10:00Z"
-link: https://rickymoorhouse.uk/2004/01/16/back-in-salto/
 slug: back-in-salto
 title: Back in Salto
 wordpress_id: 1660

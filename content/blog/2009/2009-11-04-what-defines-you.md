@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2009-11-04T08:00:00Z"
-link: https://rickymoorhouse.uk/2009/11/04/what-defines-you/
 slug: what-defines-you
 title: What defines you?
 wordpress_id: 1407

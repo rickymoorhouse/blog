@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2003-09-05T07:48:00Z"
-link: https://rickymoorhouse.uk/2003/09/05/last-day-at-work/
 slug: last-day-at-work
 title: Last day at work!
 wordpress_id: 1714

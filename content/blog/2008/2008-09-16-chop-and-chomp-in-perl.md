@@ -4,7 +4,6 @@ categories:
 - Tech
 comments: true
 date: "2008-09-16T10:23:28Z"
-link: https://rickymoorhouse.uk/2008/09/16/chop-and-chomp-in-perl/
 slug: chop-and-chomp-in-perl
 title: Chop and chomp in perl
 wordpress_id: 1445

@@ -1,0 +1,38 @@
+{{ partial "header" . }}
+
+<main class="archive">
+    <h1>{{ .Title }}</h1>
+    <pagefind-modal-trigger></pagefind-modal-trigger>
+
+    <section class="archive-content">
+            <div class="archive-section">
+                <h2>Years</h2>
+                <ul class="archive-list years-list">
+                    {{ $pages := where .Site.Pages "Type" "in" "blog" }}
+                    {{ range $group := $pages.GroupByDate "2006" }}{{ if gt $group.Key 1981}}
+                    <li>
+                        <a href="{{ $.Site.BaseURL }}blog/{{ $group.Key }}/">{{ $group.Key }}</a>
+                        <span class="count" style="padding-right: calc({{ (len $group.Pages) }} * 2pt);">{{ len $group.Pages }}</span>
+                    </li>
+                    {{ end }}{{ end }}
+                </ul>
+            </div>
+
+            <div class="archive-section">
+                <h2>Tags</h2>
+                <ul class="archive-list tags-list">
+                    {{ range $name, $taxonomy := .Site.Taxonomies.tags.ByCount | first 50 }}
+                    {{ if gt $taxonomy.Count 1 }}
+                    <li>
+                        <a href="{{ $.Site.BaseURL }}tags/{{ $name | urlize }}/">{{ $taxonomy.Name }}</a>
+                        <span class="count" style="padding-right: min(calc({{ $taxonomy.Count }} * 2pt), 35pt);">{{ $taxonomy.Count }}</span>
+                    </li>
+                    {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+{{ partial "footer.html" . }}

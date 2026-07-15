@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2003-06-27T17:48:00Z"
-link: https://rickymoorhouse.uk/2003/06/27/were-in-the-paper/
 slug: were-in-the-paper
 title: We're in the paper!
 wordpress_id: 1724

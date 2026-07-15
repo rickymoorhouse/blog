@@ -4,7 +4,6 @@ categories:
 - Tech
 comments: false
 date: "2013-06-24T19:46:28Z"
-link: https://rickymoorhouse.uk/2013/06/24/blog-hosting-wonderings-2/
 slug: blog-hosting-wonderings-2
 title: Blog hosting wonderings...
 wordpress_id: 8177

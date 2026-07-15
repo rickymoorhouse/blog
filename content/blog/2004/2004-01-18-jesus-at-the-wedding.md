@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-18T21:00:00Z"
-link: https://rickymoorhouse.uk/2004/01/18/jesus-at-the-wedding/
 slug: jesus-at-the-wedding
 title: Jesus at the Wedding
 wordpress_id: 1659

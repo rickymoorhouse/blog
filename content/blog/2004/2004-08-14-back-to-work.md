@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-08-14T00:11:03Z"
-link: https://rickymoorhouse.uk/2004/08/14/back-to-work/
 slug: back-to-work
 title: Back to work
 wordpress_id: 1606

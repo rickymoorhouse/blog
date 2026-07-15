@@ -5,7 +5,6 @@ tags:
 - tech
 comments: true
 date: "2010-09-06T14:17:12Z"
-link: https://rickymoorhouse.uk/2010/09/06/recover-from-failed-to-open-the-relay-log/
 slug: recover-from-failed-to-open-the-relay-log
 title: Recover from "Failed to open the relay log"
 wordpress_id: 5531

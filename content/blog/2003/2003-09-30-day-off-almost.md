@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-09-30T15:08:00Z"
-link: https://rickymoorhouse.uk/2003/09/30/day-off-almost/
 slug: day-off-almost
 title: Day off (almost)
 wordpress_id: 1702

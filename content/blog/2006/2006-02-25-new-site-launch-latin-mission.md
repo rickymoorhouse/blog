@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2006-02-25T00:00:00Z"
-link: https://rickymoorhouse.uk/2006/02/25/new-site-launch-latin-mission/
 slug: new-site-launch-latin-mission
 title: 'New Site Launch: Latin Mission'
 wordpress_id: 1567

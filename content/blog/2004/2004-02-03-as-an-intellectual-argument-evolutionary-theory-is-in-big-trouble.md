@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-02-03T08:39:55Z"
-link: https://rickymoorhouse.uk/2004/02/03/as-an-intellectual-argument-evolutionary-theory-is-in-big-trouble/
 slug: as-an-intellectual-argument-evolutionary-theory-is-in-big-trouble
 title: '"As an intellectual argument, evolutionary theory is in big trouble."'
 wordpress_id: 1650

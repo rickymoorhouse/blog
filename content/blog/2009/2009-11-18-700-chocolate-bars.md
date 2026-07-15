@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2009-11-18T16:09:56Z"
-link: https://rickymoorhouse.uk/2009/11/18/700-chocolate-bars/
 slug: 700-chocolate-bars
 title: 700 chocolate bars
 wordpress_id: 1403

@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-10-06T12:34:24Z"
-link: https://rickymoorhouse.uk/2004/10/06/what-a-hope-we-have/
 slug: what-a-hope-we-have
 title: What a hope we have!
 wordpress_id: 1600

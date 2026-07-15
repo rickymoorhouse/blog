@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-19T20:35:00Z"
-link: https://rickymoorhouse.uk/2004/01/19/birthday-cake-cinema/
 slug: birthday-cake-cinema
 title: Birthday Cake, Cinema
 wordpress_id: 1658

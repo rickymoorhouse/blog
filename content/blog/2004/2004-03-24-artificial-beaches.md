@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2004-03-24T01:26:10Z"
-link: https://rickymoorhouse.uk/2004/03/24/artificial-beaches/
 slug: artificial-beaches
 title: Artificial Beaches
 wordpress_id: 1632

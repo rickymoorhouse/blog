@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2006-08-28T18:27:43Z"
-link: https://rickymoorhouse.uk/2006/08/28/finally-got-my-wireless-wpa-to-work-in-ubuntu/
 slug: finally-got-my-wireless-wpa-to-work-in-ubuntu
 title: Finally got my wireless (WPA) to work in Ubuntu
 wordpress_id: 1561

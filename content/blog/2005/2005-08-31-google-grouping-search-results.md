@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-08-31T00:00:00Z"
-link: https://rickymoorhouse.uk/2005/08/31/google-grouping-search-results/
 slug: google-grouping-search-results
 title: Google grouping search results
 wordpress_id: 1576

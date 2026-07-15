@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-08-09T00:00:00Z"
-link: https://rickymoorhouse.uk/2005/08/09/things-you-dont-want-to-hear-the-pilot-saying/
 slug: things-you-dont-want-to-hear-the-pilot-saying
 title: Things you don't want to hear the pilot saying...
 wordpress_id: 1577

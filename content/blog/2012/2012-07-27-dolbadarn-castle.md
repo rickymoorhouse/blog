@@ -4,7 +4,6 @@ categories:
 - Design
 comments: true
 date: "2012-07-27T11:50:28Z"
-link: https://rickymoorhouse.uk/2012/07/27/dolbadarn-castle/
 post_format:
 - Image
 slug: dolbadarn-castle

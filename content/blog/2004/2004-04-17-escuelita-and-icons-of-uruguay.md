@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2004-04-17T20:19:45Z"
-link: https://rickymoorhouse.uk/2004/04/17/escuelita-and-icons-of-uruguay/
 slug: escuelita-and-icons-of-uruguay
 title: Escuelita and Icons of Uruguay
 wordpress_id: 1624

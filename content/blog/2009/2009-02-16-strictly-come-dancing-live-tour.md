@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2009-02-16T21:51:57Z"
-link: https://rickymoorhouse.uk/2009/02/16/strictly-come-dancing-live-tour/
 slug: strictly-come-dancing-live-tour
 title: Strictly Come Dancing Live Tour
 wordpress_id: 1438

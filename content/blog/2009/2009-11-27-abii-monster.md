@@ -4,7 +4,6 @@ categories:
 - family
 comments: true
 date: "2009-11-27T15:23:37Z"
-link: https://rickymoorhouse.uk/2009/11/27/abii-monster/
 slug: abii-monster
 title: Abii monster
 wordpress_id: 1400

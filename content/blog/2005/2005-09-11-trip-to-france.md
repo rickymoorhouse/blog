@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-09-11T00:00:00Z"
-link: https://rickymoorhouse.uk/2005/09/11/trip-to-france/
 slug: trip-to-france
 title: Trip to France
 wordpress_id: 1574

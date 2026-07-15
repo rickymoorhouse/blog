@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-03-25T01:27:15Z"
-link: https://rickymoorhouse.uk/2004/03/25/back-to-foz-wet-paint-but-still-caught-bus/
 slug: back-to-foz-wet-paint-but-still-caught-bus
 title: Back to Foz - wet paint, but still caught bus!
 wordpress_id: 1631

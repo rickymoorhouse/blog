@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-11-17T11:08:55Z"
-link: https://rickymoorhouse.uk/2005/11/17/river-crossing-game/
 slug: river-crossing-game
 title: River crossing game
 wordpress_id: 1571

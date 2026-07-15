@@ -22,6 +22,7 @@
   --colour-gray-light: #999;
   --colour-tag: #ffffff;
   --colour-code: #0550ae;
+  --colour-chart: var(--colour-primary-light);
 
   /* Background & Text */
   --bg-body: #fafefd;
@@ -62,6 +63,7 @@
   --font-heading: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   --font-sans: system-ui, sans-serif;
   --text-xs: 0.75rem;
+  --text-2xs: 0.625rem;
   --text-sm: 0.875rem;
   --text-base: 1.15rem;
   --text-lg: 1.125rem;
@@ -91,7 +93,7 @@
   --pf-border-focus: #006646 !important;
   --pf-background: #006646 !important;
   --pf-text: #ffffff !important;
-  --pf-text-muted: #ffffff !important;
+  --pf-text-muted: rgba(255,255,255,0.9) !important;
   --pf-text-secondary: rgba(255,255,255,0.9) !important;
   --pf-mark: #99ccff !important;
   --pf-hover: rgba(255,255,255,0.1) !important;
@@ -106,16 +108,17 @@
    Dark Mode Tokens
    -------------------------------------------------------------------------- */
 [data-theme="dark"] {
-  --bg-body: #1a1d1a;
+  --bg-body: rgb(30,30,0); #1a1d1a;
   --bg-surface: #222522;
   --bg-code: #2a2d2a;
   --colour-code: #55aaff;
-  --colour-primary: #009966;
-  --colour-primary-bright: #00bb88;  
+  --colour-primary: #006646;
+  --colour-primary-bright: #009966;  
   --text-primary: #e0e0e0;
   --text-secondary: #b0b0b0;
   --text-muted: #A8A8A8;
   --link-color: #99ccff;
+  --colour-chart: var(--colour-primary-light);
 }
 
 /* -----------------------------------------------------------------------------
@@ -308,16 +311,12 @@ svg.plane-icon {
 
 #theme-toggle:hover,
 :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-btn:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.1);  
 }
 [data-theme="dark"] :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-btn {
     background: transparent;
     border: none;
 }
-[data-theme="dark"] :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-btn:hover {
-  background: rgba(255,255,255,0.1);
-}
-
 /* Main Content - offset for vertical sidebar */
 main {
   padding: 0 var(--space-md);
@@ -841,7 +840,7 @@ section.recent-posts {
 .featured-overlay h3 {
   font-size: var(--text-xl);
   line-height: var(--space-baseline);
-  color: var(--colour-primary) ;
+  color: var(--colour-primary-bright) ;
   margin: 0 0 var(--space-xs);
 }
 
@@ -926,6 +925,92 @@ max-width: 67ch;
   text-decoration: underline;
 }
 
+/* -----------------------------------------------------------------------------
+   Archive Page
+   -------------------------------------------------------------------------- */
+main.archive {
+    max-width: var(--content-max-width);
+}
+main.archive pagefind-modal-trigger {
+  width: 65ch;
+}
+
+.archive-section h2 {
+    margin-bottom: var(--space-md);
+    font-size: var(--text-xl);
+}
+
+.archive-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 80ch;
+    column-count: 4;
+    column-gap: var(--space-md);    
+}
+.tags-list {
+  column-count: 3
+}
+
+.archive-list li {
+  /*display: inline-block;
+  align-items: center;*/
+  display: flex;
+  margin: var(--space-xs) var(--space-sm);
+  color: var(--text-muted);
+  background: var(--bg-code);
+  line-height: calc(var(--space-baseline) - var(--space-xs));
+  padding: var(--space-xs);
+  width: fit-content;
+}
+
+.archive-list a {
+    color: var(--link-color);
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-decoration: none;
+}
+.tags-list a {
+    width: 7em;
+}
+.years-list a {
+    width: 4em;
+}
+
+.archive-list a:hover {
+    color: var(--colour-primary);
+}
+
+.archive-list .count {
+    font-family: var(--font-sans);
+    font-size: var(--text-2xs);
+    margin-left: var(--space-md);
+    padding-left: var(--space-xs);
+    background: var(--colour-seafoam);
+    color: black;
+    align-content: right;
+}
+.archive :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-btn:hover {
+  background: var(--colour-primary-light);
+}
+[data-theme="dark"] :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-btn:hover {
+  background: var(--colour-primary-dark);
+}
+
+.archive :is(*,#\#):is(*,#\#):is(*,#\#) .pf-trigger-btn {
+border: 1px solid var(--colour-primary);
+margin-left: var(--space-md);
+}
+.archive :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-btn {
+  background: var(--colour-bg-code);
+}
+.archive :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-key,
+.archive :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-text {
+  color: var(--text-primary);
+}
+.archive :is(*, #\#):is(*, #\#):is(*, #\#) .pf-trigger-icon {
+  background: var(--colour-primary);
+}
 /* -----------------------------------------------------------------------------
    Categories
    -------------------------------------------------------------------------- */
@@ -1031,6 +1116,9 @@ max-width: 67ch;
   main .Image img {
     width: 100pt;
     height: auto;
+  }
+  main.archive ul {
+    column-count: 2;
   }
 }
 
@@ -1402,6 +1490,25 @@ iframe.wait-autoplay { opacity: 0 }
 .glightbox-clean .gclose:hover { opacity: 1 }
 
 @media (min-width: 769px) {
+  /* Margin notes */
+  article.h-entry h5 { 
+    float: left;
+    margin-left: -10vw;
+    margin-top: calc(-2 * var(--space-baseline));   
+    width: 10vw;
+    display: inherit;
+  }
+  article h5 .tags {
+    color: var(--colour-text-primary);
+    height: fit-content;
+  }
+  article .tags a.item-tag {
+    padding: var(--space-xs);
+  }
+  article .dt-published {
+    padding: 0;
+  }
+  article.h-entry { margin-left: 10vw;}
     .glightbox-container .ginner-container { width: auto; height: auto; flex-direction: row }
     .glightbox-container .ginner-container.desc-top .gslide-description { order: 0 }
     .glightbox-container .ginner-container.desc-top .gslide-image,

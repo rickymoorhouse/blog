@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2004-06-16T13:00:50Z"
-link: https://rickymoorhouse.uk/2004/06/16/coming-to-an-end/
 slug: coming-to-an-end
 title: Coming to an end
 wordpress_id: 1609

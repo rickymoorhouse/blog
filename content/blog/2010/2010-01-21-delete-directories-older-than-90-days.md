@@ -5,7 +5,6 @@ categories:
 - tech
 comments: true
 date: "2010-01-21T10:25:16Z"
-link: https://rickymoorhouse.uk/2010/01/21/delete-directories-older-than-90-days/
 slug: delete-directories-older-than-90-days
 title: Delete directories older than 90 days
 wordpress_id: 1394

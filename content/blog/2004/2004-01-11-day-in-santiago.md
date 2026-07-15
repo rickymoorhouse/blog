@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2004-01-11T22:02:00Z"
-link: https://rickymoorhouse.uk/2004/01/11/day-in-santiago/
 slug: day-in-santiago
 title: Day in Santiago
 wordpress_id: 1665

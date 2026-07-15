@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-11-25T05:57:00Z"
-link: https://rickymoorhouse.uk/2003/11/25/our-power-supply-is-here-at-last/
 slug: our-power-supply-is-here-at-last
 title: Our power supply is here at last!
 wordpress_id: 1690

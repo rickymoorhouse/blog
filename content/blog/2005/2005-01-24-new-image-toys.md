@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2005-01-24T00:00:00Z"
-link: https://rickymoorhouse.uk/2005/01/24/new-image-toys/
 slug: new-image-toys
 title: New Image Toys!
 wordpress_id: 1589

@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2008-07-16T12:55:44Z"
-link: https://rickymoorhouse.uk/?p=1450
 draft: true
 slug: draft-post
 title: Draft Post

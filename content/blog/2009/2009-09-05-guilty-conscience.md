@@ -4,7 +4,6 @@ tags:
 - family
 comments: true
 date: "2009-09-05T10:39:18Z"
-link: https://rickymoorhouse.uk/2009/09/05/guilty-conscience/
 slug: guilty-conscience
 title: Guilty Conscience
 wordpress_id: 1421

@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2003-10-09T16:04:00Z"
-link: https://rickymoorhouse.uk/2003/10/09/trying-to-go-shopping/
 slug: trying-to-go-shopping
 title: Trying to go shopping
 wordpress_id: 1694

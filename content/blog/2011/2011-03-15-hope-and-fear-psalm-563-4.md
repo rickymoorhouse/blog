@@ -4,7 +4,6 @@ categories:
 - Bible Study
 comments: true
 date: "2011-03-15T18:55:01Z"
-link: https://rickymoorhouse.uk/2011/03/15/hope-and-fear-psalm-563-4/
 slug: hope-and-fear-psalm-563-4
 title: Hope and Fear - Psalm 56:3-4
 wordpress_id: 7078

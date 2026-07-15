@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2006-06-22T20:32:12Z"
-link: https://rickymoorhouse.uk/2006/06/22/weve-moved/
 slug: weve-moved
 title: We've moved!
 wordpress_id: 1564

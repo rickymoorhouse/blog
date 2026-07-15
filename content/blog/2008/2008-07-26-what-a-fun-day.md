@@ -1,8 +1,8 @@
 ---
 author: rickymoorhouse
 comments: true
+draft: true
 date: "2008-07-26T21:33:24Z"
-link: https://rickymoorhouse.uk/2008/07/26/what-a-fun-day/
 slug: what-a-fun-day
 title: What a fun day!
 wordpress_id: 1447
@@ -23,7 +23,7 @@ After the party we went back to Stef and Gerard's house to borrow a thing to put
 
 
 
-This afternoon we went down to Gunwharf Quays to get Abi some new shoes and decided to go up the tower as well. As there's a "Meet the Navy" event on at the dockyards, we had really good views of all the extra boats that are around the harbour for that. Abi had great fun up the tower, and loved the glass floor - she walked very confidently on it, laid on it and even stayed there when people were jumping right next to her!   
+This afternoon we went down to Gunwharf Quays to get some new shoes and decided to go up the tower as well. As there's a "Meet the Navy" event on at the dockyards, we had really good views of all the extra boats that are around the harbour for that. Abi had great fun up the tower, and loved the glass floor - she walked very confidently on it, laid on it and even stayed there when people were jumping right next to her!
 
 
 Then we finished off the day with a barbecue.

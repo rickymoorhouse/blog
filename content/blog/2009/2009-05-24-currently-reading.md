@@ -4,7 +4,6 @@ categories:
 - Random
 comments: true
 date: "2009-05-24T20:54:50Z"
-link: https://rickymoorhouse.uk/2009/05/24/currently-reading/
 slug: currently-reading
 title: Currently reading…
 wordpress_id: 1431

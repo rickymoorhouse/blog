@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2007-08-10T00:00:00Z"
-link: https://rickymoorhouse.uk/2007/08/10/lawn-in-a-lunch-break/
 slug: lawn-in-a-lunch-break
 title: Lawn in a lunch break
 wordpress_id: 1489

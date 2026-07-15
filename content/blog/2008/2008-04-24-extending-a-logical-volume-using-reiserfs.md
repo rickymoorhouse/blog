@@ -4,7 +4,6 @@ tags:
 - linux
 comments: true
 date: "2008-04-24T12:08:20Z"
-link: https://rickymoorhouse.uk/2008/04/24/extending-a-logical-volume-using-reiserfs/
 slug: extending-a-logical-volume-using-reiserfs
 title: Extending a logical volume using reiserfs
 wordpress_id: 1460

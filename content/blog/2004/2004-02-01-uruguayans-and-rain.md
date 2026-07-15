@@ -4,7 +4,6 @@ categories:
 - Uruguay
 comments: true
 date: "2004-02-01T08:13:50Z"
-link: https://rickymoorhouse.uk/2004/02/01/uruguayans-and-rain/
 slug: uruguayans-and-rain
 title: Uruguayans and rain
 wordpress_id: 1651

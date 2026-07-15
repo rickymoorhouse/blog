@@ -4,7 +4,6 @@ categories:
 - family
 comments: true
 date: "2008-06-18T11:47:29Z"
-link: https://rickymoorhouse.uk/2008/06/18/dont-worry/
 slug: dont-worry
 title: Don’t worry
 wordpress_id: 1451

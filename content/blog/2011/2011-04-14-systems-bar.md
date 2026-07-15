@@ -4,7 +4,6 @@ categories:
 - Design
 comments: true
 date: "2011-04-14T21:05:02Z"
-link: https://rickymoorhouse.uk/2011/04/14/systems-bar/
 slug: systems-bar
 tags:
 - hostdb

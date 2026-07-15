@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2003-08-03T09:51:00Z"
-link: https://rickymoorhouse.uk/2003/08/03/geocaching-is-cool/
 slug: geocaching-is-cool
 title: Geocaching is cool!
 wordpress_id: 1722

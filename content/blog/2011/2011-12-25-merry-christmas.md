@@ -4,7 +4,6 @@ categories:
 - Random
 comments: true
 date: "2011-12-25T10:00:06Z"
-link: https://rickymoorhouse.uk/2011/12/25/merry-christmas/
 post_format:
 - Aside
 slug: merry-christmas

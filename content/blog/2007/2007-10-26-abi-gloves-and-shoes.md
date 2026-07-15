@@ -4,7 +4,6 @@ categories:
 - family
 comments: true
 date: "2007-10-26T20:05:12Z"
-link: https://rickymoorhouse.uk/2007/10/26/abi-gloves-and-shoes/
 slug: abi-gloves-and-shoes
 title: Abi, gloves and shoes
 wordpress_id: 1471

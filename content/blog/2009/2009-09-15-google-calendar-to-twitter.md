@@ -4,7 +4,6 @@ categories:
 - Tech
 comments: true
 date: "2009-09-15T12:14:20Z"
-link: https://rickymoorhouse.uk/2009/09/15/google-calendar-to-twitter/
 slug: google-calendar-to-twitter
 title: Google Calendar to Twitter
 wordpress_id: 1419

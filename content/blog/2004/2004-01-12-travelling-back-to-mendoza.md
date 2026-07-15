@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-12T23:06:00Z"
-link: https://rickymoorhouse.uk/2004/01/12/travelling-back-to-mendoza/
 slug: travelling-back-to-mendoza
 title: Travelling back to Mendoza
 wordpress_id: 1664

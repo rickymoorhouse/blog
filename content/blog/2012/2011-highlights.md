@@ -15,7 +15,7 @@ atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswebe3yk
  - Holiday to Malta with Des where the girls swimming really took off greatly.
  - Our summer Hampshire pass, visiting some of the sites around - and especially our family trip to Basingstoke to visit Basing House and Milestones museum
  - Our lovely anniversary weekend in Torquay thanks to Anne and Des.
- - Abi starting school and her space party for her birthday
+ - Starting school and space birthday party
  - Visiting the Royal Landscape and meeting up with Linda and Dave on their way back to Canada
 
 

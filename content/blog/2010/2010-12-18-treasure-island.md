@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2010-12-18T22:07:26Z"
-link: https://rickymoorhouse.uk/2010/12/18/treasure-island/
 slug: treasure-island
 tags:
 - pirates
@@ -15,7 +14,7 @@ atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3moswebkyrq
 
 This afternoon we took the girls to the New Theatre Royal to watch Treasure Island, thanks to winning tickets in their twitter competition.
 
-The set was really impressive with so many different things to spot with Abi before the show started, and had a fantastic ship's bridge, which doubled as the tavern entrance.
+The set was really impressive with so many different things to spot before the show started, and had a fantastic ship's bridge, which doubled as the tavern entrance.
 
 The show started with the beating of a drum and a fiddle player on stage, then the musicians took over and it developed into a big opening number, a combination which returned several times throughout, making great use of rhythmic elements intertwining with music from the excellent musicians.
 

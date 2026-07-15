@@ -4,7 +4,6 @@ categories:
 - Ubuntu
 comments: true
 date: "2009-03-12T13:08:14Z"
-link: https://rickymoorhouse.uk/2009/03/12/customising-pocket-ubuntu-for-windows/
 slug: customising-pocket-ubuntu-for-windows
 title: Customising Pocket Ubuntu for Windows
 wordpress_id: 1436

@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: true
 date: "2004-01-22T23:47:00Z"
-link: https://rickymoorhouse.uk/2004/01/22/bible-study/
 slug: bible-study
 title: Bible Study
 wordpress_id: 1655

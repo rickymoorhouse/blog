@@ -2,7 +2,6 @@
 author: rickymoorhouse
 comments: false
 date: "2014-06-26T09:24:54Z"
-link: https://rickymoorhouse.uk/2014/06/26/review-of-elasticsearch-server-2nd-edition/
 slug: review-of-elasticsearch-server-2nd-edition
 title: Review of Elasticsearch Server 2nd Edition
 wordpress_id: 8161

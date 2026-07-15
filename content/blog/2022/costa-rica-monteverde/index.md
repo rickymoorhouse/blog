@@ -20,7 +20,7 @@ We arrived at the [Hotel Belmar](http://hotelbelmar.net) and were given a lemon 
 {{<fig "DSC_0594.jpeg">}}
 {{<fig "IMG_4209.jpeg">}}
 
-After lunch we were shown to our beautiful wooden floored and panelled forest rooms with a balcony overlooking the forest and a gorgeous light and spacious bathroom.  We listened to the sounds of the forect for a while and then went for smoothies at the Juice/Tea bar downstairs from our room.  I had the Talemanca which was banana, cacao and coconut. After this we relaxed in our rooms for a bit and I spotted toucanets in a hole in the tree just opposite our room, which we watched for a while and the girls spotted an Agouti on the ground.  Afer this, Abi and I went for nature walk around the hotel before dinner. 
+After lunch we were shown to our beautiful wooden floored and panelled forest rooms with a balcony overlooking the forest and a gorgeous light and spacious bathroom.  We listened to the sounds of the forect for a while and then went for smoothies at the Juice/Tea bar downstairs from our room.  I had the Talemanca which was banana, cacao and coconut. After this we relaxed in our rooms for a bit and I spotted toucanets in a hole in the tree just opposite our room, which we watched for a while and the girls spotted an Agouti on the ground.  Afer this, Kai and I went for nature walk around the hotel before dinner. 
 {{<fig "DSC_0599.jpeg">}}
 {{<fig "DSC_0600.jpeg">}}
 {{<fig "DSC_0610.jpeg">}}
