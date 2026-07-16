@@ -70,6 +70,7 @@
           <div class="post-date" property="datePublished" content="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}<br/>
             <span class="item-tag category">{{ $category | lower}}</span>
           </div>
+          <a property="author" style="display: none;" typeof="Person" href="https://rickymoorhouse.uk/#"><span property="name">Ricky Moorhouse</span></a>
           <div class="post">
             <a class="u-url" property="url" href="{{ .Permalink }}">
               <span class="post-title" property="headline">{{ .Title }}</span>
