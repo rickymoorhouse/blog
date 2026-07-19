@@ -1,16 +1,18 @@
 ---
-title: Everything as code
-date: 2026-07-19
-layout: blog
+atUri: at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mqyritl3md2a
+bsky: 3mqyvzavm2s2j
 category: technical
+date: 2026-07-19
 featured: IMG_0559.jpeg
 hideImages: true
+layout: blog
 tags:
-  - apiconnect
-  - gitops
-  - iac
+- apiconnect
+- gitops
+- iac
+title: Everything as code
+summary: Version everything - getting into the habit of treating everything as code gives you an easy way back, tracking and a review process built in.
 ---
-
 A valuable technique I've found is treating everything I can as code - checked in, reviewed, and versioned. This post covers what that looks like across infrastructure, deployments, APIs, and even documentation, and why the discipline matters more than any specific tool.
 
 ![Coffee roasting](IMG_0559.jpeg)
