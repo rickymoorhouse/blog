@@ -11,6 +11,20 @@ import requests
 # Publication record
 BLOG_DID = 'at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.publication/3mos5q3a7jf2w'
 
+def lookup_documents(agent, url):
+    """ Lookup a document in my collection by url """
+    try:
+        response = agent.com.atproto.repo.list_records({
+            'repo': agent.me.did,
+            'collection': 'site.standard.document',
+        })
+        for record in response['records']:
+            if record.value['canonicalUrl'] == url:
+                return record.uri
+    except Exception as error:
+        print('Failed to get documents:', error)
+    return None
+
 def parse_post(post_file):
     """ Parse the post file and return a dict with frontmatter and body. """
     with open(post_file, 'r', encoding='utf-8') as f:
@@ -75,7 +89,7 @@ def upload_featured_image(agent, post_path, featured_image):
 def social_text(post_text):
     """ Generate a short teaser post for social media from the post file. """
     click.echo(click.style('Generating social media text...', fg='blue'))
-    llm_url = os.environ.get('LLM_URL', 'http://localhost:8080/api/chat')
+    llm_url = os.environ.get('LLM_URL', 'http://localhost:8081/api/chat')
     llm_model = os.environ.get('LLM_MODEL', 'unsloth/gemma-4-12b-it-GGUF:Q4_K_M')
     response = requests.post(llm_url, json={
         "model": llm_model,
@@ -160,8 +174,15 @@ def main(post, bluesky, use_commit):
         'title': post_data['frontmatter'].get('title', 'Untitled'),
         'publishedAt': date.isoformat(),
         'textContent': text_content,
+        'content': {
+            '$type': 'at.markpub.markdown',
+            "text": {
+                "$type": "at.markpub.text",
+                "markdown": post_data['body'].replace('](',']('+post_url+'/'),
+            },
+        },
         'canonicalUrl': post_url,
-        'contributor': {   
+        'contributor': {
             'did': agent.me.did,
             'role': 'author',
             'displayName': "Ricky Moorhouse",
@@ -184,9 +205,14 @@ def main(post, bluesky, use_commit):
 
     if 'tags' in post_data['frontmatter']:
         document_record['tags'] = post_data['frontmatter']['tags']
+
+    at_uri = post_data['frontmatter'].get('atUri', None)
+    # if we don't have an atUri do a search
+    if not at_uri:
+        at_uri = lookup_documents(agent, post_url)
+
     # if there is already an atUri in the frontmatter, we can update
-    if 'atUri' in post_data['frontmatter']:
-        at_uri = post_data['frontmatter']['atUri']
+    if at_uri:
         click.echo(click.style(f'Updating existing post: {at_uri}', fg='blue'))
         try:
             response = agent.com.atproto.repo.put_record({
@@ -209,20 +235,17 @@ def main(post, bluesky, use_commit):
             })
             click.echo(click.style('Document record created!', fg='green'))
             click.echo(click.style(f'Your AT-URI is: {response.uri}', fg='green'))
-
-            # inject the new atUri into the frontmatter of the post file
-            with open(post, 'r', encoding='utf-8') as f:
-                content = f.read()
-
-            # replace the frontmatter with the new frontmatter that includes the atUri
-            new_frontmatter = post_data['frontmatter']
-            new_frontmatter['atUri'] = response.uri
-            new_content = '---\n' + yaml.dump(new_frontmatter) + '---\n' + post_data['body']
-            with open(post, 'w', encoding='utf-8') as f:
-                f.write(new_content)
+            at_uri = response.uri
 
         except Exception as error:
             print('Failed to create document:', error)
+    if 'atUri' not in post_data['frontmatter']:
+        # replace the frontmatter with the new frontmatter that includes the atUri
+        new_frontmatter = post_data['frontmatter']
+        new_frontmatter['atUri'] = at_uri
+        new_content = '---\n' + yaml.dump(new_frontmatter) + '---\n' + post_data['body']
+        with open(post, 'w', encoding='utf-8') as f:
+            f.write(new_content)
 
 
 if __name__ == '__main__':

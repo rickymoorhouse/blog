@@ -1,4 +1,4 @@
-
+<header>
 {{ $.Scratch.Set "link" .RelPermalink }}
 {{ with .Params.link }} {{ $.Scratch.Set "link" . }} {{ end }}
 {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" }}
@@ -6,15 +6,7 @@
 {{- $category := .Params.category -}}
 {{- if .Params.category -}}
 {{ else }}
-{{- if eq "photos" .Type -}}{{- $category = "Visual" -}}
-{{- else if in .Params.tags "apiconnect" -}}{{- $category = "Technical" -}}
-{{- else if in .Params.tags "walk" -}}{{- $category = "Personal" -}}
-{{- else if in .Params.tags "work" -}}{{- $category = "Work" -}}
-{{- else if in .Params.tags "photography" -}}{{- $category = "Personal" -}}        
-{{- else if in .Params.tags "coding" -}}{{- $category = "Technical" -}}
-{{- else if in .Params.tags "travel" -}}{{- $category = "Travel" -}}
-{{- else if eq .Type "projects" -}}{{- $category = "Technical" -}}
-{{- end -}}
+{{- if eq "photos" .Type -}}{{- $category = "Visual" -}}{{- end -}}
 {{- end -}}
 {{ if eq "event" .Params.layout }}
 <h4 class="p-name">{{ .Title }}</h4>
@@ -60,3 +52,4 @@
     </h5>
     {{ end }}{{ end }}
 {{ end }}
+</header>

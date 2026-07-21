@@ -1,28 +1,28 @@
 ---
-title: Designing for Multi-Region API Deployments
-date: 2026-03-14T00:00:00.000Z
-layout: blog
-hideImages: true
-featured: branch-with-birds.jpg
+atUri: at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos652nvow2x
 bsky: 3mh4ndeivvc2y
-summary: A practical guide to designing multi-region API deployments - covering data consistency, auth dependencies, traffic routing, and failure modes, with real-world lessons from IBM API Connect SaaS.
-sticky: true
 category: technical
-keywords: 
-  - multi-region API
-  - API gateway
-  - API architecture
-  - API management
-  - IBM API Connect
-  - resilience
-  - data residency
+date: 2026-03-14 00:00:00+00:00
+featured: branch-with-birds.jpg
+hideImages: true
+keywords:
+- multi-region API
+- API gateway
+- API architecture
+- API management
+- IBM API Connect
+- resilience
+- data residency
+layout: blog
+sticky: true
+summary: A practical guide to designing multi-region API deployments - covering data
+  consistency, auth dependencies, traffic routing, and failure modes, with real-world
+  lessons from IBM API Connect SaaS.
 tags:
-  - architecture
-  - api
-atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mos652nvow2x"
+- architecture
+- api
+title: Designing for Multi-Region API Deployments
 ---
-
-
 The requirement to be multi-region usually comes suddenly, an immediate business demand, a compliance deadline, or the aftermath of an incident. When designing API Connect SaaS, the decision was to build each region completely independently. Within a region it's highly available across availability zones, but the regions themselves don't replicate. The reasoning is straightforward: as a shared API management platform serving customers with fundamentally different requirements - data residency, cross-region resilience, or both - independent regions let each customer build the topology that fits their constraints, rather than the platform prescribing one.
 
 ![image](branch-with-birds.jpg)
@@ -77,4 +77,4 @@ Actual failures aren't always as cut and dried as the test however - you may fin
 Are there parts of your system that need to be disabled during a regional failure and run in a degraded mode as they add more risk or aren't as crucial to maintain availability on?
 
 
-Most multi-region requirements aren't as simple as just adding another geographic location - there is a lot more to think through across the different layers of your system - data, auth, routing and how it actually will handle failures. Going back to where we started, the right answer will depend on the requirement you are building for. Latency, resilience and compliance will each take you in different directions as you design so it is key to have clarity up-front rather than trying to do everything and over-engineering a solution.  For more on designing with reliability in mind from the start see [SRE Mindset in API Architecture](/blog/2026/the-sre-mindset-in-api-architecture/) or for an example of how this could be done see my post on [building a global deployment with API Connect](/blog/2025/global-deployment-with-api-connect-serving-apis-worldwide/). 
+Most multi-region requirements aren't as simple as just adding another geographic location - there is a lot more to think through across the different layers of your system - data, auth, routing and how it actually will handle failures. Going back to where we started, the right answer will depend on the requirement you are building for. Latency, resilience and compliance will each take you in different directions as you design so it is key to have clarity up-front rather than trying to do everything and over-engineering a solution.  For more on designing with reliability in mind from the start see [SRE Mindset in API Architecture](/blog/2026/the-sre-mindset-in-api-architecture/) or for an example of how this could be done see my post on [building a global deployment with API Connect](/blog/2025/global-deployment-with-api-connect-serving-apis-worldwide/).
