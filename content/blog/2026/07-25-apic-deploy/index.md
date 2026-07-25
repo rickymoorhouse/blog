@@ -3,9 +3,8 @@
 title: GitOps Deployment of API Connect
 date: 2026-07-25
 tags:
-
 - apiconnect
-
+summary: An overview of how we automate API Connect deployments with GitOps
 ---
 
 As architect for the API Connect Cloud offerings one of the key areas I am involved in is deployment and in particular deployment automation.  With my SRE background the main goal here is that anything we need to do more than once should be automated - deployment being a big one of these.  Across our cloud environments - single-tenant and multi-tenant, IBM Cloud, AWS and Azure from dev through to production we probably have over 80 deployments of API Connect.  These all use automation to deploy from declarative deployment models - in particular GitOps so our git repo is the source of truth for everything that gets deployed.
