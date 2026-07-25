@@ -1,7 +1,7 @@
 ---
 
 title: GitOps Deployment of API Connect
-date: 2026-07-18
+date: 2026-07-25
 tags:
 
 - apiconnect
