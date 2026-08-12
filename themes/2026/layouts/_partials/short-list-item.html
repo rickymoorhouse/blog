@@ -11,7 +11,7 @@
           {{- else if eq .Type "projects" -}}{{- $category = "Technical" -}}
           {{- end -}}
         {{- end -}}
-        {{ if or (eq "microblog" .Type) (eq "flight" .Params.layout) }}
+        {{ if or (eq "microblog" .Type) (eq "talks" .Section) (eq "flight" .Params.layout) }}
         <li class="h-entry">
           <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
           {{ if eq "microblog" .Type }}
@@ -41,6 +41,12 @@
                 </g>
               </svg>
                  {{ .Params.airline }} {{ .Params.flight }} <strong>{{ .Params.to }}</strong></span>
+            {{ else if eq "talks" .Section }}
+            <div class="post talk">
+              <span class="post-title" property="headline">{{ .Title }}</span>
+              <p class="talk-location">{{ .Params.Location }}</p>
+              {{ .Summary }}
+            </div>
             {{ end }}
             </div>
         </li> 
@@ -64,7 +70,7 @@
               {{ end }}
             </a>
           </div>
-        </li>
+        </li>        
         {{ else }}
         <li class="h-entry {{$category | lower}}" property="blogPost" typeof="BlogPosting">
           <div class="post-date" property="datePublished" content="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}<br/>

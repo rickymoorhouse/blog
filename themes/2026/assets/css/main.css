@@ -13,6 +13,7 @@
   --colour-primary-dark: hsl(from var(--colour-primary) h calc(s - 10) calc(l - 10));
   --colour-primary-light: hsl(from var(--colour-primary) h calc(s - 60) calc(l + 50));
   --bg-selection: hsl(from var(--colour-primary) h calc(s + 15) calc(l + 20));
+  --colour-side-text: #ffffff;
   --colour-sage: #8FA998;
   --colour-seafoam: #7FC5B4;
   --colour-slate: #5A7D8C;
@@ -89,9 +90,9 @@
   --container-padding: 5vw;
 
   /* Pagefind UI */
-  --pf-border: #006646 !important;
-  --pf-border-focus: #006646 !important;
-  --pf-background: #006646 !important;
+  --pf-border: var(--colour-primary) !important;
+  --pf-border-focus: var(--colour-primary) !important;
+  --pf-background: var(--colour-primary) !important;
   --pf-text: #ffffff !important;
   --pf-text-muted: rgba(255,255,255,0.9) !important;
   --pf-text-secondary: rgba(255,255,255,0.9) !important;
@@ -99,11 +100,14 @@
   --pf-hover: rgba(255,255,255,0.1) !important;
   --pf-outline-focus: #99ccff !important;
   --pf-font: var(--font-sans) !important;
-
-
-
 }
-
+.y2004,.y2005,.y2006 { --colour-primary: #0099CC; --pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}
+.y2007 { --colour-primary: #aaccee; --colour-side-text: #000000;--pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}
+.y2013,.y2014 { --colour-primary: #667766; --pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}
+.y2015,.y2016,.y2023,.y2024, y2025{ --colour-primary: #009988; --pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}
+.y2017,.y2018,.y2019,.y2020,.y2021 { --colour-primary: #445555; --pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}
+.y2022 { --colour-primary: #869ba0;--pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}
+.y2026 { --colour-primary: #006646;--pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}}
 /* -----------------------------------------------------------------------------
    Dark Mode Tokens
    -------------------------------------------------------------------------- */
@@ -243,7 +247,7 @@ svg.plane-icon {
 }
 
 .side .logo svg path {
-  fill: rgba(255,255,255,0.9);
+  fill: var(--colour-side-text);
 }
 
 .side #sitetitle {
@@ -256,7 +260,7 @@ svg.plane-icon {
 }
 
 .side #sitetitle a {
-  color: white;
+  color: var(--colour-side-text);
   text-decoration: none;
 }
 
@@ -277,7 +281,7 @@ svg.plane-icon {
   font-size: 15pt;
 }
 .side nav a {
-  color: rgba(255,255,255,0.9);
+  color: var(--colour-side-text);
   font-size: var(--text-sm);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--border-radius-sm);
@@ -289,7 +293,7 @@ svg.plane-icon {
 }
 
 .side nav a:hover {
-  color: white;
+  color: var(--colour-side-text);
   background: rgba(255,255,255,0.1);
 }
 
@@ -300,7 +304,7 @@ svg.plane-icon {
   border: none;
   cursor: pointer;
   padding: var(--space-sm);
-  color: rgba(255,255,255,0.9);
+  color: var(--colour-side-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,7 +378,6 @@ margin-bottom: var(--space-sm);
 footer {
   padding: var(--space-xl);
   text-align: left;
-  width: 50%;
   margin: var(--space-xl) 0 0 20pt;
 }
 
@@ -450,6 +453,31 @@ main.photos section {
 }
 
 /* -----------------------------------------------------------------------------
+   Two-column comparison wrapper
+   -------------------------------------------------------------------------- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+.two-col pre:hover {
+  width: inherit;
+}
+.two-col code {
+  font-size: var(--text-xs);
+}
+.two-col > * { margin: 0; }
+.two-col h4 {
+  margin: 0 0 var(--space-sm) 0;
+  font-family: var(--font-heading);
+}
+.two-col pre { margin: 0; }
+@media (max-width: 720px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+/* -----------------------------------------------------------------------------
    Blog Post Layout
    -------------------------------------------------------------------------- */
 article.blog {
@@ -466,12 +494,16 @@ article.h-entry p, article.h-entry ul, article.h-entry ol, article.h-entry block
 article.h-entry {
   max-width: 70ch;
 }
-.post-summary {
+.post-summary, .talk p {
   font-family: var(--font-sans);
   font-size: var(--text-xs);
   line-height: 18px;
   color: var(--text-muted);
   margin: var(--space-sm) 0;
+}
+.talk p.talk-location {
+  color: var(--colour-primary);
+  font-style: oblique;
 }
 article h1 {
   margin-bottom: 0;
@@ -480,8 +512,9 @@ article h5 {
   display: grid;
   grid-template-columns: 1fr auto;
   line-height: var(--space-baseline);
-  margin: 0 var(--space-sm) var(--space-baseline) var(--space-sm);
+  margin: 0 var(--space-md) var(--space-baseline) var(--space-md);
   max-width: 50em;
+
 }
 article strong {font-weight: 600;}
 
@@ -549,11 +582,14 @@ pre {
 pre:hover {
   width: 100vw;
 }
-
+pre code {
+  font-size: var(--text-xs);
+  line-height: calc( var(--space-baseline) * 2/3 );
+}
 code {
+  font-size: var(--text-sm);
   font-family: var(--font-mono);
   font-weight: 500;
-  font-size: var(--text-sm);
   color: var(--colour-code);
   background: var(--bg-code);
 
@@ -1491,6 +1527,7 @@ iframe.wait-autoplay { opacity: 0 }
 
 @media (min-width: 769px) {
   /* Margin notes */
+  /*
   article.h-entry h5 { 
     float: left;
     margin-left: -10vw;
@@ -1509,6 +1546,8 @@ iframe.wait-autoplay { opacity: 0 }
     padding: 0;
   }
   article.h-entry { margin-left: 10vw;}
+  */
+  
     .glightbox-container .ginner-container { width: auto; height: auto; flex-direction: row }
     .glightbox-container .ginner-container.desc-top .gslide-description { order: 0 }
     .glightbox-container .ginner-container.desc-top .gslide-image,
