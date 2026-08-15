@@ -9,11 +9,17 @@
           {{- else if in .Params.tags "coding" -}}{{- $category = "Technical" -}}
           {{- else if in .Params.tags "travel" -}}{{- $category = "Travel" -}}
           {{- else if eq .Type "projects" -}}{{- $category = "Technical" -}}
+          {{- else if eq .Type "talks" -}}{{- $category = "Speaking" -}}
           {{- end -}}
         {{- end -}}
         {{ if or (eq "microblog" .Type) (eq "talks" .Section) (eq "flight" .Params.layout) }}
         <li class="h-entry">
-          <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
+          <div class="post-date" content="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}<br/>
+            {{- if $category -}}
+            <span class="item-tag category">{{ $category | lower}}</span>
+            {{ end -}}
+          </div>
+
           {{ if eq "microblog" .Type }}
             <div class="microblog">
             {{ .Content }}
@@ -54,12 +60,23 @@
         {{ if eq "photos" .Type }}
         <li class="h-entry">
           <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
-          <div class="post">
             {{ $page := . }}
             {{ if .Resources.ByType "image" }}
-            {{ with .Resources.GetMatch .Params.featured | default (index (.Resources.ByType "image") 0) }}
+            {{ $.Scratch.Set "images" "False" }}
+            {{ $.Scratch.Set "link" .RelPermalink }}
+            {{ if eq 1 (.Resources.ByType "image" | len) }}
+              {{ $.Scratch.Set "number" "single" }}
+            {{ else }}
+              {{ $.Scratch.Set "number" "multi" }}
+            {{ end }}
+            <div class="post photo-{{ $.Scratch.Get "number" }}">
+              {{ with .Resources.GetMatch .Params.featured | default (index (.Resources.ByType "image") 0) }}
+              {{ if eq "single" ($.Scratch.Get "number") }}
             <a class="glightbox" href="{{ .Permalink }}">
-            {{ $image := .Fill "400x250 Center" }}
+              {{ else }}
+            <a href="{{ $.Scratch.Get "link" }}">
+              {{ end }}               
+            {{ $image := .Fill "560x350 Center" }}
                   <div class="photo-image-wrapper">
                     <img src="{{ $image.Permalink }}" class="featured-image" />
                     <div class="photo-overlay">

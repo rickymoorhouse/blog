@@ -2,8 +2,8 @@
 <!--<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
 -->
-  <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.28.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.28.1/mapbox-gl.css" rel="stylesheet" />
   
   <style>
     @media (max-width: 768px) {
@@ -58,14 +58,8 @@
         footer { display: none;}
   </style>
     <div class="site" id="custom">
-.
-
       <div class="site-content" id="map">
-        <span class="mapbox-maplogo"></span>
       </div>
-      <!--<div class="static">
-        <img src="{{ .Params.static }}?access_token=pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ" />
-      </div>-->
       <!-- site-content -->
         <div class="page-content"><ul>
         {{ .Content }}
@@ -91,7 +85,7 @@ function updateMapTheme(theme) {
     setTimeout(function() {
       map.addSource('points', {
         type: 'geojson', 
-        data: geojson,
+        data: geojsonPoints,
         cluster: false,
       });
       map.addLayer({
@@ -103,6 +97,10 @@ function updateMapTheme(theme) {
           'circle-radius': 6,
         }
       });
+      {{ if .Params.geojsonLines }}
+      addLines(map);
+      {{ end }}  
+
     }, 1000);
   }
 }
@@ -126,13 +124,35 @@ var map = new mapboxgl.Map({
   center: [{{ .Params.lng }}, {{ .Params.lat }}], // starting position [lng, lat]
   zoom: {{ .Params.zoom }} // starting zoom
 });
-
+  {{ if .Params.geojsonLines }}
+  const geojsonLines = {{ .Params.geojsonLines }};
+  function addLines(map) {
+    map.addSource('lines', {
+      type: 'geojson', 
+      data: geojsonLines,
+      cluster: false,
+      })
+    map.addLayer({
+      id: 'lines',
+      type: 'line',
+      source: 'lines',
+      paint: {
+        'line-color': '#0099cc',
+        'line-width': 2,
+      }
+    });
+  }
+  {{ end }}
+  const geojsonPoints = {{ .Params.geojson }};
+map.scrollZoom.disable();
 map.on('load', function() {
-  const geojson = {{ .Params.geojson }};
+  {{ if .Params.geojsonLines }}
+  addLines(map);
+  {{ end }}  
 
   map.addSource('points', {
     type: 'geojson', 
-    data: geojson,
+    data: geojsonPoints,
     cluster: false,
     })
   map.addLayer({
@@ -162,6 +182,7 @@ map.on('load', function() {
       map.getCanvas().style.cursor = '';
       popup.remove();
   });
+
 });
 
 (function () {

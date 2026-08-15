@@ -4,28 +4,39 @@
     <article>
     {{ partial "item-header" . }} 
     <br> <div class="text-left">{{ .Content }}</div>
-
     {{ with .Resources.ByType "image" }}
       {{ range . }}
         {{ $title := "" }}
         {{ $exif_stats := "" }}
         {{ if reflect.IsImageResourceWithMeta . }}
-          {{ with .Meta }}
+        {{ with .Meta }}
             {{ with .Exif }}
-              {{ $title = .Tags.ImageDescription }}
-              {{ $exif_stats = printf "%s | %dmm | %ss" .Model .FocalLengthIn35mmFormat .ExposureTime }}
+              {{ $.Scratch.Set "title" .ImageDescription }}
+              {{ $.Scratch.Set "exif_stats" (printf "%s | %dmm | %ss" .Model .FocalLengthIn35mmFormat .ExposureTime) }}
+              {{ if eq .ExposureTime 0.0 }}
+                {{ $.Scratch.Set "exif_stats" (printf "%s | %dmm" .Model .FocalLengthIn35mmFormat) }}
+              {{ end }}
+              {{ if eq .FocalLengthIn35mmFormat 0.0 }}
+                {{ $.Scratch.Set "exif_stats" (printf "%s | %ss" .Model .ExposureTime) }}
+              {{ end }}
+              {{ if and (eq .FocalLengthIn35mmFormat 0.0) (eq .ExposureTime 0.0) }}
+                {{ $.Scratch.Set "exif_stats" (printf "%s" .Model) }}
+              {{ end }}
+              {{ if eq .Model "" }}
+                {{ $.Scratch.Set "exif_stats" (printf "%dmm | %ss" .FocalLengthIn35mmFormat .ExposureTime) }}
+              {{ end }}
               {{ $date := .Date.Format "2 Jan 2006 15:04" }}
             {{ end }}
           {{ end}}
         {{ end}}
-        <a class="glightbox" data-title="$title" href="{{ .RelPermalink }}">
-            <div class="photo-image-wrapper">
-                <img src="{{ .RelPermalink }}" />
-                <div class="photo-overlay">
-                <p>{{ $title }}{{ with $exif_stats }}<br /><span class="post-date">{{ . }}</span>{{ end }}</p>
-                </div>
+        <div class="photo-image-wrapper">
+          <a class="glightbox" data-title="{{ $.Scratch.Get "title" }}" href="{{ .RelPermalink }}">
+            <img src="{{ .RelPermalink }}" />
+            <div class="photo-overlay">
+              <p>{{ $.Scratch.Get "title" }}{{ with $.Scratch.Get "exif_stats" }}<br /><span class="post-date">{{ . }}</span>{{ end }}</p>
             </div>
-        </a>
+          </a>
+        </div>
       {{ end }}
     {{ end }}        
 </article>

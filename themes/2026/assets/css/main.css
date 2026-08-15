@@ -451,6 +451,9 @@ main.photos section {
   column-count: 3;
   column-gap: var(--space-md);
 }
+main.photos div.text-left {
+  padding-bottom: var(--space-lg);
+}
 
 /* -----------------------------------------------------------------------------
    Two-column comparison wrapper
@@ -712,7 +715,7 @@ margin-bottom: 4px;
 
 .Image img {
   width: 100%;
-  height: 250px;
+  height: 204px;
   object-fit: cover;
   border-radius: var(--border-radius);
 }
@@ -721,10 +724,15 @@ margin-bottom: 4px;
 .Image figcaption {
   font-size: var(--text-sm);
   color: var(--text-muted);
-  margin-top: var(--space-xs);
+  margin-top: -28px;
+  font-style: oblique;
   text-align: center;
 }
-
+.Image figure{
+  margin: var(--space-xs) var(--space-xs) 0 var(--space-xs);
+  margin-block-start: var(--space-sm) !important;
+  margin-inline-start: var(--space-sm) !important;
+}
 /* -----------------------------------------------------------------------------
    Tags
    -------------------------------------------------------------------------- */
@@ -897,7 +905,7 @@ section.recent-posts {
   height: auto;
 }
 
-.photo-album-wrapper::after {
+.photo-album-wrapper::after, .photo-multi .photo-image-wrapper::after {
   content: "⊞";
   color:  rgba(255,255,255,0.6);
   position: absolute;
@@ -905,6 +913,10 @@ section.recent-posts {
   right: var(--space-sm);
   font-size: 25pt;
 }
+.photo-multi .photo-image-wrapper::after {
+  bottom: var(--space-sm);
+}
+
 .recent-posts h2 {
   margin: 0 
 }
@@ -935,6 +947,8 @@ section.recent-posts {
 .photo-overlay p {
   margin: 0;
 }
+
+
 @media (pointer: fine) {
   .photo-overlay {
     opacity: 0;
@@ -1146,9 +1160,6 @@ margin-left: var(--space-md);
     column-count: 2;
     column-gap: var(--space-md);
   }
-  .Image figure{
-    margin: var(--space-md);;
-  }
   main .Image img {
     width: 100pt;
     height: auto;
@@ -1157,6 +1168,7 @@ margin-left: var(--space-md);
     column-count: 2;
   }
 }
+
 
 /* -----------------------------------------------------------------------------
    Very Small Screens (Compact phones)

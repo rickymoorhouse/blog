@@ -1,71 +1,166 @@
 {{ partial "header" . }}
-<!--<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
--->
-  <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.28.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.28.1/mapbox-gl.css" rel="stylesheet" />
   
   <style>
-        #map {
-        height: 100%;
-        margin-top: -20px;
-        }
-        div.page-content {
-        position:fixed;
+    @media (max-width: 768px) {
+      div.page-content {
+        float: left;
+        width: 100%;
         text-align: left;
-        bottom: 1em;
-        left: 1em;
-        z-index: 999;
-        background: white;
-        width: 25%;
-        margin: 1em auto;
+        clear: left;
         padding: 0.5em;
-        box-shadow: 1pt 1pt 3pt rgba(0,0,0,0.5);
-        }
-        @media (prefers-color-scheme: dark) {
-          div.page-content {
-            background-color: #222;
-            color: #ccc;
-          }
-          .mapboxgl-popup-anchor-left .mapboxgl-popup-tip { border-right-color: #222;}
-          .mapboxgl-popup-anchor-right .mapboxgl-popup-tip { border-left-color: #222;}
-          .mapboxgl-popup-anchor-top .mapboxgl-popup-tip { border-bottom-color: #222;}
-          .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip { border-top-color: #222;}
-          .mapboxgl-popup-content {
-            background: #222;
-            color: #ccc;
-          }          
-        }
+      }
+      #custom #map {
+        height: 40% !important;
+        min-height: 200pt;
+        margin-top: -20px;
+      }
+      svg.icon { display: none; }
+    }
+    @media (min-width: 768px) {
+      #map {
+          height: 100%;
+          margin-top: -20px;
+      }
+      main {
+        margin-top: 0;
+      }
+      div.page-content {
+          position: fixed;
+          text-align: left;
+          bottom: 4em;
+          left: 1em;
+          z-index: 999;
+          padding: var(--space-xs);
+          margin: 0;
+          left: calc(100vw - 15em);
+          width: 14em;
+          background: var(--bg-body);
+          color: var(--text-primary);
+          padding: var(--space-xs);          
+          box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      }
+      svg.icon {
+        width: 2em;
+        height: 2em;
+        margin: 0 auto;
+        transform: rotate(-90deg);
+        display: block;
+      }       
+    }
 
-        footer { display: none;}
+    .mapboxgl-popup-content ul {
+      margin: 0;padding: 0 0 0 1em;
+    }
+    @media (prefers-color-scheme: dark) {
+      div.page-content {
+        color: #ccc;
+      }
+      .mapboxgl-popup-anchor-left .mapboxgl-popup-tip { border-right-color: #222;}
+      .mapboxgl-popup-anchor-right .mapboxgl-popup-tip { border-left-color: #222;}
+      .mapboxgl-popup-anchor-top .mapboxgl-popup-tip { border-bottom-color: #222;}
+      .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip { border-top-color: #222;}
+      .mapboxgl-popup-content {
+        background: #222;
+        color: #ccc;
+      }          
+    }
+    #static { display: none;}
+
+    #custom .page-content h3 {
+      margin-bottom: 0;
+    }
+    #custom ul li {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+    }
+    #custom ul {
+        margin: 0;
+    }
+    #custom .text-left {
+    margin-left: 50px;
+    }
+
   </style>
-    <div class="site">
-.
-
+    <div class="site" id="custom">
       <div class="site-content" id="map">
-        <span class="mapbox-maplogo"></span>
       </div>
       <!-- site-content -->
-        <div class="page-content"><ul>
-        {{ range where .Site.Pages "Params.tags" "intersect" .Params.tags }}          
-        {{ if .Title }}
-        <li>
-          <a href="">{{ .Title }}</a>
-        </li>
-        {{ end }}
-        {{ end }}
-        </ul>
-        </div>
+      <div class="page-content" id="summary"><ul>
+      {{ .Summary }}
+      </div>
+    </div>
+    <a href="#summary">
+      <svg class="icon" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4.928,1.34c-0,0 -0.793,1.484 -0.788,2.029c0.004,0.544 0.78,2.129 0.78,2.129l-2.923,-2.118l2.931,-2.04Z" style="fill:#098;"/></svg>
+    </a>
+    <main class="blog single" data-pagefind-body="">
+    <article class="h-entry">
+      <div class="text-left e-content">
+        {{ .ContentWithoutSummary }}
+      </div>
+    </article>
+  </main>        
 <script type="text/javascript">
 
-document.getElementById('map').style.height=(window.innerHeight-57) + "px";
-mapboxgl.accessToken = 'pk.eyJ1Ijoicmlja3ltb29yaG91c2UiLCJhIjoiY2lnemh4eGF1MHc0NDRwbTNteW9sN2p0NyJ9.P_XKTG1fyN2jP_R_G1JMdQ';
+document.getElementById('map').style.height=(window.innerHeight-28) + "px";
+mapboxgl.accessToken = '{{ .Site.Params.mapboxAccessToken }}';
 
 var style = 'mapbox://styles/mapbox/light-v10';
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+var currentTheme = document.documentElement.getAttribute('data-theme') || 
+                  (window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light');
+if (currentTheme === 'dark') {
   style = 'mapbox://styles/mapbox/dark-v10'
 }
 
+// Function to update map style based on theme
+function updateMapTheme(theme) {
+  var newStyle = theme === 'dark' ? 'mapbox://styles/mapbox/dark-v10' : 'mapbox://styles/mapbox/light-v10';
+  if (map.getStyle() !== newStyle) {
+    map.setStyle(newStyle);
+    // Re-add layers after style reload
+    setTimeout(function() {
+      map.addSource('points', {
+        type: 'geojson', 
+        data: geojsonPoints,
+        cluster: false,
+      });
+      map.addLayer({
+        id: 'points',
+        type: 'circle',
+        source: 'points',
+        paint: {
+          'circle-color': '#cc9966',
+          'circle-radius': 6,
+        }
+      });
+      {{ if .Params.geojsonLines }}
+      addLines(map);
+      {{ end }}  
+
+    }, 1000);
+  }
+}
+
+// Listen for theme changes
+var themeObserver = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.attributeName === 'data-theme') {
+      var theme = document.documentElement.getAttribute('data-theme');
+      if (theme) {
+        updateMapTheme(theme);
+      }
+    }
+  });
+});
+themeObserver.observe(document.documentElement, { attributes: true });
+
+{{ if .Params.geojson }}
+const geojsonPoints = {{ .Params.geojson }};
+{{ end }}
+{{ if .Params.geojsonLines }}
+const geojsonLines = {{ .Params.geojsonLines }};
+{{ end }}
 var map = new mapboxgl.Map({
   container: 'map', // container id
   style: style, // stylesheet location
@@ -73,28 +168,32 @@ var map = new mapboxgl.Map({
   zoom: {{ .Params.zoom }} // starting zoom
 });
 
+function addLines(map) {
+  map.addSource('lines', {
+    type: 'geojson', 
+    data: geojsonLines,
+    cluster: false,
+    })
+  map.addLayer({
+    id: 'lines',
+    type: 'line',
+    source: 'lines',
+    paint: {
+      'line-color': '#0099cc',
+      'line-width': 2,
+    }
+  });
+}
+
+map.scrollZoom.disable();
 map.on('load', function() {
-  const geojson = {
-    type: 'FeatureCollection',
-    features: [{{ range where .Site.Pages "Params.tags" "intersect" .Params.tags }}{{ if .Params.lat }}
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [{{ .Params.lat }}, {{ .Params.lng }}]
-      },
-      properties: {
-        title: '{{ .Title }}',
-        url: '{{ .RelPermalink }}',
-        image: '{{ .Resources.Match "image" }}'
-      }
-    },{{ end }}{{ end }}
-    ]
-  };
+  {{ if .Params.geojsonLines }}
+  addLines(map);
+  {{ end }}  
 
   map.addSource('points', {
     type: 'geojson', 
-    data: geojson,
+    data: geojsonPoints,
     cluster: false,
     })
   map.addLayer({
@@ -114,12 +213,7 @@ map.on('load', function() {
   });
   map.on('click', 'points', function(e) {
     var coordinates = e.features[0].geometry.coordinates.slice();
-    var content = ''
-    if (e.features[0].properties.url) {
-      content = content + '<a href="'+e.features[0].properties.url+'">' + e.features[0].properties.title + '</a>';
-    } else {
-      content = content + e.features[0].properties.title;
-    }
+    var content = e.features[0].properties.content;
   
     popup.setLngLat(coordinates)
       .setHTML(content)
@@ -129,16 +223,8 @@ map.on('load', function() {
       map.getCanvas().style.cursor = '';
       popup.remove();
   });
+
 });
 
-(function () {
-    'use strict';
-
-    // Your additional js should go there
-
-}());
-
 </script>
-    </div>
-  </body>
-</html>
+{{ partial "footer" . }}

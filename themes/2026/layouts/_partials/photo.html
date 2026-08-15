@@ -1,18 +1,18 @@
-{{ $title := "" }}
-{{ if reflect.IsImageResourceWithMeta . }}
-  {{ with .Meta }}    
-    {{ with .Exif }}
-    {{ $title := .Tags.ImageDescription }}
-    {{ end }}
-  {{ end }}
-{{ end }}
+
 <div class="Image"><figure>
-    <a class="glightbox" href="{{ .RelPermalink }}" data-description="{{ $title }}">
+    <a class="glightbox" href="{{ .RelPermalink }}" data-description="{{- if reflect.IsImageResourceWithMeta . }}
+{{- with .Meta }}{{- with .Exif }}{{ .ImageDescription }}{{ end }}{{ end }}
+{{ end }}
+">
         {{ $image := .Fill "400x400 center" }}
-            <img src="{{ $image.RelPermalink }}" alt="{{ $title }}">
+            <img src="{{ $image.RelPermalink }}" alt="{{- if reflect.IsImageResourceWithMeta . }}
+{{- with .Meta }}{{- with .Exif }}{{ .ImageDescription }}{{ end }}{{ end }}
+{{ end }}">
     </a>
     <figcaption>
-    {{ $title }}
+    {{ if reflect.IsImageResourceWithMeta . }}
+    {{ with .Meta }}{{ with .Exif }}{{ .ImageDescription }}{{ end }}{{ end }}
+    {{ end }}
     </figcaption>
  </figure>
 </div>
