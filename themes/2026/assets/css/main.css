@@ -481,6 +481,31 @@ main.photos div.text-left {
 }
 
 /* -----------------------------------------------------------------------------
+   Two-column comparison wrapper
+   -------------------------------------------------------------------------- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+.two-col pre:hover {
+  width: inherit;
+}
+.two-col code {
+  font-size: var(--text-xs);
+}
+.two-col > * { margin: 0; }
+.two-col h4 {
+  margin: 0 0 var(--space-sm) 0;
+  font-family: var(--font-heading);
+}
+.two-col pre { margin: 0; }
+@media (max-width: 720px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+/* -----------------------------------------------------------------------------
    Blog Post Layout
    -------------------------------------------------------------------------- */
 article.blog {
