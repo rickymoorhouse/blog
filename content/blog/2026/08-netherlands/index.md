@@ -7,6 +7,7 @@ slug: netherlands
 date: 2026-08-01
 featured: IMG_2190.jpeg
 hideImages: true
+sticky: true
 lat: 51.6
 lng: 4
 zoom: 6.5
@@ -258,5 +259,3 @@ Our last day so we finished packing up, took Nova for a last wander around the l
 
 {{<fig "IMG_2344.jpeg">}}
 {{<fig "IMG_2345.jpeg">}}
-
-

@@ -6,7 +6,6 @@ tags:
  - photography
  - TheCompoChallenge
 hideImages: true
-sticky: true
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosw647e2t2p"
 ---
 

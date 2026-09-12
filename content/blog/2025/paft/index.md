@@ -7,7 +7,6 @@ category: work
 tags:
  - apiconnect
 hideImages: true
-sticky: true
 atUri: "at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3mosw63mpoh2r"
 ---
 
@@ -35,4 +34,4 @@ Each of these phases has an iterative approach to it and we looked at how we cou
 {{<fig "2025_PAFT-SVL_161.jpg">}}
 {{<fig "2025_PAFT-SVL_166.jpg">}}
 
-On the final day of the course I also had the opportunity to share some of our journey with instrumentation, how this has evolved and some of the lessons we learnt along the way - such as the benefits of having a data scientist on the team. I am looking forward to sharing this with the wider team and seeing how we apply some of the learning to improve our systems going forward. For example, better validation of decisions through measuring and improving our use of data. 
+On the final day of the course I also had the opportunity to share some of our journey with instrumentation, how this has evolved and some of the lessons we learnt along the way - such as the benefits of having a data scientist on the team. I am looking forward to sharing this with the wider team and seeing how we apply some of the learning to improve our systems going forward. For example, better validation of decisions through measuring and improving our use of data.
