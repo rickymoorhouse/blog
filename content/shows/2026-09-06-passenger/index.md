@@ -2,12 +2,11 @@
 title: Passenger - Live at Hove Park
 slug: passenger-live-at-hove-park
 date: 2026-09-06T20:00:00
-featured: P1040045.jpeg
+featured: P1040041.jpeg
 
 ---
 
-<!--
-## Setlist
+## Set list
 
 1. Survivors
 2. Life's for the Living
@@ -15,7 +14,7 @@ featured: P1040045.jpeg
 4. Boomerang
 5. Sword From the Stone
 6. Victor's Song
-7. The Sound of Silence (Simon & Garfunkel cover)
+7. [The Sound of Silence](https://www.youtube.com/watch?v=VCb91rATBHI&list=RDVCb91rATBHI&start_radio=1&pp=ygUacGFzc2VuZ2VyIHNvdW5kIG9mIHNpbGVuY2WgBwHSBwkJ_gsBhyohjO8%3D)
 8. I Hate
 9. Young as the Morning Old as the Sea
 10. Wild Love
@@ -28,7 +27,7 @@ Encore:
 14. Things That Stop You Dreaming
 15. [It Was Gonna Be You](https://www.youtube.com/watch?v=UjS-n3K_UG0)
 16. Holes
--->
+
 
 <script type="application/ld+json">
 {

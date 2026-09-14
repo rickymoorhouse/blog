@@ -522,6 +522,15 @@ article.h-entry p, article.h-entry ul, article.h-entry ol, article.h-entry block
 article.h-entry {
   max-width: 70ch;
 }
+.show-title, .show-location {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-style: oblique;
+  color: var(--colour-muted);
+}
+.show-title {
+  font-weight: 600;
+}
 .post-summary, .talk p {
   font-family: var(--font-sans);
   font-size: var(--text-xs);
@@ -535,6 +544,12 @@ article.h-entry {
 }
 article h1 {
   margin-bottom: 0;
+}
+.photos header h4 {
+  margin-bottom: 0;
+}
+.photos header h5 {
+  margin-left: var(--space-sm);
 }
 article h5 {
   display: grid;

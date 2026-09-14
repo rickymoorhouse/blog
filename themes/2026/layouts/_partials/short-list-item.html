@@ -1,11 +1,12 @@
         {{- $category := .Params.category -}}
         {{- if .Params.category -}}
         {{ else }}
-          {{- if eq "photos" .Type -}}{{- $category = "Visual" -}}
+          {{- if eq "photos" .Type -}}{{- $category = "Photos" -}}
+          {{- else if eq "shows" .Section -}}{{- $category = "Personal" -}}
           {{- else if in .Params.tags "apiconnect" -}}{{- $category = "Technical" -}}
           {{- else if in .Params.tags "walk" -}}{{- $category = "Personal" -}}
           {{- else if in .Params.tags "work" -}}{{- $category = "Work" -}}
-          {{- else if in .Params.tags "photography" -}}{{- $category = "Personal" -}}        
+          {{- else if in .Params.tags "photography" -}}{{- $category = "Personal" -}}
           {{- else if in .Params.tags "coding" -}}{{- $category = "Technical" -}}
           {{- else if in .Params.tags "travel" -}}{{- $category = "Travel" -}}
           {{- else if eq .Type "projects" -}}{{- $category = "Technical" -}}
@@ -19,7 +20,6 @@
             <span class="item-tag category">{{ $category | lower}}</span>
             {{ end -}}
           </div>
-
           {{ if eq "microblog" .Type }}
             <div class="microblog">
             {{ .Content }}
@@ -30,7 +30,7 @@
                     <img src="{{ $image.Permalink }}" class="microblog-image" />
                   </a>
                 {{ end }}
-              {{ end }}            
+              {{ end }}
             {{ else if eq "flight" .Params.layout }}
             <div class="flight">
 
@@ -47,19 +47,21 @@
                 </g>
               </svg>
                  {{ .Params.airline }} {{ .Params.flight }} <strong>{{ .Params.to }}</strong></span>
-            {{ else if eq "talks" .Section }}
-            <div class="post talk">
-              <span class="post-title" property="headline">{{ .Title }}</span>
-              <p class="talk-location">{{ .Params.Location }}</p>
-              {{ .Summary }}
+              {{ else if eq "talks" .Section }}
+              <div class="post talk">
+                <span class="post-title" property="headline">{{ .Title }}</span>
+                <p class="talk-location">{{ .Params.Location }}</p>
+                {{ .Summary }}
+              </div>
+              {{ end }}
             </div>
-            {{ end }}
-            </div>
-        </li> 
+        </li>
         {{ else }}
-        {{ if eq "photos" .Type }}
+        {{ if or (eq "photos" .Type) (eq "shows" .Section) }}
         <li class="h-entry">
-          <div class="post-date">{{ .Date.Format "2 Jan 2006" }}</div>
+          <div class="post-date">{{ .Date.Format "2 Jan 2006" }}
+            <span class="item-tag category">{{ $category | lower}}</span>
+          </div>
             {{ $page := . }}
             {{ if .Resources.ByType "image" }}
             {{ $.Scratch.Set "images" "False" }}
@@ -75,19 +77,30 @@
             <a class="glightbox" href="{{ .Permalink }}">
               {{ else }}
             <a href="{{ $.Scratch.Get "link" }}">
-              {{ end }}               
+              {{ end }}
             {{ $image := .Fill "560x350 Center" }}
                   <div class="photo-image-wrapper">
                     <img src="{{ $image.Permalink }}" class="featured-image" />
                     <div class="photo-overlay">
-                      <p>{{ $page.Title }}</p>
+                        {{- if eq "shows" $page.Section -}}
+                        <p><span class="show-title">{{ $page.Title }}</span>{{ if $page.Params.Location }} - <span class="show-location">{{ $page.Params.Location }}</span>{{ end }}</p>
+                        {{- else -}}
+                        <p>{{ $page.Title }}</p>
+                        {{- end -}}
                     </div>
                   </div>
+              </a>
                 {{ end }}
+              {{ else }}
+            <div class="post">
+              <a href="{{ .RelPermalink }}">
+                <span class="post-title">{{ .Title }}</span>
+                {{ if .Params.Location }} <span class="post-summary">- {{ .Params.Location }}</span>{{ end }}
+              </a>
+            </div>
               {{ end }}
-            </a>
-          </div>
-        </li>        
+            </div>
+        </li>
         {{ else }}
         <li class="h-entry {{$category | lower}}" property="blogPost" typeof="BlogPosting">
           <div class="post-date" property="datePublished" content="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}<br/>

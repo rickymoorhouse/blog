@@ -1,0 +1,53 @@
+{{ partial "header" . }}
+<main class="{{ .Type }} photos" data-pagefind-body>
+    <section class="photo-list">
+    <article>
+    {{ partial "item-header" . }}
+    <br> <div class="text-left">{{ .Content }}</div>
+    {{ with .Resources.ByType "image" }}
+      {{ range . }}
+        {{ $title := "" }}
+        {{ $exif_stats := "" }}
+        {{ if reflect.IsImageResourceWithMeta . }}
+        {{ with .Meta }}
+            {{ with .Exif }}
+              {{ $.Scratch.Set "title" .ImageDescription }}
+              {{ $.Scratch.Set "exif_stats" (printf "%s | %dmm | %ss" .Model .FocalLengthIn35mmFormat .ExposureTime) }}
+              {{ if eq .ExposureTime 0.0 }}
+                {{ $.Scratch.Set "exif_stats" (printf "%s | %dmm" .Model .FocalLengthIn35mmFormat) }}
+              {{ end }}
+              {{ if eq .FocalLengthIn35mmFormat 0.0 }}
+                {{ $.Scratch.Set "exif_stats" (printf "%s | %ss" .Model .ExposureTime) }}
+              {{ end }}
+              {{ if and (eq .FocalLengthIn35mmFormat 0.0) (eq .ExposureTime 0.0) }}
+                {{ $.Scratch.Set "exif_stats" (printf "%s" .Model) }}
+              {{ end }}
+              {{ if eq .Model "" }}
+                {{ $.Scratch.Set "exif_stats" (printf "%dmm | %ss" .FocalLengthIn35mmFormat .ExposureTime) }}
+              {{ end }}
+              {{ $date := .Date.Format "2 Jan 2006 15:04" }}
+            {{ end }}
+          {{ end}}
+        {{ end}}
+        <div class="photo-image-wrapper">
+          <a class="glightbox" data-title="{{ $.Scratch.Get "title" }}" href="{{ .RelPermalink }}">
+            <img src="{{ .RelPermalink }}" />
+            <div class="photo-overlay">
+              <p>{{ $.Scratch.Get "title" }}{{ with $.Scratch.Get "exif_stats" }}<br /><span class="post-date">{{ . }}</span>{{ end }}</p>
+            </div>
+          </a>
+        </div>
+      {{ end }}
+    {{ end }}
+</article>
+</main>
+<script src="{{ "js/glightbox.min.js" | absURL }}"></script>
+<script type="text/javascript">
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+});
+</script>
+
+{{ partial "footer.html" . }}
