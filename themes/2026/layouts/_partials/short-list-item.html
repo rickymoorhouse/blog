@@ -2,7 +2,7 @@
         {{- if .Params.category -}}
         {{ else }}
           {{- if eq "photos" .Type -}}{{- $category = "Photos" -}}
-          {{- else if eq "shows" .Section -}}{{- $category = "Personal" -}}
+          {{- else if eq "shows" .Section -}}{{- $category = "Shows" -}}
           {{- else if in .Params.tags "apiconnect" -}}{{- $category = "Technical" -}}
           {{- else if in .Params.tags "walk" -}}{{- $category = "Personal" -}}
           {{- else if in .Params.tags "work" -}}{{- $category = "Work" -}}
