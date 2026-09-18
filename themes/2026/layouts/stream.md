@@ -7,5 +7,5 @@
     
 
 {{ range $stream.ByDate.Reverse }}
-{{ partial "short-list-item-md" . }}
+{{ .Render "list-item" }}
 {{ end }}

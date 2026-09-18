@@ -1,0 +1,1 @@
+- Flight: {{- .Params.airline -}} {{- .Params.flight -}}: {{- .Params.from -}} to {{- .Params.to -}}

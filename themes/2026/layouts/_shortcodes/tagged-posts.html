@@ -3,6 +3,6 @@
 {{ $pages := where $source "Params.tags" "intersect" (slice $tag) }}
 <ul class="post-list">
 {{ range $pages }}
-{{ partial "short-list-item.html" . }}
+{{ .Render "list-item" }}
 {{ end }}
 </ul>

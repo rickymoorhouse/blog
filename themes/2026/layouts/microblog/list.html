@@ -10,7 +10,7 @@
 
     <ul class="post-list">
     {{ range $paginator.Pages }}
-        {{ partial "short-list-item" . }}
+        {{ .Render "list-item" }}
         {{ end }}
     </ul>
   	{{ partial "paginator" . }}

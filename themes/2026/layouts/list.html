@@ -4,7 +4,7 @@
     <section class="">
     <h1>{{ .Title }}</h1>
     <ul class="post-list unified-feed">
-        {{ range (.Paginator 15).Pages }} {{ partial "short-list-item" . }} {{ end }}
+        {{ range (.Paginator 15).Pages }} {{ .Render "list-item" }} {{ end }}
     </ul>
 {{ partial "paginator" . }}
 </section>

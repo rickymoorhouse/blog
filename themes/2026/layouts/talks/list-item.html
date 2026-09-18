@@ -1,0 +1,11 @@
+{{- $category := partial "short-list-category" . -}}
+<li class="h-entry">
+  <div class="post-date" content="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}<br/>
+    {{- if $category }}<span class="item-tag category">{{ $category | lower }}</span>{{ end -}}
+  </div>
+  <div class="post talk">
+    <span class="post-title" property="headline">{{ .Title }}</span>
+    <p class="talk-location">{{ .Params.Location }}</p>
+    {{ .Summary }}
+  </div>
+</li>

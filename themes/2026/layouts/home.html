@@ -77,7 +77,7 @@
   	{{ partial "paginator" . }}
     <ul class="post-list h-feed" typeof="Blog">
       {{ range first 8 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-        {{ partial "short-list-item.html" . }}
+        {{ .Render "list-item" }}
       {{ end }}
     </ul>
     {{ partial "paginator" . }}
@@ -87,7 +87,7 @@
   <main class="unified-feed">
     <ul class="post-list">
   	{{ partial "paginator" . }}
-      {{ range (.Paginator 10).Pages  }} {{ partial "short-list-item" . }} {{ end }}
+      {{ range (.Paginator 10).Pages  }} {{ .Render "list-item" }} {{ end }}
     {{ partial "paginator" . }}
     </ul>
   {{ end }}
