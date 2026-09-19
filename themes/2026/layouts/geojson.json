@@ -1,9 +1,11 @@
 {
  "type":"FeatureCollection",
  "features": [
-{{- $last := sub (len hugo.Data.travel) 1 -}}
-{{- range $i, $e := hugo.Data.travel -}}
+{{- $first := true -}}
+{{- range hugo.Data.travel -}}
 {{- if .lat -}}
+{{- if not $first }},{{ end -}}
+{{- $first = false -}}
   {
    "type":"Feature",
    "geometry": {
@@ -11,17 +13,16 @@
     "coordinates": [{{ .lng }},{{ .lat }}]
    },
    "properties": {
-    "title":"{{ .title }}",
-    {{ if .photo }}"image":"{{ .photo }}",{{ end }}
-    {{ if .link }}"url":"{{ .link }}",{{ end }}
-    "years": [{{ if .years }}{{ range $j, $year := .years }}{{ if $j }},{{ end }}"{{ $year }}"{{ end }}{{ else }}{{ $date := or .date .datePosted }}{{ $y := substr $date 0 4 }}{{ if and $date (not (eq $y "None")) (not (eq $y "Uni")) }}"{{ $y }}"{{ end }}{{ end }}],
+     "title":{{ .title | jsonify }},
+     {{ if .photo }}"image":{{ .photo | jsonify }},{{ end }}
+     {{ if .link }}"url":{{ .link | jsonify }},{{ end }}
+     "years": [{{ if .years }}{{ range $j, $year := .years }}{{ if $j }},{{ end }}{{ $year | jsonify }}{{ end }}{{ else }}{{ $date := or .date .datePosted }}{{ $y := substr $date 0 4 }}{{ if and $date (not (eq $y "None")) (not (eq $y "Uni")) }}{{ $y | jsonify }}{{ end }}{{ end }}],
     "marker-symbol":"circle",
     "marker-size":"small",
-    "marker-color":"{{ $.Site.Params.tertiary | default "#869ba0" }}"
+     "marker-color":{{ $.Site.Params.tertiary | default "#869ba0" | jsonify }}
    }
-  }{{ if ne $i $last }},{{ end }}
+   }
  {{- end -}}
  {{- end }}
-  {}
   ]
 }

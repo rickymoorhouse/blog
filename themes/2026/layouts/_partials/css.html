@@ -4,7 +4,8 @@
 <!-- custom -->
 {{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . | relURL }}"> {{ end }}
 
-<!-- baseliner 
+<!-- baseliner -->
+{{ if .Site.Params.baseliner }}
 <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js">
 </script>
 <script>
@@ -12,4 +13,4 @@ window.onload = function() {
     baseliner = new Baseliner(28);
 }
 </script>
--->
+{{ end }}

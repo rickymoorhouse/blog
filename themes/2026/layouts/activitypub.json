@@ -1,29 +1,29 @@
 {
   "@context": "https://www.w3.org/ns/activitystreams",
   "type": "OrderedCollection",
-  "summary": "{{ .Site.Title }}",
+  "summary": {{ .Site.Title | jsonify }},
   "orderedItems": [
   {{- range $i, $e := first 10 .Site.RegularPages -}}
   {{- if $i -}}, {{- end -}}
     {
       {{- if .Params.link -}}
-      "name": "{{ .Title }}",
+       "name": {{ .Title | jsonify }},
       "type": "Link",
-      "href": "{{ .Params.link }}",
-      "hreflang": "en",
-      "mediaType": "text/html",
+       "href": {{ .Params.link | jsonify }},
+       "hreflang": {{ "en" | jsonify }},
+       "mediaType": {{ "text/html" | jsonify }},
       {{- else if eq .Type "photos" -}}
       "type": "Image",
           {{- with .Resources.ByType "image" -}}{{- range first 1 . -}}
-      "href": "{{ .Permalink }}",
-      "mediaType": "image/jpeg",
+       "href": {{ .Permalink | jsonify }},
+       "mediaType": {{ "image/jpeg" | jsonify }},
           {{- end -}}{{- end -}}
         {{- else -}}
       "type": "Article",
-      "name": "{{ .Title }}",
+       "name": {{ .Title | jsonify }},
       "content": {{ .Summary | jsonify }},
       {{- end -}}
-      "published": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
+       "published": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }}
     }
     {{ end -}}
   ]

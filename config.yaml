@@ -4,7 +4,7 @@ title: "Ricky Moorhouse"
 theme: "2026"
 permalinks:
   blog: "/blog/:year/:slug/"
-  microblog: "/microblog/:slug/"
+  microblog: "/microblog/:slugorcontentbasename/"
 params:
     author: "Ricky Moorhouse"
     description: "I’m an Architect at IBM working on API Connect SaaS with a background in integration and SRE. Outside of work, I enjoy spending time with family, walking with the dog and being behind a camera. Welcome to my corner of the web - I hope you find something interesting or useful here."

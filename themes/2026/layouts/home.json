@@ -1,34 +1,34 @@
 {
   "version": "https://jsonfeed.org/version/1",
-  "title": "{{ .Site.Title }}",
-  "home_page_url": "{{ .Site.BaseURL }}",
-  "feed_url": "{{ .Permalink}}",
+  "title": {{ .Site.Title | jsonify }},
+  "home_page_url": {{ .Site.BaseURL | jsonify }},
+  "feed_url": {{ .Permalink | jsonify }},
   {{ if isset .Site.Params "description" }}
-  "description": "{{ .Site.Params.description }}",
+  "description": {{ .Site.Params.description | jsonify }},
   {{ end }}
   {{ if isset .Site.Params "author" }}
-  "author": { "name": "{{ .Site.Params.author }}" },
+  "author": { "name": {{ .Site.Params.author | jsonify }} },
   {{ end }}
   "items": [
   {{ range $i, $e := first 10 .Site.RegularPages }}
   {{ if $i }}, {{ end }}
     {
-      "id": "{{ .Permalink }}",
-      "title": "{{ .Title }}",
+      "id": {{ .Permalink | jsonify }},
+      "title": {{ .Title | jsonify }},
       {{ if .Params.link }}
-      "content_html": "<a href=\"{{ .Params.link }}\">{{ .Title }}</a>",
+      "content_html": {{ printf "<a href=\"%s\">%s</a>" .Params.link .Title | jsonify }},
       {{ else if eq .Type "photos" }}
-      "content_html": "{{ with .Resources.ByType "image" }}{{ range first 1 . }}<img src=\"{{ .Permalink }}\" />{{ end }}{{ end }}",
+      "content_html": {{ with .Resources.ByType "image" }}{{ range first 1 . }}{{ printf "<img src=\"%s\" />" .Permalink | jsonify }}{{ end }}{{ else }}""{{ end }},
         {{ else }}
       "content_text": {{ .Summary | jsonify }},
       {{ end }}
-{{ with .Resources.ByType "image" }}{{ range first 1 . }}      "image":"{{ .Permalink }}",{{ end }}{{ end }}
+{{ with .Resources.ByType "image" }}{{ range first 1 . }}      "image": {{ .Permalink | jsonify }},{{ end }}{{ end }}
       {{ if .Params.link }}
-      "url": "{{ .Params.link }}",
+      "url": {{ .Params.link | jsonify }},
       {{ else }}
-      "url": "{{ .Permalink }}",
+      "url": {{ .Permalink | jsonify }},
       {{ end }}
-      "date_published": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
+      "date_published": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }}
     }
     {{ end }}
   ]
