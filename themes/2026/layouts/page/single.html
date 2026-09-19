@@ -34,11 +34,7 @@
     {{ end }}
     <div class="text-left e-content">{{ .Content }}</div>
 
-    <!-- related posts with the same tags -->
-    {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
-
     {{ if .Params.hideImages }}{{ else }}
-    {{ .Params.type }}
     <div class="featuredPhotos">
         {{ with .Resources.ByType "image" }}
             {{ range . }}

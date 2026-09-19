@@ -5,7 +5,7 @@
 {{ end }}
 ">
         {{ $image := .Fill "400x400 center" }}
-            <img src="{{ $image.RelPermalink }}" alt="{{- if reflect.IsImageResourceWithMeta . }}
+            <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy" decoding="async" alt="{{- if reflect.IsImageResourceWithMeta . }}
 {{- with .Meta }}{{- with .Exif }}{{ .ImageDescription }}{{ end }}{{ end }}
 {{ end }}">
     </a>

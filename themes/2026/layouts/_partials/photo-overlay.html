@@ -13,7 +13,7 @@
     {{ end}}
     <a class="glightbox" data-title="{{ $title }}" href="{{ .RelPermalink }}">
         <div class="photo-image-wrapper">
-            <img src="{{ .RelPermalink }}" />
+            <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy" decoding="async" alt="{{ $title }}" />
             <div class="photo-overlay">
             <p>{{ $title }} <br /><span class="post-date">{{ $date }}</span></p>
             </div>

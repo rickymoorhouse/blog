@@ -1,4 +1,5 @@
-<script src="{{ "js/glightbox.min.js" | relURL }}"></script>
+{{ $hasLightbox := or .IsHome .IsSection (gt (len (.Resources.ByType "image")) 0) }}
+{{ if $hasLightbox }}<script src="{{ "js/glightbox.min.js" | relURL }}"></script>
 <script type="text/javascript">
   const lightbox = GLightbox({
     touchNavigation: true,
@@ -9,7 +10,9 @@
         next: '<svg class="icon" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M1.997,1.34c0,0 0.793,1.484 0.788,2.029c-0.004,0.544 -0.779,2.129 -0.779,2.129l2.922,-2.118l-2.931,-2.04Z" style="fill:#098;"/></svg>'
     }
 });
-</script>        <footer>
+</script>
+{{ end }}
+<footer>
             <p class="copyright">
                 &copy; {{ now.Format "2006" }} {{ .Site.Title }}
                  · <a href="/archive/">Archive</a>

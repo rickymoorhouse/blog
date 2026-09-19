@@ -31,7 +31,7 @@
         {{ end}}
         <div class="photo-image-wrapper">
           <a class="glightbox" data-title="{{ $.Scratch.Get "title" }}" href="{{ .RelPermalink }}">
-            <img src="{{ .RelPermalink }}" />
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async" alt="{{ $.Scratch.Get "title" }}" />
             <div class="photo-overlay">
               <p>{{ $.Scratch.Get "title" }}{{ with $.Scratch.Get "exif_stats" }}<br /><span class="post-date">{{ . }}</span>{{ end }}</p>
             </div>
