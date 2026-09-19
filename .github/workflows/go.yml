@@ -49,7 +49,7 @@ jobs:
           storage-zone-name: "rm-uk-standard"
           storage-zone-password: ${{ secrets.STORAGE_PASSWORD }}
           concurrency: "50" # Make sure to check the docs about concurrency before choosing this setting
-          enable-delete-action: false
+          enable-delete-action: true
           enable-purge-pull-zone: true
           pull-zone-id: "3422848"
           replication-timeout: "15000"
