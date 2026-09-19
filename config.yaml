@@ -81,17 +81,20 @@ markup:
 
 deployment:
   order: [".jpg$", ".gif$"]
+  target: "bunny"
+  workers: 50
+  maxDeletes: 2560
+  invalidateCDN: false
   targets:
-    name: "s3"
-    URL: "s3://blog.rickymoorhouse.co.uk?region=eu-west-1"
-    cloudFrontDistributionID: "E23ZIB9AOTAEC9"
+  - name: "bunny"
+    url: "s3://rm-uk-blog?region=uk&endpoint=https://uk-s3.storage.bunnycdn.com&awssdk=v2&use_path_style=true&disable_https=false"
   matchers:
     # Cache static assets for 1 year.
   - pattern: "^.+\\.(js|css|svg|ttf)$"
     cacheControl: "max-age=31536000, no-transform, public"
-    gzip: true
+    gzip: false
   - pattern: "^.+\\.(html|xml|json)$"
-    gzip: true 
+    gzip: false
 outputs:
   home: ["HTML", "RSS", "MARKDOWN", "JSON"]
   page: ["HTML", "MARKDOWN"]

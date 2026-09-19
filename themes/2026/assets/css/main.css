@@ -107,12 +107,12 @@
 .y2015,.y2016,.y2023,.y2024, y2025{ --colour-primary: #009988; --pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}
 .y2017,.y2018,.y2019,.y2020,.y2021 { --colour-primary: #445555; --pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}
 .y2022 { --colour-primary: #869ba0;--pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}
-.y2026 { --colour-primary: #006646;--pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}}
+.y2026 { --colour-primary: #006646;--pf-background: var(--colour-primary);  --pf-border: var(--colour-primary);}
 /* -----------------------------------------------------------------------------
    Dark Mode Tokens
    -------------------------------------------------------------------------- */
 [data-theme="dark"] {
-  --bg-body: rgb(30,30,0); #1a1d1a;
+  --bg-body: #1a1d1a;
   --bg-surface: #222522;
   --bg-code: #2a2d2a;
   --colour-code: #55aaff;
