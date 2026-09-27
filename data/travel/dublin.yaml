@@ -2,7 +2,7 @@
 title: "Dublin"
 date: 2019-10-01
 layout: travel
-photo: /travel/photos/dublin.jpg
+photo: "/travel/photos/dublin.jpg"
 tags: []
 lat: 53.3485
 lng: -6.2459
