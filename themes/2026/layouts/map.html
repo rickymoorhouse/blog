@@ -250,18 +250,18 @@ map.on('load', function() {
   });
   map.on('click', 'points', function(e) {
     var coordinates = e.features[0].geometry.coordinates.slice();
-    var content = ''
-    if (e.features[0].properties.url) {
+    var properties = e.features[0].properties;
+    var content = '';
+
+    if (properties.url) {
       content = content + '<a href="'+e.features[0].properties.url+'">';
-      if (e.features[0].properties.image) {
-        content = content + '<img src="' + e.features[0].properties.image + '"/><br />';
-        params = {minWidth: 200, autoPanPaddingTopLeft: 200}
-      } else {
-        params = {}
-      }
-      content = content + e.features[0].properties.title + '</a>';
-    } else {
-      content = content + e.features[0].properties.title;
+    }
+    if (properties.image) {
+      content = content + '<img src="' + properties.image + '"/><br />';
+    }
+    content = content + properties.title;
+    if (properties.url) {
+      content = content + '</a>';
     }
 
   

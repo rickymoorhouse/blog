@@ -1,8 +1,34 @@
-{{ $tag := .Get 0 }}
-{{ $source := where site.RegularPages "Section" "in" "blog" }}
-{{ $pages := where $source "Params.tags" "intersect" (slice $tag) }}
+{{- /*
+  Lists blog posts carrying a given tag, most recent first.
+
+  Usage: {{< tagged-posts "api" >}}      every post with the tag
+         {{< tagged-posts "api" 5 >}}   the 5 most recent
+
+  Tag matching is case-insensitive, so "api" also finds posts tagged "API".
+*/ -}}
+{{- $tag := .Get 0 -}}
+{{- $limit := .Get 1 -}}
+{{- $wanted := lower $tag -}}
+{{- $source := where site.RegularPages "Section" "in" "blog" -}}
+{{- $pages := slice -}}
+{{- range $source -}}
+  {{- $tags := slice -}}
+  {{- range (default slice .Params.tags) -}}
+    {{- $tags = $tags | append (lower .) -}}
+  {{- end -}}
+  {{- if in $tags $wanted -}}
+    {{- $pages = $pages | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- with $limit -}}
+  {{- $pages = first (int .) $pages -}}
+{{- end -}}
+{{- if $pages -}}
 <ul class="post-list">
 {{ range $pages }}
 {{ .Render "list-item" }}
 {{ end }}
 </ul>
+{{- else -}}
+<p class="post-list-empty">No blog posts tagged <strong>{{ $tag }}</strong> yet.</p>
+{{- end -}}

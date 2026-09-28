@@ -1,8 +1,13 @@
+{{- /*
+  Renders the site's "elsewhere" links from the `icon` menu in config.yaml.
+
+  Falls back to the menu entry's name when no `title` is supplied.
+*/ -}}
 <div class="social-links">
-  {{- if .Site.Menus.icon -}}
-    {{- range sort .Site.Menus.icon -}}
-      <a rel="me" href="{{ .URL }}" class="social-link" target="_blank" rel="noopener noreferrer">
-        {{ .Name }}
+  {{- with site.Menus.icon -}}
+    {{- range sort . -}}
+      <a rel="me noopener noreferrer" href="{{ .URL }}" class="social-link" target="_blank">
+        <span class="social-name">{{ with .Params.title }}{{ . }}{{ else }}{{ .Name | humanize | title }}{{ end }}</span>
       </a>
     {{- end -}}
   {{- end -}}
