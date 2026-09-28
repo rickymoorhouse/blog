@@ -1143,11 +1143,12 @@ main.page.single:has(.contact-page) article.h-entry > header {
 
 .contact-intro {
   align-self: center;
-  padding: var(--space-md) 0;
+  padding: var(--space-md) var(--space-lg)0;
 }
 
 .contact-heading {
   padding-top: var(--space-md);
+  padding-left: var(--space-md);
 }
 
 .contact-heading h1 {
