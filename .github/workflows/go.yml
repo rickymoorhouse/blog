@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 1
 
       - name: Install tools via mise
-        uses: jdx/mise-action@master
+        uses: jdx/mise-action@main
         with:
           args: install
 
