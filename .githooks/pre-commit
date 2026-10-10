@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+# Pre-commit hook: run site validation suite
+# Exit non-zero if any checks fail, blocking the commit
+
+ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Run the validation script
+if ! cd "$ROOT_DIR" && python3 scripts/validate.py; then
+    echo "VALIDATION FAILED - commit blocked"
+    echo "Fix the errors above, or add justified suppressions to scripts/suppressions.json"
+    exit 1
+fi
+
+echo "Validation passed - commit allowed"
