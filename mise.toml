@@ -3,18 +3,14 @@ hugo-extended-withdeploy = "0.163.3"
 python = "3.13"
 jq = "1.8.1"
 
-[env]
-PAGEFIND_VERSION = "1.5.2"
-
 [tasks.build]
 description = "Build and validate the Hugo site"
 run = "./scripts/build.sh"
 
-[tasks.deploy]
-description = "Deploy the generated site to BunnyCDN"
-run = "./scripts/deploy.sh"
+[tasks.validate]
+description = "Run the site validation suite"
+run = "python3 scripts/validate.py"
 
-[tasks.publish]
-description = "Build, validate, and deploy the site"
-depends = ["build"]
-run = "./scripts/deploy.sh"
+[tasks."pre-commit-install"]
+description = "Install pre-commit hook for site validation"
+run = "git config core.hooksPath .githooks && chmod +x .githooks/pre-commit"

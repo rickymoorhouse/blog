@@ -1,13 +1,42 @@
----
-name: Hugo
+name: Site CI
+
 on:
   push:
     branches:
       - main
-jobs:
+  pull_request:
+    branches:
+      - main
 
-  build:
-    name: Build-site
+jobs:
+  validate:
+    name: Validate site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Install tools via mise
+        uses: jdx/mise-action@master
+        with:
+          args: install
+
+      - name: Run validation suite
+        run: python3 scripts/validate.py
+
+      - name: Install pre-commit hook (local replica)
+        run: |
+          git config core.hooksPath .githooks
+          chmod +x .githooks/pre-commit
+
+      - name: Run pre-commit hook check
+        run: .githooks/pre-commit
+
+  deploy:
+    needs: validate
+    name: Deploy to Bunny
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -28,24 +57,25 @@ jobs:
           wget https://github.com/CloudCannon/pagefind/releases/download/v${PAGEFIND_VERSION}/${PAGEFIND_DOWNLOAD}
           tar xvzf ${PAGEFIND_DOWNLOAD} 
            mv pagefind $HOME/pagefind
-           echo "$HOME" >> "$GITHUB_PATH"
+          echo "$HOME" >> "$GITHUB_PATH"
 
-      - name: Build
+      - name: Build and validate
         run: ./scripts/build.sh
 
       - name: Deploy to Bunny
-        uses: R-J-dev/bunny-deploy@v2.0.6 # Select the version you wish to use
+        uses: R-J-dev/bunny-deploy@v2.0.6
         with:
           access-key: ${{ secrets.STORAGE_KEY }}
           directory-to-upload: "./public"
           storage-endpoint: "https://uk.storage.bunnycdn.com"
           storage-zone-name: "rm-uk-standard"
           storage-zone-password: ${{ secrets.STORAGE_PASSWORD }}
-          concurrency: "50" # Make sure to check the docs about concurrency before choosing this setting
+          concurrency: "50"
           enable-delete-action: true
           enable-purge-pull-zone: true
           pull-zone-id: "3422848"
           replication-timeout: "15000"
+
       - name: Archive production artifacts
         uses: actions/upload-artifact@v6
         with:
