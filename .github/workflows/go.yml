@@ -23,8 +23,21 @@ jobs:
         with:
           args: install
 
+      - name: Install Pagefind
+        env:
+          PAGEFIND_VERSION: "1.5.2"
+        run: |
+          PAGEFIND_DOWNLOAD=pagefind-v${PAGEFIND_VERSION}-x86_64-unknown-linux-musl.tar.gz
+          wget https://github.com/CloudCannon/pagefind/releases/download/v${PAGEFIND_VERSION}/${PAGEFIND_DOWNLOAD}
+          tar xvzf ${PAGEFIND_DOWNLOAD}
+          mv pagefind "$HOME/pagefind"
+          echo "$HOME" >> "$GITHUB_PATH"
+
       - name: Install Python dependencies
         run: python3 -m pip install -r scripts/requirements.txt
+
+      - name: Build site
+        run: ./scripts/build.sh
 
       - name: Run validation suite
         run: python3 scripts/validate.py
@@ -37,33 +50,23 @@ jobs:
       - name: Run pre-commit hook check
         run: .githooks/pre-commit
 
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          name: blog-content
+          path: public
+
   deploy:
     needs: validate
     name: Deploy to Bunny
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
+      - name: Download validated site
+        uses: actions/download-artifact@v6
         with:
-          fetch-depth: 1
-
-      - name: Get hugo and pagefind
-        env:
-          HUGO_VERSION: "0.163.3"
-          PAGEFIND_VERSION: "1.5.2"
-        run: |
-          HUGO_DOWNLOAD=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-          wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_DOWNLOAD}
-          tar xvzf ${HUGO_DOWNLOAD} hugo
-          mv hugo $HOME/hugo
-          PAGEFIND_DOWNLOAD=pagefind-v${PAGEFIND_VERSION}-x86_64-unknown-linux-musl.tar.gz
-          wget https://github.com/CloudCannon/pagefind/releases/download/v${PAGEFIND_VERSION}/${PAGEFIND_DOWNLOAD}
-          tar xvzf ${PAGEFIND_DOWNLOAD} 
-           mv pagefind $HOME/pagefind
-          echo "$HOME" >> "$GITHUB_PATH"
-
-      - name: Build and validate
-        run: ./scripts/build.sh
+          name: blog-content
+          path: public
 
       - name: Deploy to Bunny
         uses: R-J-dev/bunny-deploy@v2.0.6
@@ -78,10 +81,3 @@ jobs:
           enable-purge-pull-zone: true
           pull-zone-id: "3422848"
           replication-timeout: "15000"
-
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v6
-        with:
-          name: blog-content
-          path: |
-             public
