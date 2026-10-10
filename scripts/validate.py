@@ -11,7 +11,8 @@ import sys
 import yaml
 from pathlib import Path
 
-blog_dir = Path('/Users/rickymoorhouse/blog')
+blog_dir = Path(__file__).resolve().parent.parent
+os.chdir(blog_dir)
 ERRORS = 0
 SUPPRESSIONS = blog_dir / 'scripts' / 'suppressions.json'
 
