@@ -1,20 +1,16 @@
 ---
 title: "API failure stories and what they taught me"
 date: 2026-10-06T21:25:00+01:00
-publishDate: 2026-08-22
-
 layout: blog
 category: technical
 tags:
   - api
-summary: "Four anonymised API failure stories about versioning, migration testing, sensitive data, and authorisation, with practical lessons for preventing them."
+summary: "Four generalised API failure stories about versioning, migration testing, sensitive data, and authorisation, with practical lessons for preventing them."
 featured: "DSC_0086.jpeg"
 hideImages: true
 ---
 
 API failures often come from missing lifecycle controls rather than difficult technology. These generalised stories from my experience show how unchecked assumptions around versioning, testing, logging, and access control can create avoidable problems.
-
-<!--more-->
 
 ## When API versions stop making sense
 

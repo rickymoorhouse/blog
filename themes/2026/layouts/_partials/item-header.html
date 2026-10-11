@@ -48,7 +48,11 @@
             {{ range .Params.tags }}
             <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag p-category tag-{{ . | lower }}">{{ . | lower}}</a>
             {{ end }}
+            {{ if .Params.theatricalia }}
+            <a href="{{ .Params.theatricalia }}" target="_blank" class="theatricalia-link">Theatricalia</a>
+            {{ end }}
         </div>
+
     </h5>
     {{ end }}{{ end }}
 {{ end }}

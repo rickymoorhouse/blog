@@ -7,7 +7,7 @@
     {{ $number := cond (eq 1 (.Resources.ByType "image" | len)) "single" "multi" }}
     <div class="post photo-{{ $number }}">
       {{ with .Resources.GetMatch .Params.featured | default (index (.Resources.ByType "image") 0) }}
-        {{ if eq "single" $number }}<a class="glightbox" href="{{ .Permalink }}">{{ else }}<a href="{{ $.RelPermalink }}">{{ end }}
+        <a href="{{ $.RelPermalink }}">
           {{ $image := .Fill "560x350 Center" }}
           <div class="photo-image-wrapper">
             <img src="{{ $image.Permalink }}" class="featured-image" />
