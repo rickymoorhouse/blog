@@ -92,10 +92,10 @@ Encore:
   },
   "reviewRating": {
     "@type": "Rating",
-    "ratingValue": "TODO",
+    "ratingValue": "5",
     "bestRating": 5,
     "worstRating": 1
   },
-  "reviewBody": "TODO: My review of the gig"
+  "reviewBody": "Great afternoon out with a lovely atmosphere - Passenger was incredible to see live and would go again given an opportunity."
 }
 </script>

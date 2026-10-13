@@ -90,3 +90,6 @@ outputFormats:
 outputs:
   home: ["HTML", "RSS", "MARKDOWN", "JSON", "LLMS", "LLMSFULL"]
   page: ["HTML", "MARKDOWN"]
+services:
+  rss:
+    limit: 10
