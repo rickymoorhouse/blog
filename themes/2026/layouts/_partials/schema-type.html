@@ -1,0 +1,11 @@
+{{- /* schema.org @type for a page: BlogPosting for blog posts (also TechArticle when technical), SocialMediaPosting for microblog, TechArticle for other technical pages, else Article. */ -}}
+{{- $category := lower (partial "short-list-category.html" .) -}}
+{{- $type := "Article" -}}
+{{- if eq .Type "blog" -}}
+  {{- $type = cond (eq $category "technical") (slice "BlogPosting" "TechArticle") "BlogPosting" -}}
+{{- else if eq .Type "microblog" -}}
+  {{- $type = "SocialMediaPosting" -}}
+{{- else if eq $category "technical" -}}
+  {{- $type = "TechArticle" -}}
+{{- end -}}
+{{- return $type -}}
