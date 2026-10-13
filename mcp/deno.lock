@@ -1,0 +1,9 @@
+{
+  "version": "5",
+  "remote": {
+    "https://esm.sh/@bunny.net/edgescript-sdk@0.11.2": "bbc2fae00d36fb9b65f4eb17d7c954748ee5fda0d9ba2e7f943bec9c24e1d499",
+    "https://esm.sh/@bunny.net/edgescript-sdk@0.11.2/denonext/edgescript-sdk.mjs": "c49254dd69fc612e461ab0acaaac74dc0cbba8270e246e188cc2ae0f2c77b615",
+    "https://esm.sh/minisearch@7.1.2": "70afd35c798ca68756b9fe569e37b4eee2faac6d629c6139cf9ed52158c3a4d3",
+    "https://esm.sh/minisearch@7.1.2/denonext/minisearch.mjs": "a4b8bee7412c8a6c045e6e99c5c65aca67ef84e8e691f3525af329e5fb57d150"
+  }
+}

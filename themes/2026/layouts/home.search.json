@@ -1,0 +1,22 @@
+{{- /* Search index for the MCP server: one entry per post in blog, talks, projects and microblog. */ -}}
+{{- $items := slice -}}
+{{- range where site.RegularPages "Type" "in" (slice "blog" "talks" "projects" "microblog") -}}
+  {{- if .Date.IsZero }}{{ continue }}{{ end -}}
+  {{- $description := partial "plain-description.html" . -}}
+  {{- $md := "" -}}
+  {{- with .OutputFormats.Get "markdown" }}{{ $md = .Permalink }}{{ end -}}
+  {{- $item := dict
+    "title" (.Title | default (truncate 80 $description))
+    "url" .Permalink
+    "md" $md
+    "date" (.Date.Format "2006-01-02T15:04:05-07:00")
+    "section" .Section
+    "type" (partial "schema-type.html" .)
+    "category" (partial "short-list-category.html" .)
+    "tags" (.Params.tags | default slice)
+    "description" $description
+    "content" (.Plain | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace)
+  -}}
+  {{- $items = $items | append $item -}}
+{{- end -}}
+{{- dict "site" site.BaseURL "generated" (now.Format "2006-01-02T15:04:05-07:00") "items" (sort $items "date" "desc") | jsonify -}}
