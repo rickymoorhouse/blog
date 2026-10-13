@@ -51,32 +51,6 @@ languages:
   en:
     params:
       title: "Ricky Moorhouse"
-  es:
-    params:
-      title: "Ricky Moorhouse en Español"
-      description: "Vivo en el sur de Inglaterra con mi esposa y hijas. Yo trabajo en las ofertas de nube de IBM API Connect. Me gusta corriendo, caminando, fotografia y passando tiempo con mi familia."
-    menu:
-      main:
-      - url: "/photos/"
-        name: "Fotos"
-        weight: 4
-      icon:
-      - url: "https://github.com/rickymoorhouse/"
-        name: "github"
-        weight: 2
-      - url: "https://twitter.com/rickymoorhouse/"
-        name: "twitter"
-        weight: 3
-      - url: "https://hachyderm.io/@ricky"
-        name: "mastodon"
-        weight: 3
-      - url: "https://www.linkedin.com/in/rickymoorhouse/"
-        name: "linkedin"
-        weight: 4
-      - url: "https://www.instagram.com/rickymoorhouse/"
-        name: "instagram"
-        weight: 3        
-
 markup:
   highlight:
     noClasses: false
@@ -102,6 +76,17 @@ deployment:
     gzip: false
   - pattern: "^.+\\.(html|xml|json)$"
     gzip: false
+outputFormats:
+  llms:
+    mediaType: "text/plain"
+    baseName: "llms"
+    isPlainText: true
+    notAlternative: true
+  llmsfull:
+    mediaType: "text/plain"
+    baseName: "llms-full"
+    isPlainText: true
+    notAlternative: true
 outputs:
-  home: ["HTML", "RSS", "MARKDOWN", "JSON"]
+  home: ["HTML", "RSS", "MARKDOWN", "JSON", "LLMS", "LLMSFULL"]
   page: ["HTML", "MARKDOWN"]

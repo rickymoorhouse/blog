@@ -1,0 +1,16 @@
+# {{ site.Title }}: technical writing
+
+> The full text of the technical posts and projects on {{ site.BaseURL }}, newest first. See {{ site.BaseURL }}llms.txt for an overview of the whole site.
+{{ range partial "llms/technical-pages.html" . }}
+---
+
+# {{ .Title }}
+
+URL: {{ .Permalink }}
+Date: {{ .Date.Format "2006-01-02" }}
+{{- with .Params.tags }}
+Tags: {{ delimit . ", " }}
+{{- end }}
+
+{{ .RawContent | replaceRE `\{\{[<%][\s\S]*?[>%]\}\}` "" | strings.TrimSpace }}
+{{ end -}}

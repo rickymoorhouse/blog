@@ -1,0 +1,46 @@
+# {{ site.Title }}
+
+{{ site.Params.description }}
+
+This is my personal site. It mixes technical writing about API architecture, API management (IBM API Connect), SRE, observability and AI agents with personal posts about travel, photography and walking.
+
+Every page has a Markdown version alongside the HTML: append `index.md` to the page URL, for example {{ site.BaseURL }}about/index.md. The links below point at those Markdown versions where they exist.
+
+The technical writing is the most substantive content here. The full text of it is in [llms-full.txt]({{ site.BaseURL }}llms-full.txt).
+
+{{ site.Params.author }}
+
+## About
+
+{{ range slice "about" "cv" "colophon" "contact" -}}
+{{- with site.GetPage . -}}
+- [{{ .Title }}]({{ partial "llms/link.html" . }})
+{{ end -}}
+{{- end }}
+## Technical writing
+
+{{ range partial "llms/technical-pages.html" . -}}
+- [{{ .Title }}]({{ partial "llms/link.html" . }}): {{ .Date.Format "2 Jan 2006" }}{{ with partial "llms/description.html" . }}. {{ . }}{{ end }}
+{{ end }}
+## Talks
+
+{{ range (where site.RegularPages "Type" "talks").ByDate.Reverse -}}
+- [{{ .Title }}]({{ partial "llms/link.html" . }}): {{ .Date.Format "2 Jan 2006" }}{{ with .Params.location }}, {{ . }}{{ end }}
+{{ end }}
+## Sections
+
+- [Blog]({{ site.BaseURL }}blog/): all long-form posts, technical and personal, since 2003
+- [Talks]({{ site.BaseURL }}talks/): conference talks, webinars and workshops
+- [Projects]({{ site.BaseURL }}projects/): side projects, including Trawler, a metrics exporter for API Connect
+- [Stream]({{ site.BaseURL }}stream/): everything on the site, newest first
+
+## Optional
+
+- [Photos]({{ site.BaseURL }}photos/): photo galleries, mostly travel and walks
+- [Microblog]({{ site.BaseURL }}microblog/): short notes
+- [Shows]({{ site.BaseURL }}shows/): gigs and theatre
+- [Flights]({{ site.BaseURL }}flights/): flight log
+- [Reading]({{ site.BaseURL }}reading/): reading log by year
+- [RSS feed]({{ site.BaseURL }}index.xml)
+- [JSON feed]({{ site.BaseURL }}index.json)
+- [Sitemap]({{ site.BaseURL }}sitemap.xml)
