@@ -55,6 +55,8 @@ jobs:
         with:
           name: blog-content
           path: public
+          # Keep .well-known/ (skipped by default since upload-artifact v4.4).
+          include-hidden-files: true
 
   deploy:
     needs: validate

@@ -18,6 +18,17 @@ It uses the Streamable HTTP transport in stateless JSON mode. There are no sessi
 | `get_post` | `url` of a page on the site | The page as Markdown |
 | `list_recent` | optional `section` and `limit` | The newest posts, in the same shape as search results |
 
+## Discovery
+
+The server publishes an [MCP Server Card](https://github.com/modelcontextprotocol/ext-server-card) at `<endpoint>/server-card`, for example `https://blog-mcp-xfh2k.bunny.run/mcp/server-card`. Server Cards are experimental (SEP-2127). The card is a static JSON description of the server that clients can read before connecting: name, version, title, description, website, repository, icon, and the Streamable HTTP endpoint with its supported protocol versions.
+
+- The card is built in `main.ts` from the same `SERVER_INFO` and `PROTOCOL_VERSIONS` that `initialize` uses, so the two can't drift.
+- The endpoint URL comes from the request host, so the card stays correct on a custom domain.
+- Following the spec, it doesn't list tools. Clients get those from `tools/list`.
+- It's served as `application/mcp-server-card+json`, with the CORS, `Cache-Control` and `ETag` headers the spec asks for, and it answers `If-None-Match` with a 304.
+
+The blog advertises the server in an [AI Catalog](https://github.com/Agent-Card/ai-catalog) at `https://rickymoorhouse.uk/.well-known/ai-catalog.json`, from `static/.well-known/ai-catalog.json`. That catalog is where domain-level discovery starts. Its entry points at the Server Card URL above, so update it if the server's hostname changes.
+
 ## Configuration
 
 | Variable | Default | |

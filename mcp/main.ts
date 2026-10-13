@@ -11,7 +11,8 @@ import MiniSearch from "https://esm.sh/minisearch@7.1.2";
 const SITE_URL = (Deno.env.get("SITE_URL") ?? "https://rickymoorhouse.uk").replace(/\/+$/, "");
 const INDEX_TTL_MS = Number(Deno.env.get("INDEX_TTL_SECONDS") ?? "600") * 1000;
 const PROTOCOL_VERSIONS = ["2025-06-18", "2025-03-26", "2024-11-05"];
-const SERVER_INFO = { name: "rickymoorhouse-blog", title: "Ricky Moorhouse's blog", version: "0.1.0" };
+// The name uses the reverse-DNS form Server Cards require, so the card and serverInfo agree.
+const SERVER_INFO = { name: "uk.rickymoorhouse/blog", title: "Ricky Moorhouse's blog", version: "0.1.0" };
 
 type Item = {
   title: string;
@@ -250,6 +251,50 @@ async function handleMessage(message: RpcMessage) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Server Card: pre-connection discovery metadata, served at <endpoint>/server-card.
+// https://github.com/modelcontextprotocol/ext-server-card (SEP-2127, experimental)
+// Cards deliberately leave out tools; clients get those from tools/list.
+
+function serverCard(origin: string) {
+  return {
+    $schema: "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+    name: SERVER_INFO.name,
+    version: SERVER_INFO.version,
+    title: SERVER_INFO.title,
+    description: "Search and read Ricky Moorhouse's posts on API architecture, API Connect, SRE, AI and travel.",
+    websiteUrl: SITE_URL,
+    repository: { url: "https://github.com/rickymoorhouse/blog", source: "github", subfolder: "mcp" },
+    icons: [{ src: `${SITE_URL}/rmlogo-512.png`, mimeType: "image/png", sizes: ["512x512"] }],
+    remotes: [{ type: "streamable-http", url: `${origin}/mcp`, supportedProtocolVersions: PROTOCOL_VERSIONS }],
+  };
+}
+
+const CARD_HEADERS = {
+  "access-control-allow-origin": "*",
+  "access-control-allow-methods": "GET",
+  "access-control-allow-headers": "Content-Type, If-None-Match",
+  "access-control-expose-headers": "ETag",
+  "cache-control": "public, max-age=3600",
+};
+
+async function serveCard(req: Request, url: URL): Promise<Response> {
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: CARD_HEADERS });
+  if (req.method !== "GET" && req.method !== "HEAD") {
+    return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD, OPTIONS", ...CARD_HEADERS } });
+  }
+  // Behind Bunny the request may arrive as plain http; the public endpoint is always https.
+  const local = url.hostname === "localhost" || url.hostname === "127.0.0.1";
+  const body = JSON.stringify(serverCard(`${local ? url.protocol : "https:"}//${url.host}`), null, 2);
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(body));
+  const etag = `"${[...new Uint8Array(digest).slice(0, 12)].map((b) => b.toString(16).padStart(2, "0")).join("")}"`;
+  const headers = { "content-type": "application/mcp-server-card+json", etag, ...CARD_HEADERS };
+  if (req.headers.get("if-none-match")?.split(/\s*,\s*/).includes(etag)) {
+    return new Response(null, { status: 304, headers });
+  }
+  return new Response(req.method === "HEAD" ? null : body, { headers });
+}
+
 const CORS_HEADERS = {
   "access-control-allow-origin": "*",
   "access-control-allow-methods": "POST, GET, OPTIONS",
@@ -263,7 +308,9 @@ const json = (body: unknown, status = 200) =>
   });
 
 export async function handler(req: Request): Promise<Response> {
-  const { pathname } = new URL(req.url);
+  const url = new URL(req.url);
+  const { pathname } = url;
+  if (pathname === "/mcp/server-card" || pathname === "/server-card") return await serveCard(req, url);
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS_HEADERS });
   if (pathname !== "/mcp" && pathname !== "/") return json({ error: "Not found" }, 404);
   if (req.method === "GET" && req.headers.get("accept")?.includes("text/html")) {

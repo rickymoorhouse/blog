@@ -1,0 +1,14 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Ricky Moorhouse",
+    "identifier": "rickymoorhouse.uk"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:rickymoorhouse.uk:mcp:blog",
+      "type": "application/mcp-server-card+json",
+      "url": "https://mcp.rickymoorhouse.uk/mcp/server-card"
+    }
+  ]
+}
