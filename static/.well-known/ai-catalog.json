@@ -7,6 +7,8 @@
   "entries": [
     {
       "identifier": "urn:air:rickymoorhouse.uk:mcp:blog",
+      "displayName": "Ricky Moorhouse's blog",
+      "description": "MCP server to search and read Ricky Moorhouse's posts on API architecture, API Connect, SRE, AI and travel.",
       "type": "application/mcp-server-card+json",
       "url": "https://mcp.rickymoorhouse.uk/mcp/server-card"
     }
