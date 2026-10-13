@@ -28,9 +28,6 @@ jobs:
       - name: Install
         run: "curl -fsSL https://deno.land/install.sh | sh -s v1.0.0"
 
-      - name: Build
-        run: "deno task build"
-
       - name: Publish the script to Bunny
         uses: "BunnyWay/actions/deploy-script@main"
         with:
