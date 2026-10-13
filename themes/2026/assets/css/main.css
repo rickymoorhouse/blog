@@ -522,6 +522,9 @@ article.h-entry p, article.h-entry ul, article.h-entry ol, article.h-entry block
 article.h-entry {
   max-width: 70ch;
 }
+a.p-author {
+  display: none;
+}
 .show-title, .show-location {
   font-family: var(--font-sans);
   font-size: var(--text-xs);

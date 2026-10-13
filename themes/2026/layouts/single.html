@@ -4,28 +4,38 @@
     <article class="h-entry">
     {{ partial "item-header" . }}
 
+    {{- $category := lower (partial "short-list-category.html" .) -}}
+    {{- $schemaType := "Article" -}}
+    {{- if eq .Type "blog" -}}
+      {{- $schemaType = cond (eq $category "technical") (slice "BlogPosting" "TechArticle") "BlogPosting" -}}
+    {{- else if eq .Type "microblog" -}}
+      {{- $schemaType = "SocialMediaPosting" -}}
+    {{- else if eq $category "technical" -}}
+      {{- $schemaType = "TechArticle" -}}
+    {{- end }}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": {{ if eq .Type "blog" }}"TechArticle"{{ else }}"Article"{{ end }},
-      "headline": {{ .Title | jsonify }},
-      "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end }},
-      "url": {{ .Permalink | jsonify }},
-      "datePublished": {{ .Date.Format "2006-01-02" | jsonify }},
-      {{ if .Lastmod }}"dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z" | jsonify }},{{ end }}
-      {{ if .Resources.ByType "image" }}{{ if .Params.featured }}{{ with .Resources.Match .Params.featured }}{{ range first 1 . }}"image": {{ .Permalink | jsonify }},{{ end }}{{ end }}{{ else }}{{ with .Resources.ByType "image" }}{{ range first 1 . }}"image": {{ .Permalink | jsonify }},{{ end }}{{ end }}{{ end }}{{ end }}
+      "@type": {{ $schemaType }},
+      "headline": {{ .Title }},
+      "description": {{ partial "plain-description.html" . }},
+      "url": {{ .Permalink }},
+      "datePublished": {{ .Date.Format "2006-01-02T15:04:05-07:00" }},
+      {{ if .Lastmod }}"dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }},{{ end }}
+      {{ if .Resources.ByType "image" }}{{ if .Params.featured }}{{ with .Resources.Match .Params.featured }}{{ range first 1 . }}"image": {{ .Permalink }},{{ end }}{{ end }}{{ else }}{{ with .Resources.ByType "image" }}{{ range first 1 . }}"image": {{ .Permalink }},{{ end }}{{ end }}{{ end }}{{ end }}
+      {{ with .Params.keywords | default .Params.tags }}"keywords": {{ . }},{{ end }}
       "author": {
         "@type": "Person",
-        "name": {{ .Site.Params.author | jsonify }},
-        "url": {{ .Site.BaseURL | jsonify }}
+        "name": {{ .Site.Params.author }},
+        "url": {{ .Site.BaseURL }}
       },
       "publisher": {
         "@type": "Person",
-        "name": {{ .Site.Params.author | jsonify }}
+        "name": {{ .Site.Params.author }}
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": {{ .Permalink | jsonify }}
+        "@id": {{ .Permalink }}
       }
     }
     </script>
@@ -44,7 +54,7 @@
         {{ end }}
     </div>
     {{ end }}
-    <a href="https://rickymoorhouse.uk/" rel="author" class="p-author h-card"></a>
+    <a href="https://rickymoorhouse.uk/" rel="author" class="p-author h-card">Ricky Moorhouse</a>
     <!-- experimental comments -->
      {{ if .Params.bsky }}
      <bsky-conversation uri="https://bsky.app/profile/did:plc:r53zv4vpzeihop3aliwyejlu/post/{{ .Params.bsky }}"></bsky-conversation>    

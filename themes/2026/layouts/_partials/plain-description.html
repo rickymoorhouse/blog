@@ -1,0 +1,3 @@
+{{- /* Plain-text description for metadata: description, else summary, else title. */ -}}
+{{- $d := .Description | default .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+{{- return ($d | default .Title | truncate 200 | htmlUnescape) -}}
