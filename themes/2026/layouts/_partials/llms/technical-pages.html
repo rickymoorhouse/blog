@@ -1,0 +1,8 @@
+{{- /* Blog posts and projects that count as technical writing, newest first. */ -}}
+{{- $pages := slice -}}
+{{- range where site.RegularPages "Type" "in" (slice "blog" "projects") -}}
+  {{- if eq "technical" (lower (partial "short-list-category.html" .)) -}}
+    {{- $pages = $pages | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- return $pages.ByDate.Reverse -}}

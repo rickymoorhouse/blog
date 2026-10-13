@@ -1,0 +1,4 @@
+{{- /* Markdown version of a page when it has one, else the HTML page. */ -}}
+{{- $url := .Permalink -}}
+{{- with .OutputFormats.Get "markdown" -}}{{- $url = .Permalink -}}{{- end -}}
+{{- return $url -}}
