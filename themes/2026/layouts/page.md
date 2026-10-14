@@ -1,10 +1,12 @@
 {{- if and .File (eq .File.ContentBaseName "about") -}}
 {{- /* SocialSpec profile; build.sh also copies this to /.well-known/about.md */ -}}
 ---
+title: "About"
+{{- with or (cond .Date.IsZero nil .Date) (cond .Lastmod.IsZero nil .Lastmod) }}
+created_at: {{ .Format "2006-01-02T15:04:05-07:00" }}
+{{- end }}
 summary: {{ site.Params.description | jsonify }}
 ---
-# {{ site.Title }}
-
 {{ .RenderShortcodes | strings.TrimSpace }}
 
 ## Elsewhere

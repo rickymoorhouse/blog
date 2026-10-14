@@ -10,6 +10,12 @@
     <link rel="me" href="https://sifa.id/p/rickymoorhouse.uk">
     <link rel="pgpkey" href="/key.pub">
     <link rel="blogroll" type="text/x-opml" title="Feeds I follow" href="/.well-known/following.opml">
+    <link rel="following" type="text/x-opml" href="/.well-known/following.opml">
+    {{- /* HyperTexting profile metadata (no email: contact is via the Letterbird form) */}}
+    <meta name="hypergraph:site_name" content="{{ site.Title }}">
+    <meta name="hypergraph:name" content="{{ site.Params.author }}">
+    <meta name="hypergraph:favicon" content="{{ "rmlogo-512.png" | absURL }}">
+    <meta name="hypergraph:cover" content="{{ "images/social-share.png" | absURL }}">
     <link rel="ai-catalog" type="application/ai-catalog+json" href="/.well-known/ai-catalog.json">
     <link rel="site.standard.publication" href="at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.publication/3mos5q3a7jf2w">
     {{ if .Params.atUri }}
@@ -49,8 +55,8 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:width" content="1200" />
     {{- end -}}
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
-    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}{{ end }}" />
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}{{ end }}" />
     <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
     <meta property="og:url" content="{{ .Permalink }}" />

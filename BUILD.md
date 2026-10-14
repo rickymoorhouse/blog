@@ -26,6 +26,24 @@ The equivalent direct command is:
 ./scripts/build.sh
 ```
 
+## Blogroll
+
+`data/blogroll.yaml` drives `/blogroll/` and `/.well-known/following.opml`. Import feed reader OPML exports (several at once is fine) with:
+
+```sh
+python3 scripts/import_opml.py --dry-run export1.opml export2.opml   # preview
+python3 scripts/import_opml.py export1.opml export2.opml
+```
+
+Duplicate feeds are skipped (ignoring http/https, `www.`, trailing slashes and tracking parameters), and existing entries are never overwritten or reordered; only a missing `htmlUrl` or `description` is filled in. The innermost OPML folder becomes the category.
+
+Check every feed and site in the blogroll for broken links, redirects, non-feeds, stale feeds and secret-looking URLs (network access, so it isn't part of the build; exits 1 on broken links):
+
+```sh
+mise run check-blogroll                                         # summary and problems
+python3 scripts/check_blogroll.py --report ~/blog-feed-check.md # full Markdown report
+```
+
 ## Publish
 
 Publishing requires Bunny credentials. On macOS, the deploy script reads the existing `bunny-storage` and `bunny-apikey` Keychain entries. On Linux, provide environment variables:
