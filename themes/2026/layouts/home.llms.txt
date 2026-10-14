@@ -39,6 +39,6 @@ The technical writing is the most substantive content here. The full text of it 
 - [Shows]({{ site.BaseURL }}shows/): gigs and theatre
 - [Flights]({{ site.BaseURL }}flights/): flight log
 - [Reading]({{ site.BaseURL }}reading/): reading log by year
-- [RSS feed]({{ site.BaseURL }}index.xml)
-- [JSON feed]({{ site.BaseURL }}index.json)
+- [RSS feed]({{ site.BaseURL }}feed.xml)
+- [JSON feed]({{ site.BaseURL }}feed.json)
 - [Sitemap]({{ site.BaseURL }}sitemap.xml)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>{{ site.Params.author | htmlEscape }}'s followed feeds</title>
+    <dateModified>{{ now.UTC.Format "Mon, 02 Jan 2006 15:04:05 GMT" }}</dateModified>
+    <ownerName>{{ site.Params.author | htmlEscape }}</ownerName>
+    <ownerId>{{ site.BaseURL | htmlEscape }}</ownerId>
+    <docs>https://opml.org/spec2.opml</docs>
+  </head>
+  <body>
+{{- range partial "blogroll/groups.html" . }}
+{{- $indent := "    " }}
+{{- with .name }}
+    <outline text="{{ . | htmlEscape }}">
+{{- $indent = "      " }}
+{{- end }}
+{{- range .feeds }}
+{{ $indent }}<outline type="rss" text="{{ .title | htmlEscape }}" title="{{ .title | htmlEscape }}" xmlUrl="{{ .xmlUrl | htmlEscape }}"
+{{- with .htmlUrl }} htmlUrl="{{ . | htmlEscape }}"{{ end }}
+{{- with .description }} description="{{ . | htmlEscape }}"{{ end }}/>
+{{- end }}
+{{- if .name }}
+    </outline>
+{{- end }}
+{{- end }}
+  </body>
+</opml>

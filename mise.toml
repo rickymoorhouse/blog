@@ -11,6 +11,10 @@ run = "./scripts/build.sh"
 description = "Run the site validation suite"
 run = "python3 scripts/validate.py"
 
+[tasks.check-blogroll]
+description = "Check blogroll feeds and sites for broken links"
+run = "python3 scripts/check_blogroll.py"
+
 [tasks."pre-commit-install"]
 description = "Install pre-commit hook for site validation"
 run = "git config core.hooksPath .githooks && chmod +x .githooks/pre-commit"

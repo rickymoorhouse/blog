@@ -2,7 +2,7 @@
   "version": "https://jsonfeed.org/version/1",
   "title": {{ .Site.Title | jsonify }},
   "home_page_url": {{ .Site.BaseURL | jsonify }},
-  "feed_url": {{ .Permalink | jsonify }},
+  "feed_url": {{ with .OutputFormats.Get "feedjson" }}{{ .Permalink | jsonify }}{{ else }}{{ .Permalink | jsonify }}{{ end }},
   {{ if isset .Site.Params "description" }}
   "description": {{ .Site.Params.description | jsonify }},
   {{ end }}

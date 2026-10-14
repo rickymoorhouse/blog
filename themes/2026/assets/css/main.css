@@ -1978,3 +1978,14 @@ iframe.wait-autoplay { opacity: 0 }
 [data-theme="dark"] .chroma .gt { color:#ff7b72 }
 [data-theme="dark"] .chroma .gl { text-decoration:underline }
 [data-theme="dark"] .chroma .w { color:#6e7681 }
+
+/* Blogroll */
+.blogroll-list .blogroll-feed {
+  font-size: 0.75em;
+  color: var(--text-muted);
+  margin-left: 0.25em;
+}
+.blogroll-list .p-note,
+.blogroll-empty {
+  color: var(--text-muted);
+}

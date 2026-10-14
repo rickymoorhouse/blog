@@ -1,0 +1,2 @@
+{{- /* Home RSS, published as /feed.xml */ -}}
+{{- partial "feeds/rss.xml" . -}}

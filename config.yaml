@@ -76,7 +76,23 @@ deployment:
     gzip: false
   - pattern: "^.+\\.(html|xml|json)$"
     gzip: false
+mediaTypes:
+  application/feed+json:
+    suffixes: ["json"]
+  text/x-opml:
+    suffixes: ["opml"]
 outputFormats:
+  # Home feeds at /feed.xml and /feed.json; section and taxonomy RSS stay at index.xml
+  feedxml:
+    mediaType: "application/rss+xml"
+    baseName: "feed"
+    rel: "alternate"
+    noUgly: true
+  feedjson:
+    mediaType: "application/feed+json"
+    baseName: "feed"
+    rel: "alternate"
+    isPlainText: true
   llms:
     mediaType: "text/plain"
     baseName: "llms"
@@ -92,8 +108,14 @@ outputFormats:
     baseName: "search"
     isPlainText: true
     notAlternative: true
+  # followspec list built from data/blogroll.yaml; build.sh moves it to /.well-known/following.opml
+  following:
+    mediaType: "text/x-opml"
+    baseName: "following"
+    isPlainText: true
+    notAlternative: true
 outputs:
-  home: ["HTML", "RSS", "MARKDOWN", "JSON", "LLMS", "LLMSFULL", "SEARCH"]
+  home: ["HTML", "FEEDXML", "MARKDOWN", "FEEDJSON", "LLMS", "LLMSFULL", "SEARCH", "FOLLOWING"]
   page: ["HTML", "MARKDOWN"]
 services:
   rss:

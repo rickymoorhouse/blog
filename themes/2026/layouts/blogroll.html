@@ -1,0 +1,30 @@
+{{ partial "header" . }}
+{{ $.Scratch.Set "template" "single"}}
+{{ $groups := partial "blogroll/groups.html" . }}
+<main class="{{ .Type }} single blogroll">
+  <article class="h-entry">
+    <h4 class="p-name">{{ .Title }}</h4>
+    <div class="text-left e-content">
+      {{ .Content }}
+      {{ with $groups }}
+        {{ range . }}
+          {{ with .name }}<h2>{{ . }}</h2>{{ end }}
+          <ul class="blogroll-list">
+            {{ range .feeds }}
+            <li class="h-card">
+              <a class="p-name u-url" href="{{ .htmlUrl | default .xmlUrl }}">{{ .title }}</a>
+              <a class="blogroll-feed" href="{{ .xmlUrl }}" title="{{ .title }} feed">RSS</a>
+              {{ with .description }}<span class="p-note"> - {{ . }}</span>{{ end }}
+            </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      {{ else }}
+        <p class="blogroll-empty">Coming soon: I'm still gathering the list.</p>
+      {{ end }}
+      <p><a href="/.well-known/following.opml" type="text/x-opml" download="following.opml">Download as OPML</a> to import into your feed reader.</p>
+    </div>
+    <a href="{{ site.BaseURL }}" rel="author" class="p-author h-card"></a>
+  </article>
+</main>
+{{ partial "footer.html" . }}

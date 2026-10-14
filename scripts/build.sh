@@ -28,18 +28,18 @@ cd "$ROOT_DIR"
     --cleanDestinationDir \
     --printPathWarnings
 
-cp public/index.xml public/feed.xml
-cp public/index.json public/feed.json
 mkdir -p public/.well-known
 cp public/about/index.md public/.well-known/about.md
+mv public/following.opml public/.well-known/following.opml
 
 "$PYTHON_BIN" scripts/generate_flights.py
 
 "$PAGEFIND_BIN"
 
-"$JQ_BIN" -e . public/index.json >/dev/null
+"$JQ_BIN" -e . public/feed.json >/dev/null
 "$JQ_BIN" -e . public/activitypub/index.json >/dev/null
 "$JQ_BIN" -e . public/map/index.json >/dev/null
 "$JQ_BIN" -e . public/flights.json >/dev/null
+"$PYTHON_BIN" -c 'import sys, xml.dom.minidom; xml.dom.minidom.parse(sys.argv[1])' public/.well-known/following.opml
 
 printf 'Build and output validation completed successfully.\n'
