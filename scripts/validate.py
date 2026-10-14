@@ -9,6 +9,7 @@ import os
 import re
 import sys
 import yaml
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 blog_dir = Path(__file__).resolve().parent.parent
@@ -34,15 +35,15 @@ def check_feed(path, label):
     
     if label == 'home':
         if 'version' not in d or not isinstance(d['version'], str):
-            track_error(f"{label} index.json: version must be a string")
+            track_error(f"{label} feed.json: version must be a string")
         if 'title' not in d or not isinstance(d['title'], str):
-            track_error(f"{label} index.json: title must be a string")
+            track_error(f"{label} feed.json: title must be a string")
         if 'home_page_url' not in d or not isinstance(d['home_page_url'], str):
-            track_error(f"{label} index.json: home_page_url must be a string")
+            track_error(f"{label} feed.json: home_page_url must be a string")
         if 'feed_url' not in d or not isinstance(d['feed_url'], str):
-            track_error(f"{label} index.json: feed_url must be a string")
+            track_error(f"{label} feed.json: feed_url must be a string")
         if 'items' not in d or not isinstance(d['items'], list):
-            track_error(f"{label} index.json: items must be a list")
+            track_error(f"{label} feed.json: items must be a list")
     elif label == 'activitypub':
         if '@context' not in d or d['@context'] != 'https://www.w3.org/ns/activitystreams':
             track_error(f"{label} index.json: @context must be https://www.w3.org/ns/activitystreams")
@@ -235,6 +236,28 @@ def check_suppressions():
         return False
 
 
+def check_following_opml():
+    """Check the followspec OPML parses and every feed outline has an absolute http(s) xmlUrl."""
+    path = Path('public/.well-known/following.opml')
+    try:
+        root = ET.parse(path).getroot()
+    except Exception as e:
+        track_error(f"{path} fails to parse: {e}")
+        return False
+    if root.tag != 'opml' or root.find('body') is None:
+        track_error(f"{path}: expected <opml> with a <body>")
+        return False
+    ok = True
+    feeds = [o for o in root.iter('outline') if 'xmlUrl' in o.attrib]
+    for o in feeds:
+        url = o.get('xmlUrl', '')
+        if not re.match(r'^https?://[^/\s]+', url):
+            track_error(f"{path}: outline {o.get('text')!r} has non-absolute xmlUrl {url!r}")
+            ok = False
+    print(f"  {path}: {len(feeds)} feed(s)")
+    return ok
+
+
 def main():
     global ERRORS
     ERRORS = 0
@@ -248,7 +271,7 @@ def main():
     # 1. JSON feeds
     print("\n--- JSON Feeds ---")
     for path, label in [
-        ('public/index.json', 'home'),
+        ('public/feed.json', 'home'),
         ('public/activitypub/index.json', 'activitypub'),
         ('public/map/index.json', 'map'),
         ('public/flights.json', 'flights'),
@@ -281,6 +304,11 @@ def main():
     if not check_suppressions():
         all_pass = False
     
+    # 7. followspec OPML
+    print("\n--- Following OPML ---")
+    if not check_following_opml():
+        all_pass = False
+
     # Summary
     print("\n" + "=" * 60)
     if ERRORS == 0:
