@@ -1,3 +1,18 @@
+{{- if and .File (eq .File.ContentBaseName "about") -}}
+{{- /* SocialSpec profile; build.sh also copies this to /.well-known/about.md */ -}}
+---
+summary: {{ site.Params.description | jsonify }}
+---
+# {{ site.Title }}
+
+{{ .RenderShortcodes | strings.TrimSpace }}
+
+## Elsewhere
+
+{{ range site.Menus.icon -}}
+- [{{ .Title }}]({{ .URL }})
+{{ end -}}
+{{- else -}}
 ---
 title: {{ .Title | jsonify }}
 description: {{ .Description | default .Summary | plainify | jsonify }}
@@ -8,7 +23,7 @@ tags: {{ .Params.tags | jsonify }}
 canonical: "{{ .Permalink }}"
 ---
 # {{ .Title }}
-{{ .RawContent }}
+{{ .RenderShortcodes }}
 
 
     
@@ -20,3 +35,4 @@ canonical: "{{ .Permalink }}"
 {{ end }}
 
 {{ .Site.Params.copyright | default "&copy; All rights reserved." | markdownify }}
+{{- end }}

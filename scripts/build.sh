@@ -28,6 +28,11 @@ cd "$ROOT_DIR"
     --cleanDestinationDir \
     --printPathWarnings
 
+cp public/index.xml public/feed.xml
+cp public/index.json public/feed.json
+mkdir -p public/.well-known
+cp public/about/index.md public/.well-known/about.md
+
 "$PYTHON_BIN" scripts/generate_flights.py
 
 "$PAGEFIND_BIN"
