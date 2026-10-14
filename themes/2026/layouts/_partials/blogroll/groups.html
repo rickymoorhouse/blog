@@ -1,0 +1,15 @@
+{{- /*
+  Groups data/blogroll.yaml feeds by category, keeping file order.
+  Returns a slice of dicts: { name: "" | category, feeds: [...] }, uncategorised first.
+*/ -}}
+{{- $feeds := default slice hugo.Data.blogroll.feeds -}}
+{{- $names := slice "" -}}
+{{- range $feeds }}{{ with .category }}{{ $names = $names | append . }}{{ end }}{{ end -}}
+{{- $groups := slice -}}
+{{- range uniq $names -}}
+  {{- $name := . -}}
+  {{- $members := slice -}}
+  {{- range $feeds }}{{ if eq (default "" .category) $name }}{{ $members = $members | append . }}{{ end }}{{ end -}}
+  {{- with $members }}{{ $groups = $groups | append (dict "name" $name "feeds" .) }}{{ end -}}
+{{- end -}}
+{{- return $groups -}}
