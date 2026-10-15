@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#006646">
+<title>SocialSpec Checker</title>
+<meta name="description" content="Check a site's SocialSpec files (feed, following.opml, about.md and contact.vcf) for status, content type, CORS and valid content. Runs entirely in your browser.">
+<style>
+/* Tokens from rickymoorhouse.uk/style-guide. Layout: fixed green sidebar + a single 800px reading column. */
+:root {
+  --colour-primary: #006646;
+  --colour-primary-bright: #009966;
+  --colour-secondary: #dd8800;
+  --colour-coral: #D96040;
+  --colour-side-text: #ffffff;
+  --bg-body: #fafefd;
+  --bg-surface: #ffffff;
+  --bg-code: #f5f5f5;
+  --bg-pass: #e3f4ec;
+  --bg-warn: #fbefdc;
+  --bg-fail: #fbe7e1;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #405B5E;
+  --link-color: #006699;
+  --link-hover: var(--colour-secondary);
+  --border: #e0e6e4;
+
+  --font-body: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --font-heading: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium", "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+  --font-sans: system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+  --text-xs: 0.75rem; --text-sm: 0.875rem; --text-base: 1.15rem;
+  --text-xl: 1.25rem; --text-2xl: 1.5rem; --text-3xl: 1.7rem;
+  --space-xs: 0.25rem; --space-sm: 0.5rem; --space-md: 1rem; --space-lg: 1.5rem; --space-xl: 28px; --space-2xl: 3rem;
+  --space-baseline: 28px;
+  --border-radius-sm: 4px; --border-radius: 8px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --transition-fast: 150ms ease;
+  --sidebar-width: 60px;
+  --content-max-width: 800px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-body: #1a1d1a; --bg-surface: #222522; --bg-code: #2a2d2a;
+    --bg-pass: #1d3329; --bg-warn: #3a2e18; --bg-fail: #3d231c;
+    --text-primary: #e0e0e0; --text-secondary: #b0b0b0; --text-muted: #A8A8A8;
+    --link-color: #99ccff; --border: #343834; --colour-coral: #E07B5B;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg-body: #1a1d1a; --bg-surface: #222522; --bg-code: #2a2d2a;
+  --bg-pass: #1d3329; --bg-warn: #3a2e18; --bg-fail: #3d231c;
+  --text-primary: #e0e0e0; --text-secondary: #b0b0b0; --text-muted: #A8A8A8;
+  --link-color: #99ccff; --border: #343834; --colour-coral: #E07B5B;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { font-size: var(--text-base); line-height: var(--space-baseline); -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg-body); color: var(--text-primary); font-family: var(--font-body); min-height: 100vh; }
+a { color: var(--link-color); transition: color var(--transition-fast); }
+a:hover { color: var(--link-hover); }
+:focus-visible { outline: 2px solid var(--colour-primary-bright); outline-offset: 2px; }
+::selection { background: #7FC5B4; color: #1a1d1a; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 300; color: var(--colour-primary-bright); margin: 0; line-height: 1.25; text-wrap: balance; }
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+p { margin: 0; max-width: 65ch; }
+code { font-family: var(--font-mono); font-size: 0.8em; background: var(--bg-code); padding: 1px 5px; border-radius: var(--border-radius-sm); overflow-wrap: anywhere; }
+ul { margin: 0; padding-left: var(--space-md); }
+ul li::marker { color: var(--colour-primary); }
+
+/* Sidebar, as on the blog */
+.side {
+  position: fixed; top: 0; left: 0; z-index: 10; width: var(--sidebar-width); height: 100%;
+  background: var(--colour-primary); box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-md);
+  padding: calc(var(--space-md) + env(safe-area-inset-top, 0px)) 0 calc(var(--space-md) + env(safe-area-inset-bottom, 0px));
+}
+.side .mark { width: 36px; height: 36px; display: grid; place-content: center; }
+.side .mark svg { width: 32px; height: 32px; }
+.side .title { writing-mode: vertical-rl; font-family: var(--font-heading); font-size: 1.1rem; color: var(--colour-side-text); white-space: nowrap; letter-spacing: 0.02em; }
+.side button {
+  margin-top: auto; background: none; border: 0; color: var(--colour-side-text); font-size: 1.2rem; cursor: pointer;
+  width: 40px; height: 40px; border-radius: var(--border-radius-sm);
+}
+.side button:hover { background: rgba(255,255,255,0.12); }
+
+main {
+  margin-left: var(--sidebar-width);
+  padding-inline: var(--space-md);
+  padding-block: var(--space-2xl) var(--space-2xl);
+}
+.col { max-width: var(--content-max-width); margin: 0 auto; display: grid; gap: var(--space-xl); }
+.intro { display: grid; gap: var(--space-sm); }
+.intro p { color: var(--text-secondary); }
+
+form { display: flex; gap: var(--space-sm); flex-wrap: wrap; }
+form input {
+  flex: 1 1 280px; min-width: 0; font: 1rem/1.3 var(--font-mono); color: var(--text-primary);
+  background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--border-radius-sm);
+  padding: 10px 12px; box-shadow: var(--shadow-sm);
+}
+form button {
+  font: 600 var(--text-sm)/1 var(--font-sans); color: #fff; background: var(--colour-primary);
+  border: 0; border-radius: var(--border-radius-sm); padding: 0 var(--space-lg); min-height: 44px; cursor: pointer;
+  transition: background var(--transition-fast);
+}
+form button:hover { background: var(--colour-primary-bright); }
+form button:disabled { opacity: 0.6; cursor: progress; }
+
+/* Score */
+.score { display: flex; gap: var(--space-lg); align-items: center; flex-wrap: wrap; }
+.score .num { font: 300 3.4rem/1 var(--font-heading); color: var(--colour-primary-bright); font-variant-numeric: tabular-nums; }
+.score .num small { font-size: 1.1rem; color: var(--text-secondary); }
+.score .verdict { display: grid; gap: var(--space-xs); min-width: 0; flex: 1 1 240px; }
+.score .verdict strong { font-family: var(--font-heading); font-weight: 400; font-size: var(--text-xl); }
+.score .verdict span { font: var(--text-sm)/1.4 var(--font-sans); color: var(--text-secondary); overflow-wrap: anywhere; }
+.meter { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-xs); width: 100%; }
+.meter i { height: 6px; border-radius: 3px; background: var(--border); }
+.meter i[data-s=pass] { background: var(--colour-primary-bright); }
+.meter i[data-s=warn] { background: var(--colour-secondary); }
+.meter i[data-s=fail] { background: var(--colour-coral); }
+
+/* Profile preview: what a subscriber would build from these files */
+.profile {
+  background: var(--bg-surface); border-radius: var(--border-radius); box-shadow: var(--shadow-sm);
+  padding: var(--space-lg); display: grid; gap: var(--space-sm); border-top: 3px solid var(--colour-primary);
+}
+.profile .label { font: 600 var(--text-xs)/1 var(--font-sans); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+.profile .who { font: 300 var(--text-2xl)/1.2 var(--font-heading); }
+.profile p { color: var(--text-secondary); }
+.profile .facts { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); font: var(--text-sm)/1.5 var(--font-sans); }
+.profile .facts span { overflow-wrap: anywhere; }
+
+/* File cards */
+.files { display: grid; gap: var(--space-md); }
+.file {
+  background: var(--bg-surface); border-radius: var(--border-radius); box-shadow: var(--shadow-sm);
+  padding: var(--space-md) var(--space-lg); display: grid; gap: var(--space-sm); border-left: 4px solid var(--border);
+}
+.file[data-s=pass] { border-left-color: var(--colour-primary-bright); }
+.file[data-s=warn] { border-left-color: var(--colour-secondary); }
+.file[data-s=fail] { border-left-color: var(--colour-coral); }
+.file header { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-sm) var(--space-md); flex-wrap: wrap; }
+.file header .path { font: var(--text-sm)/1.4 var(--font-mono); color: var(--text-muted); overflow-wrap: anywhere; }
+.file .pts { font: var(--text-sm)/1 var(--font-sans); color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.chip {
+  font: 500 var(--text-xs)/1 var(--font-sans); padding: 5px 9px; border-radius: 99px;
+  background: var(--bg-code); color: var(--text-secondary);
+}
+.chip::before { margin-right: 4px; }
+.chip[data-s=pass] { background: var(--bg-pass); color: var(--colour-primary-bright); }
+.chip[data-s=pass]::before { content: "✓"; }
+.chip[data-s=warn] { background: var(--bg-warn); color: var(--colour-secondary); }
+.chip[data-s=warn]::before { content: "!"; }
+.chip[data-s=fail] { background: var(--bg-fail); color: var(--colour-coral); }
+.chip[data-s=fail]::before { content: "✕"; }
+.chip[data-s=running] { animation: pulse 1.1s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: 0.4; } }
+.file ul { font-size: var(--text-sm); line-height: 1.5; color: var(--text-secondary); }
+.file ul li { overflow-wrap: anywhere; }
+.file .fix { font-size: var(--text-sm); line-height: 1.5; }
+.file .fix b { font-family: var(--font-sans); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.05em; color: var(--colour-secondary); margin-right: 4px; }
+.file .spec { font: var(--text-xs)/1 var(--font-sans); }
+
+footer { font: var(--text-sm)/1.6 var(--font-sans); color: var(--text-secondary); border-top: 1px solid var(--border); padding-top: var(--space-md); display: grid; gap: var(--space-sm); }
+footer p { max-width: none; }
+
+@media (prefers-reduced-motion: reduce) { .chip[data-s=running] { animation: none; } * { transition: none !important; } }
+</style>
+</head>
+<body>
+<aside class="side">
+  <div class="mark" aria-hidden="true">
+    <svg viewBox="0 0 32 32" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round">
+      <circle cx="9" cy="23" r="2.4" fill="#ffffff" stroke="none"/>
+      <path d="M7 14a11 11 0 0 1 11 11"/><path d="M7 7a18 18 0 0 1 18 18"/>
+    </svg>
+  </div>
+  <span class="title">SocialSpec Checker</span>
+  <button id="theme" type="button" aria-label="Toggle dark or light mode">◐</button>
+</aside>
+
+<main>
+  <div class="col">
+    <section class="intro">
+      <h1>SocialSpec Checker</h1>
+      <p>A <a href="https://socialspec.org">SocialSpec</a> site publishes a feed and three small files that let anyone build its social profile in a few HTTP requests. Enter a domain to check them. The checks run in your browser, like a real subscriber would.</p>
+    </section>
+
+    <form id="form" novalidate>
+      <input id="site" type="text" inputmode="url" autocomplete="url" spellcheck="false" aria-label="Site address" placeholder="example.com" value="rickymoorhouse.uk">
+      <button id="go" type="submit">Check site</button>
+    </form>
+
+    <section class="score" aria-live="polite">
+      <div class="num" id="score">–<small> / 100</small></div>
+      <div class="verdict">
+        <strong id="verdict">Not checked yet</strong>
+        <span id="target">Each file below is scored on whether it exists and parses, its Content-Type, and CORS.</span>
+        <div class="meter" id="meter"><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <section class="profile" id="profile" hidden>
+      <span class="label">Profile a subscriber would see</span>
+      <div class="who" id="pWho"></div>
+      <p id="pAbout"></p>
+      <div class="facts" id="pFacts"></div>
+    </section>
+
+    <section class="files" id="files"></section>
+
+    <footer>
+      <p>Scoring: each file is worth 25 points. 12.5 for existing and parsing, 6.25 for the expected Content-Type and 6.25 for allowing cross-origin requests (<code>Access-Control-Allow-Origin</code>).</p>
+      <p>A browser can't tell a missing file apart from one that blocks CORS, so either way it's reported as unreadable. To a browser-based subscriber, both look the same.</p>
+      <p>Add <code>?site=example.com</code> to this page's address to run a check on load. Specs: <a href="https://followspec.org">FollowSpec</a> · <a href="https://aboutspec.org">AboutSpec</a> · <a href="https://contactspec.org">ContactSpec</a></p>
+    </footer>
+  </div>
+</main>
+
+<script>
+(() => {
+"use strict";
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmt = s => esc(s).replace(/`([^`]+)`/g, "<code>$1</code>");
+const trunc = (s, n = 80) => (s = String(s).replace(/\s+/g, " ").trim()).length > n ? s.slice(0, n - 1) + "…" : s;
+const looksHtml = t => /^\s*(<!doctype html|<html[\s>])/i.test(t || "");
+
+// ---------- theme toggle (same behaviour as the blog) ----------
+const themeBtn = $("#theme");
+const current = () => document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+themeBtn.addEventListener("click", () => {
+  const next = current() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("theme", next); } catch {}
+});
+
+// ---------- fetching: direct only, like a browser-based subscriber ----------
+async function get(url, accept) {
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), 15000);
+  try {
+    const r = await fetch(url, { headers: { Accept: accept }, cache: "no-store", signal: ctl.signal });
+    return { status: r.status, contentType: (r.headers.get("content-type") || "").split(";")[0].trim().toLowerCase(), text: await r.text(), url: r.url };
+  } catch (e) {
+    return { error: e.name === "AbortError" ? "timed out" : "blocked" };
+  } finally { clearTimeout(timer); }
+}
+
+const parseXml = t => { const d = new DOMParser().parseFromString(t, "application/xml"); return d.getElementsByTagName("parsererror").length ? null : d; };
+
+// ---------- file definitions ----------
+const FILES = [
+  {
+    id: "feed", name: "Feed", paths: ["/feed.xml", "/feed.json"], accept: "application/rss+xml, application/atom+xml, application/feed+json, application/json;q=0.9, */*;q=0.5",
+    spec: ["socialspec.org", "https://socialspec.org"],
+    ctWant: "an RSS, Atom or JSON Feed type",
+    ctFix: "Serve it as `application/rss+xml`, `application/atom+xml` or `application/feed+json`.",
+    ctOk: (ct, path) => path.endsWith(".json") ? /^application\/(feed\+)?json$/.test(ct) : /^(application\/(rss\+xml|atom\+xml|xml)|text\/xml)$/.test(ct),
+    missing: "Publish your RSS, Atom or JSON Feed at `/feed.xml` or `/feed.json`, the entry point SocialSpec clients look for.",
+    parse(t, path) {
+      if (path.endsWith(".json")) {
+        let j; try { j = JSON.parse(t); } catch { return { ok: false, msg: "Not valid JSON." }; }
+        if (!/^https:\/\/jsonfeed\.org\/version\//.test(j.version || "")) return { ok: false, msg: "JSON is missing a jsonfeed.org `version`." };
+        const n = Array.isArray(j.items) ? j.items.length : 0;
+        return { ok: true, msg: `JSON Feed${j.title ? ` “${trunc(j.title, 50)}”` : ""} with ${n} item${n === 1 ? "" : "s"}.`, data: { title: j.title } };
+      }
+      const d = parseXml(t); if (!d) return { ok: false, msg: "Not well-formed XML." };
+      const root = d.documentElement.localName;
+      if (root === "rss") { const n = d.getElementsByTagName("item").length; const title = d.querySelector("channel > title")?.textContent; return { ok: true, msg: `RSS ${d.documentElement.getAttribute("version") || ""} feed${title ? ` “${trunc(title, 50)}”` : ""} with ${n} item${n === 1 ? "" : "s"}.`, data: { title } }; }
+      if (root === "feed") { const n = d.getElementsByTagNameNS("*", "entry").length; const title = d.getElementsByTagNameNS("*", "title")[0]?.textContent; return { ok: true, msg: `Atom feed${title ? ` “${trunc(title, 50)}”` : ""} with ${n} entr${n === 1 ? "y" : "ies"}.`, data: { title } }; }
+      return { ok: false, msg: `XML root is \`<${root}>\`, not an RSS or Atom feed.` };
+    }
+  },
+  {
+    id: "following", name: "Following", paths: ["/.well-known/following.opml"], accept: "text/x-opml",
+    spec: ["FollowSpec", "https://followspec.org"],
+    ctFix: "Serve it with `Content-Type: text/x-opml`.",
+    ctWant: "`text/x-opml`", ctOk: ct => ct === "text/x-opml",
+    missing: "Export your subscriptions as OPML and publish them at `/.well-known/following.opml`.",
+    parse(t) {
+      const d = parseXml(t);
+      if (!d || d.documentElement.localName !== "opml") return { ok: false, msg: "Not a valid OPML document." };
+      const outlines = [...d.querySelectorAll("outline[xmlUrl]")];
+      if (!outlines.length) return { ok: false, msg: "OPML has no `<outline>` elements with an `xmlUrl`." };
+      const names = outlines.map(o => o.getAttribute("text") || o.getAttribute("title")).filter(Boolean);
+      return { ok: true, msg: `OPML ${d.documentElement.getAttribute("version") || ""} listing ${outlines.length} feed${outlines.length === 1 ? "" : "s"}${names.length ? `, including ${names.slice(0, 3).map(n => trunc(n, 30)).join(", ")}` : ""}.`, data: { count: outlines.length } };
+    }
+  },
+  {
+    id: "about", name: "About", paths: ["/.well-known/about.md"], accept: "text/markdown",
+    spec: ["AboutSpec", "https://aboutspec.org"],
+    ctFix: "Serve it with `Content-Type: text/markdown`.",
+    ctWant: "`text/markdown`", ctOk: ct => ct === "text/markdown",
+    missing: "Write a Markdown bio with as many links as you like and publish it at `/.well-known/about.md`.",
+    parse(t) {
+      if (!t.trim()) return { ok: false, msg: "File is empty." };
+      const fm = /^---\r?\n([\s\S]*?)\r?\n---/.exec(t);
+      const summary = fm && (/^summary:\s*["']?(.+?)["']?\s*$/mi.exec(fm[1]) || [])[1];
+      const body = t.slice(fm ? fm[0].length : 0);
+      const firstPara = body.split(/\n\s*\n/).map(p => p.trim()).find(p => p && !/^#|^!\[|^[-*] /.test(p));
+      const links = (t.match(/\]\([^)]+\)/g) || []).length;
+      return { ok: true, msg: `${t.length.toLocaleString()} characters${fm ? " with front matter" : ""}, ${links} link${links === 1 ? "" : "s"}.`, data: { summary: summary || (firstPara && firstPara.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/[*_`]/g, "")), links } };
+    }
+  },
+  {
+    id: "contact", name: "Contact", paths: ["/.well-known/contact.vcf"], accept: "text/vcard",
+    spec: ["ContactSpec", "https://contactspec.org"],
+    ctFix: "Serve it with `Content-Type: text/vcard`.",
+    ctWant: "`text/vcard`", ctOk: ct => ct === "text/vcard",
+    missing: "Publish a vCard (version 3.0 or newer) at `/.well-known/contact.vcf`.",
+    parse(t) {
+      if (!/BEGIN:VCARD/i.test(t) || !/END:VCARD/i.test(t)) return { ok: false, msg: "Not a vCard: missing `BEGIN:VCARD` or `END:VCARD`." };
+      const unfolded = t.replace(/\r?\n[ \t]/g, "");
+      const prop = name => [...unfolded.matchAll(new RegExp(`^(?:[\\w-]+\\.)?${name}(?:;[^:\\n]*)?:(.+)$`, "gmi"))].map(m => m[1].trim());
+      const v = prop("VERSION")[0];
+      if (!v || parseFloat(v) < 3) return { ok: false, msg: `vCard version is ${v || "missing"}. ContactSpec needs 3.0 or newer.` };
+      const fn = prop("FN")[0];
+      if (!fn) return { ok: false, msg: "vCard has no `FN` (formatted name)." };
+      const email = prop("EMAIL")[0], url = prop("URL")[0];
+      const has = ["EMAIL", "URL", "TEL", "IMPP"].filter(p => prop(p).length);
+      return { ok: true, msg: `vCard ${v} for ${trunc(fn, 40)}${has.length ? `, with ${has.join(", ")}` : ""}.`, data: { fn, email, url } };
+    }
+  }
+];
+
+// ---------- check one file ----------
+async function checkFile(f, origin) {
+  let r, path;
+  for (path of f.paths) {
+    r = await get(origin + path, f.accept);
+    if (!r.error && r.status === 200 && !looksHtml(r.text)) break;
+  }
+  const res = { file: f, path, chips: [], detail: [], fixes: [], points: 0 };
+  const url = origin + path;
+  if (r.error) {
+    res.chips = [["fail", "Not readable"], ["skip", "Content-Type"], ["fail", "CORS"]];
+    res.detail.push(r.error === "timed out" ? `\`${path}\` timed out after 15 seconds.` : `The browser couldn't read ${f.paths.map(p => "`" + p + "`").join(" or ")}. Either the file is missing, or the server doesn't allow cross-origin requests.`);
+    res.fixes.push(f.missing, "Send `Access-Control-Allow-Origin: *` with the response.");
+    return finish(res);
+  }
+  // From here the browser could read the response, so CORS is allowed.
+  if (r.status !== 200) {
+    res.chips = [["fail", `HTTP ${r.status}`], ["skip", "Content-Type"], ["pass", "CORS"]];
+    res.detail.push(`${f.paths.map(p => "`" + p + "`").join(" and ")} returned HTTP ${r.status}.`);
+    res.fixes.push(f.missing);
+    return finish(res);
+  }
+  if (looksHtml(r.text)) {
+    res.chips = [["fail", "Returns HTML"], ["skip", "Content-Type"], ["pass", "CORS"]];
+    res.detail.push(`\`${path}\` returns an HTML page, probably a catch-all 404 page.`);
+    res.fixes.push(f.missing);
+    return finish(res);
+  }
+  const p = f.parse(r.text, path);
+  const ctOk = f.ctOk(r.contentType, path);
+  res.data = p.data;
+  res.chips = [
+    [p.ok ? "pass" : "fail", p.ok ? "Found and valid" : "Invalid"],
+    [ctOk ? "pass" : "warn", r.contentType || "No Content-Type"],
+    ["pass", "CORS"]
+  ];
+  res.detail.push(p.msg);
+  if (r.url && r.url !== url) res.detail.push(`Redirected to \`${r.url}\`.`);
+  res.detail.push(`Served as \`${r.contentType || "none"}\`${ctOk ? "." : `. Expected ${f.ctWant}.`}`);
+  if (!p.ok) res.fixes.push("Fix the file so it parses: " + p.msg.replace(/\.$/, "") + ".");
+  if (!ctOk) res.fixes.push(f.ctFix);
+  res.points = (p.ok ? 12.5 : 0) + (ctOk ? 6.25 : 0) + 6.25;
+  return finish(res);
+}
+function finish(res) {
+  res.status = res.points === 25 ? "pass" : res.points >= 12.5 ? "warn" : "fail";
+  return res;
+}
+
+// ---------- rendering ----------
+function renderFile(f, res) {
+  const el = $("#file-" + f.id);
+  const s = res ? res.status : "pending";
+  el.dataset.s = s;
+  const chips = res ? res.chips : [["running", "Checking…"]];
+  el.innerHTML = `
+    <header>
+      <div><h3>${esc(f.name)}</h3><div class="path">${f.paths.map(esc).join(" or ")}</div></div>
+      <span class="pts">${res ? `${+res.points.toFixed(2)} / 25` : ""}</span>
+    </header>
+    <div class="chips">${chips.map(([cs, label]) => `<span class="chip" data-s="${cs}">${esc(label)}</span>`).join("")}</div>
+    ${res ? `<ul>${res.detail.map(d => `<li>${fmt(d)}</li>`).join("")}</ul>` : ""}
+    ${res && res.fixes.length ? res.fixes.map(x => `<p class="fix"><b>Fix</b>${fmt(x)}</p>`).join("") : ""}
+    <a class="spec" href="${f.spec[1]}" target="_blank" rel="noopener">${esc(f.spec[0])} specification ↗</a>`;
+}
+
+function skeleton() {
+  $("#files").innerHTML = FILES.map(f => `<article class="file" id="file-${f.id}"></article>`).join("");
+  FILES.forEach(f => {
+    const el = $("#file-" + f.id);
+    el.dataset.s = "idle";
+    el.innerHTML = `
+      <header><div><h3>${esc(f.name)}</h3><div class="path">${f.paths.map(esc).join(" or ")}</div></div><span class="pts">25 points</span></header>
+      <ul><li>Expects ${fmt(f.ctWant)}, with cross-origin requests allowed.</li></ul>
+      <a class="spec" href="${f.spec[1]}" target="_blank" rel="noopener">${esc(f.spec[0])} specification ↗</a>`;
+  });
+}
+
+function renderProfile(results, origin) {
+  const by = Object.fromEntries(results.map(r => [r.file.id, r.data || {}]));
+  const name = by.contact.fn || by.feed.title;
+  if (!name && !by.about.summary && !by.following.count) { $("#profile").hidden = true; return; }
+  $("#pWho").textContent = name || new URL(origin).hostname;
+  $("#pAbout").textContent = by.about.summary ? trunc(by.about.summary, 280) : "No about.md summary available.";
+  const facts = [
+    by.following.count != null && `Following ${by.following.count} feed${by.following.count === 1 ? "" : "s"}`,
+    by.about.links != null && `${by.about.links} link${by.about.links === 1 ? "" : "s"} in bio`,
+    by.contact.email && `✉ ${by.contact.email.replace(/^mailto:/i, "")}`,
+    by.contact.url && `↗ ${by.contact.url}`
+  ].filter(Boolean);
+  $("#pFacts").innerHTML = facts.map(f => `<span>${esc(f)}</span>`).join("");
+  $("#profile").hidden = false;
+}
+
+const VERDICT = [[100, "Fully SocialSpec compliant"], [75, "Nearly there"], [50, "Partly published"], [1, "Barely started"], [0, "No SocialSpec files found"]];
+
+async function run(input) {
+  let u;
+  try { u = new URL(/^https?:\/\//i.test(input) ? input : "https://" + input); }
+  catch { $("#verdict").textContent = "That doesn't look like a site address"; $("#target").textContent = "Try a domain such as example.com."; return; }
+  const origin = u.origin;
+  const insecure = u.protocol === "http:";
+  $("#site").value = u.host;
+  $("#go").disabled = true;
+  $("#profile").hidden = true;
+  $("#score").innerHTML = `…<small> / 100</small>`;
+  $("#verdict").textContent = "Checking";
+  $("#target").textContent = origin;
+  $("#meter").innerHTML = FILES.map(() => "<i></i>").join("");
+  FILES.forEach(f => renderFile(f, null));
+
+  const results = await Promise.all(FILES.map(async (f, i) => {
+    const res = await checkFile(f, origin);
+    renderFile(f, res);
+    $("#meter").children[i].dataset.s = res.status;
+    return res;
+  }));
+
+  const total = Math.round(results.reduce((a, r) => a + r.points, 0));
+  $("#score").innerHTML = `${total}<small> / 100</small>`;
+  $("#verdict").textContent = VERDICT.find(([min]) => total >= min)[1];
+  $("#target").textContent = `${origin} · checked ${new Date().toLocaleTimeString()}${insecure ? " · SocialSpec expects HTTPS, but this address uses HTTP" : ""}`;
+  renderProfile(results, origin);
+  $("#go").disabled = false;
+  try { history.replaceState(null, "", "?site=" + encodeURIComponent(u.host)); } catch {}
+}
+
+$("#form").addEventListener("submit", e => { e.preventDefault(); const v = $("#site").value.trim(); if (v) run(v); });
+skeleton();
+const qp = new URLSearchParams(location.search).get("site");
+if (qp) run(qp);
+})();
+</script>
+</body>
+</html>
