@@ -23,8 +23,16 @@
         <link rel="site.standard.document" href="{{ . | safeURL }}">
         {{ end }}
     {{ end }}
+    {{- /* Site feeds on every page for auto-discovery; home's own feed formats are skipped below to avoid duplicates */}}
+    {{- with site.Home.OutputFormats.Get "feedxml" }}
+    <link rel="alternate" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} title="{{ site.Title }}" href="{{ .Permalink | safeURL }}">
+    {{- end }}
+    {{- with site.Home.OutputFormats.Get "feedjson" }}
+    <link rel="alternate" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} title="{{ site.Title }}" href="{{ .Permalink | safeURL }}">
+    {{- end }}
     {{ range .AlternativeOutputFormats -}}
-    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{- if and $.IsHome (in (slice "feedxml" "feedjson") .Name) }}{{ continue }}{{ end }}
+    <link rel="{{ .Rel }}" {{ printf "type=%q" .MediaType.Type | safeHTMLAttr }} href="{{ .Permalink | safeURL }}">
     {{- end -}}
     {{ partial "css" . }}
     {{- hugo.Generator -}}
