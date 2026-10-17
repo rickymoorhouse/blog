@@ -2,7 +2,7 @@
 
 > {{ site.Params.description }}
 
-This is my personal site. It mixes technical writing about API architecture, API management (IBM API Connect), SRE, observability and AI agents with personal posts about travel, photography and walking.
+This is my personal site. It mixes technical writing about API product and developer experience, API architecture and management (IBM API Connect), SRE, observability and AI agents with personal posts about travel, photography and walking.
 
 Every page has a Markdown version alongside the HTML: append `index.md` to the page URL, for example {{ site.BaseURL }}about/index.md. The links below point at those Markdown versions where they exist.
 

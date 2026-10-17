@@ -1,6 +1,6 @@
 ---
 title: Contact
-description: Get in touch about API architecture, integration, SRE or the open source tools I build.
+description: Get in touch about API product management, developer experience, architecture, SRE or the open source tools I build.
 ---
 
 <div class="contact-page">
@@ -11,8 +11,8 @@ description: Get in touch about API architecture, integration, SRE or the open s
 
 <div class="contact-top">
 <section class="contact-intro" aria-label="About me">
-<p class="contact-lede">I’m an Architect for IBM API Connect SaaS, with nearly twenty years in integration. I started in operations and SRE before moving into architecture, and I’m interested in how APIs are designed, how systems behave under pressure, and how to make the reliable path the easy one.</p>
-<p>Get in touch about API architecture, integration, SRE, speaking, a project, or simply to compare notes.</p>
+<p class="contact-lede">I’m a Technical Product Manager for IBM API Connect, with nearly twenty years in integration. I started in operations and SRE before moving into architecture and now product, and I’m interested in how APIs are designed, how systems behave under pressure, and how to make the reliable path the easy one.</p>
+<p>Get in touch about API product and developer experience, architecture, SRE, speaking, a project, or simply to compare notes.</p>
 </section>
 
 <section class="contact-card contact-message" aria-labelledby="contact-message-title">
