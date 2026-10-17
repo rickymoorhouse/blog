@@ -9,7 +9,7 @@ tags:
   - work
   - apiconnect
 summary: "After years in SRE and architecture for API Connect SaaS, I'm moving to Technical Product Manager for IBM API Connect, owning API Studio and championing stability and reliability as the foundation for what comes next."
-featured: ""
+atUri: at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3my2medg7g723
 hideImages: true
 draft: false
 ---
