@@ -1,15 +1,15 @@
 ---
-title: "Adding SocialSpec to my site"
-date: 2026-10-18
-layout: blog
+atUri: at://did:plc:r53zv4vpzeihop3aliwyejlu/site.standard.document/3my5rjxykqb2r
 category: work
-tags:
-  - blog
-  - socialspec
-  - hugo
+date: 2026-10-18
 hideImages: true
+layout: blog
+tags:
+- blog
+- socialspec
+- hugo
+title: Adding SocialSpec to my site
 ---
-
 On Tuesday, Caleb Hailey [announced](https://calebhailey.com/links/socialspec/) [SocialSpec](https://socialspec.org) around the premise that the future of social media is websites. This maps out a consistent way to expose key social data (about, contact, following) from your website based around existing standards and ways things are typically done already. This makes it very easy to adopt and add to an existing website - for me this meant the following:
 
 ## Start with a feed
