@@ -6,6 +6,9 @@ set -Eeuo pipefail
 
 ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 
+# Warn (never block) on long front matter descriptions/summaries in staged posts
+(cd "$ROOT_DIR" && python3 scripts/check_descriptions.py) || true
+
 # Run the validation script
 if ! cd "$ROOT_DIR" && python3 scripts/validate.py; then
     echo "VALIDATION FAILED - commit blocked"

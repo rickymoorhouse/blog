@@ -55,3 +55,13 @@ mise run publish
 ```
 
 The publish task builds and validates before uploading `public/` and purging the Bunny pull-zone cache.
+
+## Pre-commit hook
+
+The tracked hook in `.githooks/pre-commit` runs `scripts/validate.py` (blocking) and
+`scripts/check_descriptions.py`, which warns without blocking when a staged post's
+front matter `description` or `summary` is over 160 characters. Enable it once per clone:
+
+```sh
+git config core.hooksPath .githooks
+```
