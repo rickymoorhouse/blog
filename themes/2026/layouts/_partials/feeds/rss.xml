@@ -22,7 +22,10 @@
 {{- if .IsHome }}{{ $pctx = .Site }}{{ end }}
 {{- $pages := slice }}
 {{- if or $.IsHome $.IsSection }}
-	{{- $pages = where $pctx.RegularPages "Type" "in" (slice "blog")}}
+	{{- /* Blog posts plus shows that have a review (a rating) */}}
+	{{- $posts := where $pctx.RegularPages "Type" "in" (slice "blog") }}
+	{{- $reviews := where (where $pctx.RegularPages "Type" "shows") "Params.rating" "!=" nil }}
+	{{- $pages = ($posts | union $reviews).ByDate.Reverse }}
 {{- else }}
 	{{- $pages = $pctx.Pages }}
 {{- end }}
@@ -60,11 +63,11 @@
 				<pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
 				{{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
 				<guid>{{ .Permalink }}</guid>
-				<description>{{ .Summary | transform.XMLEscape | safeHTML }}</description>
+				<description>{{ .Summary | strings.ReplacePairs "href=\"/" "href=\"https://rickymoorhouse.uk/" | transform.XMLEscape | safeHTML }}</description>
 				{{- if .Resources.ByType "image" -}}
 					{{- if .Params.featured -}}
 				<image>{{- with .Resources.Match .Params.featured -}}{{- range first 1 . }}
-					<url>{{ .Permalink }}"</url>
+					<url>{{ .Permalink }}</url>
 				</image>				
 						{{- end -}}{{- end -}}
 					{{- end -}}

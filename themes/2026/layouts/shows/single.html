@@ -1,17 +1,82 @@
 {{ partial "header" . }}
+{{ $rating := .Params.rating }}
+{{ $best := .Params.bestRating | default 5 }}
 <main class="{{ .Type }} shows" data-pagefind-body>
-    <article>
-    {{ partial "item-header" . }}
-    <br> <div class="text-left">{{ .Content }}</div>
-    {{ with .Resources.ByType "image" }}
-      {{ range . }}
-        {{ $title := "" }}
-        {{ $exif_stats := "" }}
-          <a class="glightbox" data-title="{{ $.Scratch.Get "title" }}" href="{{ .RelPermalink }}">
-            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async" alt="{{ $.Scratch.Get "title" }}" />
-          </a>
-      {{ end }}
+    <article{{ if $rating }} class="h-entry h-review"{{ end }}>
+    <header>
+        <h1 class="p-name"><a href="{{ .RelPermalink }}" class="u-url">{{ .Title }}</a></h1>
+        <h5>
+            <span class="show-meta">
+                <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</time>
+                <span class="p-item h-event">
+                    <data class="p-name" value="{{ .Title }}"></data>
+                    <data class="dt-start" value="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}"></data>
+                    {{ with .Params.location }}<span class="p-location">{{ . }}{{ with $.Params.town }}, {{ . }}{{ end }}</span>{{ end }}
+                </span>
+                {{ with $rating }}
+                {{ $full := math.Floor . | int }}
+                <span class="review-stars" aria-label="Rated {{ . }} out of {{ $best }}" title="Rated {{ . }} out of {{ $best }}">
+                    <span aria-hidden="true">{{ strings.Repeat $full "★" }}{{ strings.Repeat (sub (int $best) $full) "☆" }}</span>
+                    <data class="p-rating" value="{{ . }}"></data><data class="p-best" value="{{ $best }}"></data>
+                </span>
+                {{ end }}
+            </span>
+            <div class="tags">
+                {{ range .Params.tags }}
+                <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="item-tag p-category tag-{{ . | lower }}">{{ . | lower }}</a>
+                {{ end }}
+                {{ with .Params.theatricalia }}
+                <a href="{{ . }}" target="_blank" class="theatricalia-link">Theatricalia</a>
+                {{ end }}
+            </div>
+        </h5>
+    </header>
+    {{ with $rating }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "name": {{ $.Title }},
+      "url": {{ $.Permalink }},
+      "datePublished": {{ $.Date.Format "2006-01-02T15:04:05-07:00" }},
+      "reviewBody": {{ partial "plain-description.html" $ }},
+      "itemReviewed": {
+        "@type": "TheaterEvent",
+        "name": {{ $.Title }},
+        "startDate": {{ $.Date.Format "2006-01-02T15:04:05-07:00" }},
+        {{ with $.Params.theatricalia }}"sameAs": {{ . }},{{ end }}
+        "location": {
+          "@type": "Place",
+          "name": {{ $.Params.location }}{{ with $.Params.town }},
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": {{ . }}
+          }{{ end }}
+        }
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": {{ . }},
+        "bestRating": {{ $best }},
+        "worstRating": 1
+      },
+      "author": {
+        "@type": "Person",
+        "name": {{ $.Site.Params.author }},
+        "url": {{ $.Site.BaseURL }}
+      }
+    }
+    </script>
     {{ end }}
+    <br> <div class="text-left{{ if $rating }} e-content{{ end }}">{{ .Content }}</div>
+    <div class="featuredPhotos">
+        {{ with .Resources.ByType "image" }}
+            {{ range . }}
+                {{ partial "photo.html" . }}
+            {{ end }}
+        {{ end }}
+    </div>
+    {{ if $rating }}<a href="{{ .Site.BaseURL }}" rel="author" class="p-author h-card" hidden>{{ .Site.Params.author }}</a>{{ end }}
 </article>
 </main>
 {{ partial "footer.html" . }}

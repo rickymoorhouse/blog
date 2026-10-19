@@ -119,6 +119,8 @@ outputFormats:
 outputs:
   home: ["HTML", "FEEDXML", "MARKDOWN", "FEEDJSON", "LLMS", "LLMSFULL", "SEARCH", "FOLLOWING"]
   page: ["HTML", "MARKDOWN"]
+  # No section RSS (e.g. /blog/index.xml); the only feeds are /feed.xml and /feed.json
+  section: ["HTML"]
 services:
   rss:
     limit: 10

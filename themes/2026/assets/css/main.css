@@ -1989,3 +1989,22 @@ iframe.wait-autoplay { opacity: 0 }
 .blogroll-empty {
   color: var(--text-muted);
 }
+
+/* Show reviews */
+.show-meta {
+  grid-column: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-sm);
+  align-items: baseline;
+}
+.show-meta .dt-published {
+  padding-left: 0;
+}
+.show-meta .p-location {
+  color: var(--text-muted);
+}
+.review-stars {
+  color: var(--colour-secondary);
+  letter-spacing: 0.1em;
+}
