@@ -9,7 +9,7 @@ params:
     author: "Ricky Moorhouse"
     description: "I’m a Technical Product Manager at IBM working on API Connect, with a background in integration, SRE and architecture. Outside of work, I enjoy spending time with family, walking with the dog and being behind a camera. Welcome to my corner of the web - I hope you find something interesting or useful here."
     # Short version (under 160 characters) for <meta name="description"> and og:description
-    metaDescription: "I’m a Technical Product Manager at IBM working on API Connect, with a background in integration, SRE and architecture."
+    metaDescription: "Ricky Moorhouse’s personal site: writing on APIs, SRE, observability and AI agents, alongside posts about travel, photography and walking with the dog."
     githubUsername: "rickymoorhouse"
     build: "main"
     mainSections: ["blog", "flights", "talks", "projects", "photos", "microblog", "shows"]
