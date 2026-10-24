@@ -6,7 +6,11 @@
   <a property="author" style="display: none;" typeof="Person" href="https://rickymoorhouse.uk/#Person" url="https://rickymoorhouse.uk/"><span property="name">Ricky Moorhouse</span></a>
   {{ if .Resources.ByType "image" }}{{ if .Params.featured }}{{ with .Resources.Match .Params.featured }}{{ range first 1 . }}<img property="image" style="display: none" src="{{ .Permalink }}"/>{{ end }}{{ end }}{{ end }}{{ end }}
   <div class="post">
+    {{ if .Params.link }}
+    <a class="u-url external" property="url" href="{{ .Params.link }}">
+    {{ else }}
     <a class="u-url" property="url" href="{{ .Permalink }}">
+    {{ end }}
       <span class="post-title" property="headline">{{ .Title }}</span>
     </a>
     {{ if .Params.summary }}<p class="post-summary" property="description">{{ .Summary }}</p>{{ end }}

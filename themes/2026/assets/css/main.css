@@ -515,6 +515,10 @@ article.blog {
   font-family: var(--font-heading);
   text-decoration: none;
 }
+a.external:before {
+  color: var(--link-color);
+  content: "🔗";
+}
 article.h-entry p, article.h-entry ul, article.h-entry ol, article.h-entry blockquote {
   margin-bottom: var(--space-baseline);
   margin-top: 0;
