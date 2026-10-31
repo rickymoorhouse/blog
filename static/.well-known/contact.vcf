@@ -4,9 +4,9 @@ PRODID:-//Apple Inc.//macOS 27.0.1//EN
 N:Moorhouse;Ricky;;;
 FN:Ricky Moorhouse
 NICKNAME:@rickymoorhouse.uk
-TITLE:Cloud Architect
+TITLE:Technical Product Manager, IBM API Connect
 EMAIL;type=INTERNET;type=pref:hello@rickymoorhouse.uk
-item1.URL;type=pref:https://rickymoorhouse.uk/
-item1.X-ABLabel:_$!<HomePage>!$_
+URL;type=pref:https://rickymoorhouse.uk/
 PHOTO;VALUE=uri:https://rickymoorhouse.uk/images/avatar.jpg
+X-SOCIALPROFILE;TYPE=iMessage;X-USER=hello@rickymoorhouse.uk:x-apple:hello@rickymoorhouse.uk
 END:VCARD
