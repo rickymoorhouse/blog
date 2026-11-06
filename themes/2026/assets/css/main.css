@@ -586,6 +586,25 @@ article strong {font-weight: 600;}
   font-size: var(--text-sm);
   margin-bottom: var(--space-xl);
 }
+.markdown-links {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  margin-top: var(--space-baseline);
+}
+.markdown-links a, .copy-markdown {
+  color: var(--text-muted);
+}
+.copy-markdown {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.markdown-links a:hover, .copy-markdown:hover {
+  color: var(--link-hover);
+}
 
 article img {
   max-width: 100%;

@@ -7,6 +7,12 @@ jq = "1.8.1"
 description = "Build and validate the Hugo site"
 run = "./scripts/build.sh"
 
+[tasks.serve]
+description = "Run the Hugo dev server, reachable from other machines on the network"
+# Bind to all interfaces; baseURL uses this machine's hostname so links work from elsewhere.
+# Extra flags pass through, e.g. `mise run serve -- --port 1314`
+run = 'hugo server --bind 0.0.0.0 --baseURL "http://$(hostname)/"'
+
 [tasks.validate]
 description = "Run the site validation suite"
 run = "python3 scripts/validate.py"
