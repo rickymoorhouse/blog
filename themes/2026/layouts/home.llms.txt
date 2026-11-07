@@ -42,3 +42,9 @@ The technical writing is the most substantive content here. The full text of it 
 - [RSS feed]({{ site.BaseURL }}feed.xml)
 - [JSON feed]({{ site.BaseURL }}feed.json)
 - [Sitemap]({{ site.BaseURL }}sitemap.xml)
+{{- $technical := slice -}}
+{{- range partial "llms/technical-pages.html" . }}{{ $technical = $technical | append .Permalink }}{{ end }}
+{{ range (where site.RegularPages "Type" "blog").ByDate.Reverse -}}
+{{- if in $technical .Permalink }}{{ continue }}{{ end -}}
+- [{{ .Title }}]({{ partial "llms/link.html" . }}): {{ .Date.Format "2 Jan 2006" }}
+{{ end -}}
