@@ -1,0 +1,19 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "uk.rickymoorhouse/blog",
+  "title": "Ricky Moorhouse's blog",
+  "description": "Search and read Ricky Moorhouse's posts on API architecture, API Connect, SRE, AI and travel.",
+  "version": "0.2.0",
+  "websiteUrl": "https://rickymoorhouse.uk",
+  "repository": {
+    "url": "https://github.com/rickymoorhouse/blog",
+    "source": "github",
+    "subfolder": "mcp"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.rickymoorhouse.uk/mcp"
+    }
+  ]
+}

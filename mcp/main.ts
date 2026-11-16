@@ -10,9 +10,15 @@ import MiniSearch from "https://esm.sh/minisearch@7.1.2";
 
 const SITE_URL = (Deno.env.get("SITE_URL") ?? "https://rickymoorhouse.uk").replace(/\/+$/, "");
 const INDEX_TTL_MS = Number(Deno.env.get("INDEX_TTL_SECONDS") ?? "600") * 1000;
-const PROTOCOL_VERSIONS = ["2025-06-18", "2025-03-26", "2024-11-05"];
+// Modern versions are stateless: every request carries its version and client capabilities in _meta.
+// Legacy versions negotiate once with initialize.
+const MODERN_VERSIONS = ["2026-07-28"];
+const LEGACY_VERSIONS = ["2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"];
+const ALL_VERSIONS = [...MODERN_VERSIONS, ...LEGACY_VERSIONS];
 // The name uses the reverse-DNS form Server Cards require, so the card and serverInfo agree.
-const SERVER_INFO = { name: "uk.rickymoorhouse/blog", title: "Ricky Moorhouse's blog", version: "0.1.0" };
+const SERVER_INFO = { name: "uk.rickymoorhouse/blog", title: "Ricky Moorhouse's blog", version: "0.2.0" };
+const INSTRUCTIONS = "Read-only access to Ricky Moorhouse's personal site. Use search_posts to find posts, " +
+  "list_recent for the latest ones and get_post to read a post in full.";
 
 type Item = {
   title: string;
@@ -204,50 +210,101 @@ async function callTool(name: string, args: Record<string, unknown>) {
 // JSON-RPC over Streamable HTTP
 
 class RpcError extends Error {
-  constructor(public code: number, message: string) {
+  constructor(public code: number, message: string, public status = 200, public data?: unknown) {
     super(message);
   }
 }
 
 type RpcMessage = { jsonrpc?: string; id?: string | number | null; method?: string; params?: Record<string, unknown> };
+type Reply = { status: number; body?: unknown };
 
-async function dispatch(method: string, params: Record<string, unknown>) {
+const META_VERSION = "io.modelcontextprotocol/protocolVersion";
+const META_CAPABILITIES = "io.modelcontextprotocol/clientCapabilities";
+const META_SERVER_INFO = "io.modelcontextprotocol/serverInfo";
+
+const meta = (message: RpcMessage) => (message.params?._meta ?? {}) as Record<string, unknown>;
+
+// A request uses modern (2026-07-28+) semantics if it carries a protocol version in _meta, or names a
+// non-legacy version in its header. Everything else, including initialize and header-less requests
+// (which the spec lets us treat as 2025-03-26), takes the legacy path.
+function isModern(message: RpcMessage, headers: Headers) {
+  if (message.method === "initialize") return false;
+  const header = headers.get("mcp-protocol-version");
+  return meta(message)[META_VERSION] !== undefined || (header !== null && !LEGACY_VERSIONS.includes(header));
+}
+
+// Checks the per-request _meta and the optional routing headers a modern request carries.
+function checkModern(message: RpcMessage, headers: Headers) {
+  const m = meta(message);
+  const version = m[META_VERSION];
+  if (typeof version !== "string" || m[META_CAPABILITIES] === undefined) {
+    throw new RpcError(-32602, `Missing _meta "${META_VERSION}" or "${META_CAPABILITIES}"`, 400);
+  }
+  const header = headers.get("mcp-protocol-version");
+  if (header !== null && header !== version) {
+    throw new RpcError(-32020, `MCP-Protocol-Version header ${header} does not match _meta version ${version}`, 400);
+  }
+  if (!MODERN_VERSIONS.includes(version)) {
+    throw new RpcError(-32022, `Unsupported protocol version: ${version}`, 400, { supported: ALL_VERSIONS, requested: version });
+  }
+  const method = headers.get("mcp-method");
+  if (method !== null && method !== message.method) {
+    throw new RpcError(-32020, `Mcp-Method header ${method} does not match method ${message.method}`, 400);
+  }
+  const name = headers.get("mcp-name");
+  if (name !== null && message.method === "tools/call" && name !== message.params?.name) {
+    throw new RpcError(-32020, `Mcp-Name header ${name} does not match tool ${message.params?.name}`, 400);
+  }
+}
+
+async function dispatch(method: string, params: Record<string, unknown>, modern: boolean) {
   switch (method) {
     case "initialize": {
       const requested = String(params.protocolVersion ?? "");
       return {
-        protocolVersion: PROTOCOL_VERSIONS.includes(requested) ? requested : PROTOCOL_VERSIONS[0],
+        protocolVersion: LEGACY_VERSIONS.includes(requested) ? requested : LEGACY_VERSIONS[0],
         capabilities: { tools: {} },
         serverInfo: SERVER_INFO,
-        instructions:
-          "Read-only access to Ricky Moorhouse's personal site. Use search_posts to find posts, " +
-          "list_recent for the latest ones and get_post to read a post in full.",
+        instructions: INSTRUCTIONS,
       };
     }
-    case "ping":
-      return {};
+    case "server/discover":
+      return {
+        supportedVersions: ALL_VERSIONS,
+        capabilities: { tools: {} },
+        instructions: INSTRUCTIONS,
+        ttlMs: 3_600_000,
+        cacheScope: "public",
+      };
     case "tools/list":
-      return { tools: TOOLS };
+      return modern ? { tools: TOOLS, ttlMs: 86_400_000, cacheScope: "public" } : { tools: TOOLS };
     case "tools/call":
       return await callTool(String(params.name ?? ""), (params.arguments ?? {}) as Record<string, unknown>);
-    default:
-      throw new RpcError(-32601, `Method not found: ${method}`);
+    case "ping": // Removed in modern versions.
+      if (!modern) return {};
   }
+  throw new RpcError(-32601, `Method not found: ${method}`, modern ? 404 : 200);
 }
 
-async function handleMessage(message: RpcMessage) {
+async function handleMessage(message: RpcMessage, headers: Headers, modern = isModern(message, headers)): Promise<Reply> {
   const isRequest = message.id !== undefined && message.id !== null;
-  if (message.jsonrpc !== "2.0" || typeof message.method !== "string") {
-    return { jsonrpc: "2.0", id: message.id ?? null, error: { code: -32600, message: "Invalid request" } };
+  if (message?.jsonrpc !== "2.0" || typeof message.method !== "string") {
+    return { status: modern ? 400 : 200, body: { jsonrpc: "2.0", id: message?.id ?? null, error: { code: -32600, message: "Invalid request" } } };
   }
-  if (!isRequest) return undefined; // Notifications, such as notifications/initialized, need no reply.
+  if (!isRequest) return { status: 202 }; // Notifications, such as notifications/initialized, need no reply.
   try {
-    return { jsonrpc: "2.0", id: message.id, result: await dispatch(message.method, message.params ?? {}) };
+    if (modern) checkModern(message, headers);
+    const result = await dispatch(message.method, message.params ?? {}, modern);
+    // Legacy callers get server/discover in its modern shape too; other legacy results are unchanged.
+    const wrap = modern || message.method === "server/discover";
+    const body = wrap ? { resultType: "complete", ...result, _meta: { [META_SERVER_INFO]: SERVER_INFO } } : result;
+    return { status: 200, body: { jsonrpc: "2.0", id: message.id, result: body } };
   } catch (err) {
     const code = err instanceof RpcError ? err.code : -32603;
     const text = err instanceof Error ? err.message : String(err);
     if (code === -32603) console.error(err);
-    return { jsonrpc: "2.0", id: message.id, error: { code, message: text } };
+    const error = { code, message: text, ...(err instanceof RpcError && err.data ? { data: err.data } : {}) };
+    return { status: err instanceof RpcError ? err.status : modern ? 500 : 200, body: { jsonrpc: "2.0", id: message.id, error } };
   }
 }
 
@@ -266,7 +323,7 @@ function serverCard(origin: string) {
     websiteUrl: SITE_URL,
     repository: { url: "https://github.com/rickymoorhouse/blog", source: "github", subfolder: "mcp" },
     icons: [{ src: `${SITE_URL}/rmlogo-512.png`, mimeType: "image/png", sizes: ["512x512"] }],
-    remotes: [{ type: "streamable-http", url: `${origin}/mcp`, supportedProtocolVersions: PROTOCOL_VERSIONS }],
+    remotes: [{ type: "streamable-http", url: `${origin}/mcp`, supportedProtocolVersions: ALL_VERSIONS }],
   };
 }
 
@@ -298,7 +355,7 @@ async function serveCard(req: Request, url: URL): Promise<Response> {
 const CORS_HEADERS = {
   "access-control-allow-origin": "*",
   "access-control-allow-methods": "POST, GET, OPTIONS",
-  "access-control-allow-headers": "content-type, accept, mcp-protocol-version, mcp-session-id",
+  "access-control-allow-headers": "content-type, accept, mcp-protocol-version, mcp-method, mcp-name, mcp-session-id",
 };
 
 const json = (body: unknown, status = 200) =>
@@ -329,12 +386,18 @@ export async function handler(req: Request): Promise<Response> {
   } catch {
     return json({ jsonrpc: "2.0", id: null, error: { code: -32700, message: "Parse error" } }, 400);
   }
+  // Any Mcp-Session-Id header is ignored: there are no sessions.
   if (Array.isArray(body)) {
-    const replies = (await Promise.all(body.map(handleMessage))).filter(Boolean);
+    // Batches are a legacy feature; modern messages must be sent one per POST.
+    if (body.some((m) => isModern(m ?? {}, req.headers))) {
+      return json({ jsonrpc: "2.0", id: null, error: { code: -32600, message: "Invalid request: batches are not supported" } }, 400);
+    }
+    const replies = (await Promise.all(body.map((m) => handleMessage(m, req.headers, false))))
+      .map((r) => r.body).filter(Boolean);
     return replies.length ? json(replies) : new Response(null, { status: 202, headers: CORS_HEADERS });
   }
-  const reply = await handleMessage(body as RpcMessage);
-  return reply ? json(reply) : new Response(null, { status: 202, headers: CORS_HEADERS });
+  const reply = await handleMessage((body ?? {}) as RpcMessage, req.headers);
+  return reply.body ? json(reply.body, reply.status) : new Response(null, { status: 202, headers: CORS_HEADERS });
 }
 
 // Bunny ignores the listener in production; PORT only matters when running locally (default 8080).
