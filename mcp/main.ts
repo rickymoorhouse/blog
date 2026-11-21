@@ -16,7 +16,7 @@ const MODERN_VERSIONS = ["2026-07-28"];
 const LEGACY_VERSIONS = ["2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"];
 const ALL_VERSIONS = [...MODERN_VERSIONS, ...LEGACY_VERSIONS];
 // The name uses the reverse-DNS form Server Cards require, so the card and serverInfo agree.
-const SERVER_INFO = { name: "uk.rickymoorhouse/blog", title: "Ricky Moorhouse's blog", version: "0.2.0" };
+const SERVER_INFO = { name: "uk.rickymoorhouse/blog", title: "Ricky Moorhouse's blog", version: "0.2.1" };
 const INSTRUCTIONS = "Read-only access to Ricky Moorhouse's personal site. Use search_posts to find posts, " +
   "list_recent for the latest ones and get_post to read a post in full.";
 
