@@ -230,6 +230,7 @@ We had the High Wine menu which was amazing, and consisted of 3 different wines 
   "@type": "Review",
   "author": {
     "@type": "Person",
+    "name": "Ricky Moorhouse",
     "givenName": "Ricky",
     "familyName": "Moorhouse"
   },
