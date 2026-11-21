@@ -232,7 +232,7 @@ We had the High Wine menu which was amazing, and consisted of 3 different wines 
     "@type": "Person",
     "givenName": "Ricky",
     "familyName": "Moorhouse"
-  }
+  },
   "reviewBody": "We had a lovely evening at Spott, it has a fantastic atmosphere and very convenient location in Doorn. We had the High Wine menu which was amazing, 3 different wines each served with a platter of food alongside. The service was very friendly and we were well looked after. The wines were exquisite and the food was delicious - really good value for money!",
   "itemReviewed": {
     "@type": "Restaurant",
