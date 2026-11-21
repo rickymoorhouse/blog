@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
   "name": "uk.rickymoorhouse/blog",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "title": "Ricky Moorhouse's blog",
   "description": "Search and read Ricky Moorhouse's posts on API architecture, API Connect, SRE, AI and travel.",
   "websiteUrl": "https://rickymoorhouse.uk",
