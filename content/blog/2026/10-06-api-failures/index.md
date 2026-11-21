@@ -8,6 +8,7 @@ tags:
 summary: "Four generalised API failure stories about versioning, migration testing, sensitive data, and authorisation, with practical lessons for preventing them."
 featured: "DSC_0086.jpeg"
 hideImages: true
+sticky: true
 ---
 
 API failures often come from missing lifecycle controls rather than difficult technology. These generalised stories from my experience show how unchecked assumptions around versioning, testing, logging, and access control can create avoidable problems.
